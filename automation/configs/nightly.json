@@ -1,0 +1,148 @@
+{
+  "paths": {
+    "risk_csv": "automation_runtime/risk_metrics_latest.csv",
+    "risk_script": "skin_homog/screener_preprocess_risk/risk_preprocess.py",
+    "risk_input_items_py": "lists/skins_normal_filtered1.py",
+    "risk_stage1_csv": "skin_homog/screener_preprocess/preprocess_metrics.csv",
+    "risk_progress_log": "automation_runtime/risk_progress_latest.log",
+    "risk_runtime_json": "automation_runtime/risk_runtime_latest.json",
+    "risk_candidates_csv": "automation_runtime/risk_candidates_latest.csv",
+    "model_coverage_csv": "automation_runtime/model_coverage_latest.csv",
+    "model_backfill_queue_csv": "automation_runtime/model_backfill_queue_latest.csv",
+    "model_backfill_queue_items_py": "automation_runtime/model_backfill_queue_latest.py",
+    "model_backfill_batch_items_py": "automation_runtime/model_backfill_batch_latest.py",
+    "model_backfill_runtime_json": "automation_runtime/model_backfill_runtime_latest.json",
+    "model_backfill_progress_log": "automation_runtime/model_backfill_progress_latest.log",
+    "model_refit_progress_log": "automation_runtime/model_refit_progress_latest.log",
+    "summary_csv": "skin_homog/data_skins_big/_summary.csv",
+    "skin_data_dir": "skin_homog/data_skins_big",
+    "fit_json": "steam_listings/data/float_fit_rel_curves.json",
+    "monitor_csv": "automation_runtime/monitor_list_latest.csv",
+    "monitor_items_py": "automation_runtime/monitor_list_latest.py",
+    "base_snapshot_csv": "automation_runtime/base_snapshot_latest.csv"
+  },
+  "schedule": {
+    "intended_start": "manual",
+    "timezone": "Europe/Prague",
+    "github_actions_cron_utc": "disabled; run Library nightly manually"
+  },
+  "preflight": {
+    "require_existing_risk_csv": true,
+    "max_existing_risk_age_hours": null,
+    "fail_on_stale_existing_risk_csv": false,
+    "require_summary_csv": true,
+    "require_skin_data_dir": true
+  },
+  "risk_rebuild": {
+    "enabled": true,
+    "mode": "create",
+    "trade_days": 7,
+    "min_discount_sample": 3,
+    "steam_currency": 3,
+    "auto_refresh_steam_cookies": false,
+    "require_stage1_ok": true,
+    "steam_item_delay_min_sec": 10.0,
+    "steam_item_delay_max_sec": 20.0,
+    "steam_429_retry_wait_sec": 5400.0
+  },
+  "monitor_list": {
+    "enabled": true,
+    "expected_min_items": 0,
+    "expected_max_items": 1000,
+    "fail_if_outside_expected_range": false
+  },
+  "risk_filter": {
+    "ret_7d_min": -0.03,
+    "downside_14d_max": 0.12,
+    "sales_7d_n_min": 50,
+    "tail_ratio_min": 0.9,
+    "n_listings_min": 20
+  },
+  "high_cv_filter": {
+    "pred_cv_min": 0.075,
+    "pred_range_over_mean_min": 0.3,
+    "min_listings": 3,
+    "missing_cv_policy": "assume_high"
+  },
+  "model_coverage": {
+    "min_summary_n_listings": 3,
+    "min_fit_clean_points": 5,
+    "require_model_ready_for_monitor": true
+  },
+  "model_backfill": {
+    "enabled": true,
+    "max_items_per_run": 30,
+    "target_unique": 400,
+    "page_limit": 50,
+    "mode": "merge",
+    "use_mix": true,
+    "sort_by": "most_recent",
+    "skip_known_ids": true,
+    "ignore_existing_items": true,
+    "mix_overfetch_factor": 1.15,
+    "mix_shards": [
+      {
+        "sort_by": "most_recent",
+        "share": 0.5,
+        "drop_lowest_price_fraction": 0.0,
+        "drop_highest_price_fraction": 0.0
+      },
+      {
+        "sort_by": "lowest_float",
+        "share": 0.25,
+        "drop_lowest_price_fraction": 0.0,
+        "drop_highest_price_fraction": 0.0
+      },
+      {
+        "sort_by": "highest_float",
+        "share": 0.25,
+        "drop_lowest_price_fraction": 0.0,
+        "drop_highest_price_fraction": 0.0
+      }
+    ],
+    "inner_delay_min_sec": 11.0,
+    "inner_delay_max_sec": 16.8,
+    "item_delay_min_sec": 11.0,
+    "item_delay_max_sec": 16.0,
+    "slow_inner_delay_min_sec": 16.0,
+    "slow_inner_delay_max_sec": 21.0,
+    "slow_item_delay_min_sec": 16.0,
+    "slow_item_delay_max_sec": 21.0,
+    "slow_mode_extend_sec": 1800.0,
+    "key_cooldown_429_sec": 1200.0,
+    "key_cooldown_403_sec": 1800.0,
+    "retry_ladder_min_sec": 90.0,
+    "retry_ladder_step_sec": 150.0,
+    "retry_ladder_max_sec": 900.0
+  },
+  "model_refit": {
+    "enabled": true,
+    "min_points": 5,
+    "max_skins": null,
+    "grid_n": 300,
+    "smooth_frac": 0.25,
+    "supersmooth_frac": 0.35,
+    "smooth_min_pts": 12,
+    "smooth_robust_iters": 2,
+    "seg_min_seg": 12,
+    "seg_z_thresh": 4.0,
+    "seg_max_jumps": 2,
+    "hybrid_alpha": 0.7,
+    "outlier_neighbors": 6,
+    "outlier_z": 3.5,
+    "outlier_min_abs_dev": 0.03
+  },
+  "base_snapshot": {
+    "enabled": true,
+    "delay_min_sec": 15.0,
+    "delay_max_sec": 20.0,
+    "rate_limit_pause_sec": 900.0,
+    "rate_limit_stair_step_sec": 60.0,
+    "rate_limit_max_retries": 10,
+    "rate_limit_error_patterns": [
+      "429",
+      "too many requests",
+      "rate limit"
+    ]
+  }
+}

@@ -1,0 +1,137 @@
+{
+  "version": 1,
+  "items_signature": "5aba2df3ab27a89488ba81ce895f10ff90cba472ecc2a0b648224d1b5ee408b2",
+  "items_count": 281,
+  "batch_pointer": 0,
+  "last_run_at_utc": null,
+  "last_status": null,
+  "last_batch_items": [],
+  "last_error": null,
+  "last_finished_at_utc": null,
+  "last_successful_monitoring_at_utc": null,
+  "last_failed_monitoring_at_utc": null,
+  "consecutive_errors": 0,
+  "last_listing_errors": [],
+  "last_listing_error_count": 0,
+  "last_listing_rows": 0,
+  "last_enriched_rows": 0,
+  "last_opportunities_rows": 0,
+  "last_alert_stats": {},
+  "sent_alerts": {
+    "listing:519746022666394280": {
+      "sent_at_utc": "2026-05-06T06:09:33.521395+00:00",
+      "item": "Five-SeveN | Monkey Business (Field-Tested)",
+      "listing_id": "519746022666394280",
+      "spread_hybrid_disc": 0.0883476767996976
+    },
+    "listing:520871291150145756": {
+      "sent_at_utc": "2026-05-06T06:13:09.661683+00:00",
+      "item": "P2000 | Turf (Factory New)",
+      "listing_id": "520871291150145756",
+      "spread_hybrid_disc": 0.1078214752065748
+    },
+    "listing:794463791549667275": {
+      "sent_at_utc": "2026-05-06T06:18:57.761215+00:00",
+      "item": "P90 | Sand Spray (Factory New)",
+      "listing_id": "794463791549667275",
+      "spread_hybrid_disc": 0.0573118155769064
+    },
+    "listing:512989991900870975": {
+      "sent_at_utc": "2026-05-06T06:19:28.057136+00:00",
+      "item": "Five-SeveN | Capillary (Factory New)",
+      "listing_id": "512989991900870975",
+      "spread_hybrid_disc": 0.1117848839044712
+    },
+    "listing:508486392208545158": {
+      "sent_at_utc": "2026-05-06T06:22:03.510115+00:00",
+      "item": "MP7 | Cirrus (Factory New)",
+      "listing_id": "508486392208545158",
+      "spread_hybrid_disc": 0.0712899200723052
+    },
+    "listing:509612923502253795": {
+      "sent_at_utc": "2026-05-06T06:22:24.496376+00:00",
+      "item": "AWP | Exoskeleton (Battle-Scarred)",
+      "listing_id": "509612923502253795",
+      "spread_hybrid_disc": 0.1120406970149272
+    },
+    "listing:492723793463866677": {
+      "sent_at_utc": "2026-05-06T06:24:29.775716+00:00",
+      "item": "P90 | Elite Build (Factory New)",
+      "listing_id": "492723793463866677",
+      "spread_hybrid_disc": 0.0741411208692531
+    },
+    "listing:497227393166269721": {
+      "sent_at_utc": "2026-05-06T06:24:53.769330+00:00",
+      "item": "P90 | Elite Build (Factory New)",
+      "listing_id": "497227393166269721",
+      "spread_hybrid_disc": 0.0845938232101854
+    },
+    "listing:520871291151462096": {
+      "sent_at_utc": "2026-05-06T06:25:34.781615+00:00",
+      "item": "P90 | Elite Build (Factory New)",
+      "listing_id": "520871291151462096",
+      "spread_hybrid_disc": 0.1115629485149743
+    },
+    "listing:498353924434271515": {
+      "sent_at_utc": "2026-05-06T06:27:26.225187+00:00",
+      "item": "AK-47 | Midnight Laminate (Minimal Wear)",
+      "listing_id": "498353924434271515",
+      "spread_hybrid_disc": 0.0489679187435231
+    },
+    "listing:500605724248952231": {
+      "sent_at_utc": "2026-05-06T06:43:52.742544+00:00",
+      "item": "M4A4 | Poly Mag (Factory New)",
+      "listing_id": "500605724248952231",
+      "spread_hybrid_disc": -0.1083828409375762
+    },
+    "listing:502857524061547876": {
+      "sent_at_utc": "2026-05-06T06:44:15.762223+00:00",
+      "item": "M4A4 | Poly Mag (Factory New)",
+      "listing_id": "502857524061547876",
+      "spread_hybrid_disc": 0.0935147601093056
+    },
+    "listing:493850324804583148": {
+      "sent_at_utc": "2026-05-06T07:08:24.718608+00:00",
+      "item": "P250 | Boreal Forest (Factory New)",
+      "listing_id": "493850324804583148",
+      "spread_hybrid_disc": 0.0054128305135948
+    },
+    "listing:520871922574189764": {
+      "sent_at_utc": "2026-05-06T07:09:57.685589+00:00",
+      "item": "AK-47 | Midnight Laminate (Field-Tested)",
+      "listing_id": "520871922574189764",
+      "spread_hybrid_disc": 0.1071233843360541
+    },
+    "listing:494976224706266574": {
+      "sent_at_utc": "2026-05-06T07:44:50.473355+00:00",
+      "item": "MAG-7 | Justice (Field-Tested)",
+      "listing_id": "494976224706266574",
+      "spread_hybrid_disc": 0.0654583715864355
+    },
+    "listing:508487023588384910": {
+      "sent_at_utc": "2026-05-06T08:16:28.927834+00:00",
+      "item": "AWP | Black Nile (Factory New)",
+      "listing_id": "508487023588384910",
+      "spread_hybrid_disc": 0.085626793632059
+    },
+    "listing:503983423967652967": {
+      "sent_at_utc": "2026-05-06T08:16:29.981692+00:00",
+      "item": "AK-47 | Steel Delta (Factory New)",
+      "listing_id": "503983423967652967",
+      "spread_hybrid_disc": 0.1098320088911357
+    },
+    "listing:500605724249267051": {
+      "sent_at_utc": "2026-05-06T08:25:33.462703+00:00",
+      "item": "Desert Eagle | Mulberry (Minimal Wear)",
+      "listing_id": "500605724249267051",
+      "spread_hybrid_disc": 0.0934870966823658
+    },
+    "listing:506235223783541124": {
+      "sent_at_utc": "2026-05-06T09:41:33.164229+00:00",
+      "item": "AK-47 | Wintergreen (Factory New)",
+      "listing_id": "506235223783541124",
+      "spread_hybrid_disc": 0.0569341310376843
+    }
+  },
+  "last_alert_sent_at_utc": "2026-05-06T09:41:33.164705+00:00"
+}

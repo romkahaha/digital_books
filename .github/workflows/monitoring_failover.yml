@@ -1,0 +1,58 @@
+name: Monitoring Failover
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+concurrency:
+  group: monitoring-failover
+  cancel-in-progress: false
+
+jobs:
+  run-failover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Check failover request
+        id: request
+        run: |
+          python - <<'PY'
+          import json
+          import os
+          from pathlib import Path
+          request_path = Path("automation_runtime/failover_request_latest.json")
+          active = "false"
+          mode = "missing"
+          if request_path.is_file():
+              payload = json.loads(request_path.read_text(encoding="utf-8"))
+              mode = str(payload.get("mode", "unknown"))
+              active = "true" if payload.get("trigger_run") else "false"
+          with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as handle:
+              handle.write(f"active={active}\n")
+              handle.write(f"mode={mode}\n")
+          print(f"failover request mode={mode} active={active}")
+          PY
+
+      - name: Install dependencies
+        if: steps.request.outputs.active == 'true'
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r requirements.txt
+
+      - name: Run monitoring failover request
+        if: steps.request.outputs.active == 'true'
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          TG_CHAT_ID: ${{ secrets.TG_CHAT_ID }}
+        run: |
+          python automation/failover_monitoring.py run-request
