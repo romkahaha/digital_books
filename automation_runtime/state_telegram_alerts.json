@@ -137,7 +137,55 @@
       "item": "MP7 | Nemesis (Minimal Wear)",
       "listing_id": "516368322943270790",
       "spread_hybrid_disc": 0.0479522718636959
+    },
+    "listing:497228024528617829": {
+      "sent_at_utc": "2026-05-06T13:15:25.161664+00:00",
+      "item": "Desert Eagle | Mulberry (Minimal Wear)",
+      "listing_id": "497228024528617829",
+      "spread_hybrid_disc": 0.0500137663081974
+    },
+    "listing:498353924435338951": {
+      "sent_at_utc": "2026-05-06T13:15:48.348475+00:00",
+      "item": "Desert Eagle | Mulberry (Minimal Wear)",
+      "listing_id": "498353924435338951",
+      "spread_hybrid_disc": 0.1197952162527705
+    },
+    "listing:770819894208387489": {
+      "sent_at_utc": "2026-05-06T13:26:11.195460+00:00",
+      "item": "AK-47 | Midnight Laminate (Minimal Wear)",
+      "listing_id": "770819894208387489",
+      "spread_hybrid_disc": 0.1165454974921426
+    },
+    "listing:526501422108037889": {
+      "sent_at_utc": "2026-05-06T14:28:52.456027+00:00",
+      "item": "P90 | Elite Build (Factory New)",
+      "listing_id": "526501422108037889",
+      "spread_hybrid_disc": 0.1008624640310976
+    },
+    "listing:506235223784731968": {
+      "sent_at_utc": "2026-05-06T15:16:05.547453+00:00",
+      "item": "P250 | Boreal Forest (Factory New)",
+      "listing_id": "506235223784731968",
+      "spread_hybrid_disc": 0.1187216577339054
+    },
+    "listing:521997822478340286": {
+      "sent_at_utc": "2026-05-06T15:36:20.700435+00:00",
+      "item": "P90 | Elite Build (Factory New)",
+      "listing_id": "521997822478340286",
+      "spread_hybrid_disc": 0.1024808755442751
+    },
+    "listing:497228024529246857": {
+      "sent_at_utc": "2026-05-06T15:52:13.115392+00:00",
+      "item": "MP7 | Abyssal Apparition (Battle-Scarred)",
+      "listing_id": "497228024529246857",
+      "spread_hybrid_disc": 0.0676883751515591
+    },
+    "listing:528753221921235549": {
+      "sent_at_utc": "2026-05-06T16:26:03.663268+00:00",
+      "item": "M4A1-S | Fizzy POP (Factory New)",
+      "listing_id": "528753221921235549",
+      "spread_hybrid_disc": 0.0223609887924846
     }
   },
-  "last_alert_sent_at_utc": "2026-05-06T12:47:46.218144+00:00"
+  "last_alert_sent_at_utc": "2026-05-06T16:26:03.663436+00:00"
 }
