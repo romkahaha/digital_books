@@ -30,6 +30,8 @@ from automation.state import items_signature
 REQUEST_REL = Path("automation_runtime/failover_request_latest.json")
 FAILOVER_CONFIG_REL = Path("automation/configs/monitoring_failover.json")
 WORKFLOW_REL = Path(".github/workflows/monitoring_failover.yml")
+STATE_REL = Path("automation_runtime/state.json")
+ALERT_STATE_REL = Path("automation_runtime/state_telegram_alerts.json")
 
 SYNC_FILES = (
     Path("requirements.txt"),
@@ -37,8 +39,8 @@ SYNC_FILES = (
     Path("automation_runtime/monitor_list_latest.csv"),
     Path("automation_runtime/base_snapshot_latest.csv"),
     Path("automation_runtime/risk_metrics_latest.csv"),
-    Path("automation_runtime/state.json"),
-    Path("automation_runtime/state_telegram_alerts.json"),
+    STATE_REL,
+    ALERT_STATE_REL,
     Path("steam_listings/data/float_fit_rel_curves.json"),
 )
 SYNC_DIRS = (
@@ -72,6 +74,16 @@ class FailoverConfig:
     request_on_rate_limit: bool
     lease_seconds: int
     copy_precomputed_plots: bool
+
+
+def derive_failover_lease_seconds(config: dict[str, Any]) -> int:
+    cycle_cfg = config.get("cycle", {})
+    raw = cycle_cfg.get("recoverable_error_sleep_sec", cycle_cfg.get("cycle_sleep_sec", 5400))
+    try:
+        value = int(float(raw))
+    except Exception:
+        value = 5400
+    return max(60, value)
 
 
 def parse_args() -> argparse.Namespace:
@@ -110,7 +122,7 @@ def load_failover_config(config: dict[str, Any], repo_root: Path) -> FailoverCon
         branch=str(cfg.get("branch", "main")).strip() or "main",
         push_on_cycle_start=bool(cfg.get("push_on_cycle_start", True)),
         request_on_rate_limit=bool(cfg.get("request_on_rate_limit", True)),
-        lease_seconds=max(60, int(cfg.get("lease_seconds", 5400))),
+        lease_seconds=derive_failover_lease_seconds(config),
         copy_precomputed_plots=bool(cfg.get("copy_precomputed_plots", True)),
     )
 
@@ -173,6 +185,150 @@ def sent_alerts_count(state_json: Path) -> int:
     return len(sent) if isinstance(sent, dict) else 0
 
 
+def load_json_object(path: Path) -> dict[str, Any]:
+    if not path.is_file():
+        return {}
+    try:
+        payload = json.loads(path.read_text(encoding="utf-8"))
+    except Exception:
+        return {}
+    return payload if isinstance(payload, dict) else {}
+
+
+def parse_iso_datetime(raw: Any) -> datetime | None:
+    if not raw:
+        return None
+    try:
+        return datetime.fromisoformat(str(raw))
+    except Exception:
+        return None
+
+
+def payload_timestamp(payload: dict[str, Any]) -> datetime | None:
+    for key in (
+        "last_finished_at_utc",
+        "last_run_at_utc",
+        "completed_at_utc",
+        "last_failover_completed_at_utc",
+    ):
+        dt = parse_iso_datetime(payload.get(key))
+        if dt is not None:
+            return dt
+    return None
+
+
+def same_items_signature(left: dict[str, Any], right: dict[str, Any]) -> bool:
+    left_sig = str(left.get("items_signature") or "").strip()
+    right_sig = str(right.get("items_signature") or "").strip()
+    return bool(left_sig and right_sig and left_sig == right_sig)
+
+
+def merge_sent_alerts(
+    current: dict[str, Any] | None,
+    incoming: dict[str, Any] | None,
+) -> tuple[dict[str, Any], bool]:
+    merged = dict(current) if isinstance(current, dict) else {}
+    changed = False
+    incoming = incoming if isinstance(incoming, dict) else {}
+    for key, value in incoming.items():
+        if key not in merged:
+            merged[key] = value
+            changed = True
+            continue
+        existing = merged.get(key)
+        if not isinstance(existing, dict) or not isinstance(value, dict):
+            continue
+        existing_dt = parse_iso_datetime(existing.get("sent_at_utc"))
+        incoming_dt = parse_iso_datetime(value.get("sent_at_utc"))
+        if incoming_dt and (existing_dt is None or incoming_dt > existing_dt):
+            merged[key] = value
+            changed = True
+    return merged, changed
+
+
+def maybe_pull_failover_repo(repo: Path, branch: str) -> None:
+    remotes = {line.strip() for line in run_git(repo, ["remote"], capture_output=True).stdout.splitlines() if line.strip()}
+    if "origin" not in remotes:
+        return
+    run_git(repo, ["pull", "--ff-only", "origin", branch])
+
+
+def import_runtime_state_from_failover(
+    *,
+    repo_root: Path,
+    config: dict[str, Any],
+    quiet: bool = False,
+) -> bool:
+    failover_cfg = load_failover_config(config, repo_root)
+    if not failover_cfg.enabled:
+        return False
+    repo = ensure_failover_repo(failover_cfg)
+    try:
+        maybe_pull_failover_repo(repo, failover_cfg.branch)
+    except Exception as exc:
+        if not quiet:
+            print(f"warning: failover repo pull failed before runtime import: {exc}", file=sys.stderr, flush=True)
+
+    main_state_path = path_from_config(config, "state_json")
+    main_alert_state_path = alert_state_path_from(main_state_path)
+    failover_state_path = repo / STATE_REL
+    failover_alert_state_path = repo / ALERT_STATE_REL
+
+    main_state = load_json_object(main_state_path)
+    failover_state = load_json_object(failover_state_path)
+    main_alert_state = load_json_object(main_alert_state_path)
+    failover_alert_state = load_json_object(failover_alert_state_path)
+
+    changed = False
+
+    if failover_state and (
+        not main_state
+        or same_items_signature(main_state, failover_state)
+        or not str(main_state.get("items_signature") or "").strip()
+    ):
+        main_ts = payload_timestamp(main_state) if main_state else None
+        failover_ts = payload_timestamp(failover_state)
+        if failover_ts and (main_ts is None or failover_ts > main_ts):
+            write_json(main_state_path, failover_state)
+            main_state = failover_state
+            changed = True
+            if not quiet:
+                print(
+                    "imported newer failover monitoring state "
+                    f"(batch_pointer={failover_state.get('batch_pointer')})",
+                    flush=True,
+                )
+
+    if failover_alert_state and (
+        not main_alert_state
+        or same_items_signature(main_alert_state, failover_alert_state)
+        or not str(main_alert_state.get("items_signature") or "").strip()
+    ):
+        base = copy.deepcopy(main_alert_state or failover_alert_state)
+        remote_is_newer = False
+        base_ts = payload_timestamp(main_alert_state) if main_alert_state else None
+        failover_alert_ts = payload_timestamp(failover_alert_state)
+        if failover_alert_ts and (base_ts is None or failover_alert_ts > base_ts):
+            base = copy.deepcopy(failover_alert_state)
+            remote_is_newer = True
+        merged_sent, merged_changed = merge_sent_alerts(
+            main_alert_state.get("sent_alerts") if main_alert_state else {},
+            failover_alert_state.get("sent_alerts"),
+        )
+        if merged_changed or remote_is_newer or not main_alert_state:
+            base["sent_alerts"] = merged_sent
+            write_json(main_alert_state_path, base)
+            changed = True
+            if not quiet:
+                print(
+                    "merged failover Telegram dedupe state "
+                    f"(sent_alerts={len(merged_sent)})",
+                    flush=True,
+                )
+
+    return changed
+
+
 def write_json(path: Path, payload: dict[str, Any]) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
@@ -186,6 +342,9 @@ on:
     branches:
       - main
   workflow_dispatch:
+
+permissions:
+  contents: write
 
 concurrency:
   group: monitoring-failover
@@ -311,6 +470,7 @@ def sync_monitoring_failover(
     if not failover_cfg.enabled:
         return False
     repo = ensure_failover_repo(failover_cfg)
+    import_runtime_state_from_failover(repo_root=repo_root, config=config, quiet=True)
 
     state_path = state_path or Path(str(config["paths"]["state_json"])).resolve()
     monitor_items_py = monitor_items_py or Path(str(config["paths"]["monitor_items_py"])).resolve()
@@ -373,6 +533,44 @@ def load_request(path: Path) -> dict[str, Any]:
     return payload
 
 
+def finalize_request_payload(request: dict[str, Any], *, exit_code: int) -> dict[str, Any]:
+    payload = copy.deepcopy(request)
+    payload["trigger_run"] = False
+    payload["mode"] = "clear"
+    payload["last_failover_status"] = "success" if exit_code == 0 else "error"
+    payload["last_failover_exit_code"] = int(exit_code)
+    payload["last_failover_completed_at_utc"] = utc_now_iso()
+    return payload
+
+
+def push_failover_runtime(repo_root: Path, *, branch: str) -> bool:
+    run_git(repo_root, ["config", "user.name", "github-actions[bot]"])
+    run_git(repo_root, ["config", "user.email", "41898282+github-actions[bot]@users.noreply.github.com"])
+    run_git(
+        repo_root,
+        [
+            "add",
+            str(STATE_REL),
+            str(ALERT_STATE_REL),
+            str(REQUEST_REL),
+        ],
+    )
+    diff = subprocess.run(["git", "-C", str(repo_root), "diff", "--cached", "--quiet"])
+    if diff.returncode == 0:
+        print("failover runtime sync-back: no state changes to commit")
+        return False
+    if diff.returncode != 1:
+        raise RuntimeError(f"failover runtime diff failed with exit {diff.returncode}")
+    run_git(repo_root, ["commit", "-m", "Update monitoring failover runtime [skip ci]"])
+    remotes = {line.strip() for line in run_git(repo_root, ["remote"], capture_output=True).stdout.splitlines() if line.strip()}
+    if "origin" not in remotes:
+        print("failover runtime sync-back: committed locally (origin remote is not configured)")
+        return True
+    run_git(repo_root, ["push", "origin", f"HEAD:{branch}"])
+    print(f"failover runtime sync-back: committed and pushed to {branch}")
+    return True
+
+
 def run_failover_request(*, repo_root: Path, request_json: Path, config_path: Path) -> int:
     request = load_request(request_json)
     if not bool(request.get("trigger_run")):
@@ -395,7 +593,12 @@ def run_failover_request(*, repo_root: Path, request_json: Path, config_path: Pa
     print(f"starting failover monitoring request {request.get('request_id')} lease={lease_seconds}s")
     print(" ".join(cmd), flush=True)
     completed = subprocess.run(cmd, cwd=str(repo_root))
-    return int(completed.returncode)
+    exit_code = int(completed.returncode)
+    finalized_request = finalize_request_payload(request, exit_code=exit_code)
+    write_json(request_json, finalized_request)
+    branch = str(os.environ.get("GITHUB_REF_NAME") or "main").strip() or "main"
+    push_failover_runtime(repo_root, branch=branch)
+    return exit_code
 
 
 def main() -> int:

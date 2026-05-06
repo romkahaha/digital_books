@@ -41,14 +41,14 @@
     "enabled": true,
     "batch_size": null,
     "cycle_sleep_sec": 600.0,
+    "recoverable_error_sleep_sec": 5400.0,
     "commit_runtime": false,
     "commit_every_batches": 5,
-    "max_runtime_minutes": 15.0,
+    "max_runtime_minutes": 90.0,
     "max_batches_per_run": null,
     "max_cycles_per_run": null,
     "respect_active_window": false,
-    "checkpoint_message": "Update monitoring runtime [skip ci]",
-    "recoverable_error_sleep_sec": 5400.0
+    "checkpoint_message": "Update monitoring runtime [skip ci]"
   },
   "steam_scm": {
     "listings_per_request": 100,

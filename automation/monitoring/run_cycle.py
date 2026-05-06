@@ -16,7 +16,11 @@ if str(_REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(_REPO_ROOT))
 
 from automation.config import load_json_config, monitoring_defaults, path_from_config
-from automation.failover_monitoring import load_failover_config, sync_monitoring_failover
+from automation.failover_monitoring import (
+    import_runtime_state_from_failover,
+    load_failover_config,
+    sync_monitoring_failover,
+)
 from automation.listing_enrichment import load_items_py
 from automation.risk_filters import repo_root_from
 from automation.state import load_state
@@ -196,6 +200,17 @@ def maybe_sync_failover(
         return False
 
 
+def maybe_import_failover_runtime(*, root: Path, config: dict, quiet: bool = False) -> bool:
+    failover_cfg = load_failover_config(config, root)
+    if not failover_cfg.enabled:
+        return False
+    try:
+        return import_runtime_state_from_failover(repo_root=root, config=config, quiet=quiet)
+    except Exception as exc:
+        print(f"warning: failover runtime import failed: {exc}", file=sys.stderr, flush=True)
+        return False
+
+
 def main() -> int:
     configure_stdio()
     args = parse_args()
@@ -244,6 +259,8 @@ def main() -> int:
     if not items:
         raise RuntimeError(f"no monitor items in {monitor_items_py}")
     failover_cfg = load_failover_config(config, root)
+    if failover_cfg.enabled:
+        maybe_import_failover_runtime(root=root, config=config, quiet=True)
 
     active, now_local = is_active_now(schedule_cfg)
     print(f"config: {config_path}")
@@ -349,6 +366,8 @@ def main() -> int:
                     commit_runtime(root, checkpoint_message)
                     batches_since_commit = 0
                 time.sleep(max(0.0, recoverable_error_sleep_sec))
+                if failover_request_active:
+                    maybe_import_failover_runtime(root=root, config=config, quiet=False)
                 continue
             print(f"batch failed with exit {result.returncode}", file=sys.stderr)
             if commit_enabled:

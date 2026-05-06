@@ -86,6 +86,7 @@ def monitoring_defaults() -> dict[str, Any]:
             "enabled": True,
             "batch_size": None,
             "cycle_sleep_sec": 600.0,
+            "recoverable_error_sleep_sec": 5400.0,
             "commit_runtime": True,
             "commit_every_batches": 5,
             "max_runtime_minutes": 330.0,
