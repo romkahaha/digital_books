@@ -410,6 +410,7 @@ def build_failover_config(config: dict[str, Any], *, lease_seconds: int) -> dict
     out["cycle"]["max_runtime_minutes"] = max(1.0, lease_seconds / 60.0)
     out.setdefault("telegram", {})
     out["telegram"]["enabled"] = False
+    out["telegram"]["force_inline_sender"] = True
     out["failover"] = {"enabled": False}
     return out
 

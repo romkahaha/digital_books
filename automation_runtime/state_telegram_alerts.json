@@ -131,7 +131,13 @@
       "item": "AK-47 | Wintergreen (Factory New)",
       "listing_id": "506235223783541124",
       "spread_hybrid_disc": 0.0569341310376843
+    },
+    "listing:516368322943270790": {
+      "sent_at_utc": "2026-05-06T12:47:46.217960+00:00",
+      "item": "MP7 | Nemesis (Minimal Wear)",
+      "listing_id": "516368322943270790",
+      "spread_hybrid_disc": 0.0479522718636959
     }
   },
-  "last_alert_sent_at_utc": "2026-05-06T09:41:33.164705+00:00"
+  "last_alert_sent_at_utc": "2026-05-06T12:47:46.218144+00:00"
 }

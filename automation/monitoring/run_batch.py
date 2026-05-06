@@ -414,6 +414,7 @@ def main() -> int:
         )
 
         telegram_enabled = bool(telegram_cfg.get("enabled", False)) or args.send_telegram or args.telegram_dry_run
+        force_inline_sender = bool(telegram_cfg.get("force_inline_sender", False))
         if telegram_enabled:
             if args.telegram_dry_run:
                 stats = send_opportunity_alerts(
@@ -430,6 +431,26 @@ def main() -> int:
                 alert_stats = stats
                 print(
                     "telegram alerts: "
+                    f"loaded={stats['loaded']} filtered={stats['filtered']} "
+                    f"considered={stats['considered']} sent={stats['sent']} skipped={stats['skipped']}"
+                )
+            elif force_inline_sender:
+                alert_state_path = alert_state_path_from(state_path)
+                bootstrap_alert_state(alert_state_path, state_path)
+                stats = send_opportunity_alerts(
+                    opportunities_csv,
+                    alert_state_path,
+                    monitor_items_py,
+                    cooldown_hours=float(telegram_cfg.get("cooldown_hours", 12.0)),
+                    dry_run=False,
+                    sleep_sec=float(telegram_cfg.get("sleep_sec", 0.6)),
+                    max_alerts=telegram_cfg.get("max_alerts"),
+                    alerts_cfg=alerts_cfg,
+                    plot_cfg=plot_cfg,
+                )
+                alert_stats = stats
+                print(
+                    "telegram alerts inline: "
                     f"loaded={stats['loaded']} filtered={stats['filtered']} "
                     f"considered={stats['considered']} sent={stats['sent']} skipped={stats['skipped']}"
                 )

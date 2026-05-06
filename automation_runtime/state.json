@@ -2,30 +2,30 @@
   "version": 1,
   "items_signature": "5aba2df3ab27a89488ba81ce895f10ff90cba472ecc2a0b648224d1b5ee408b2",
   "items_count": 281,
-  "batch_pointer": 162,
-  "last_run_at_utc": "2026-05-06T12:24:32.341980+00:00",
-  "last_status": "ok",
+  "batch_pointer": 46,
+  "last_run_at_utc": "2026-05-06T13:05:19.962019+00:00",
+  "last_status": "running",
   "last_batch_items": [
-    "AK-47 | Slate (Battle-Scarred)",
-    "Five-SeveN | Heat Treated (Factory New)",
-    "USP-S | Cortex (Well-Worn)",
-    "AK-47 | Searing Rage (Battle-Scarred)",
-    "AK-47 | Slate (Factory New)"
+    "USP-S | Flashback (Factory New)",
+    "M4A1-S | Fizzy POP (Factory New)",
+    "AWP | Hyper Beast (Battle-Scarred)",
+    "Five-SeveN | Monkey Business (Field-Tested)",
+    "P250 | Asiimov (Battle-Scarred)"
   ],
   "last_error": null,
-  "last_finished_at_utc": "2026-05-06T12:26:26.207549+00:00",
-  "last_successful_monitoring_at_utc": "2026-05-06T12:26:26.207549+00:00",
+  "last_finished_at_utc": "2026-05-06T13:05:18.404717+00:00",
+  "last_successful_monitoring_at_utc": "2026-05-06T13:05:18.404717+00:00",
   "last_failed_monitoring_at_utc": "2026-05-06T10:54:22.557501+00:00",
   "consecutive_errors": 0,
   "last_listing_errors": [],
   "last_listing_error_count": 0,
-  "last_listing_rows": 916,
-  "last_enriched_rows": 916,
+  "last_listing_rows": 855,
+  "last_enriched_rows": 855,
   "last_opportunities_rows": 0,
   "last_alert_stats": {
     "mode": "background",
     "queued_rows": 0,
-    "sender_pid": 87453
+    "sender_pid": 91952
   },
-  "last_batch_start_pointer": 157
+  "last_batch_start_pointer": 46
 }
