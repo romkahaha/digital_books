@@ -3,7 +3,7 @@
   "items_signature": "5aba2df3ab27a89488ba81ce895f10ff90cba472ecc2a0b648224d1b5ee408b2",
   "items_count": 281,
   "batch_pointer": 32,
-  "last_run_at_utc": "2026-05-06T18:58:59.731063+00:00",
+  "last_run_at_utc": "2026-05-06T20:29:16.511041+00:00",
   "last_status": "error",
   "last_batch_items": [
     "M4A1-S | Mud-Spec (Factory New)",
@@ -13,10 +13,10 @@
     "AWP | Black Nile (Factory New)"
   ],
   "last_error": "Steam rate limit (429) for \"1/5 M4A1-S | Mud-Spec (Factory New)\": 429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/M4A1-S%20%7C%20Mud-Spec%20%28Factory%20New%29/render/?query=&start=0&count=100&currency=3&language=english&format=json",
-  "last_finished_at_utc": "2026-05-06T18:59:00.056297+00:00",
+  "last_finished_at_utc": "2026-05-06T20:29:16.807771+00:00",
   "last_successful_monitoring_at_utc": "2026-05-06T17:28:13.909051+00:00",
-  "last_failed_monitoring_at_utc": "2026-05-06T18:59:00.056297+00:00",
-  "consecutive_errors": 2,
+  "last_failed_monitoring_at_utc": "2026-05-06T20:29:16.807771+00:00",
+  "consecutive_errors": 3,
   "last_listing_errors": [],
   "last_listing_error_count": 0,
   "last_listing_rows": 0,
