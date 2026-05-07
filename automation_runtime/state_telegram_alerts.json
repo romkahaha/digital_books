@@ -157,19 +157,19 @@
       "spread_hybrid_disc": 0.1165454974921426
     },
     "listing:526501422108037889": {
-      "sent_at_utc": "2026-05-06T14:28:52.456027+00:00",
+      "sent_at_utc": "2026-05-07T04:02:05.211540+00:00",
       "item": "P90 | Elite Build (Factory New)",
       "listing_id": "526501422108037889",
       "spread_hybrid_disc": 0.1008624640310976
     },
     "listing:506235223784731968": {
-      "sent_at_utc": "2026-05-06T15:16:05.547453+00:00",
+      "sent_at_utc": "2026-05-07T03:44:17.325501+00:00",
       "item": "P250 | Boreal Forest (Factory New)",
       "listing_id": "506235223784731968",
-      "spread_hybrid_disc": 0.1187216577339054
+      "spread_hybrid_disc": 0.1163104994787314
     },
     "listing:521997822478340286": {
-      "sent_at_utc": "2026-05-06T15:36:20.700435+00:00",
+      "sent_at_utc": "2026-05-07T04:02:07.151822+00:00",
       "item": "P90 | Elite Build (Factory New)",
       "listing_id": "521997822478340286",
       "spread_hybrid_disc": 0.1024808755442751
@@ -197,7 +197,61 @@
       "item": "P2000 | Turf (Factory New)",
       "listing_id": "500605724251475579",
       "spread_hybrid_disc": 0.1172826274334419
+    },
+    "listing:521997822481708518": {
+      "sent_at_utc": "2026-05-07T03:14:56.228830+00:00",
+      "item": "AWP | Atheris (Battle-Scarred)",
+      "listing_id": "521997822481708518",
+      "spread_hybrid_disc": 0.0845429614506809
+    },
+    "listing:512990623226816315": {
+      "sent_at_utc": "2026-05-07T03:19:30.223544+00:00",
+      "item": "P2000 | Acid Etched (Factory New)",
+      "listing_id": "512990623226816315",
+      "spread_hybrid_disc": 0.1096150070234235
+    },
+    "listing:508487023592161166": {
+      "sent_at_utc": "2026-05-07T03:44:15.324615+00:00",
+      "item": "P250 | Boreal Forest (Factory New)",
+      "listing_id": "508487023592161166",
+      "spread_hybrid_disc": 0.0632792594699384
+    },
+    "listing:525375522204283063": {
+      "sent_at_utc": "2026-05-07T04:00:16.707593+00:00",
+      "item": "MP7 | Cirrus (Factory New)",
+      "listing_id": "525375522204283063",
+      "spread_hybrid_disc": 0.0923923790355455
+    },
+    "listing:510738936593787466": {
+      "sent_at_utc": "2026-05-07T05:16:11.123291+00:00",
+      "item": "MAG-7 | Justice (Field-Tested)",
+      "listing_id": "510738936593787466",
+      "spread_hybrid_disc": 0.014224847377388
+    },
+    "listing:519746135812953524": {
+      "sent_at_utc": "2026-05-07T06:19:23.789570+00:00",
+      "item": "AWP | Atheris (Battle-Scarred)",
+      "listing_id": "519746135812953524",
+      "spread_hybrid_disc": 0.0620527049634129
+    },
+    "listing:491598638254388438": {
+      "sent_at_utc": "2026-05-07T07:38:46.904856+00:00",
+      "item": "Desert Eagle | Mulberry (Field-Tested)",
+      "listing_id": "491598638254388438",
+      "spread_hybrid_disc": 0.1170661442871606
+    },
+    "listing:500605837396976099": {
+      "sent_at_utc": "2026-05-07T08:00:44.712104+00:00",
+      "item": "Glock-18 | Mirror Mosaic (Battle-Scarred)",
+      "listing_id": "500605837396976099",
+      "spread_hybrid_disc": 0.1163177398655977
+    },
+    "listing:509613036859249599": {
+      "sent_at_utc": "2026-05-07T08:01:38.561289+00:00",
+      "item": "P250 | Visions (Field-Tested)",
+      "listing_id": "509613036859249599",
+      "spread_hybrid_disc": 0.1112314181145018
     }
   },
-  "last_alert_sent_at_utc": "2026-05-06T16:26:03.663436+00:00"
+  "last_alert_sent_at_utc": "2026-05-07T08:01:38.561328+00:00"
 }
