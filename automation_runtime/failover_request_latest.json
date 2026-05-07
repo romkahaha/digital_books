@@ -17,5 +17,8 @@
   "last_status": "error",
   "last_error": "Steam rate limit (429) for \"1/5 Sawed-Off | Kiss♥Love (Factory New)\": 429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/Sawed-Off%20%7C%20Kiss%E2%99%A5Love%20%28Factory%20New%29/render/?query=&start=0&count=100&currency=3&language=english&format=json",
   "last_finished_at_utc": "2026-05-07T20:22:23.940013+00:00",
-  "last_successful_monitoring_at_utc": "2026-05-07T18:52:03.172155+00:00"
+  "last_successful_monitoring_at_utc": "2026-05-07T18:52:03.172155+00:00",
+  "previous_failover_request_id": "20260507T202231Z-vmi2737474-request",
+  "previous_failover_status": "success",
+  "previous_failover_completed_at_utc": "2026-05-07T21:03:05.838034+00:00"
 }

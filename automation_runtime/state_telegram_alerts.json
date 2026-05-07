@@ -19,7 +19,7 @@
   "last_alert_stats": {},
   "sent_alerts": {
     "listing:508487023592161166": {
-      "sent_at_utc": "2026-05-07T08:13:16.577340+00:00",
+      "sent_at_utc": "2026-05-07T20:44:52.528508+00:00",
       "item": "P250 | Boreal Forest (Factory New)",
       "listing_id": "508487023592161166",
       "spread_hybrid_disc": 0.1122306247463621
@@ -65,7 +65,19 @@
       "item": "MAC-10 | Disco Tech (Field-Tested)",
       "listing_id": "524249735517164895",
       "spread_hybrid_disc": 0.1120490005004025
+    },
+    "listing:518620288313315272": {
+      "sent_at_utc": "2026-05-07T20:50:11.446301+00:00",
+      "item": "PP-Bizon | Brass (Factory New)",
+      "listing_id": "518620288313315272",
+      "spread_hybrid_disc": 0.0804536538583559
+    },
+    "listing:492724590625339821": {
+      "sent_at_utc": "2026-05-07T20:52:00.179786+00:00",
+      "item": "MP9 | Slide (Factory New)",
+      "listing_id": "492724590625339821",
+      "spread_hybrid_disc": 0.0751447031010554
     }
   },
-  "last_alert_sent_at_utc": "2026-05-07T09:58:48.156034+00:00"
+  "last_alert_sent_at_utc": "2026-05-07T20:52:00.179843+00:00"
 }
