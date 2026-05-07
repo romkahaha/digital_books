@@ -1,27 +1,27 @@
 {
   "version": 1,
-  "items_signature": "5aba2df3ab27a89488ba81ce895f10ff90cba472ecc2a0b648224d1b5ee408b2",
-  "items_count": 281,
-  "batch_pointer": 86,
-  "last_run_at_utc": "2026-05-07T08:04:14.030623+00:00",
+  "items_signature": "0a680a730a5e0b30a7ceca2ba17fe88325f0273c48ce102e4e462e7b52367097",
+  "items_count": 291,
+  "batch_pointer": 93,
+  "last_run_at_utc": "2026-05-07T10:44:00.147859+00:00",
   "last_status": "error",
   "last_batch_items": [
-    "M4A4 | Evil Daimyo (Factory New)",
     "MP7 | Fade (Factory New)",
     "UMP-45 | Wild Child (Battle-Scarred)",
-    "Desert Eagle | Mulberry (Minimal Wear)",
-    "MP9 | Rose Iron (Factory New)"
+    "MP7 | Abyssal Apparition (Field-Tested)",
+    "MP5-SD | Phosphor (Minimal Wear)",
+    "P90 | Sand Spray (Factory New)"
   ],
-  "last_error": "Steam rate limit (429) for \"5/5 MP9 | Rose Iron (Factory New)\": 429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/MP9%20%7C%20Rose%20Iron%20%28Factory%20New%29/render/?query=&start=0&count=100&currency=3&language=english&format=json",
-  "last_finished_at_utc": "2026-05-07T08:05:30.082367+00:00",
-  "last_successful_monitoring_at_utc": "2026-05-07T08:04:13.633786+00:00",
-  "last_failed_monitoring_at_utc": "2026-05-07T08:05:30.082367+00:00",
+  "last_error": "Steam rate limit (429) for \"4/5 MP5-SD | Phosphor (Minimal Wear)\": 429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/MP5-SD%20%7C%20Phosphor%20%28Minimal%20Wear%29/render/?query=&start=100&count=100&currency=3&language=english&format=json",
+  "last_finished_at_utc": "2026-05-07T10:44:41.900005+00:00",
+  "last_successful_monitoring_at_utc": "2026-05-07T10:43:58.628184+00:00",
+  "last_failed_monitoring_at_utc": "2026-05-07T10:44:41.900005+00:00",
   "consecutive_errors": 1,
   "last_listing_errors": [],
   "last_listing_error_count": 0,
   "last_listing_rows": 0,
-  "last_enriched_rows": 725,
+  "last_enriched_rows": 721,
   "last_opportunities_rows": 0,
   "last_alert_stats": {},
-  "last_batch_start_pointer": 86
+  "last_batch_start_pointer": 93
 }

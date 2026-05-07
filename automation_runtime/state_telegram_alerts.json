@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "items_signature": "5aba2df3ab27a89488ba81ce895f10ff90cba472ecc2a0b648224d1b5ee408b2",
-  "items_count": 281,
+  "items_signature": "0a680a730a5e0b30a7ceca2ba17fe88325f0273c48ce102e4e462e7b52367097",
+  "items_count": 291,
   "batch_pointer": 0,
   "last_run_at_utc": null,
   "last_status": null,
@@ -18,240 +18,36 @@
   "last_opportunities_rows": 0,
   "last_alert_stats": {},
   "sent_alerts": {
-    "listing:519746022666394280": {
-      "sent_at_utc": "2026-05-06T20:34:34.615788+00:00",
-      "item": "Five-SeveN | Monkey Business (Field-Tested)",
-      "listing_id": "519746022666394280",
-      "spread_hybrid_disc": 0.0883476767996976
-    },
-    "listing:520871291150145756": {
-      "sent_at_utc": "2026-05-06T20:36:49.773633+00:00",
-      "item": "P2000 | Turf (Factory New)",
-      "listing_id": "520871291150145756",
-      "spread_hybrid_disc": 0.1078214752065748
-    },
-    "listing:794463791549667275": {
-      "sent_at_utc": "2026-05-06T20:40:58.371317+00:00",
-      "item": "P90 | Sand Spray (Factory New)",
-      "listing_id": "794463791549667275",
-      "spread_hybrid_disc": 0.0573118155769064
-    },
-    "listing:512989991900870975": {
-      "sent_at_utc": "2026-05-06T20:43:11.373192+00:00",
-      "item": "Five-SeveN | Capillary (Factory New)",
-      "listing_id": "512989991900870975",
-      "spread_hybrid_disc": 0.1117848839044712
-    },
-    "listing:508486392208545158": {
-      "sent_at_utc": "2026-05-06T20:44:51.506365+00:00",
-      "item": "MP7 | Cirrus (Factory New)",
-      "listing_id": "508486392208545158",
-      "spread_hybrid_disc": 0.0712899200723052
-    },
-    "listing:509612923502253795": {
-      "sent_at_utc": "2026-05-06T06:22:24.496376+00:00",
-      "item": "AWP | Exoskeleton (Battle-Scarred)",
-      "listing_id": "509612923502253795",
-      "spread_hybrid_disc": 0.1120406970149272
-    },
-    "listing:492723793463866677": {
-      "sent_at_utc": "2026-05-06T20:48:03.652294+00:00",
-      "item": "P90 | Elite Build (Factory New)",
-      "listing_id": "492723793463866677",
-      "spread_hybrid_disc": 0.0741411208692531
-    },
-    "listing:497227393166269721": {
-      "sent_at_utc": "2026-05-06T20:48:05.075537+00:00",
-      "item": "P90 | Elite Build (Factory New)",
-      "listing_id": "497227393166269721",
-      "spread_hybrid_disc": 0.0845938232101854
-    },
-    "listing:520871291151462096": {
-      "sent_at_utc": "2026-05-06T20:48:09.657643+00:00",
-      "item": "P90 | Elite Build (Factory New)",
-      "listing_id": "520871291151462096",
-      "spread_hybrid_disc": 0.1115629485149743
-    },
-    "listing:498353924434271515": {
-      "sent_at_utc": "2026-05-06T06:27:26.225187+00:00",
-      "item": "AK-47 | Midnight Laminate (Minimal Wear)",
-      "listing_id": "498353924434271515",
-      "spread_hybrid_disc": 0.0489679187435231
-    },
-    "listing:500605724248952231": {
-      "sent_at_utc": "2026-05-06T06:43:52.742544+00:00",
-      "item": "M4A4 | Poly Mag (Factory New)",
-      "listing_id": "500605724248952231",
-      "spread_hybrid_disc": -0.1083828409375762
-    },
-    "listing:502857524061547876": {
-      "sent_at_utc": "2026-05-06T06:44:15.762223+00:00",
-      "item": "M4A4 | Poly Mag (Factory New)",
-      "listing_id": "502857524061547876",
-      "spread_hybrid_disc": 0.0935147601093056
-    },
-    "listing:493850324804583148": {
-      "sent_at_utc": "2026-05-06T21:33:34.530746+00:00",
-      "item": "P250 | Boreal Forest (Factory New)",
-      "listing_id": "493850324804583148",
-      "spread_hybrid_disc": 0.0014023983785691
-    },
-    "listing:520871922574189764": {
-      "sent_at_utc": "2026-05-06T07:09:57.685589+00:00",
-      "item": "AK-47 | Midnight Laminate (Field-Tested)",
-      "listing_id": "520871922574189764",
-      "spread_hybrid_disc": 0.1071233843360541
-    },
-    "listing:494976224706266574": {
-      "sent_at_utc": "2026-05-06T07:44:50.473355+00:00",
-      "item": "MAG-7 | Justice (Field-Tested)",
-      "listing_id": "494976224706266574",
-      "spread_hybrid_disc": 0.0654583715864355
-    },
-    "listing:508487023588384910": {
-      "sent_at_utc": "2026-05-06T08:16:28.927834+00:00",
-      "item": "AWP | Black Nile (Factory New)",
-      "listing_id": "508487023588384910",
-      "spread_hybrid_disc": 0.085626793632059
-    },
-    "listing:503983423967652967": {
-      "sent_at_utc": "2026-05-06T08:16:29.981692+00:00",
-      "item": "AK-47 | Steel Delta (Factory New)",
-      "listing_id": "503983423967652967",
-      "spread_hybrid_disc": 0.1098320088911357
-    },
-    "listing:500605724249267051": {
-      "sent_at_utc": "2026-05-06T08:25:33.462703+00:00",
-      "item": "Desert Eagle | Mulberry (Minimal Wear)",
-      "listing_id": "500605724249267051",
-      "spread_hybrid_disc": 0.0934870966823658
-    },
-    "listing:506235223783541124": {
-      "sent_at_utc": "2026-05-06T09:41:33.164229+00:00",
-      "item": "AK-47 | Wintergreen (Factory New)",
-      "listing_id": "506235223783541124",
-      "spread_hybrid_disc": 0.0569341310376843
-    },
-    "listing:516368322943270790": {
-      "sent_at_utc": "2026-05-06T12:47:46.217960+00:00",
-      "item": "MP7 | Nemesis (Minimal Wear)",
-      "listing_id": "516368322943270790",
-      "spread_hybrid_disc": 0.0479522718636959
-    },
-    "listing:497228024528617829": {
-      "sent_at_utc": "2026-05-06T13:15:25.161664+00:00",
-      "item": "Desert Eagle | Mulberry (Minimal Wear)",
-      "listing_id": "497228024528617829",
-      "spread_hybrid_disc": 0.0500137663081974
-    },
-    "listing:498353924435338951": {
-      "sent_at_utc": "2026-05-06T13:15:48.348475+00:00",
-      "item": "Desert Eagle | Mulberry (Minimal Wear)",
-      "listing_id": "498353924435338951",
-      "spread_hybrid_disc": 0.1197952162527705
-    },
-    "listing:770819894208387489": {
-      "sent_at_utc": "2026-05-06T13:26:11.195460+00:00",
-      "item": "AK-47 | Midnight Laminate (Minimal Wear)",
-      "listing_id": "770819894208387489",
-      "spread_hybrid_disc": 0.1165454974921426
-    },
-    "listing:526501422108037889": {
-      "sent_at_utc": "2026-05-07T04:02:05.211540+00:00",
-      "item": "P90 | Elite Build (Factory New)",
-      "listing_id": "526501422108037889",
-      "spread_hybrid_disc": 0.1008624640310976
-    },
-    "listing:506235223784731968": {
-      "sent_at_utc": "2026-05-07T03:44:17.325501+00:00",
-      "item": "P250 | Boreal Forest (Factory New)",
-      "listing_id": "506235223784731968",
-      "spread_hybrid_disc": 0.1163104994787314
-    },
-    "listing:521997822478340286": {
-      "sent_at_utc": "2026-05-07T04:02:07.151822+00:00",
-      "item": "P90 | Elite Build (Factory New)",
-      "listing_id": "521997822478340286",
-      "spread_hybrid_disc": 0.1024808755442751
-    },
-    "listing:497228024529246857": {
-      "sent_at_utc": "2026-05-06T15:52:13.115392+00:00",
-      "item": "MP7 | Abyssal Apparition (Battle-Scarred)",
-      "listing_id": "497228024529246857",
-      "spread_hybrid_disc": 0.0676883751515591
-    },
-    "listing:528753221921235549": {
-      "sent_at_utc": "2026-05-06T16:26:03.663268+00:00",
-      "item": "M4A1-S | Fizzy POP (Factory New)",
-      "listing_id": "528753221921235549",
-      "spread_hybrid_disc": 0.0223609887924846
-    },
-    "listing:501731624157001373": {
-      "sent_at_utc": "2026-05-06T21:37:09.155615+00:00",
-      "item": "AWP | Black Nile (Factory New)",
-      "listing_id": "501731624157001373",
-      "spread_hybrid_disc": 0.1180344134902319
-    },
-    "listing:500605724251475579": {
-      "sent_at_utc": "2026-05-06T21:42:40.006164+00:00",
-      "item": "P2000 | Turf (Factory New)",
-      "listing_id": "500605724251475579",
-      "spread_hybrid_disc": 0.1172826274334419
-    },
-    "listing:521997822481708518": {
-      "sent_at_utc": "2026-05-07T03:14:56.228830+00:00",
-      "item": "AWP | Atheris (Battle-Scarred)",
-      "listing_id": "521997822481708518",
-      "spread_hybrid_disc": 0.0845429614506809
-    },
-    "listing:512990623226816315": {
-      "sent_at_utc": "2026-05-07T03:19:30.223544+00:00",
-      "item": "P2000 | Acid Etched (Factory New)",
-      "listing_id": "512990623226816315",
-      "spread_hybrid_disc": 0.1096150070234235
-    },
     "listing:508487023592161166": {
-      "sent_at_utc": "2026-05-07T03:44:15.324615+00:00",
+      "sent_at_utc": "2026-05-07T08:13:16.577340+00:00",
       "item": "P250 | Boreal Forest (Factory New)",
       "listing_id": "508487023592161166",
-      "spread_hybrid_disc": 0.0632792594699384
-    },
-    "listing:525375522204283063": {
-      "sent_at_utc": "2026-05-07T04:00:16.707593+00:00",
-      "item": "MP7 | Cirrus (Factory New)",
-      "listing_id": "525375522204283063",
-      "spread_hybrid_disc": 0.0923923790355455
-    },
-    "listing:510738936593787466": {
-      "sent_at_utc": "2026-05-07T05:16:11.123291+00:00",
-      "item": "MAG-7 | Justice (Field-Tested)",
-      "listing_id": "510738936593787466",
-      "spread_hybrid_disc": 0.014224847377388
-    },
-    "listing:519746135812953524": {
-      "sent_at_utc": "2026-05-07T06:19:23.789570+00:00",
-      "item": "AWP | Atheris (Battle-Scarred)",
-      "listing_id": "519746135812953524",
-      "spread_hybrid_disc": 0.0620527049634129
-    },
-    "listing:491598638254388438": {
-      "sent_at_utc": "2026-05-07T07:38:46.904856+00:00",
-      "item": "Desert Eagle | Mulberry (Field-Tested)",
-      "listing_id": "491598638254388438",
-      "spread_hybrid_disc": 0.1170661442871606
-    },
-    "listing:500605837396976099": {
-      "sent_at_utc": "2026-05-07T08:00:44.712104+00:00",
-      "item": "Glock-18 | Mirror Mosaic (Battle-Scarred)",
-      "listing_id": "500605837396976099",
-      "spread_hybrid_disc": 0.1163177398655977
+      "spread_hybrid_disc": 0.1122306247463621
     },
     "listing:509613036859249599": {
-      "sent_at_utc": "2026-05-07T08:01:38.561289+00:00",
+      "sent_at_utc": "2026-05-07T08:23:35.518172+00:00",
       "item": "P250 | Visions (Field-Tested)",
       "listing_id": "509613036859249599",
-      "spread_hybrid_disc": 0.1112314181145018
+      "spread_hybrid_disc": 0.119377269885873
+    },
+    "listing:794463791549667275": {
+      "sent_at_utc": "2026-05-07T08:28:54.180349+00:00",
+      "item": "P90 | Sand Spray (Factory New)",
+      "listing_id": "794463791549667275",
+      "spread_hybrid_disc": 0.1153164028690609
+    },
+    "listing:498354037508562811": {
+      "sent_at_utc": "2026-05-07T08:59:07.051760+00:00",
+      "item": "Dual Berettas | Melondrama (Battle-Scarred)",
+      "listing_id": "498354037508562811",
+      "spread_hybrid_disc": -0.0021027583040518
+    },
+    "listing:496102237883028599": {
+      "sent_at_utc": "2026-05-07T09:58:48.155870+00:00",
+      "item": "AWP | Atheris (Battle-Scarred)",
+      "listing_id": "496102237883028599",
+      "spread_hybrid_disc": 0.066467257471857
     }
   },
-  "last_alert_sent_at_utc": "2026-05-06T16:26:03.663436+00:00"
+  "last_alert_sent_at_utc": "2026-05-07T09:58:48.156034+00:00"
 }
