@@ -1,11 +1,11 @@
 {
   "version": 1,
-  "mode": "request",
+  "mode": "clear",
   "request_id": "20260507T121512Z-vmi2737474-request",
   "requested_at_utc": "2026-05-07T12:15:12.010545+00:00",
   "requested_by": "vmi2737474",
   "main_repo_root": "/home/roma/cs-arbitrage/cs-skins-monitoring-bot",
-  "trigger_run": true,
+  "trigger_run": false,
   "lease_seconds": 5400,
   "max_runtime_minutes": 90,
   "cooldown_until_utc": "2026-05-07T13:45:12.010040+00:00",
@@ -17,5 +17,8 @@
   "last_status": "error",
   "last_error": "Steam rate limit (429) for \"1/5 MP7 | Fade (Factory New)\": 429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/MP7%20%7C%20Fade%20%28Factory%20New%29/render/?query=&start=0&count=100&currency=3&language=english&format=json",
   "last_finished_at_utc": "2026-05-07T12:14:57.235867+00:00",
-  "last_successful_monitoring_at_utc": "2026-05-07T10:43:58.628184+00:00"
+  "last_successful_monitoring_at_utc": "2026-05-07T10:43:58.628184+00:00",
+  "last_failover_status": "success",
+  "last_failover_exit_code": 0,
+  "last_failover_completed_at_utc": "2026-05-07T13:46:46.315929+00:00"
 }

@@ -47,7 +47,25 @@
       "item": "AWP | Atheris (Battle-Scarred)",
       "listing_id": "496102237883028599",
       "spread_hybrid_disc": 0.066467257471857
+    },
+    "listing:527627435179884680": {
+      "sent_at_utc": "2026-05-07T12:25:45.555535+00:00",
+      "item": "USP-S | Jawbreaker (Battle-Scarred)",
+      "listing_id": "527627435179884680",
+      "spread_hybrid_disc": 0.0769863591043945
+    },
+    "listing:524249735517246687": {
+      "sent_at_utc": "2026-05-07T13:16:43.897055+00:00",
+      "item": "MP9 | Slide (Factory New)",
+      "listing_id": "524249735517246687",
+      "spread_hybrid_disc": 0.0906342640670117
+    },
+    "listing:524249735517164895": {
+      "sent_at_utc": "2026-05-07T13:25:25.271556+00:00",
+      "item": "MAC-10 | Disco Tech (Field-Tested)",
+      "listing_id": "524249735517164895",
+      "spread_hybrid_disc": 0.1120490005004025
     }
   },
-  "last_alert_sent_at_utc": "2026-05-07T09:58:48.156034+00:00"
+  "last_alert_sent_at_utc": "2026-05-07T13:25:25.271621+00:00"
 }
