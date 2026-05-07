@@ -2,32 +2,30 @@
   "version": 1,
   "items_signature": "0a680a730a5e0b30a7ceca2ba17fe88325f0273c48ce102e4e462e7b52367097",
   "items_count": 291,
-  "batch_pointer": 217,
-  "last_run_at_utc": "2026-05-07T13:46:00.505403+00:00",
+  "batch_pointer": 98,
+  "last_run_at_utc": "2026-05-07T13:45:21.194012+00:00",
   "last_status": "ok",
   "last_batch_items": [
-    "AUG | Random Access (Factory New)",
-    "AK-47 | Neon Rider (Field-Tested)",
-    "MP9 | Arctic Tri-Tone (Factory New)",
-    "Glock-18 | Coral Bloom (Factory New)",
-    "AWP | PAW (Factory New)"
+    "MP7 | Fade (Factory New)",
+    "UMP-45 | Wild Child (Battle-Scarred)",
+    "MP7 | Abyssal Apparition (Field-Tested)",
+    "MP5-SD | Phosphor (Minimal Wear)",
+    "P90 | Sand Spray (Factory New)"
   ],
   "last_error": null,
-  "last_finished_at_utc": "2026-05-07T13:46:45.755742+00:00",
-  "last_successful_monitoring_at_utc": "2026-05-07T13:46:45.755742+00:00",
+  "last_finished_at_utc": "2026-05-07T13:47:16.501682+00:00",
+  "last_successful_monitoring_at_utc": "2026-05-07T13:47:16.501682+00:00",
   "last_failed_monitoring_at_utc": "2026-05-07T12:14:57.235867+00:00",
   "consecutive_errors": 0,
   "last_listing_errors": [],
   "last_listing_error_count": 0,
-  "last_listing_rows": 822,
-  "last_enriched_rows": 822,
-  "last_opportunities_rows": 0,
+  "last_listing_rows": 848,
+  "last_enriched_rows": 848,
+  "last_opportunities_rows": 1,
   "last_alert_stats": {
-    "loaded": 0,
-    "filtered": 0,
-    "considered": 0,
-    "sent": 0,
-    "skipped": 0
+    "mode": "background",
+    "queued_rows": 1,
+    "sender_pid": 141054
   },
-  "last_batch_start_pointer": 212
+  "last_batch_start_pointer": 93
 }
