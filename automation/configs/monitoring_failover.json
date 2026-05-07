@@ -44,7 +44,7 @@
     "recoverable_error_sleep_sec": 5400.0,
     "commit_runtime": false,
     "commit_every_batches": 5,
-    "max_runtime_minutes": 90.0,
+    "max_runtime_minutes": 37.583333333333336,
     "max_batches_per_run": null,
     "max_cycles_per_run": null,
     "respect_active_window": false,
