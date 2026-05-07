@@ -44,7 +44,7 @@
     "recoverable_error_sleep_sec": 5400.0,
     "commit_runtime": false,
     "commit_every_batches": 5,
-    "max_runtime_minutes": 37.583333333333336,
+    "max_runtime_minutes": 330.0,
     "max_batches_per_run": null,
     "max_cycles_per_run": null,
     "respect_active_window": false,
@@ -66,8 +66,8 @@
   "opportunity_filter": {
     "steam_sales_n_min": 50,
     "downside_risk_max": 10.0,
-    "tail_ratio_min": 0.9,
-    "downside_14d_max": 0.12,
+    "tail_ratio_min": 0.8,
+    "downside_14d_max": 0.15,
     "continuity_ratio_max": 3.5,
     "spread_hybrid_disc_max": 0.12,
     "exclude_any": []
@@ -79,8 +79,8 @@
     "ask_max": null,
     "steam_sales_7d_n_min": 50,
     "steam_sales_7d_downside_risk_max": 10.0,
-    "steam_sales_7d_tail_ratio_min": 0.9,
-    "steam_daily_downside_14d_pct_max": 0.12,
+    "steam_sales_7d_tail_ratio_min": 0.8,
+    "steam_daily_downside_14d_pct_max": 0.15,
     "continuity_ratio_max": 3.5,
     "exclude_any": [
       "Fade",
