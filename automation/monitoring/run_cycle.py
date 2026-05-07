@@ -186,6 +186,20 @@ def is_rate_limit_batch_error(state: dict, cycle_cfg: dict) -> bool:
     return any(str(pattern) and str(pattern) in error for pattern in patterns)
 
 
+def partial_rate_limit_listing_errors(state: dict, cycle_cfg: dict) -> list[str]:
+    patterns = [str(pattern).lower() for pattern in cycle_cfg.get("failover_trigger_error_patterns", ["Steam rate limit (429)", "429", "too many requests"]) if str(pattern).strip()]
+    out: list[str] = []
+    for entry in state.get("last_listing_errors") or []:
+        if not isinstance(entry, dict):
+            continue
+        item = str(entry.get("market_hash_name") or "?")
+        meta = entry.get("meta")
+        haystack = str(meta).lower()
+        if any(pattern in haystack for pattern in patterns):
+            out.append(item)
+    return out
+
+
 def maybe_sync_failover(
     *,
     root: Path,
@@ -338,6 +352,11 @@ def main() -> int:
             batch_pointer=int(load_state(state_path, items).get("batch_pointer") or 0),
         )
 
+    partial_rate_limit_min_item_errors = max(
+        1,
+        int(cycle_cfg.get("partial_rate_limit_failover_min_item_errors", 2)),
+    )
+
     while True:
         elapsed_minutes = (time.monotonic() - started) / 60.0
         if elapsed_minutes >= max_runtime_minutes:
@@ -412,6 +431,58 @@ def main() -> int:
             if commit_enabled:
                 commit_runtime(root, checkpoint_message)
             return result.returncode
+
+        partial_rate_limited_items = partial_rate_limit_listing_errors(after, cycle_cfg)
+        if (
+            failover_cfg.enabled
+            and failover_cfg.request_on_rate_limit
+            and len(partial_rate_limited_items) >= partial_rate_limit_min_item_errors
+        ):
+            remaining_runtime_sec = max(0.0, max_runtime_minutes * 60.0 - (time.monotonic() - started))
+            failover_lease_seconds = rate_limit_failover_lease_seconds(
+                schedule_cfg=schedule_cfg,
+                failover_cfg=failover_cfg,
+                recoverable_error_sleep_sec=recoverable_error_sleep_sec,
+            )
+            sample = ", ".join(partial_rate_limited_items[:3])
+            reason = (
+                f"partial Steam rate limit (429): {len(partial_rate_limited_items)} item errors "
+                f"in successful batch starting at pointer {start_pointer} ({sample})"
+            )
+            maybe_sync_failover(
+                root=root,
+                config_path=config_path,
+                config=config,
+                mode="request",
+                reason=reason,
+                lease_seconds=failover_lease_seconds,
+                state_path=state_path,
+                monitor_items_py=monitor_items_py,
+                batch_pointer=start_pointer,
+            )
+            failover_request_active = True
+            if remaining_runtime_sec <= recoverable_error_sleep_sec:
+                print(
+                    "partial rate-limit batch near runtime deadline; "
+                    f"remaining={remaining_runtime_sec:.1f}s sleep={recoverable_error_sleep_sec:.1f}s; "
+                    "stopping now to release lock",
+                    file=sys.stderr,
+                )
+                if commit_enabled and batches_since_commit > 0:
+                    commit_runtime(root, checkpoint_message)
+                    batches_since_commit = 0
+                break
+            print(
+                "partial rate-limit batch; "
+                f"sleeping {recoverable_error_sleep_sec:.1f}s before retry/failover handoff: {reason}",
+                file=sys.stderr,
+            )
+            if commit_enabled and batches_since_commit > 0:
+                commit_runtime(root, checkpoint_message)
+                batches_since_commit = 0
+            time.sleep(max(0.0, recoverable_error_sleep_sec))
+            maybe_import_failover_runtime(root=root, config=config, quiet=False)
+            continue
 
         full_cycle_done = batch_size >= len(items) or next_pointer <= start_pointer
         if full_cycle_done:

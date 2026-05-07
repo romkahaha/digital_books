@@ -2,30 +2,30 @@
   "version": 1,
   "items_signature": "0a680a730a5e0b30a7ceca2ba17fe88325f0273c48ce102e4e462e7b52367097",
   "items_count": 291,
-  "batch_pointer": 98,
-  "last_run_at_utc": "2026-05-07T13:45:21.194012+00:00",
-  "last_status": "ok",
+  "batch_pointer": 215,
+  "last_run_at_utc": "2026-05-07T17:39:07.114557+00:00",
+  "last_status": "running",
   "last_batch_items": [
-    "MP7 | Fade (Factory New)",
-    "UMP-45 | Wild Child (Battle-Scarred)",
-    "MP7 | Abyssal Apparition (Field-Tested)",
-    "MP5-SD | Phosphor (Minimal Wear)",
-    "P90 | Sand Spray (Factory New)"
+    "Glock-18 | Coral Bloom (Factory New)",
+    "AWP | PAW (Factory New)",
+    "Glock-18 | Water Elemental (Minimal Wear)",
+    "Desert Eagle | Mulberry (Factory New)",
+    "P2000 | Acid Etched (Factory New)"
   ],
   "last_error": null,
-  "last_finished_at_utc": "2026-05-07T13:47:16.501682+00:00",
-  "last_successful_monitoring_at_utc": "2026-05-07T13:47:16.501682+00:00",
+  "last_finished_at_utc": "2026-05-07T17:39:05.326705+00:00",
+  "last_successful_monitoring_at_utc": "2026-05-07T17:39:05.326705+00:00",
   "last_failed_monitoring_at_utc": "2026-05-07T12:14:57.235867+00:00",
   "consecutive_errors": 0,
   "last_listing_errors": [],
   "last_listing_error_count": 0,
-  "last_listing_rows": 848,
-  "last_enriched_rows": 848,
-  "last_opportunities_rows": 1,
+  "last_listing_rows": 776,
+  "last_enriched_rows": 776,
+  "last_opportunities_rows": 0,
   "last_alert_stats": {
     "mode": "background",
-    "queued_rows": 1,
-    "sender_pid": 141054
+    "queued_rows": 0,
+    "sender_pid": 148405
   },
-  "last_batch_start_pointer": 93
+  "last_batch_start_pointer": 215
 }
