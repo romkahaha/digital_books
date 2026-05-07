@@ -66,8 +66,8 @@
   "opportunity_filter": {
     "steam_sales_n_min": 50,
     "downside_risk_max": 10.0,
-    "tail_ratio_min": 0.9,
-    "downside_14d_max": 0.12,
+    "tail_ratio_min": 0.8,
+    "downside_14d_max": 0.15,
     "continuity_ratio_max": 3.5,
     "spread_hybrid_disc_max": 0.12,
     "exclude_any": []
@@ -79,8 +79,8 @@
     "ask_max": null,
     "steam_sales_7d_n_min": 50,
     "steam_sales_7d_downside_risk_max": 10.0,
-    "steam_sales_7d_tail_ratio_min": 0.9,
-    "steam_daily_downside_14d_pct_max": 0.12,
+    "steam_sales_7d_tail_ratio_min": 0.8,
+    "steam_daily_downside_14d_pct_max": 0.15,
     "continuity_ratio_max": 3.5,
     "exclude_any": [
       "Fade",
