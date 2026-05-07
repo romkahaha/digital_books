@@ -151,6 +151,8 @@ def monitoring_defaults() -> dict[str, Any]:
             "push_on_cycle_start": True,
             "request_on_rate_limit": True,
             "lease_seconds": 5400,
+            "request_on_nightly_start": True,
+            "nightly_lease_seconds": 19800,
             "copy_precomputed_plots": True,
         },
     }

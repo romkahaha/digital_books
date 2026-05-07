@@ -44,7 +44,7 @@
     "recoverable_error_sleep_sec": 5400.0,
     "commit_runtime": false,
     "commit_every_batches": 5,
-    "max_runtime_minutes": 90.0,
+    "max_runtime_minutes": 330.0,
     "max_batches_per_run": null,
     "max_cycles_per_run": null,
     "respect_active_window": false,
@@ -102,7 +102,8 @@
     "cooldown_hours": 12.0,
     "sleep_sec": 0.6,
     "max_alerts": null,
-    "send_empty_summary": false
+    "send_empty_summary": false,
+    "force_inline_sender": true
   },
   "failover": {
     "enabled": false

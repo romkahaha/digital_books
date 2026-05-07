@@ -73,6 +73,8 @@ class FailoverConfig:
     push_on_cycle_start: bool
     request_on_rate_limit: bool
     lease_seconds: int
+    request_on_nightly_start: bool
+    nightly_lease_seconds: int
     copy_precomputed_plots: bool
 
 
@@ -83,6 +85,16 @@ def derive_failover_lease_seconds(config: dict[str, Any]) -> int:
         value = int(float(raw))
     except Exception:
         value = 5400
+    return max(60, value)
+
+
+def derive_nightly_failover_lease_seconds(config: dict[str, Any]) -> int:
+    failover_cfg = config.get("failover", {})
+    raw = failover_cfg.get("nightly_lease_seconds", 19800)
+    try:
+        value = int(float(raw))
+    except Exception:
+        value = 19800
     return max(60, value)
 
 
@@ -123,6 +135,8 @@ def load_failover_config(config: dict[str, Any], repo_root: Path) -> FailoverCon
         push_on_cycle_start=bool(cfg.get("push_on_cycle_start", True)),
         request_on_rate_limit=bool(cfg.get("request_on_rate_limit", True)),
         lease_seconds=derive_failover_lease_seconds(config),
+        request_on_nightly_start=bool(cfg.get("request_on_nightly_start", True)),
+        nightly_lease_seconds=derive_nightly_failover_lease_seconds(config),
         copy_precomputed_plots=bool(cfg.get("copy_precomputed_plots", True)),
     )
 
@@ -353,7 +367,7 @@ concurrency:
 jobs:
   run-failover:
     runs-on: ubuntu-latest
-    timeout-minutes: 120
+    timeout-minutes: 420
     steps:
       - uses: actions/checkout@v4
 
@@ -520,7 +534,11 @@ def sync_monitoring_failover(
     if "origin" not in remotes:
         print(f"failover sync ({mode}): committed locally (origin remote is not configured yet)")
         return True
-    run_git(repo, ["push", "origin", f"HEAD:{failover_cfg.branch}"])
+    push = run_git(repo, ["push", "origin", f"HEAD:{failover_cfg.branch}"], check=False)
+    if push.returncode != 0:
+        print("failover sync: push rejected; rebasing and retrying", flush=True)
+        run_git(repo, ["pull", "--rebase", "origin", failover_cfg.branch])
+        run_git(repo, ["push", "origin", f"HEAD:{failover_cfg.branch}"])
     print(f"failover sync ({mode}): committed and pushed to {failover_cfg.branch}")
     return True
 
@@ -542,6 +560,49 @@ def finalize_request_payload(request: dict[str, Any], *, exit_code: int) -> dict
     payload["last_failover_exit_code"] = int(exit_code)
     payload["last_failover_completed_at_utc"] = utc_now_iso()
     return payload
+
+
+def remote_request_payload(repo_root: Path, *, branch: str) -> dict[str, Any]:
+    remotes = {line.strip() for line in run_git(repo_root, ["remote"], capture_output=True).stdout.splitlines() if line.strip()}
+    if "origin" not in remotes:
+        return {}
+    run_git(repo_root, ["fetch", "--quiet", "origin", branch], check=False)
+    result = run_git(repo_root, ["show", f"origin/{branch}:{REQUEST_REL.as_posix()}"], check=False, capture_output=True)
+    if result.returncode != 0:
+        return {}
+    try:
+        payload = json.loads(result.stdout)
+    except Exception:
+        return {}
+    return payload if isinstance(payload, dict) else {}
+
+
+def resolve_syncback_request_payload(
+    *,
+    started_request: dict[str, Any],
+    remote_request: dict[str, Any],
+    exit_code: int,
+) -> dict[str, Any]:
+    started_id = str(started_request.get("request_id") or "").strip()
+    remote_id = str(remote_request.get("request_id") or "").strip()
+    started_at = parse_iso_datetime(started_request.get("requested_at_utc"))
+    remote_at = parse_iso_datetime(remote_request.get("requested_at_utc"))
+    newer_remote_request = bool(
+        remote_request
+        and remote_id
+        and remote_id != started_id
+        and (
+            (remote_at and started_at and remote_at > started_at)
+            or bool(remote_request.get("trigger_run"))
+        )
+    )
+    if newer_remote_request:
+        payload = copy.deepcopy(remote_request)
+        payload["previous_failover_request_id"] = started_id
+        payload["previous_failover_status"] = "success" if exit_code == 0 else "error"
+        payload["previous_failover_completed_at_utc"] = utc_now_iso()
+        return payload
+    return finalize_request_payload(started_request, exit_code=exit_code)
 
 
 def push_failover_runtime(repo_root: Path, *, branch: str) -> bool:
@@ -567,7 +628,11 @@ def push_failover_runtime(repo_root: Path, *, branch: str) -> bool:
     if "origin" not in remotes:
         print("failover runtime sync-back: committed locally (origin remote is not configured)")
         return True
-    run_git(repo_root, ["push", "origin", f"HEAD:{branch}"])
+    push = run_git(repo_root, ["push", "origin", f"HEAD:{branch}"], check=False)
+    if push.returncode != 0:
+        print("failover runtime sync-back: push rejected; rebasing and retrying", flush=True)
+        run_git(repo_root, ["pull", "--rebase", "origin", branch])
+        run_git(repo_root, ["push", "origin", f"HEAD:{branch}"])
     print(f"failover runtime sync-back: committed and pushed to {branch}")
     return True
 
@@ -595,9 +660,14 @@ def run_failover_request(*, repo_root: Path, request_json: Path, config_path: Pa
     print(" ".join(cmd), flush=True)
     completed = subprocess.run(cmd, cwd=str(repo_root))
     exit_code = int(completed.returncode)
-    finalized_request = finalize_request_payload(request, exit_code=exit_code)
-    write_json(request_json, finalized_request)
     branch = str(os.environ.get("GITHUB_REF_NAME") or "main").strip() or "main"
+    remote_request = remote_request_payload(repo_root, branch=branch)
+    finalized_request = resolve_syncback_request_payload(
+        started_request=request,
+        remote_request=remote_request,
+        exit_code=exit_code,
+    )
+    write_json(request_json, finalized_request)
     push_failover_runtime(repo_root, branch=branch)
     return exit_code
 
