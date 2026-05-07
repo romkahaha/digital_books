@@ -7,7 +7,7 @@ import os
 import subprocess
 import sys
 import time
-from datetime import datetime
+from datetime import datetime, timedelta
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
@@ -84,6 +84,24 @@ def is_active_now(schedule_cfg: dict) -> tuple[bool, datetime]:
     if start <= end:
         return start <= cur <= end, now
     return cur >= start or cur <= end, now
+
+
+def seconds_until_active_window_end(schedule_cfg: dict, *, now_local: datetime | None = None) -> float:
+    tz = ZoneInfo(str(schedule_cfg.get("timezone", "Europe/Prague")))
+    now = now_local or datetime.now(tz)
+    start_h, start_m = parse_hhmm(str(schedule_cfg.get("active_from", "00:00")))
+    end_h, end_m = parse_hhmm(str(schedule_cfg.get("active_to", "23:59")))
+    cur = minutes_since_midnight(now)
+    start = start_h * 60 + start_m
+    end = end_h * 60 + end_m
+    end_dt = now.replace(hour=end_h, minute=end_m, second=0, microsecond=0)
+    if start <= end:
+        if cur > end:
+            return 0.0
+    else:
+        if cur >= start:
+            end_dt = (now + timedelta(days=1)).replace(hour=end_h, minute=end_m, second=0, microsecond=0)
+    return max(0.0, (end_dt - now).total_seconds())
 
 
 def run_cmd(cmd: list[str], cwd: Path, *, check: bool = True) -> subprocess.CompletedProcess:
@@ -211,6 +229,22 @@ def maybe_import_failover_runtime(*, root: Path, config: dict, quiet: bool = Fal
         return False
 
 
+def rate_limit_failover_lease_seconds(
+    *,
+    schedule_cfg: dict,
+    failover_cfg,
+    recoverable_error_sleep_sec: float,
+    now_local: datetime | None = None,
+) -> int:
+    lease = max(60, int(recoverable_error_sleep_sec))
+    if not getattr(failover_cfg, "request_on_nightly_start", False):
+        return lease
+    remaining_to_nightly_sec = int(seconds_until_active_window_end(schedule_cfg, now_local=now_local))
+    if remaining_to_nightly_sec > 0:
+        lease = min(lease, max(60, remaining_to_nightly_sec))
+    return lease
+
+
 def main() -> int:
     configure_stdio()
     args = parse_args()
@@ -334,13 +368,18 @@ def main() -> int:
             if is_recoverable_batch_error(after, cycle_cfg):
                 remaining_runtime_sec = max(0.0, max_runtime_minutes * 60.0 - (time.monotonic() - started))
                 if failover_cfg.enabled and failover_cfg.request_on_rate_limit and is_rate_limit_batch_error(after, cycle_cfg):
+                    failover_lease_seconds = rate_limit_failover_lease_seconds(
+                        schedule_cfg=schedule_cfg,
+                        failover_cfg=failover_cfg,
+                        recoverable_error_sleep_sec=recoverable_error_sleep_sec,
+                    )
                     maybe_sync_failover(
                         root=root,
                         config_path=config_path,
                         config=config,
                         mode="request",
                         reason=str(after.get("last_error") or ""),
-                        lease_seconds=int(recoverable_error_sleep_sec),
+                        lease_seconds=failover_lease_seconds,
                         state_path=state_path,
                         monitor_items_py=monitor_items_py,
                         batch_pointer=start_pointer,

@@ -43,6 +43,12 @@ SYNC_FILES = (
     ALERT_STATE_REL,
     Path("steam_listings/data/float_fit_rel_curves.json"),
 )
+HEAD_PREFERRED_SYNC_FILES = {
+    Path("automation_runtime/monitor_list_latest.py"),
+    Path("automation_runtime/monitor_list_latest.csv"),
+    Path("automation_runtime/base_snapshot_latest.csv"),
+    Path("automation_runtime/risk_metrics_latest.csv"),
+}
 SYNC_DIRS = (
     Path("automation"),
     Path("steam_listings"),
@@ -163,12 +169,41 @@ def ensure_failover_repo(cfg: FailoverConfig) -> Path:
     return repo
 
 
-def copy_file(src_root: Path, dst_root: Path, rel: Path) -> bool:
+def git_head_file_bytes(repo: Path, rel: Path) -> bytes | None:
+    result = subprocess.run(
+        ["git", "-C", str(repo), "show", f"HEAD:{rel.as_posix()}"],
+        check=False,
+        capture_output=True,
+    )
+    if result.returncode != 0:
+        return None
+    return result.stdout
+
+
+def git_path_is_dirty(repo: Path, rel: Path) -> bool:
+    result = subprocess.run(
+        ["git", "-C", str(repo), "diff", "--quiet", "HEAD", "--", rel.as_posix()],
+        check=False,
+    )
+    return result.returncode == 1
+
+
+def copy_file(src_root: Path, dst_root: Path, rel: Path, *, prefer_head_if_dirty: bool = False) -> bool:
     src = src_root / rel
     if not src.exists():
         return False
     dst = dst_root / rel
     dst.parent.mkdir(parents=True, exist_ok=True)
+    if prefer_head_if_dirty and git_path_is_dirty(src_root, rel):
+        blob = git_head_file_bytes(src_root, rel)
+        if blob is not None:
+            dst.write_bytes(blob)
+            print(
+                f"failover sync: using stable HEAD snapshot for {rel} "
+                "(working tree copy is dirty)",
+                flush=True,
+            )
+            return True
     shutil.copy2(src, dst)
     return True
 
@@ -496,7 +531,12 @@ def sync_monitoring_failover(
     for rel in SYNC_DIRS:
         copied_any = copy_tree(repo_root, repo, rel) or copied_any
     for rel in SYNC_FILES:
-        copied_any = copy_file(repo_root, repo, rel) or copied_any
+        copied_any = copy_file(
+            repo_root,
+            repo,
+            rel,
+            prefer_head_if_dirty=rel in HEAD_PREFERRED_SYNC_FILES,
+        ) or copied_any
     if failover_cfg.copy_precomputed_plots:
         for rel in SYNC_OPTIONAL_DIRS:
             copied_any = copy_tree(repo_root, repo, rel) or copied_any
