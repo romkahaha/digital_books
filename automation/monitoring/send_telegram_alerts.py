@@ -50,6 +50,12 @@ def parse_args() -> argparse.Namespace:
         help="State JSON used for alert dedupe/cooldown.",
     )
     parser.add_argument(
+        "--alert-state-json",
+        type=Path,
+        default=None,
+        help="Explicit Telegram dedupe state JSON; defaults to <state-json stem>_telegram_alerts.json.",
+    )
+    parser.add_argument(
         "--monitor-items-py",
         type=Path,
         default=None,
@@ -106,7 +112,7 @@ def main() -> int:
     plot_cfg = config.get("model_plot", {})
     opportunities_csv = args.opportunities_csv.resolve() if args.opportunities_csv else path_from_config(config, "opportunities_csv")
     batch_state_json = args.state_json.resolve() if args.state_json else path_from_config(config, "state_json")
-    state_json = alert_state_path_from(batch_state_json)
+    state_json = args.alert_state_json.resolve() if args.alert_state_json else alert_state_path_from(batch_state_json)
     monitor_items_py = args.monitor_items_py.resolve() if args.monitor_items_py else path_from_config(config, "monitor_items_py")
     max_alerts = args.max_alerts if args.max_alerts is not None else telegram_cfg.get("max_alerts")
     bootstrap_alert_state(state_json, batch_state_json)

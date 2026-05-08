@@ -22,8 +22,23 @@ from automation.failover_monitoring import (
     sync_monitoring_failover,
 )
 from automation.listing_enrichment import load_items_py
+from automation.monitoring.tier_scheduler import (
+    alert_state_json_from_config,
+    batch_sizes_from_config,
+    load_scheduler_state,
+    load_tier_items,
+    mark_scheduler_run_finished,
+    mark_scheduler_run_started,
+    queue_pattern_from_config,
+    save_scheduler_state,
+    select_next_tier,
+    tier_item_paths_from_config,
+    tier_items_match_full_list,
+    tier_mode_enabled,
+    tier_state_paths_from_config,
+)
 from automation.risk_filters import repo_root_from
-from automation.state import load_state
+from automation.state import load_state, select_batch
 
 RECOVERABLE_BATCH_ERROR_PATTERNS = (
     "all Steam listing fetches failed for this batch",
@@ -147,7 +162,16 @@ def commit_runtime(repo_root: Path, message: str) -> bool:
     return True
 
 
-def batch_command(root: Path, config_path: Path, batch_size: int, telegram_mode: str) -> list[str]:
+def batch_command(
+    root: Path,
+    config_path: Path,
+    batch_size: int,
+    telegram_mode: str,
+    *,
+    monitor_items_py: Path | None = None,
+    state_json: Path | None = None,
+    alert_state_json: Path | None = None,
+) -> list[str]:
     cmd = [
         sys.executable,
         "-B",
@@ -158,6 +182,12 @@ def batch_command(root: Path, config_path: Path, batch_size: int, telegram_mode:
         str(batch_size),
         "--ignore-schedule",
     ]
+    if monitor_items_py is not None:
+        cmd.extend(["--monitor-items-py", str(monitor_items_py)])
+    if state_json is not None:
+        cmd.extend(["--state-json", str(state_json)])
+    if alert_state_json is not None:
+        cmd.extend(["--alert-state-json", str(alert_state_json)])
     if telegram_mode == "real":
         cmd.append("--send-telegram")
     elif telegram_mode == "dry-run":
@@ -303,12 +333,31 @@ def main() -> int:
 
     monitor_items_py = path_from_config(config, "monitor_items_py")
     state_path = path_from_config(config, "state_json")
+    alert_state_path = alert_state_json_from_config(config, fallback_state_json=state_path)
     items = load_items_py(monitor_items_py)
     if not items:
         raise RuntimeError(f"no monitor items in {monitor_items_py}")
     failover_cfg = load_failover_config(config, root)
     if failover_cfg.enabled:
         maybe_import_failover_runtime(root=root, config=config, quiet=True)
+
+    use_tiers = False
+    queue_pattern: list[str] = []
+    tier_item_paths = tier_item_paths_from_config(config)
+    tier_state_paths = tier_state_paths_from_config(config)
+    tier_items: dict[str, list[str]] = {}
+    tier_batch_sizes: dict[str, int] = {}
+    if tier_mode_enabled(config):
+        tier_items = load_tier_items(tier_item_paths)
+        if any(tier_items.values()):
+            if tier_items_match_full_list(items, tier_items):
+                use_tiers = True
+                queue_pattern = queue_pattern_from_config(config)
+                tier_batch_sizes = batch_sizes_from_config(config, default_batch_size=batch_size)
+            else:
+                print("warning: tier files do not match monitor_list_latest.py; falling back to single-list mode")
+        else:
+            print("warning: tiered monitoring enabled but tier item files are missing/empty; falling back to single-list mode")
 
     active, now_local = is_active_now(schedule_cfg)
     print(f"config: {config_path}")
@@ -320,9 +369,19 @@ def main() -> int:
     )
     print(f"local schedule time: {now_local.isoformat(timespec='seconds')} active={active}")
     print(f"monitor items: {len(items)} from {monitor_items_py}")
-    print(f"batch size: {batch_size}")
+    if use_tiers:
+        print(
+            "tiered monitoring: on "
+            f"queue={queue_pattern} "
+            f"A={len(tier_items.get('A', []))}/b{tier_batch_sizes['A']} "
+            f"B={len(tier_items.get('B', []))}/b{tier_batch_sizes['B']} "
+            f"C={len(tier_items.get('C', []))}/b{tier_batch_sizes['C']}"
+        )
+        print("cycle sleep after queue rounds: skipped in tiered mode")
+    else:
+        print(f"batch size: {batch_size}")
+        print(f"cycle sleep after full list: {cycle_sleep_sec:.1f}s")
     print(f"telegram mode: {telegram_mode}")
-    print(f"cycle sleep after full list: {cycle_sleep_sec:.1f}s")
     print(f"runtime checkpoint: {'on' if commit_enabled else 'off'} every {commit_every_batches} batches")
     print(f"max runtime: {max_runtime_minutes:.1f} minutes")
     print(f"dry run: {'on' if args.dry_run else 'off'}")
@@ -349,7 +408,11 @@ def main() -> int:
             lease_seconds=failover_cfg.lease_seconds,
             state_path=state_path,
             monitor_items_py=monitor_items_py,
-            batch_pointer=int(load_state(state_path, items).get("batch_pointer") or 0),
+            batch_pointer=(
+                int(load_scheduler_state(state_path, items, tier_items, queue_pattern).get("queue_pointer") or 0)
+                if use_tiers
+                else int(load_state(state_path, items).get("batch_pointer") or 0)
+            ),
         )
 
     partial_rate_limit_min_item_errors = max(
@@ -374,12 +437,76 @@ def main() -> int:
                 print(f"outside active window before next batch: {now_local.isoformat(timespec='seconds')}")
                 break
 
-        before = load_state(state_path, items)
-        start_pointer = int(before.get("batch_pointer") or 0) % len(items)
-        print(f"\n=== monitoring cycle batch {batches_run + 1} start_pointer={start_pointer} ===", flush=True)
-        result = run_cmd(batch_command(root, config_path, batch_size, telegram_mode), root, check=False)
-        after = load_state(state_path, items)
-        next_pointer = int(after.get("batch_pointer") or 0) % len(items)
+        selected_tier = None
+        queue_index = None
+        next_queue_pointer = None
+        run_items = items
+        run_items_path = monitor_items_py
+        run_state_path = state_path
+        effective_batch_size = batch_size
+        cycle_boundary_done = False
+
+        if use_tiers:
+            scheduler_before = load_scheduler_state(state_path, items, tier_items, queue_pattern)
+            selected_tier, queue_index, next_queue_pointer = select_next_tier(
+                scheduler_before,
+                queue_pattern,
+                tier_items,
+            )
+            run_items = tier_items[selected_tier]
+            run_items_path = tier_item_paths[selected_tier]
+            run_state_path = tier_state_paths[selected_tier]
+            effective_batch_size = tier_batch_sizes[selected_tier]
+            tier_before = load_state(run_state_path, run_items)
+            batch_preview, start_pointer, _ = select_batch(run_items, tier_before, effective_batch_size)
+            scheduler_before = mark_scheduler_run_started(
+                scheduler_before,
+                tier=selected_tier,
+                queue_index=queue_index,
+                batch_items=batch_preview,
+                tier_start_pointer=start_pointer,
+            )
+            save_scheduler_state(state_path, scheduler_before)
+            print(
+                f"\n=== monitoring cycle batch {batches_run + 1} "
+                f"tier={selected_tier} queue_index={queue_index} "
+                f"start_pointer={start_pointer} batch_size={effective_batch_size} ===",
+                flush=True,
+            )
+        else:
+            before = load_state(run_state_path, run_items)
+            start_pointer = int(before.get("batch_pointer") or 0) % len(run_items)
+            print(f"\n=== monitoring cycle batch {batches_run + 1} start_pointer={start_pointer} ===", flush=True)
+
+        result = run_cmd(
+            batch_command(
+                root,
+                config_path,
+                effective_batch_size,
+                telegram_mode,
+                monitor_items_py=run_items_path,
+                state_json=run_state_path,
+                alert_state_json=alert_state_path,
+            ),
+            root,
+            check=False,
+        )
+        after = load_state(run_state_path, run_items)
+        next_pointer = int(after.get("batch_pointer") or 0) % len(run_items)
+        if use_tiers:
+            scheduler_after = mark_scheduler_run_finished(
+                load_scheduler_state(state_path, items, tier_items, queue_pattern),
+                tier=str(selected_tier),
+                queue_index=int(queue_index),
+                next_queue_pointer=int(next_queue_pointer),
+                status="ok" if result.returncode == 0 else "error",
+                tier_state=after,
+                error=str(after.get("last_error") or "") or None,
+            )
+            save_scheduler_state(state_path, scheduler_after)
+            cycle_boundary_done = bool(next_queue_pointer is not None and queue_index is not None and next_queue_pointer <= queue_index)
+        else:
+            cycle_boundary_done = effective_batch_size >= len(run_items) or next_pointer <= start_pointer
         batches_run += 1
         batches_since_commit += 1
 
@@ -397,11 +524,15 @@ def main() -> int:
                         config_path=config_path,
                         config=config,
                         mode="request",
-                        reason=str(after.get("last_error") or ""),
+                        reason=(
+                            f"[tier {selected_tier}] {after.get('last_error')}"
+                            if use_tiers and selected_tier
+                            else str(after.get("last_error") or "")
+                        ),
                         lease_seconds=failover_lease_seconds,
                         state_path=state_path,
                         monitor_items_py=monitor_items_py,
-                        batch_pointer=start_pointer,
+                        batch_pointer=int(queue_index if use_tiers and queue_index is not None else start_pointer),
                     )
                     failover_request_active = True
                 if remaining_runtime_sec <= recoverable_error_sleep_sec:
@@ -447,7 +578,9 @@ def main() -> int:
             sample = ", ".join(partial_rate_limited_items[:3])
             reason = (
                 f"partial Steam rate limit (429): {len(partial_rate_limited_items)} item errors "
-                f"in successful batch starting at pointer {start_pointer} ({sample})"
+                f"in successful batch "
+                f"{'(tier ' + str(selected_tier) + ') ' if use_tiers and selected_tier else ''}"
+                f"starting at pointer {start_pointer} ({sample})"
             )
             maybe_sync_failover(
                 root=root,
@@ -458,7 +591,7 @@ def main() -> int:
                 lease_seconds=failover_lease_seconds,
                 state_path=state_path,
                 monitor_items_py=monitor_items_py,
-                batch_pointer=start_pointer,
+                batch_pointer=int(queue_index if use_tiers and queue_index is not None else start_pointer),
             )
             failover_request_active = True
             if remaining_runtime_sec <= recoverable_error_sleep_sec:
@@ -484,10 +617,12 @@ def main() -> int:
             maybe_import_failover_runtime(root=root, config=config, quiet=False)
             continue
 
-        full_cycle_done = batch_size >= len(items) or next_pointer <= start_pointer
-        if full_cycle_done:
+        if cycle_boundary_done:
             cycles_done += 1
-            print(f"full monitor-list cycle completed: cycles_done={cycles_done}")
+            if use_tiers:
+                print(f"tier queue round completed: cycles_done={cycles_done}")
+            else:
+                print(f"full monitor-list cycle completed: cycles_done={cycles_done}")
 
         if failover_request_active:
             maybe_sync_failover(
@@ -499,21 +634,23 @@ def main() -> int:
                 lease_seconds=failover_cfg.lease_seconds,
                 state_path=state_path,
                 monitor_items_py=monitor_items_py,
-                batch_pointer=next_pointer,
+                batch_pointer=int(next_queue_pointer if use_tiers and next_queue_pointer is not None else next_pointer),
             )
             failover_request_active = False
 
         checkpoint_due = commit_enabled and (
-            batches_since_commit >= max(1, commit_every_batches) or full_cycle_done
+            batches_since_commit >= max(1, commit_every_batches) or cycle_boundary_done
         )
         if checkpoint_due:
             commit_runtime(root, checkpoint_message)
             batches_since_commit = 0
 
-        if full_cycle_done:
+        if cycle_boundary_done:
             if max_cycles is not None and cycles_done >= max_cycles:
                 print(f"max cycles reached after completed cycle: {cycles_done}")
                 break
+            if use_tiers:
+                continue
             elapsed_minutes = (time.monotonic() - started) / 60.0
             if elapsed_minutes + (cycle_sleep_sec / 60.0) >= max_runtime_minutes:
                 print("not sleeping after full cycle because max runtime is near")

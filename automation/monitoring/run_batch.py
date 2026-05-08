@@ -18,7 +18,12 @@ if str(_REPO_ROOT) not in sys.path:
 
 from automation.config import load_json_config, monitoring_defaults, path_from_config
 from automation.listing_enrichment import OpportunityConfig, build_enriched_listings, load_items_py, write_opportunity_outputs
-from automation.monitoring.send_telegram_alerts import alert_state_path_from, bootstrap_alert_state
+from automation.monitoring.send_telegram_alerts import bootstrap_alert_state
+from automation.monitoring.tier_scheduler import (
+    alert_monitor_items_py_from_config,
+    alert_state_json_from_config,
+    resolve_batch_state_path,
+)
 from automation.risk_filters import repo_root_from
 from automation.state import load_state, mark_run_finished, mark_run_started, save_state, select_batch
 from automation.telegram_alerts import send_opportunity_alerts
@@ -94,6 +99,12 @@ def parse_args() -> argparse.Namespace:
         type=Path,
         default=None,
         help="Batch pointer state file.",
+    )
+    parser.add_argument(
+        "--alert-state-json",
+        type=Path,
+        default=None,
+        help="Shared Telegram alert dedupe state JSON.",
     )
     parser.add_argument("--batch-size", type=int, default=None, help="Number of items to scan in this run.")
     parser.add_argument(
@@ -184,6 +195,7 @@ def spawn_telegram_sender(
     opportunities_csv: Path,
     state_json: Path,
     monitor_items_py: Path,
+    alert_state_json: Path,
     dry_run: bool,
     log_path: Path,
 ) -> int:
@@ -196,6 +208,8 @@ def spawn_telegram_sender(
         str(opportunities_csv),
         "--state-json",
         str(state_json),
+        "--alert-state-json",
+        str(alert_state_json),
         "--monitor-items-py",
         str(monitor_items_py),
         "--delete-input-after",
@@ -295,7 +309,13 @@ def main() -> int:
     plot_cfg = config.get("model_plot", {})
 
     monitor_items_py = args.monitor_items_py.resolve() if args.monitor_items_py else path_from_config(config, "monitor_items_py")
-    state_path = args.state_json.resolve() if args.state_json else path_from_config(config, "state_json")
+    state_path = args.state_json.resolve() if args.state_json else resolve_batch_state_path(config, monitor_items_py)
+    alert_state_path = (
+        args.alert_state_json.resolve()
+        if args.alert_state_json
+        else alert_state_json_from_config(config, fallback_state_json=state_path)
+    )
+    alert_monitor_items_py = alert_monitor_items_py_from_config(config)
     listings_out_csv = args.listings_out_csv.resolve() if args.listings_out_csv else path_from_config(config, "steam_listings_csv")
     base_snapshot_csv = args.base_out_csv.resolve() if args.base_out_csv else path_from_config(config, "base_snapshot_csv")
     fit_json = args.fit_json.resolve() if args.fit_json else path_from_config(config, "fit_json")
@@ -419,8 +439,8 @@ def main() -> int:
             if args.telegram_dry_run:
                 stats = send_opportunity_alerts(
                     opportunities_csv,
-                    state_path,
-                    monitor_items_py,
+                    alert_state_path,
+                    alert_monitor_items_py,
                     cooldown_hours=float(telegram_cfg.get("cooldown_hours", 12.0)),
                     dry_run=True,
                     sleep_sec=float(telegram_cfg.get("sleep_sec", 0.6)),
@@ -435,12 +455,11 @@ def main() -> int:
                     f"considered={stats['considered']} sent={stats['sent']} skipped={stats['skipped']}"
                 )
             elif force_inline_sender:
-                alert_state_path = alert_state_path_from(state_path)
                 bootstrap_alert_state(alert_state_path, state_path)
                 stats = send_opportunity_alerts(
                     opportunities_csv,
                     alert_state_path,
-                    monitor_items_py,
+                    alert_monitor_items_py,
                     cooldown_hours=float(telegram_cfg.get("cooldown_hours", 12.0)),
                     dry_run=False,
                     sleep_sec=float(telegram_cfg.get("sleep_sec", 0.6)),
@@ -456,24 +475,24 @@ def main() -> int:
                 )
             else:
                 snapshot_csv, alert_log = queue_alert_snapshot(opportunities_csv, start_pointer=start_pointer)
-                bootstrap_alert_state(alert_state_path_from(state_path), state_path)
+                bootstrap_alert_state(alert_state_path, state_path)
                 try:
                     sender_pid = spawn_telegram_sender(
                         repo_root=repo_root,
                         config_path=config_path,
                         opportunities_csv=snapshot_csv,
                         state_json=state_path,
-                        monitor_items_py=monitor_items_py,
+                        monitor_items_py=alert_monitor_items_py,
+                        alert_state_json=alert_state_path,
                         dry_run=False,
                         log_path=alert_log,
                     )
                 except Exception as exc:
                     print(f"telegram background sender failed to start, falling back to inline send: {exc}")
-                    alert_state_path = alert_state_path_from(state_path)
                     stats = send_opportunity_alerts(
                         snapshot_csv,
                         alert_state_path,
-                        monitor_items_py,
+                        alert_monitor_items_py,
                         cooldown_hours=float(telegram_cfg.get("cooldown_hours", 12.0)),
                         dry_run=False,
                         sleep_sec=float(telegram_cfg.get("sleep_sec", 0.6)),

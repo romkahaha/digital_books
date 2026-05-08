@@ -22,6 +22,7 @@ if str(_REPO_ROOT) not in sys.path:
 
 from automation.config import load_json_config, monitoring_defaults, path_from_config
 from automation.listing_enrichment import load_items_py
+from automation.monitoring.tier_scheduler import alert_state_json_from_config
 from automation.monitoring.send_telegram_alerts import alert_state_path_from
 from automation.risk_filters import repo_root_from
 from automation.state import items_signature
@@ -32,20 +33,38 @@ FAILOVER_CONFIG_REL = Path("automation/configs/monitoring_failover.json")
 WORKFLOW_REL = Path(".github/workflows/monitoring_failover.yml")
 STATE_REL = Path("automation_runtime/state.json")
 ALERT_STATE_REL = Path("automation_runtime/state_telegram_alerts.json")
+MONITOR_TIER_A_REL = Path("automation_runtime/monitor_list_tier_a.py")
+MONITOR_TIER_B_REL = Path("automation_runtime/monitor_list_tier_b.py")
+MONITOR_TIER_C_REL = Path("automation_runtime/monitor_list_tier_c.py")
+MONITOR_TIERS_META_REL = Path("automation_runtime/monitor_tiers_latest.json")
+TIER_STATE_A_REL = Path("automation_runtime/state_tier_a.json")
+TIER_STATE_B_REL = Path("automation_runtime/state_tier_b.json")
+TIER_STATE_C_REL = Path("automation_runtime/state_tier_c.json")
 
 SYNC_FILES = (
     Path("requirements.txt"),
     Path("automation_runtime/monitor_list_latest.py"),
     Path("automation_runtime/monitor_list_latest.csv"),
+    MONITOR_TIER_A_REL,
+    MONITOR_TIER_B_REL,
+    MONITOR_TIER_C_REL,
+    MONITOR_TIERS_META_REL,
     Path("automation_runtime/base_snapshot_latest.csv"),
     Path("automation_runtime/risk_metrics_latest.csv"),
     STATE_REL,
+    TIER_STATE_A_REL,
+    TIER_STATE_B_REL,
+    TIER_STATE_C_REL,
     ALERT_STATE_REL,
     Path("steam_listings/data/float_fit_rel_curves.json"),
 )
 HEAD_PREFERRED_SYNC_FILES = {
     Path("automation_runtime/monitor_list_latest.py"),
     Path("automation_runtime/monitor_list_latest.csv"),
+    MONITOR_TIER_A_REL,
+    MONITOR_TIER_B_REL,
+    MONITOR_TIER_C_REL,
+    MONITOR_TIERS_META_REL,
     Path("automation_runtime/base_snapshot_latest.csv"),
     Path("automation_runtime/risk_metrics_latest.csv"),
 }
@@ -319,9 +338,14 @@ def import_runtime_state_from_failover(
             print(f"warning: failover repo pull failed before runtime import: {exc}", file=sys.stderr, flush=True)
 
     main_state_path = path_from_config(config, "state_json")
-    main_alert_state_path = alert_state_path_from(main_state_path)
+    main_alert_state_path = alert_state_json_from_config(config, fallback_state_json=main_state_path)
     failover_state_path = repo / STATE_REL
     failover_alert_state_path = repo / ALERT_STATE_REL
+    tier_state_pairs = (
+        (path_from_config(config, "state_tier_a_json"), repo / TIER_STATE_A_REL),
+        (path_from_config(config, "state_tier_b_json"), repo / TIER_STATE_B_REL),
+        (path_from_config(config, "state_tier_c_json"), repo / TIER_STATE_C_REL),
+    )
 
     main_state = load_json_object(main_state_path)
     failover_state = load_json_object(failover_state_path)
@@ -374,6 +398,28 @@ def import_runtime_state_from_failover(
                     f"(sent_alerts={len(merged_sent)})",
                     flush=True,
                 )
+
+    for main_tier_state_path, failover_tier_state_path in tier_state_pairs:
+        main_tier_state = load_json_object(main_tier_state_path)
+        failover_tier_state = load_json_object(failover_tier_state_path)
+        if not failover_tier_state:
+            continue
+        if (
+            not main_tier_state
+            or same_items_signature(main_tier_state, failover_tier_state)
+            or not str(main_tier_state.get("items_signature") or "").strip()
+        ):
+            main_ts = payload_timestamp(main_tier_state) if main_tier_state else None
+            failover_ts = payload_timestamp(failover_tier_state)
+            if failover_ts and (main_ts is None or failover_ts > main_ts):
+                write_json(main_tier_state_path, failover_tier_state)
+                changed = True
+                if not quiet:
+                    print(
+                        "imported newer failover tier state "
+                        f"({main_tier_state_path.name} batch_pointer={failover_tier_state.get('batch_pointer')})",
+                        flush=True,
+                    )
 
     return changed
 
@@ -653,6 +699,9 @@ def push_failover_runtime(repo_root: Path, *, branch: str) -> bool:
         [
             "add",
             str(STATE_REL),
+            str(TIER_STATE_A_REL),
+            str(TIER_STATE_B_REL),
+            str(TIER_STATE_C_REL),
             str(ALERT_STATE_REL),
             str(REQUEST_REL),
         ],

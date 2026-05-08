@@ -68,6 +68,15 @@ def monitoring_defaults() -> dict[str, Any]:
         "paths": {
             "monitor_items_py": str(root / "automation_runtime" / "monitor_list_latest.py"),
             "state_json": str(root / "automation_runtime" / "state.json"),
+            "default_batch_state_json": str(root / "automation_runtime" / "state_full_list.json"),
+            "alert_state_json": str(root / "automation_runtime" / "state_telegram_alerts.json"),
+            "monitor_tier_a_items_py": str(root / "automation_runtime" / "monitor_list_tier_a.py"),
+            "monitor_tier_b_items_py": str(root / "automation_runtime" / "monitor_list_tier_b.py"),
+            "monitor_tier_c_items_py": str(root / "automation_runtime" / "monitor_list_tier_c.py"),
+            "state_tier_a_json": str(root / "automation_runtime" / "state_tier_a.json"),
+            "state_tier_b_json": str(root / "automation_runtime" / "state_tier_b.json"),
+            "state_tier_c_json": str(root / "automation_runtime" / "state_tier_c.json"),
+            "monitor_tiers_json": str(root / "automation_runtime" / "monitor_tiers_latest.json"),
             "base_snapshot_csv": str(root / "automation_runtime" / "base_snapshot_latest.csv"),
             "steam_listings_csv": str(root / "automation_runtime" / "steam_listings_latest.csv"),
             "fit_json": str(root / "steam_listings" / "data" / "float_fit_rel_curves.json"),
@@ -94,6 +103,15 @@ def monitoring_defaults() -> dict[str, Any]:
             "max_cycles_per_run": None,
             "respect_active_window": True,
             "checkpoint_message": "Update monitoring runtime [skip ci]",
+            "tiers": {
+                "enabled": True,
+                "queue_pattern": ["A", "A", "B", "A", "A", "B", "C"],
+                "batch_sizes": {
+                    "A": 5,
+                    "B": 5,
+                    "C": 5,
+                },
+            },
         },
         "steam_scm": {
             "listings_per_request": 100,
@@ -220,6 +238,10 @@ def nightly_defaults() -> dict[str, Any]:
             "fit_json": str(root / "steam_listings" / "data" / "float_fit_rel_curves.json"),
             "monitor_csv": str(root / "automation_runtime" / "monitor_list_latest.csv"),
             "monitor_items_py": str(root / "automation_runtime" / "monitor_list_latest.py"),
+            "monitor_tier_a_items_py": str(root / "automation_runtime" / "monitor_list_tier_a.py"),
+            "monitor_tier_b_items_py": str(root / "automation_runtime" / "monitor_list_tier_b.py"),
+            "monitor_tier_c_items_py": str(root / "automation_runtime" / "monitor_list_tier_c.py"),
+            "monitor_tiers_json": str(root / "automation_runtime" / "monitor_tiers_latest.json"),
             "base_snapshot_csv": str(root / "automation_runtime" / "base_snapshot_latest.csv"),
         },
         "schedule": {
@@ -251,6 +273,18 @@ def nightly_defaults() -> dict[str, Any]:
             "expected_min_items": 100,
             "expected_max_items": 300,
             "fail_if_outside_expected_range": False,
+        },
+        "monitor_tiers": {
+            "enabled": True,
+            "shares": {
+                "A": 0.2,
+                "B": 0.3,
+                "C": 0.5,
+            },
+            "score_weights": {
+                "steam_sales_7d_n": 0.75,
+                "steam_turnover_proxy": 0.25,
+            },
         },
         "risk_filter": {
             "ret_7d_min": -0.03,
