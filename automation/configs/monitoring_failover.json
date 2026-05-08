@@ -53,7 +53,7 @@
     "recoverable_error_sleep_sec": 5400.0,
     "commit_runtime": false,
     "commit_every_batches": 5,
-    "max_runtime_minutes": 63.46666666666667,
+    "max_runtime_minutes": 90.0,
     "max_batches_per_run": null,
     "max_cycles_per_run": null,
     "respect_active_window": false,
@@ -130,6 +130,21 @@
     "max_alerts": null,
     "send_empty_summary": false,
     "force_inline_sender": true
+  },
+  "alert_enrichment": {
+    "enabled": true,
+    "background": true,
+    "provider": "gemini",
+    "gemini_model": "gemini-2.5-flash",
+    "fee_pct": 0.02,
+    "max_sales_rows": 30,
+    "cache_ttl_minutes": 15.0,
+    "use_stale_cache_on_error": true,
+    "log_dir": "automation_runtime/alert_enrichment",
+    "csfloat_base_url": "https://csfloat.com",
+    "csfloat_timeout_sec": 30.0,
+    "gemini_timeout_sec": 45.0,
+    "telegram_timeout_sec": 20
   },
   "failover": {
     "enabled": false

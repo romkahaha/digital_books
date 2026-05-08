@@ -462,16 +462,27 @@ def telegram_credentials(bot_token: str | None = None, chat_id: str | None = Non
     return token, chat
 
 
-def send_message(text: str, *, bot_token: str, chat_id: str, timeout: int = 20) -> dict[str, Any]:
+def send_message(
+    text: str,
+    *,
+    bot_token: str,
+    chat_id: str,
+    timeout: int = 20,
+    reply_to_message_id: int | None = None,
+) -> dict[str, Any]:
     url = f"https://api.telegram.org/bot{bot_token}/sendMessage"
+    data = {
+        "chat_id": chat_id,
+        "text": text,
+        "parse_mode": "HTML",
+        "disable_web_page_preview": "true",
+    }
+    if reply_to_message_id is not None:
+        data["reply_to_message_id"] = str(int(reply_to_message_id))
+        data["allow_sending_without_reply"] = "true"
     response = requests.post(
         url,
-        data={
-            "chat_id": chat_id,
-            "text": text,
-            "parse_mode": "HTML",
-            "disable_web_page_preview": "true",
-        },
+        data=data,
         timeout=timeout,
     )
     if not response.ok:
@@ -547,6 +558,7 @@ def send_opportunity_alerts(
     state_json: Path,
     monitor_items_py: Path,
     *,
+    config_path: Path | None = None,
     bot_token: str | None = None,
     chat_id: str | None = None,
     cooldown_hours: float = 12.0,
@@ -555,12 +567,16 @@ def send_opportunity_alerts(
     max_alerts: int | None = None,
     alerts_cfg: dict[str, Any] | None = None,
     plot_cfg: dict[str, Any] | None = None,
+    alert_enrichment_cfg: dict[str, Any] | None = None,
 ) -> dict[str, int]:
     raw_df = load_opportunities(opportunities_csv)
     df, filter_stats = apply_alert_filters(raw_df, alerts_cfg)
     items = load_items_py(monitor_items_py) if monitor_items_py.is_file() else []
     state = load_state(state_json, items)
     plot_cache: dict[str, bytes | None] = {}
+    enrichment_cfg = dict(alert_enrichment_cfg or {})
+    if config_path is None:
+        config_path = repo_root_from(Path(__file__)) / "automation" / "configs" / "monitoring.json"
     token = chat = None
     if not dry_run:
         token, chat = telegram_credentials(bot_token=bot_token, chat_id=chat_id)
@@ -583,12 +599,19 @@ def send_opportunity_alerts(
             item = str(row.get("item", "") or "").strip()
             image_bytes = plot_cache.get(item) if item else None
             try:
-                send_message(message, bot_token=token, chat_id=chat)
+                primary_payload = send_message(message, bot_token=token, chat_id=chat)
             except Exception as exc:
                 if bool((plot_cfg or {}).get("fail_on_error", False)):
                     raise
                 print(f"telegram text send failed: {exc}")
                 continue
+            primary_message_id = None
+            result_payload = primary_payload.get("result") if isinstance(primary_payload, dict) else None
+            if isinstance(result_payload, dict):
+                try:
+                    primary_message_id = int(result_payload.get("message_id"))
+                except Exception:
+                    primary_message_id = None
             try:
                 if item and item not in plot_cache:
                     image_bytes = maybe_render_fit_plot(row, plot_cfg)
@@ -604,6 +627,24 @@ def send_opportunity_alerts(
                 if bool((plot_cfg or {}).get("fail_on_error", False)):
                     raise
                 print(f"fit plot skipped: {exc}")
+            if bool(enrichment_cfg.get("enabled", False)):
+                try:
+                    from automation.alert_enrichment import queue_enrichment_job, run_enrichment_job, spawn_enrichment_worker
+
+                    job_json = queue_enrichment_job(
+                        row=row.to_dict(),
+                        primary_message_id=primary_message_id,
+                        config={"alert_enrichment": enrichment_cfg},
+                        config_path=config_path,
+                        chat_id=chat,
+                    )
+                    if job_json is not None:
+                        if bool(enrichment_cfg.get("background", True)):
+                            spawn_enrichment_worker(config_path=config_path, job_json=job_json)
+                        else:
+                            run_enrichment_job(job_json, {"alert_enrichment": enrichment_cfg}, dry_run=False)
+                except Exception as exc:
+                    print(f"alert enrichment failed to start: {exc}")
             state = mark_sent(state, key, row)
             save_state(state_json, state)
             time.sleep(max(0.0, float(sleep_sec)))

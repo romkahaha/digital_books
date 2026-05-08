@@ -104,6 +104,20 @@
     "max_alerts": null,
     "send_empty_summary": false
   },
+  "alert_enrichment": {
+    "enabled": true,
+    "background": true,
+    "provider": "gemini",
+    "gemini_model": "gemini-2.5-flash",
+    "fee_pct": 0.02,
+    "max_sales_rows": 30,
+    "cache_ttl_minutes": 15.0,
+    "use_stale_cache_on_error": true,
+    "log_dir": "automation_runtime/alert_enrichment",
+    "csfloat_timeout_sec": 30.0,
+    "gemini_timeout_sec": 45.0,
+    "telegram_timeout_sec": 20
+  },
   "failover": {
     "enabled": true,
     "repo_path": "/home/roma/cs-arbitrage/digital_books",
