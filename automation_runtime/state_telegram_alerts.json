@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "items_signature": "0a680a730a5e0b30a7ceca2ba17fe88325f0273c48ce102e4e462e7b52367097",
+  "items_signature": "b50b3c3f1c3b6696b22929ba57ba61769af338ced2241dfae2fc8e02ee1d4350",
   "items_count": 291,
   "batch_pointer": 0,
   "last_run_at_utc": null,
@@ -18,66 +18,48 @@
   "last_opportunities_rows": 0,
   "last_alert_stats": {},
   "sent_alerts": {
-    "listing:508487023592161166": {
-      "sent_at_utc": "2026-05-07T20:44:52.528508+00:00",
-      "item": "P250 | Boreal Forest (Factory New)",
-      "listing_id": "508487023592161166",
-      "spread_hybrid_disc": 0.1122306247463621
-    },
-    "listing:509613036859249599": {
-      "sent_at_utc": "2026-05-07T08:23:35.518172+00:00",
-      "item": "P250 | Visions (Field-Tested)",
-      "listing_id": "509613036859249599",
-      "spread_hybrid_disc": 0.119377269885873
-    },
-    "listing:794463791549667275": {
-      "sent_at_utc": "2026-05-07T08:28:54.180349+00:00",
-      "item": "P90 | Sand Spray (Factory New)",
-      "listing_id": "794463791549667275",
-      "spread_hybrid_disc": 0.1153164028690609
-    },
-    "listing:498354037508562811": {
-      "sent_at_utc": "2026-05-07T08:59:07.051760+00:00",
-      "item": "Dual Berettas | Melondrama (Battle-Scarred)",
-      "listing_id": "498354037508562811",
-      "spread_hybrid_disc": -0.0021027583040518
-    },
-    "listing:496102237883028599": {
-      "sent_at_utc": "2026-05-07T09:58:48.155870+00:00",
-      "item": "AWP | Atheris (Battle-Scarred)",
-      "listing_id": "496102237883028599",
-      "spread_hybrid_disc": 0.066467257471857
-    },
-    "listing:527627435179884680": {
-      "sent_at_utc": "2026-05-07T12:25:45.555535+00:00",
-      "item": "USP-S | Jawbreaker (Battle-Scarred)",
-      "listing_id": "527627435179884680",
-      "spread_hybrid_disc": 0.0769863591043945
-    },
-    "listing:524249735517246687": {
-      "sent_at_utc": "2026-05-07T13:16:43.897055+00:00",
-      "item": "MP9 | Slide (Factory New)",
-      "listing_id": "524249735517246687",
-      "spread_hybrid_disc": 0.0906342640670117
-    },
-    "listing:524249735517164895": {
-      "sent_at_utc": "2026-05-07T13:25:25.271556+00:00",
-      "item": "MAC-10 | Disco Tech (Field-Tested)",
-      "listing_id": "524249735517164895",
-      "spread_hybrid_disc": 0.1120490005004025
-    },
-    "listing:518620288313315272": {
-      "sent_at_utc": "2026-05-07T20:50:11.446301+00:00",
-      "item": "PP-Bizon | Brass (Factory New)",
-      "listing_id": "518620288313315272",
-      "spread_hybrid_disc": 0.0804536538583559
+    "listing:606438509299341689": {
+      "sent_at_utc": "2026-05-08T06:06:02.725391+00:00",
+      "item": "XM1014 | Entombed (Minimal Wear)",
+      "listing_id": "606438509299341689",
+      "spread_hybrid_disc": 0.1040095189907115
     },
     "listing:492724590625339821": {
-      "sent_at_utc": "2026-05-07T20:52:00.179786+00:00",
+      "sent_at_utc": "2026-05-08T06:12:10.427251+00:00",
       "item": "MP9 | Slide (Factory New)",
       "listing_id": "492724590625339821",
-      "spread_hybrid_disc": 0.0751447031010554
+      "spread_hybrid_disc": 0.075775632379109
+    },
+    "listing:507361289453659837": {
+      "sent_at_utc": "2026-05-08T06:14:19.592222+00:00",
+      "item": "SSG 08 | Azure Glyph (Factory New)",
+      "listing_id": "507361289453659837",
+      "spread_hybrid_disc": 0.10055542216749
+    },
+    "listing:526501587737935457": {
+      "sent_at_utc": "2026-05-08T06:40:43.374919+00:00",
+      "item": "SG 553 | Integrale (Field-Tested)",
+      "listing_id": "526501587737935457",
+      "spread_hybrid_disc": 0.0870511417667034
+    },
+    "listing:498354037508562811": {
+      "sent_at_utc": "2026-05-08T06:49:31.181269+00:00",
+      "item": "Dual Berettas | Melondrama (Battle-Scarred)",
+      "listing_id": "498354037508562811",
+      "spread_hybrid_disc": 0.0460019671084047
+    },
+    "listing:490472790738187383": {
+      "sent_at_utc": "2026-05-08T07:52:29.661626+00:00",
+      "item": "MAG-7 | Justice (Field-Tested)",
+      "listing_id": "490472790738187383",
+      "spread_hybrid_disc": 0.0901054113123908
+    },
+    "listing:502857742726572508": {
+      "sent_at_utc": "2026-05-08T09:41:49.926739+00:00",
+      "item": "Desert Eagle | Mulberry (Minimal Wear)",
+      "listing_id": "502857742726572508",
+      "spread_hybrid_disc": 0.095916651331562
     }
   },
-  "last_alert_sent_at_utc": "2026-05-07T09:58:48.156034+00:00"
+  "last_alert_sent_at_utc": "2026-05-08T09:41:49.926870+00:00"
 }
