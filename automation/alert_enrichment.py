@@ -41,10 +41,20 @@ class EnrichmentConfig:
     background: bool
     provider: str
     gemini_model: str
+    prompt_template_path: Path
     fee_pct: float
     max_sales_rows: int
     cache_ttl_minutes: float
     use_stale_cache_on_error: bool
+    use_cache: bool
+    persist_cache: bool
+    github_fetch_enabled: bool
+    github_fetch_required: bool
+    github_fetch_repo_path: Path | None
+    github_fetch_remote_url: str
+    github_fetch_branch: str
+    github_fetch_timeout_sec: float
+    github_fetch_poll_interval_sec: float
     log_dir: Path
     csfloat_base_url: str
     csfloat_timeout_sec: float
@@ -72,16 +82,36 @@ def _resolve_path(root: Path, value: str | Path) -> Path:
 
 def load_enrichment_config(config: dict[str, Any], *, root: Path | None = None) -> EnrichmentConfig:
     cfg = config.get("alert_enrichment", {})
+    github_cfg = cfg.get("github_fetch", {})
+    if not isinstance(github_cfg, dict):
+        github_cfg = {}
     base_root = root or repo_root()
+    github_repo_path_raw = github_cfg.get("repo_path")
+    github_repo_path = None
+    if github_repo_path_raw not in (None, ""):
+        github_repo_path = _resolve_path(base_root, github_repo_path_raw)
     return EnrichmentConfig(
         enabled=bool(cfg.get("enabled", False)),
         background=bool(cfg.get("background", True)),
         provider=str(cfg.get("provider", "gemini")).strip() or "gemini",
         gemini_model=str(cfg.get("gemini_model", "gemini-2.5-flash")).strip() or "gemini-2.5-flash",
+        prompt_template_path=_resolve_path(
+            base_root,
+            cfg.get("prompt_template_path", "automation/prompts/alert_enrichment_gemini.txt"),
+        ),
         fee_pct=float(cfg.get("fee_pct", 0.02)),
         max_sales_rows=max(1, int(cfg.get("max_sales_rows", 30))),
         cache_ttl_minutes=max(0.0, float(cfg.get("cache_ttl_minutes", 15.0))),
         use_stale_cache_on_error=bool(cfg.get("use_stale_cache_on_error", True)),
+        use_cache=bool(cfg.get("use_cache", True)),
+        persist_cache=bool(cfg.get("persist_cache", True)),
+        github_fetch_enabled=bool(github_cfg.get("enabled", False)),
+        github_fetch_required=bool(github_cfg.get("required", False)),
+        github_fetch_repo_path=github_repo_path,
+        github_fetch_remote_url=str(github_cfg.get("remote_url", "")).strip(),
+        github_fetch_branch=str(github_cfg.get("branch", "main")).strip() or "main",
+        github_fetch_timeout_sec=max(5.0, float(github_cfg.get("timeout_sec", 180.0))),
+        github_fetch_poll_interval_sec=max(1.0, float(github_cfg.get("poll_interval_sec", 5.0))),
         log_dir=_resolve_path(base_root, cfg.get("log_dir", "automation_runtime/alert_enrichment")),
         csfloat_base_url=str(cfg.get("csfloat_base_url", "https://csfloat.com")).rstrip("/"),
         csfloat_timeout_sec=max(5.0, float(cfg.get("csfloat_timeout_sec", 30.0))),
@@ -435,8 +465,37 @@ def fetch_latest_sales(item: str, cfg: EnrichmentConfig, *, job_dir: Path) -> di
 
 
 def load_latest_sales(item: str, cfg: EnrichmentConfig, *, job_dir: Path) -> dict[str, Any]:
+    if cfg.github_fetch_enabled:
+        try:
+            from automation.github_latest_sales import fetch_latest_sales_via_github
+
+            payload = fetch_latest_sales_via_github(
+                item=item,
+                repo_path=cfg.github_fetch_repo_path,
+                remote_url=cfg.github_fetch_remote_url,
+                branch=cfg.github_fetch_branch,
+                timeout_sec=cfg.github_fetch_timeout_sec,
+                poll_interval_sec=cfg.github_fetch_poll_interval_sec,
+                max_sales_rows=cfg.max_sales_rows,
+                job_dir=job_dir,
+            )
+            if cfg.persist_cache:
+                cache_path = _cache_path(cfg, item)
+                cache_path.parent.mkdir(parents=True, exist_ok=True)
+                write_json(cache_path, payload)
+            write_json(job_dir / "latest_sales.json", payload)
+            return payload
+        except Exception as exc:
+            if cfg.github_fetch_required:
+                write_json(job_dir / "latest_sales_error.json", {"error": str(exc), "item": item, "at_utc": utc_now_iso()})
+                raise
+            write_json(
+                job_dir / "latest_sales_github_fallback_error.json",
+                {"error": str(exc), "item": item, "at_utc": utc_now_iso()},
+            )
+
     cache_path = _cache_path(cfg, item)
-    cached = _load_cache(cache_path)
+    cached = _load_cache(cache_path) if cfg.use_cache else None
     if cached and _is_cache_fresh(cached, cfg.cache_ttl_minutes):
         payload = dict(cached)
         payload["source"] = "fresh_cache"
@@ -461,8 +520,9 @@ def load_latest_sales(item: str, cfg: EnrichmentConfig, *, job_dir: Path) -> dic
         write_json(job_dir / "latest_sales_error.json", {"error": str(exc), "item": item, "at_utc": utc_now_iso()})
         raise
 
-    cache_path.parent.mkdir(parents=True, exist_ok=True)
-    write_json(cache_path, fresh)
+    if cfg.persist_cache:
+        cache_path.parent.mkdir(parents=True, exist_ok=True)
+        write_json(cache_path, fresh)
     write_json(job_dir / "latest_sales.json", fresh)
     return fresh
 
@@ -475,18 +535,55 @@ def _num(value: Any) -> float | None:
     return out if math.isfinite(out) else None
 
 
+def _pct_or_none(value: float | None) -> float | None:
+    return None if value is None or not math.isfinite(value) else value * 100.0
+
+
+def _net_exit_pct(gross_sale_eur: float | None, steam_ask: float | None, *, fee_pct: float) -> float | None:
+    if gross_sale_eur is None or steam_ask is None or steam_ask <= 0:
+        return None
+    return ((gross_sale_eur * (1.0 - fee_pct) / steam_ask) - 1.0) * 100.0
+
+
+def _gross_target(steam_ask: float | None, target_net_pct: float, *, fee_pct: float) -> float | None:
+    if steam_ask is None or steam_ask <= 0 or fee_pct >= 1.0:
+        return None
+    return steam_ask * (1.0 + target_net_pct / 100.0) / (1.0 - fee_pct)
+
+
+def _dispersion_pct(values: list[float | None]) -> float | None:
+    clean = [float(v) for v in values if v is not None and math.isfinite(float(v))]
+    if len(clean) < 2:
+        return None
+    mean = sum(clean) / len(clean)
+    if not math.isfinite(mean) or mean <= 0:
+        return None
+    return ((max(clean) - min(clean)) / mean) * 100.0
+
+
 def _compact_alert_payload(row: dict[str, Any]) -> dict[str, Any]:
+    steam_ask = _num(row.get("ask"))
+    smooth_fair = _num(row.get("pred_smooth_eur"))
+    segmented_fair = _num(row.get("pred_segmented_eur"))
+    hybrid_fair = _num(row.get("pred_hybrid_eur"))
+    smooth_disc_fair = _num(row.get("pred_smooth_eur_disc"))
+    segmented_disc_fair = _num(row.get("pred_segmented_eur_disc"))
+    hybrid_disc_fair = _num(row.get("pred_hybrid_eur_disc"))
     return {
         "item": row.get("item"),
         "listing_id": row.get("listing_id"),
-        "ask_eur": row.get("ask"),
+        "steam_ask": steam_ask,
         "float_value": row.get("float_value"),
         "paint_seed": row.get("paint_seed"),
         "hybrid_disc_spread": row.get("spread_hybrid_disc"),
-        "hybrid_fair_eur": row.get("pred_hybrid_eur"),
-        "hybrid_disc_fair_eur": row.get("pred_hybrid_eur_disc"),
-        "smooth_disc_fair_eur": row.get("pred_smooth_eur_disc"),
-        "segmented_disc_fair_eur": row.get("pred_segmented_eur_disc"),
+        "smooth_fair_eur": smooth_fair,
+        "segmented_fair_eur": segmented_fair,
+        "hybrid_fair_eur": hybrid_fair,
+        "smooth_disc_fair_eur": smooth_disc_fair,
+        "segmented_disc_fair_eur": segmented_disc_fair,
+        "hybrid_disc_fair_eur": hybrid_disc_fair,
+        "model_fair_dispersion_pct": _dispersion_pct([smooth_fair, segmented_fair, hybrid_fair]),
+        "model_disc_dispersion_pct": _dispersion_pct([smooth_disc_fair, segmented_disc_fair, hybrid_disc_fair]),
         "continuity_ratio": row.get("continuity_ratio"),
         "steam_sales_7d_n": row.get("steam_sales_7d_n"),
         "steam_sales_7d_downside_risk_pct": row.get("steam_sales_7d_downside_risk%"),
@@ -501,17 +598,17 @@ def _compact_alert_payload(row: dict[str, Any]) -> dict[str, Any]:
         "steam_daily_downside_14d_pct": row.get("steam_daily_downside_14d_pct"),
         "steam_sales_7d_iqr_risk_pct": row.get("steam_sales_7d_iqr_risk%"),
         "steam_sales_7d_band_risk_pct": row.get("steam_sales_7d_band_risk%"),
+        "breakeven_gross_eur": _gross_target(steam_ask, 0.0, fee_pct=0.02),
+        "gross_for_minus_5pct": _gross_target(steam_ask, -5.0, fee_pct=0.02),
+        "gross_for_minus_10pct": _gross_target(steam_ask, -10.0, fee_pct=0.02),
+        "gross_for_minus_15pct": _gross_target(steam_ask, -15.0, fee_pct=0.02),
     }
 
 
-def _gemini_prompt(row: dict[str, Any], latest_sales: dict[str, Any], cfg: EnrichmentConfig) -> str:
-    payload = {
-        "fee_pct": cfg.fee_pct,
-        "alert": _compact_alert_payload(row),
-        "latest_sales_source": latest_sales.get("source"),
-        "latest_sales_count": len(latest_sales.get("sales_rows") or []),
-        "latest_sales": latest_sales.get("sales_rows") or [],
-    }
+def _load_prompt_template(cfg: EnrichmentConfig) -> str:
+    path = cfg.prompt_template_path
+    if path.is_file():
+        return path.read_text(encoding="utf-8")
     return (
         "You are a careful CS2 skins trading assistant. "
         "Be conservative and do not hype trades. "
@@ -536,8 +633,20 @@ def _gemini_prompt(row: dict[str, Any], latest_sales: dict[str, Any], cfg: Enric
         "}\n\n"
         "Keep best_comps to at most 3 entries and risks to at most 3 entries. "
         "Use only the given data. If something is unclear, say so briefly in summary.\n\n"
-        f"INPUT_JSON:\n{json.dumps(payload, ensure_ascii=False, separators=(',', ':'))}"
+        "INPUT_JSON:\n__INPUT_JSON__"
     )
+
+
+def _gemini_prompt(row: dict[str, Any], latest_sales: dict[str, Any], cfg: EnrichmentConfig) -> str:
+    payload = {
+        "fee_pct": cfg.fee_pct,
+        "alert": _compact_alert_payload(row),
+        "latest_sales_source": latest_sales.get("source"),
+        "latest_sales_count": len(latest_sales.get("sales_rows") or []),
+        "latest_sales": latest_sales.get("sales_rows") or [],
+    }
+    template = _load_prompt_template(cfg)
+    return template.replace("__INPUT_JSON__", json.dumps(payload, ensure_ascii=False, separators=(",", ":")))
 
 
 def _strip_json_fence(text: str) -> str:
@@ -570,6 +679,38 @@ def _coerce_range(value: Any) -> list[float] | None:
     if left is None or right is None:
         return None
     return [left, right]
+
+
+def _coerce_label(value: Any, allowed: set[str], default: str) -> str:
+    text = str(value or "").strip().lower()
+    return text if text in allowed else default
+
+
+def _post_validate_note(note: dict[str, Any]) -> dict[str, Any]:
+    out = dict(note)
+    verdict = str(out.get("verdict") or "MAYBE").upper()
+    confidence = str(out.get("confidence") or "medium").lower()
+    target_15 = str(out.get("target_15pct_fast") or "maybe").lower()
+    float_liq = str(out.get("float_liquidity") or "medium").lower()
+    model_agreement = str(out.get("model_agreement") or "mixed").lower()
+    risk_level = str(out.get("risk_level") or "medium").lower()
+    fast_sale_range = out.get("fast_sale_range_eur")
+    gross_for_minus_15 = _num(out.get("gross_for_minus_15pct"))
+
+    if verdict == "BUY" and target_15 != "yes":
+        verdict = "MAYBE"
+    if verdict == "BUY" and float_liq == "low":
+        verdict = "MAYBE"
+    if verdict == "BUY" and model_agreement == "divergent" and confidence != "high":
+        verdict = "MAYBE"
+    if verdict == "BUY" and risk_level == "high":
+        verdict = "MAYBE"
+    if verdict == "BUY" and isinstance(fast_sale_range, list) and len(fast_sale_range) == 2 and gross_for_minus_15 is not None:
+        fast_low = _num(fast_sale_range[0])
+        if fast_low is not None and fast_low < gross_for_minus_15:
+            verdict = "MAYBE"
+    out["verdict"] = verdict
+    return out
 
 
 def _call_gemini_once(
@@ -663,6 +804,11 @@ def call_gemini(row: dict[str, Any], latest_sales: dict[str, Any], cfg: Enrichme
     result = {
         "verdict": str(parsed.get("verdict") or "MAYBE").upper(),
         "confidence": str(parsed.get("confidence") or "medium").lower(),
+        "risk_level": _coerce_label(parsed.get("risk_level"), {"low", "medium", "high"}, "medium"),
+        "item_liquidity": _coerce_label(parsed.get("item_liquidity"), {"low", "medium", "high"}, "medium"),
+        "float_liquidity": _coerce_label(parsed.get("float_liquidity"), {"low", "medium", "high"}, "medium"),
+        "model_agreement": _coerce_label(parsed.get("model_agreement"), {"strong", "mixed", "divergent"}, "mixed"),
+        "target_15pct_fast": _coerce_label(parsed.get("target_15pct_fast"), {"yes", "maybe", "no"}, "maybe"),
         "breakeven_gross_eur": _num(parsed.get("breakeven_gross_eur")),
         "gross_for_minus_5pct": _num(parsed.get("gross_for_minus_5pct")),
         "gross_for_minus_10pct": _num(parsed.get("gross_for_minus_10pct")),
@@ -672,10 +818,20 @@ def call_gemini(row: dict[str, Any], latest_sales: dict[str, Any], cfg: Enrichme
         "patient_sale_range_eur": _coerce_range(parsed.get("patient_sale_range_eur")),
         "start_listing_range_eur": _coerce_range(parsed.get("start_listing_range_eur")),
         "fast_floor_range_eur": _coerce_range(parsed.get("fast_floor_range_eur")),
+        "fast_net_exit_pct": _coerce_range(parsed.get("fast_net_exit_pct")),
+        "realistic_net_exit_pct": _coerce_range(parsed.get("realistic_net_exit_pct")),
+        "patient_net_exit_pct": _coerce_range(parsed.get("patient_net_exit_pct")),
+        "range_basis": {"fast": "", "realistic": "", "patient": ""},
         "best_comps": [],
         "risks": [],
         "summary": str(parsed.get("summary") or "").strip(),
     }
+    range_basis = parsed.get("range_basis")
+    if isinstance(range_basis, dict):
+        for key in ("fast", "realistic", "patient"):
+            value = str(range_basis.get(key) or "").strip()
+            if value:
+                result["range_basis"][key] = value
     best_comps = parsed.get("best_comps")
     if isinstance(best_comps, list):
         for entry in best_comps[:3]:
@@ -692,6 +848,16 @@ def call_gemini(row: dict[str, Any], latest_sales: dict[str, Any], cfg: Enrichme
     risks = parsed.get("risks")
     if isinstance(risks, list):
         result["risks"] = [str(entry).strip() for entry in risks[:3] if str(entry).strip()]
+    for key_prefix in ("fast", "realistic", "patient"):
+        if result.get(f"{key_prefix}_net_exit_pct") is None:
+            sale_range = result.get(f"{key_prefix}_sale_range_eur")
+            if isinstance(sale_range, list) and len(sale_range) == 2:
+                ask = _num(row.get("ask"))
+                lo = _net_exit_pct(_num(sale_range[0]), ask, fee_pct=cfg.fee_pct)
+                hi = _net_exit_pct(_num(sale_range[1]), ask, fee_pct=cfg.fee_pct)
+                if lo is not None and hi is not None:
+                    result[f"{key_prefix}_net_exit_pct"] = [lo, hi]
+    result = _post_validate_note(result)
     write_json(job_dir / "gemini_result.json", result)
     return result
 
@@ -704,6 +870,12 @@ def _fmt_range(value: list[float] | None) -> str:
     if not value:
         return "-"
     return f"€{value[0]:.2f}-{value[1]:.2f}"
+
+
+def _fmt_pct_range(value: list[float] | None) -> str:
+    if not value:
+        return "-"
+    return f"{value[0]:+.1f}%..{value[1]:+.1f}%"
 
 
 def _fmt_comp(comp: dict[str, Any]) -> str:
@@ -730,19 +902,52 @@ def format_ai_note_message(row: dict[str, Any], latest_sales: dict[str, Any], no
     lines = [
         "<b>AI note</b>",
         f"Verdict: <b>{html.escape(str(note.get('verdict') or 'MAYBE'))}</b> / {html.escape(str(note.get('confidence') or 'medium'))}",
+        (
+            "Risk / liquidity: "
+            f"<code>risk={html.escape(str(note.get('risk_level') or 'medium'))}</code> "
+            f"<code>item_liq={html.escape(str(note.get('item_liquidity') or 'medium'))}</code> "
+            f"<code>float_liq={html.escape(str(note.get('float_liquidity') or 'medium'))}</code>"
+        ),
+        (
+            "Model / fast -15%: "
+            f"<code>models={html.escape(str(note.get('model_agreement') or 'mixed'))}</code> "
+            f"<code>target_15_fast={html.escape(str(note.get('target_15pct_fast') or 'maybe'))}</code>"
+        ),
         f"Sales source: <code>{html.escape(source_map.get(latest_source, latest_source))}</code>",
         f"Fast sale: <code>{html.escape(_fmt_range(note.get('fast_sale_range_eur')))}</code>",
         f"Realistic: <code>{html.escape(_fmt_range(note.get('realistic_sale_range_eur')))}</code>",
         f"Patient: <code>{html.escape(_fmt_range(note.get('patient_sale_range_eur')))}</code>",
         f"Start listing: <code>{html.escape(_fmt_range(note.get('start_listing_range_eur')))}</code>",
         f"Fast floor: <code>{html.escape(_fmt_range(note.get('fast_floor_range_eur')))}</code>",
-        "",
-        "<b>Breakeven math</b>",
-        f"Gross 0%: <code>{html.escape(_fmt_money(note.get('breakeven_gross_eur')))}</code>",
-        f"Gross -5%: <code>{html.escape(_fmt_money(note.get('gross_for_minus_5pct')))}</code>",
-        f"Gross -10%: <code>{html.escape(_fmt_money(note.get('gross_for_minus_10pct')))}</code>",
-        f"Gross -15%: <code>{html.escape(_fmt_money(note.get('gross_for_minus_15pct')))}</code>",
+        f"Fast net exit: <code>{html.escape(_fmt_pct_range(note.get('fast_net_exit_pct')))}</code>",
+        f"Realistic net exit: <code>{html.escape(_fmt_pct_range(note.get('realistic_net_exit_pct')))}</code>",
+        f"Patient net exit: <code>{html.escape(_fmt_pct_range(note.get('patient_net_exit_pct')))}</code>",
     ]
+    range_basis = note.get("range_basis") or {}
+    if isinstance(range_basis, dict):
+        fast_basis = str(range_basis.get("fast") or "").strip()
+        realistic_basis = str(range_basis.get("realistic") or "").strip()
+        patient_basis = str(range_basis.get("patient") or "").strip()
+        if fast_basis or realistic_basis or patient_basis:
+            lines.extend(
+                [
+                    "",
+                    "<b>Range basis</b>",
+                    f"Fast: {html.escape(fast_basis or '-')}",
+                    f"Realistic: {html.escape(realistic_basis or '-')}",
+                    f"Patient: {html.escape(patient_basis or '-')}",
+                ]
+            )
+    lines.extend(
+        [
+            "",
+            "<b>Breakeven math</b>",
+            f"Gross 0%: <code>{html.escape(_fmt_money(note.get('breakeven_gross_eur')))}</code>",
+            f"Gross -5%: <code>{html.escape(_fmt_money(note.get('gross_for_minus_5pct')))}</code>",
+            f"Gross -10%: <code>{html.escape(_fmt_money(note.get('gross_for_minus_10pct')))}</code>",
+            f"Gross -15%: <code>{html.escape(_fmt_money(note.get('gross_for_minus_15pct')))}</code>",
+        ]
+    )
     comps = note.get("best_comps") or []
     if comps:
         lines.extend(["", "<b>Relevant comps</b>"])

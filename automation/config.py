@@ -171,6 +171,7 @@ def monitoring_defaults() -> dict[str, Any]:
             "background": True,
             "provider": "gemini",
             "gemini_model": "gemini-2.5-flash",
+            "prompt_template_path": str(root / "automation" / "prompts" / "alert_enrichment_gemini.txt"),
             "fee_pct": 0.02,
             "max_sales_rows": 30,
             "cache_ttl_minutes": 15.0,
@@ -180,6 +181,15 @@ def monitoring_defaults() -> dict[str, Any]:
             "csfloat_timeout_sec": 30.0,
             "gemini_timeout_sec": 45.0,
             "telegram_timeout_sec": 20,
+            "github_fetch": {
+                "enabled": False,
+                "required": False,
+                "repo_path": str(root.parent / "digital_books"),
+                "remote_url": "",
+                "branch": "main",
+                "timeout_sec": 180.0,
+                "poll_interval_sec": 5.0,
+            },
         },
         "failover": {
             "enabled": False,
