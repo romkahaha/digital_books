@@ -1,0 +1,56 @@
+name: Latest Sales Fetch
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: latest-sales-fetch
+  cancel-in-progress: false
+
+jobs:
+  run-fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Check latest-sales request
+        id: request
+        run: |
+          python - <<'PY'
+          import json
+          import os
+          from pathlib import Path
+          request_path = Path("automation_runtime/latest_sales_request_latest.json")
+          active = "false"
+          mode = "missing"
+          if request_path.is_file():
+              payload = json.loads(request_path.read_text(encoding="utf-8"))
+              mode = str(payload.get("mode", "unknown"))
+              active = "true" if payload.get("trigger_run") else "false"
+          with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as handle:
+              handle.write(f"active={active}\n")
+              handle.write(f"mode={mode}\n")
+          print(f"latest-sales request mode={mode} active={active}")
+          PY
+
+      - name: Install dependencies
+        if: steps.request.outputs.active == 'true'
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r requirements.txt
+
+      - name: Run latest-sales request
+        if: steps.request.outputs.active == 'true'
+        run: |
+          python automation/github_latest_sales.py run-request
