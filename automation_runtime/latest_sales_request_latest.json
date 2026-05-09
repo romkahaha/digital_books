@@ -1,12 +1,10 @@
 {
   "version": 1,
-  "mode": "clear",
-  "trigger_run": false,
-  "request_id": "20260509T083947_711865Z-vmi2737474",
-  "requested_at_utc": "2026-05-09T08:39:47.711924+00:00",
+  "mode": "request",
+  "trigger_run": true,
+  "request_id": "20260509T112548_056365Z-vmi2737474",
+  "requested_at_utc": "2026-05-09T11:25:48.056431+00:00",
   "requested_by": "vmi2737474",
   "item": "AWP | Atheris (Battle-Scarred)",
-  "max_sales_rows": 30,
-  "last_status": "success",
-  "last_completed_at_utc": "2026-05-09T08:40:13.953643+00:00"
+  "max_sales_rows": 30
 }
