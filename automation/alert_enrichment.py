@@ -545,6 +545,18 @@ def _net_exit_pct(gross_sale_eur: float | None, steam_ask: float | None, *, fee_
     return ((gross_sale_eur * (1.0 - fee_pct) / steam_ask) - 1.0) * 100.0
 
 
+def _pct_of_ask(fair_eur: float | None, steam_ask: float | None) -> float | None:
+    if fair_eur is None or steam_ask is None or steam_ask <= 0:
+        return None
+    return ((fair_eur / steam_ask) - 1.0) * 100.0
+
+
+def _pct_of_fair(fair_eur: float | None, steam_ask: float | None) -> float | None:
+    if fair_eur is None or steam_ask is None or fair_eur <= 0:
+        return None
+    return ((fair_eur - steam_ask) / fair_eur) * 100.0
+
+
 def _gross_target(steam_ask: float | None, target_net_pct: float, *, fee_pct: float) -> float | None:
     if steam_ask is None or steam_ask <= 0 or fee_pct >= 1.0:
         return None
@@ -569,13 +581,19 @@ def _compact_alert_payload(row: dict[str, Any]) -> dict[str, Any]:
     smooth_disc_fair = _num(row.get("pred_smooth_eur_disc"))
     segmented_disc_fair = _num(row.get("pred_segmented_eur_disc"))
     hybrid_disc_fair = _num(row.get("pred_hybrid_eur_disc"))
+    hybrid_disc_spread = _num(row.get("spread_hybrid_disc"))
     return {
         "item": row.get("item"),
         "listing_id": row.get("listing_id"),
         "steam_ask": steam_ask,
         "float_value": row.get("float_value"),
         "paint_seed": row.get("paint_seed"),
-        "hybrid_disc_spread": row.get("spread_hybrid_disc"),
+        "hybrid_disc_spread": hybrid_disc_spread,
+        "hybrid_disc_spread_pct_of_ask": None if hybrid_disc_spread is None else hybrid_disc_spread * 100.0,
+        "hybrid_disc_edge_pct_of_ask": _pct_of_ask(hybrid_disc_fair, steam_ask),
+        "hybrid_disc_gap_pct_of_fair": _pct_of_fair(hybrid_disc_fair, steam_ask),
+        "hybrid_fair_edge_pct_of_ask": _pct_of_ask(hybrid_fair, steam_ask),
+        "hybrid_fair_gap_pct_of_fair": _pct_of_fair(hybrid_fair, steam_ask),
         "smooth_fair_eur": smooth_fair,
         "segmented_fair_eur": segmented_fair,
         "hybrid_fair_eur": hybrid_fair,
@@ -878,8 +896,15 @@ def _fmt_pct_range(value: list[float] | None) -> str:
     return f"{value[0]:+.1f}%..{value[1]:+.1f}%"
 
 
-def _fmt_comp(comp: dict[str, Any]) -> str:
+def _fmt_pct_value(value: float | None) -> str:
+    return "-" if value is None else f"{value:+.1f}%"
+
+
+def _fmt_comp(comp: dict[str, Any], *, steam_ask: float | None = None, fee_pct: float = 0.02) -> str:
     parts = [_fmt_money(_num(comp.get("price_eur")))]
+    realized_net_exit = _net_exit_pct(_num(comp.get("price_eur")), steam_ask, fee_pct=fee_pct)
+    if realized_net_exit is not None:
+        parts.append(f"(net {_fmt_pct_value(realized_net_exit)} vs ask)")
     flt = _num(comp.get("float_value"))
     if flt is not None:
         parts.append(f"@ {flt:.6f}")
@@ -894,6 +919,7 @@ def _fmt_comp(comp: dict[str, Any]) -> str:
 
 def format_ai_note_message(row: dict[str, Any], latest_sales: dict[str, Any], note: dict[str, Any]) -> str:
     latest_source = str(latest_sales.get("source") or "unknown")
+    steam_ask = _num(row.get("ask"))
     source_map = {
         "network": "fresh CSFloat sales",
         "fresh_cache": "cached latest sales",
@@ -953,7 +979,7 @@ def format_ai_note_message(row: dict[str, Any], latest_sales: dict[str, Any], no
         lines.extend(["", "<b>Relevant comps</b>"])
         for comp in comps[:3]:
             if isinstance(comp, dict):
-                lines.append(f"• {html.escape(_fmt_comp(comp))}")
+                lines.append(f"• {html.escape(_fmt_comp(comp, steam_ask=steam_ask))}")
     risks = note.get("risks") or []
     if risks:
         lines.extend(["", "<b>Risks</b>"])

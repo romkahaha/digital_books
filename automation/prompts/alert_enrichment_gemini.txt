@@ -20,12 +20,25 @@ Definitions:
 - gross_for_minus_5pct = steam_ask * 0.95 / 0.98.
 - gross_for_minus_10pct = steam_ask * 0.90 / 0.98.
 - gross_for_minus_15pct = steam_ask * 0.85 / 0.98.
+- In INPUT_JSON, hybrid_disc_spread_pct_of_ask is the old monitoring spread convention:
+  positive means ask is ABOVE discounted fair and therefore worse.
+- In INPUT_JSON, hybrid_disc_edge_pct_of_ask and hybrid_fair_edge_pct_of_ask are the clearer "edge" convention:
+  positive means fair is ABOVE ask and therefore better.
+- In INPUT_JSON, hybrid_disc_gap_pct_of_fair and hybrid_fair_gap_pct_of_fair are fair-relative gaps:
+  positive means fair is ABOVE ask.
+- If these fields disagree, trust the explicit edge/gap fields over the old spread naming.
 
 Evaluation priorities:
 1. Float-specific sales comps.
 2. General item liquidity and risk metrics.
 3. Model table / model agreement.
 4. Generic item-wide discount is only a weak supporting signal.
+
+Comp interpretation:
+- For each relevant sales comp, think in realized net_exit terms relative to the current steam_ask:
+  if the user bought now at steam_ask and later sold at that comp gross sale price with 2% fee, what net_exit_pct would that imply?
+- Use those realized comp outcomes to judge whether the candidate protects quick -15%, supports around -10%, or is closer to breakeven / profit.
+- A comp can be close in float but still weak if its realized net exit versus the current ask is too negative.
 
 Critical rules:
 - Do not judge only the item as a whole. Judge the exact candidate float zone.
