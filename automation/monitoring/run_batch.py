@@ -18,6 +18,7 @@ if str(_REPO_ROOT) not in sys.path:
 
 from automation.config import load_json_config, monitoring_defaults, path_from_config
 from automation.listing_enrichment import OpportunityConfig, build_enriched_listings, load_items_py, write_opportunity_outputs
+from automation.monitoring.runtime_integrity import ensure_monitor_runtime_integrity
 from automation.monitoring.send_telegram_alerts import bootstrap_alert_state
 from automation.monitoring.tier_scheduler import (
     alert_monitor_items_py_from_config,
@@ -53,12 +54,22 @@ def _load_steam_scm_listings(repo_root: Path):
     return module
 
 
-def _apply_steam_scm_config(module, monitoring_cfg: dict, steam_scm_cfg: dict) -> None:
+def _apply_steam_scm_config(
+    module,
+    monitoring_cfg: dict,
+    steam_scm_cfg: dict,
+    *,
+    max_listings_override: int | None = None,
+) -> None:
     config = getattr(module, "CONFIG", None)
     if not isinstance(config, dict):
         return
 
-    max_listings = steam_scm_cfg.get("max_listings_per_item", monitoring_cfg.get("max_listings_per_item"))
+    max_listings = (
+        max_listings_override
+        if max_listings_override is not None
+        else steam_scm_cfg.get("max_listings_per_item", monitoring_cfg.get("max_listings_per_item"))
+    )
     if max_listings is not None:
         config["max_listings_per_skin"] = int(max_listings)
 
@@ -148,6 +159,12 @@ def parse_args() -> argparse.Namespace:
         type=Path,
         default=None,
         help="Output opportunity filter report CSV.",
+    )
+    parser.add_argument(
+        "--max-listings-per-item",
+        type=int,
+        default=None,
+        help="Override max Steam listings depth for this batch.",
     )
     parser.add_argument("--send-telegram", action="store_true", help="Send Telegram alerts after building opportunities.")
     parser.add_argument("--telegram-dry-run", action="store_true", help="Print Telegram messages instead of sending.")
@@ -326,6 +343,7 @@ def main() -> int:
     report_csv = args.out_report_csv.resolve() if args.out_report_csv else path_from_config(config, "opportunities_report_csv")
     batch_size = int(args.batch_size if args.batch_size is not None else monitoring_cfg.get("batch_size", 5))
     config_path = args.config.resolve() if args.config else repo_root_from(Path(__file__)) / "automation" / "configs" / "monitoring.json"
+    repo_root = repo_root_from(Path(__file__))
 
     print(f"config: {config_path}")
     print(
@@ -345,6 +363,14 @@ def main() -> int:
             print("outside active window; skipping run")
             return 0
 
+    integrity_report = ensure_monitor_runtime_integrity(config, repo_root)
+    for action in integrity_report.actions:
+        print(f"runtime integrity: {action}")
+    if integrity_report.warnings:
+        for warning in integrity_report.warnings:
+            print(f"runtime integrity warning: {warning}")
+        raise RuntimeError("monitor runtime integrity check failed")
+
     run_preflight(
         config,
         monitor_items_py=monitor_items_py,
@@ -362,7 +388,6 @@ def main() -> int:
         spread_hybrid_disc_max=float(opp_cfg.get("spread_hybrid_disc_max", 0.17)),
     )
 
-    repo_root = repo_root_from(Path(__file__))
     items = load_items_py(monitor_items_py)
     if not items:
         print(f"no items in {monitor_items_py}")
@@ -393,7 +418,14 @@ def main() -> int:
             )
 
         steam_scm_listings = _load_steam_scm_listings(repo_root)
-        _apply_steam_scm_config(steam_scm_listings, monitoring_cfg, steam_scm_cfg)
+        _apply_steam_scm_config(
+            steam_scm_listings,
+            monitoring_cfg,
+            steam_scm_cfg,
+            max_listings_override=args.max_listings_per_item,
+        )
+        if args.max_listings_per_item is not None:
+            print(f"steam depth override: max_listings_per_item={int(args.max_listings_per_item)}")
         listings_path, listing_errors, listings_df = steam_scm_listings.run_batch_to_csv(
             batch,
             out_csv=listings_out_csv,
