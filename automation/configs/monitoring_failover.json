@@ -137,7 +137,7 @@
     "force_inline_sender": true
   },
   "alert_enrichment": {
-    "enabled": true,
+    "enabled": false,
     "background": true,
     "provider": "gemini",
     "gemini_model": "gemini-2.5-flash",
