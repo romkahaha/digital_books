@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "items_signature": "88d9c77dfcb0ec8837a800419e84a6dab3f95fc86f7af8c7c934cad58445434b",
-  "items_count": 368,
+  "items_signature": "36f2b72815649b53cf13867a63e30409bae3d9aa85684f1a1a9f949871045c9a",
+  "items_count": 317,
   "batch_pointer": 0,
   "last_run_at_utc": null,
   "last_status": null,
@@ -19,179 +19,143 @@
   "last_alert_stats": {},
   "sent_alerts": {
     "listing:498354037508562811": {
-      "sent_at_utc": "2026-05-09T18:59:45.380953+00:00",
+      "sent_at_utc": "2026-05-10T06:18:39.633472+00:00",
       "item": "Dual Berettas | Melondrama (Battle-Scarred)",
       "listing_id": "498354037508562811",
-      "spread_hybrid_disc": 0.0452721129131415
+      "spread_hybrid_disc": 0.0382905561519947
     },
-    "listing:517494477422383822": {
-      "sent_at_utc": "2026-05-09T19:09:08.735010+00:00",
-      "item": "R8 Revolver | Blaze (Factory New)",
-      "listing_id": "517494477422383822",
-      "spread_hybrid_disc": 0.1087684954324094
+    "listing:528753476549202861": {
+      "sent_at_utc": "2026-05-10T07:26:17.868528+00:00",
+      "item": "M4A1-S | Stratosphere (Field-Tested)",
+      "listing_id": "528753476549202861",
+      "spread_hybrid_disc": 0.1015213032531678
     },
-    "listing:490472879524264323": {
-      "sent_at_utc": "2026-05-09T19:35:45.875394+00:00",
-      "item": "AWP | Crakow! (Battle-Scarred)",
-      "listing_id": "490472879524264323",
-      "spread_hybrid_disc": -0.0716390727201143
-    },
-    "listing:516368577514376822": {
-      "sent_at_utc": "2026-05-09T19:39:21.602662+00:00",
-      "item": "P250 | Asiimov (Field-Tested)",
-      "listing_id": "516368577514376822",
-      "spread_hybrid_disc": 0.1024125826117789
-    },
-    "listing:490472879525218071": {
-      "sent_at_utc": "2026-05-09T19:48:28.374994+00:00",
-      "item": "Desert Eagle | Mulberry (Minimal Wear)",
-      "listing_id": "490472879525218071",
-      "spread_hybrid_disc": 0.0778973111818009
+    "listing:496102379118897263": {
+      "sent_at_utc": "2026-05-10T07:50:44.066254+00:00",
+      "item": "MAC-10 | Heat (Field-Tested)",
+      "listing_id": "496102379118897263",
+      "spread_hybrid_disc": 0.0849714052457899
     },
     "listing:524249876749162155": {
-      "sent_at_utc": "2026-05-09T19:57:58.706232+00:00",
+      "sent_at_utc": "2026-05-10T08:00:50.230721+00:00",
       "item": "MP7 | Army Recon (Factory New)",
       "listing_id": "524249876749162155",
       "spread_hybrid_disc": -0.0991584454453267
     },
     "listing:503983678403705935": {
-      "sent_at_utc": "2026-05-09T19:58:30.927788+00:00",
+      "sent_at_utc": "2026-05-10T08:00:53.179926+00:00",
       "item": "MP7 | Army Recon (Factory New)",
       "listing_id": "503983678403705935",
       "spread_hybrid_disc": -0.0067192597925942
     },
     "listing:529879376339092164": {
-      "sent_at_utc": "2026-05-09T19:58:33.923810+00:00",
+      "sent_at_utc": "2026-05-10T08:01:19.270448+00:00",
       "item": "MP7 | Army Recon (Factory New)",
       "listing_id": "529879376339092164",
       "spread_hybrid_disc": -0.0006407357947584
     },
     "listing:490471993875582099": {
-      "sent_at_utc": "2026-05-09T19:59:14.844941+00:00",
+      "sent_at_utc": "2026-05-10T08:02:00.293985+00:00",
       "item": "MP7 | Army Recon (Factory New)",
       "listing_id": "490471993875582099",
       "spread_hybrid_disc": 0.0104193028525912
     },
     "listing:491597893798706618": {
-      "sent_at_utc": "2026-05-09T19:59:55.765222+00:00",
+      "sent_at_utc": "2026-05-10T08:02:01.293139+00:00",
       "item": "MP7 | Army Recon (Factory New)",
       "listing_id": "491597893798706618",
       "spread_hybrid_disc": 0.0773701633468428
     },
+    "listing:509613178095446403": {
+      "sent_at_utc": "2026-05-10T08:02:42.285866+00:00",
+      "item": "MP7 | Army Recon (Factory New)",
+      "listing_id": "509613178095446403",
+      "spread_hybrid_disc": 0.0838846705050584
+    },
     "listing:523123976860977154": {
-      "sent_at_utc": "2026-05-09T20:00:18.894469+00:00",
+      "sent_at_utc": "2026-05-10T08:03:03.278112+00:00",
       "item": "MP7 | Army Recon (Factory New)",
       "listing_id": "523123976860977154",
       "spread_hybrid_disc": 0.0884199707297835
     },
     "listing:527627576412012764": {
-      "sent_at_utc": "2026-05-09T20:00:59.854267+00:00",
+      "sent_at_utc": "2026-05-10T08:03:44.295112+00:00",
       "item": "MP7 | Army Recon (Factory New)",
       "listing_id": "527627576412012764",
       "spread_hybrid_disc": 0.0919393850721937
     },
     "listing:643593816533250097": {
-      "sent_at_utc": "2026-05-09T20:01:20.833760+00:00",
+      "sent_at_utc": "2026-05-10T08:04:08.338773+00:00",
       "item": "MP7 | Army Recon (Factory New)",
       "listing_id": "643593816533250097",
       "spread_hybrid_disc": 0.1006947795874833
     },
     "listing:524249876749161399": {
-      "sent_at_utc": "2026-05-09T20:01:42.768460+00:00",
+      "sent_at_utc": "2026-05-10T08:04:49.283955+00:00",
       "item": "MP7 | Army Recon (Factory New)",
       "listing_id": "524249876749161399",
       "spread_hybrid_disc": 0.1105923087463884
     },
     "listing:524249876749161615": {
-      "sent_at_utc": "2026-05-09T20:02:04.728502+00:00",
+      "sent_at_utc": "2026-05-10T08:05:30.390692+00:00",
       "item": "MP7 | Army Recon (Factory New)",
       "listing_id": "524249876749161615",
       "spread_hybrid_disc": 0.1121658226765472
     },
     "listing:501731878517094089": {
-      "sent_at_utc": "2026-05-09T20:02:06.729830+00:00",
+      "sent_at_utc": "2026-05-10T08:05:51.331899+00:00",
       "item": "MP7 | Army Recon (Factory New)",
       "listing_id": "501731878517094089",
       "spread_hybrid_disc": 0.1123715548730485
     },
     "listing:496102379115971939": {
-      "sent_at_utc": "2026-05-09T20:02:47.672450+00:00",
+      "sent_at_utc": "2026-05-10T08:05:56.365018+00:00",
       "item": "MP7 | Army Recon (Factory New)",
       "listing_id": "496102379115971939",
       "spread_hybrid_disc": 0.1196422332430374
     },
-    "listing:516368577514109054": {
-      "sent_at_utc": "2026-05-09T21:11:50.310585+00:00",
-      "item": "USP-S | Desert Tactical (Factory New)",
-      "listing_id": "516368577514109054",
-      "spread_hybrid_disc": 0.1119733169779988
+    "listing:519746277047792552": {
+      "sent_at_utc": "2026-05-10T08:27:27.759911+00:00",
+      "item": "Tec-9 | Urban DDPAT (Factory New)",
+      "listing_id": "519746277047792552",
+      "spread_hybrid_disc": 0.0988091464052541
     },
-    "listing:521998076805137898": {
-      "sent_at_utc": "2026-05-09T21:29:03.083511+00:00",
-      "item": "AWP | Atheris (Battle-Scarred)",
-      "listing_id": "521998076805137898",
-      "spread_hybrid_disc": 0.1012467001574463
+    "listing:526501676528276777": {
+      "sent_at_utc": "2026-05-10T08:53:58.210817+00:00",
+      "item": "AWP | Duality (Field-Tested)",
+      "listing_id": "526501676528276777",
+      "spread_hybrid_disc": 0.1133646041133071
     },
-    "listing:501731878518102593": {
-      "sent_at_utc": "2026-05-09T21:41:47.783998+00:00",
-      "item": "P250 | Franklin (Factory New)",
-      "listing_id": "501731878518102593",
-      "spread_hybrid_disc": 0.0917101047448647
+    "listing:523123976862833566": {
+      "sent_at_utc": "2026-05-10T09:12:22.643334+00:00",
+      "item": "AUG | Radiation Hazard (Factory New)",
+      "listing_id": "523123976862833566",
+      "spread_hybrid_disc": 0.0486448283510216
+    },
+    "listing:661604971830822369": {
+      "sent_at_utc": "2026-05-10T09:12:43.596591+00:00",
+      "item": "AUG | Radiation Hazard (Factory New)",
+      "listing_id": "661604971830822369",
+      "spread_hybrid_disc": 0.1157955902629812
+    },
+    "listing:491598779489907758": {
+      "sent_at_utc": "2026-05-10T09:21:31.744019+00:00",
+      "item": "MP9 | Orange Peel (Factory New)",
+      "listing_id": "491598779489907758",
+      "spread_hybrid_disc": 0.0493739236041319
     },
     "listing:515242677340256173": {
-      "sent_at_utc": "2026-05-09T21:42:19.671624+00:00",
+      "sent_at_utc": "2026-05-10T09:22:12.748306+00:00",
       "item": "MP9 | Orange Peel (Factory New)",
       "listing_id": "515242677340256173",
-      "spread_hybrid_disc": 0.1033470131597629
+      "spread_hybrid_disc": 0.077760141326853
     },
-    "listing:503983678406855395": {
-      "sent_at_utc": "2026-05-09T21:57:27.316615+00:00",
-      "item": "AUG | Radiation Hazard (Factory New)",
-      "listing_id": "503983678406855395",
-      "spread_hybrid_disc": 0.0676123672563572
-    },
-    "listing:514116777739513566": {
-      "sent_at_utc": "2026-05-09T22:09:56.778603+00:00",
-      "item": "Tec-9 | Groundwater (Factory New)",
-      "listing_id": "514116777739513566",
-      "spread_hybrid_disc": 0.0817336232832974
-    },
-    "listing:510739077829942798": {
-      "sent_at_utc": "2026-05-09T22:52:54.003613+00:00",
-      "item": "P250 | Asiimov (Field-Tested)",
-      "listing_id": "510739077829942798",
-      "spread_hybrid_disc": 0.0756928845296507
-    },
-    "listing:510739077830067610": {
-      "sent_at_utc": "2026-05-09T23:01:30.494931+00:00",
-      "item": "MAG-7 | Justice (Field-Tested)",
-      "listing_id": "510739077830067610",
-      "spread_hybrid_disc": 0.0712114747159491
-    },
-    "listing:508487278130755454": {
-      "sent_at_utc": "2026-05-09T23:32:04.478362+00:00",
-      "item": "AK-47 | Wintergreen (Factory New)",
-      "listing_id": "508487278130755454",
-      "spread_hybrid_disc": 0.1005551071536907
-    },
-    "listing:649223316110931424": {
-      "sent_at_utc": "2026-05-09T23:33:24.317543+00:00",
-      "item": "R8 Revolver | Nitro (Factory New)",
-      "listing_id": "649223316110931424",
-      "spread_hybrid_disc": 0.1007642368874314
-    },
-    "listing:497228278929458765": {
-      "sent_at_utc": "2026-05-10T01:12:42.069702+00:00",
-      "item": "MP7 | Army Recon (Factory New)",
-      "listing_id": "497228278929458765",
-      "spread_hybrid_disc": -0.0760149201405064
-    },
-    "listing:631208917643984678": {
-      "sent_at_utc": "2026-05-10T01:12:43.555163+00:00",
-      "item": "MP7 | Army Recon (Factory New)",
-      "listing_id": "631208917643984678",
-      "spread_hybrid_disc": 0.0912208667171785
+    "listing:500605978632033143": {
+      "sent_at_utc": "2026-05-10T09:51:50.018761+00:00",
+      "item": "AWP | Duality (Field-Tested)",
+      "listing_id": "500605978632033143",
+      "spread_hybrid_disc": 0.1069519722033569
     }
   },
-  "last_alert_sent_at_utc": "2026-05-09T20:02:47.672808+00:00"
+  "last_alert_sent_at_utc": "2026-05-10T09:51:50.018897+00:00"
 }

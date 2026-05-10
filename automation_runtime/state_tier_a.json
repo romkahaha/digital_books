@@ -1,33 +1,31 @@
 {
   "version": 1,
-  "items_signature": "dfeb0476f65ce242b6db619688b9b3a41c48a60c812d30e12deb9a3e8e7f472e",
-  "items_count": 74,
-  "batch_pointer": 62,
-  "last_run_at_utc": "2026-05-10T01:30:40.564457+00:00",
-  "last_status": "ok",
+  "items_signature": "ecf81787be0f22e21c15e248536e118eca2097109d07e93b47a9169eac663bea",
+  "items_count": 63,
+  "batch_pointer": 21,
+  "last_run_at_utc": "2026-05-10T09:58:01.739827+00:00",
+  "last_status": "running",
   "last_batch_items": [
-    "M4A1-S | Glitched Paint (Minimal Wear)",
-    "AK-47 | Frontside Misty (Field-Tested)",
-    "UMP-45 | Wild Child (Minimal Wear)",
-    "Tec-9 | Whiteout (Field-Tested)",
-    "FAMAS | Rapid Eye Movement (Battle-Scarred)"
+    "UMP-45 | Wild Child (Field-Tested)",
+    "USP-S | Cortex (Field-Tested)",
+    "Desert Eagle | Serpent Strike (Factory New)",
+    "P250 | Visions (Field-Tested)",
+    "AK-47 | Elite Build (Minimal Wear)"
   ],
   "last_error": null,
-  "last_finished_at_utc": "2026-05-10T01:31:29.430188+00:00",
-  "last_successful_monitoring_at_utc": "2026-05-10T01:31:29.430188+00:00",
+  "last_finished_at_utc": "2026-05-10T09:58:00.387323+00:00",
+  "last_successful_monitoring_at_utc": "2026-05-10T09:58:00.387323+00:00",
   "last_failed_monitoring_at_utc": null,
   "consecutive_errors": 0,
   "last_listing_errors": [],
   "last_listing_error_count": 0,
-  "last_listing_rows": 1000,
-  "last_enriched_rows": 1000,
+  "last_listing_rows": 997,
+  "last_enriched_rows": 997,
   "last_opportunities_rows": 0,
   "last_alert_stats": {
-    "loaded": 0,
-    "filtered": 0,
-    "considered": 0,
-    "sent": 0,
-    "skipped": 0
+    "mode": "background",
+    "queued_rows": 0,
+    "sender_pid": 344117
   },
-  "last_batch_start_pointer": 57
+  "last_batch_start_pointer": 21
 }

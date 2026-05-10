@@ -1,33 +1,31 @@
 {
   "version": 1,
-  "items_signature": "f7fb9ed96e5a3120ab9568820d977207bf06e60fd3284929b907258541d952a3",
-  "items_count": 184,
-  "batch_pointer": 51,
-  "last_run_at_utc": "2026-05-10T01:28:17.815914+00:00",
+  "items_signature": "99ffd45143e3284e88f40f165aa34d42704f195ae681ebd635c687434764d6d1",
+  "items_count": 159,
+  "batch_pointer": 130,
+  "last_run_at_utc": "2026-05-10T09:56:35.010012+00:00",
   "last_status": "ok",
   "last_batch_items": [
-    "MAC-10 | Heat (Field-Tested)",
-    "M4A1-S | Nitro (Factory New)",
-    "Galil AR | Rainbow Spoon (Minimal Wear)",
-    "P250 | Verdigris (Factory New)",
-    "UMP-45 | Wild Child (Factory New)"
+    "AWP | Elite Build (Battle-Scarred)",
+    "MP5-SD | Statics (Factory New)",
+    "CZ75-Auto | Pole Position (Factory New)",
+    "Five-SeveN | Scumbria (Factory New)",
+    "AK-47 | Cartel (Battle-Scarred)"
   ],
   "last_error": null,
-  "last_finished_at_utc": "2026-05-10T01:29:07.090932+00:00",
-  "last_successful_monitoring_at_utc": "2026-05-10T01:29:07.090932+00:00",
+  "last_finished_at_utc": "2026-05-10T09:56:57.934881+00:00",
+  "last_successful_monitoring_at_utc": "2026-05-10T09:56:57.934881+00:00",
   "last_failed_monitoring_at_utc": null,
   "consecutive_errors": 0,
   "last_listing_errors": [],
   "last_listing_error_count": 0,
-  "last_listing_rows": 698,
-  "last_enriched_rows": 698,
+  "last_listing_rows": 300,
+  "last_enriched_rows": 300,
   "last_opportunities_rows": 0,
   "last_alert_stats": {
-    "loaded": 0,
-    "filtered": 0,
-    "considered": 0,
-    "sent": 0,
-    "skipped": 0
+    "mode": "background",
+    "queued_rows": 0,
+    "sender_pid": 343858
   },
-  "last_batch_start_pointer": 46
+  "last_batch_start_pointer": 125
 }
