@@ -1,14 +1,14 @@
 {
   "version": 1,
   "mode": "request",
-  "request_id": "20260510T122400Z-vmi2737474-request",
-  "requested_at_utc": "2026-05-10T12:24:00.847294+00:00",
+  "request_id": "20260510T135413Z-vmi2737474-request",
+  "requested_at_utc": "2026-05-10T13:54:13.286596+00:00",
   "requested_by": "vmi2737474",
   "main_repo_root": "/home/roma/cs-arbitrage/cs-skins-monitoring-bot",
   "trigger_run": true,
   "lease_seconds": 5400,
   "max_runtime_minutes": 90,
-  "cooldown_until_utc": "2026-05-10T13:54:00.846878+00:00",
+  "cooldown_until_utc": "2026-05-10T15:24:13.286286+00:00",
   "reason": "[tier A] Steam rate limit (429) for \"1/5 Dual Berettas | Melondrama (Field-Tested)\": 429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/Dual%20Berettas%20%7C%20Melondrama%20%28Field-Tested%29/render/?query=&start=0&count=100&currency=3&language=english&format=json",
   "batch_pointer": 1,
   "items_count": 317,
@@ -16,6 +16,6 @@
   "sent_alerts_count": 25,
   "last_status": "error",
   "last_error": "Steam rate limit (429) for \"1/5 Dual Berettas | Melondrama (Field-Tested)\": 429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/Dual%20Berettas%20%7C%20Melondrama%20%28Field-Tested%29/render/?query=&start=0&count=100&currency=3&language=english&format=json",
-  "last_finished_at_utc": "2026-05-10T12:23:55.268472+00:00",
+  "last_finished_at_utc": "2026-05-10T13:54:08.508725+00:00",
   "last_successful_monitoring_at_utc": "2026-05-10T10:53:13.241868+00:00"
 }
