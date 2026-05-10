@@ -245,7 +245,13 @@
       "item": "AK-47 | Wintergreen (Factory New)",
       "listing_id": "501731878522800305",
       "spread_hybrid_disc": 0.091196898821161
+    },
+    "listing:491598779493123098": {
+      "sent_at_utc": "2026-05-10T20:19:34.020816+00:00",
+      "item": "MAG-7 | Justice (Field-Tested)",
+      "listing_id": "491598779493123098",
+      "spread_hybrid_disc": 0.0633224130366787
     }
   },
-  "last_alert_sent_at_utc": "2026-05-10T20:03:54.677615+00:00"
+  "last_alert_sent_at_utc": "2026-05-10T20:19:34.020886+00:00"
 }
