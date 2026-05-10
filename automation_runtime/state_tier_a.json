@@ -2,9 +2,9 @@
   "version": 1,
   "items_signature": "ecf81787be0f22e21c15e248536e118eca2097109d07e93b47a9169eac663bea",
   "items_count": 63,
-  "batch_pointer": 15,
-  "last_run_at_utc": "2026-05-10T13:54:07.621083+00:00",
-  "last_status": "error",
+  "batch_pointer": 20,
+  "last_run_at_utc": "2026-05-10T15:24:19.896655+00:00",
+  "last_status": "ok",
   "last_batch_items": [
     "Dual Berettas | Melondrama (Field-Tested)",
     "FAMAS | Rapid Eye Movement (Field-Tested)",
@@ -12,16 +12,20 @@
     "AK-47 | Slate (Battle-Scarred)",
     "AK-47 | Slate (Minimal Wear)"
   ],
-  "last_error": "Steam rate limit (429) for \"1/5 Dual Berettas | Melondrama (Field-Tested)\": 429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/Dual%20Berettas%20%7C%20Melondrama%20%28Field-Tested%29/render/?query=&start=0&count=100&currency=3&language=english&format=json",
-  "last_finished_at_utc": "2026-05-10T13:54:08.250907+00:00",
-  "last_successful_monitoring_at_utc": "2026-05-10T10:53:13.018977+00:00",
+  "last_error": null,
+  "last_finished_at_utc": "2026-05-10T15:25:29.343482+00:00",
+  "last_successful_monitoring_at_utc": "2026-05-10T15:25:29.343482+00:00",
   "last_failed_monitoring_at_utc": "2026-05-10T13:54:08.250907+00:00",
-  "consecutive_errors": 3,
+  "consecutive_errors": 0,
   "last_listing_errors": [],
   "last_listing_error_count": 0,
-  "last_listing_rows": 0,
-  "last_enriched_rows": 992,
+  "last_listing_rows": 999,
+  "last_enriched_rows": 999,
   "last_opportunities_rows": 0,
-  "last_alert_stats": {},
+  "last_alert_stats": {
+    "mode": "background",
+    "queued_rows": 0,
+    "sender_pid": 357440
+  },
   "last_batch_start_pointer": 15
 }
