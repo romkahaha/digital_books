@@ -119,7 +119,79 @@
       "item": "MP7 | Army Recon (Factory New)",
       "listing_id": "496102379115971939",
       "spread_hybrid_disc": 0.1196422332430374
+    },
+    "listing:516368577514109054": {
+      "sent_at_utc": "2026-05-09T21:11:50.310585+00:00",
+      "item": "USP-S | Desert Tactical (Factory New)",
+      "listing_id": "516368577514109054",
+      "spread_hybrid_disc": 0.1119733169779988
+    },
+    "listing:521998076805137898": {
+      "sent_at_utc": "2026-05-09T21:29:03.083511+00:00",
+      "item": "AWP | Atheris (Battle-Scarred)",
+      "listing_id": "521998076805137898",
+      "spread_hybrid_disc": 0.1012467001574463
+    },
+    "listing:501731878518102593": {
+      "sent_at_utc": "2026-05-09T21:41:47.783998+00:00",
+      "item": "P250 | Franklin (Factory New)",
+      "listing_id": "501731878518102593",
+      "spread_hybrid_disc": 0.0917101047448647
+    },
+    "listing:515242677340256173": {
+      "sent_at_utc": "2026-05-09T21:42:19.671624+00:00",
+      "item": "MP9 | Orange Peel (Factory New)",
+      "listing_id": "515242677340256173",
+      "spread_hybrid_disc": 0.1033470131597629
+    },
+    "listing:503983678406855395": {
+      "sent_at_utc": "2026-05-09T21:57:27.316615+00:00",
+      "item": "AUG | Radiation Hazard (Factory New)",
+      "listing_id": "503983678406855395",
+      "spread_hybrid_disc": 0.0676123672563572
+    },
+    "listing:514116777739513566": {
+      "sent_at_utc": "2026-05-09T22:09:56.778603+00:00",
+      "item": "Tec-9 | Groundwater (Factory New)",
+      "listing_id": "514116777739513566",
+      "spread_hybrid_disc": 0.0817336232832974
+    },
+    "listing:510739077829942798": {
+      "sent_at_utc": "2026-05-09T22:52:54.003613+00:00",
+      "item": "P250 | Asiimov (Field-Tested)",
+      "listing_id": "510739077829942798",
+      "spread_hybrid_disc": 0.0756928845296507
+    },
+    "listing:510739077830067610": {
+      "sent_at_utc": "2026-05-09T23:01:30.494931+00:00",
+      "item": "MAG-7 | Justice (Field-Tested)",
+      "listing_id": "510739077830067610",
+      "spread_hybrid_disc": 0.0712114747159491
+    },
+    "listing:508487278130755454": {
+      "sent_at_utc": "2026-05-09T23:32:04.478362+00:00",
+      "item": "AK-47 | Wintergreen (Factory New)",
+      "listing_id": "508487278130755454",
+      "spread_hybrid_disc": 0.1005551071536907
+    },
+    "listing:649223316110931424": {
+      "sent_at_utc": "2026-05-09T23:33:24.317543+00:00",
+      "item": "R8 Revolver | Nitro (Factory New)",
+      "listing_id": "649223316110931424",
+      "spread_hybrid_disc": 0.1007642368874314
+    },
+    "listing:497228278929458765": {
+      "sent_at_utc": "2026-05-10T01:12:42.069702+00:00",
+      "item": "MP7 | Army Recon (Factory New)",
+      "listing_id": "497228278929458765",
+      "spread_hybrid_disc": -0.0760149201405064
+    },
+    "listing:631208917643984678": {
+      "sent_at_utc": "2026-05-10T01:12:43.555163+00:00",
+      "item": "MP7 | Army Recon (Factory New)",
+      "listing_id": "631208917643984678",
+      "spread_hybrid_disc": 0.0912208667171785
     }
   },
-  "last_alert_sent_at_utc": "2026-05-09T20:02:47.672808+00:00"
+  "last_alert_sent_at_utc": "2026-05-10T01:12:43.555227+00:00"
 }

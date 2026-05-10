@@ -2,30 +2,32 @@
   "version": 1,
   "items_signature": "dfeb0476f65ce242b6db619688b9b3a41c48a60c812d30e12deb9a3e8e7f472e",
   "items_count": 74,
-  "batch_pointer": 4,
-  "last_run_at_utc": "2026-05-09T20:53:49.338274+00:00",
+  "batch_pointer": 62,
+  "last_run_at_utc": "2026-05-10T01:30:40.564457+00:00",
   "last_status": "ok",
   "last_batch_items": [
-    "MP9 | Food Chain (Field-Tested)",
-    "AK-47 | Ice Coaled (Field-Tested)",
-    "M4A1-S | Black Lotus (Field-Tested)",
-    "AK-47 | Slate (Field-Tested)",
-    "AK-47 | Searing Rage (Field-Tested)"
+    "M4A1-S | Glitched Paint (Minimal Wear)",
+    "AK-47 | Frontside Misty (Field-Tested)",
+    "UMP-45 | Wild Child (Minimal Wear)",
+    "Tec-9 | Whiteout (Field-Tested)",
+    "FAMAS | Rapid Eye Movement (Battle-Scarred)"
   ],
   "last_error": null,
-  "last_finished_at_utc": "2026-05-09T20:55:39.971248+00:00",
-  "last_successful_monitoring_at_utc": "2026-05-09T20:55:39.971248+00:00",
+  "last_finished_at_utc": "2026-05-10T01:31:29.430188+00:00",
+  "last_successful_monitoring_at_utc": "2026-05-10T01:31:29.430188+00:00",
   "last_failed_monitoring_at_utc": null,
   "consecutive_errors": 0,
   "last_listing_errors": [],
   "last_listing_error_count": 0,
-  "last_listing_rows": 936,
-  "last_enriched_rows": 936,
+  "last_listing_rows": 1000,
+  "last_enriched_rows": 1000,
   "last_opportunities_rows": 0,
   "last_alert_stats": {
-    "mode": "background",
-    "queued_rows": 0,
-    "sender_pid": 309819
+    "loaded": 0,
+    "filtered": 0,
+    "considered": 0,
+    "sent": 0,
+    "skipped": 0
   },
-  "last_batch_start_pointer": 73
+  "last_batch_start_pointer": 57
 }
