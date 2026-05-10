@@ -155,7 +155,19 @@
       "item": "AWP | Duality (Field-Tested)",
       "listing_id": "500605978632033143",
       "spread_hybrid_disc": 0.1069519722033569
+    },
+    "listing:525375776830028167": {
+      "sent_at_utc": "2026-05-10T10:27:57.999069+00:00",
+      "item": "AWP | Atheris (Battle-Scarred)",
+      "listing_id": "525375776830028167",
+      "spread_hybrid_disc": 0.0308459403756161
+    },
+    "listing:649223316113065360": {
+      "sent_at_utc": "2026-05-10T10:37:05.603120+00:00",
+      "item": "Dual Berettas | Melondrama (Battle-Scarred)",
+      "listing_id": "649223316113065360",
+      "spread_hybrid_disc": 0.0034888239557173
     }
   },
-  "last_alert_sent_at_utc": "2026-05-10T09:51:50.018897+00:00"
+  "last_alert_sent_at_utc": "2026-05-10T10:37:05.603266+00:00"
 }
