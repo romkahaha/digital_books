@@ -99,7 +99,9 @@
     "exclude_any": [
       "Fade",
       "Case Hardened",
-      "Heat Treated"
+      "Heat Treated",
+      "Army Recon (Factory New)",
+      "Melondrama (Battle-Scarred)"
     ]
   },
   "model_plot": {

@@ -1,33 +1,31 @@
 {
   "version": 1,
-  "items_signature": "d29016f908e9d2ec18fa78cc51bbfa4e29c0eb4fc478b21ac656b21382d79db1",
-  "items_count": 95,
-  "batch_pointer": 25,
-  "last_run_at_utc": "2026-05-10T20:57:13.442709+00:00",
+  "items_signature": "c0ed3a8be1fb380652a6d91833d97527eb7b8d81f5bd27fcef0914879bef1197",
+  "items_count": 80,
+  "batch_pointer": 0,
+  "last_run_at_utc": "2026-05-11T07:18:41.991310+00:00",
   "last_status": "ok",
   "last_batch_items": [
-    "SG 553 | Dragon Tech (Factory New)",
-    "Sawed-Off | Kiss♥Love (Battle-Scarred)",
-    "Sawed-Off | Kiss♥Love (Well-Worn)",
-    "MAC-10 | Disco Tech (Field-Tested)",
-    "AK-47 | Redline (Field-Tested)"
+    "Desert Eagle | Crimson Web (Field-Tested)",
+    "M4A4 | Tooth Fairy (Factory New)",
+    "P2000 | Amber Fade (Factory New)",
+    "MAG-7 | Justice (Field-Tested)",
+    "P90 | Wave Breaker (Factory New)"
   ],
   "last_error": null,
-  "last_finished_at_utc": "2026-05-10T20:58:37.969421+00:00",
-  "last_successful_monitoring_at_utc": "2026-05-10T20:58:37.969421+00:00",
-  "last_failed_monitoring_at_utc": "2026-05-10T20:12:53.704735+00:00",
+  "last_finished_at_utc": "2026-05-11T07:19:54.168413+00:00",
+  "last_successful_monitoring_at_utc": "2026-05-11T07:19:54.168413+00:00",
+  "last_failed_monitoring_at_utc": null,
   "consecutive_errors": 0,
   "last_listing_errors": [],
   "last_listing_error_count": 0,
-  "last_listing_rows": 998,
-  "last_enriched_rows": 998,
+  "last_listing_rows": 779,
+  "last_enriched_rows": 779,
   "last_opportunities_rows": 0,
   "last_alert_stats": {
-    "loaded": 0,
-    "filtered": 0,
-    "considered": 0,
-    "sent": 0,
-    "skipped": 0
+    "mode": "background",
+    "queued_rows": 0,
+    "sender_pid": 380229
   },
-  "last_batch_start_pointer": 20
+  "last_batch_start_pointer": 75
 }

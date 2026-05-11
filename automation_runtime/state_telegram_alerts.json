@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "items_signature": "36f2b72815649b53cf13867a63e30409bae3d9aa85684f1a1a9f949871045c9a",
-  "items_count": 317,
+  "items_signature": "cbe469370a3a0324dd93c20941e477f4ab13ed050d6adbe4dc04a41904592289",
+  "items_count": 267,
   "batch_pointer": 0,
   "last_run_at_utc": null,
   "last_status": null,
@@ -18,240 +18,78 @@
   "last_opportunities_rows": 0,
   "last_alert_stats": {},
   "sent_alerts": {
-    "listing:498354037508562811": {
-      "sent_at_utc": "2026-05-10T19:28:48.653336+00:00",
-      "item": "Dual Berettas | Melondrama (Battle-Scarred)",
-      "listing_id": "498354037508562811",
-      "spread_hybrid_disc": 0.0382905561519947
+    "listing:492724679421073077": {
+      "sent_at_utc": "2026-05-11T06:11:20.977223+00:00",
+      "item": "Desert Eagle | Mulberry (Minimal Wear)",
+      "listing_id": "492724679421073077",
+      "spread_hybrid_disc": 0.0709366851061616
     },
-    "listing:528753476549202861": {
-      "sent_at_utc": "2026-05-10T07:26:17.868528+00:00",
-      "item": "M4A1-S | Stratosphere (Field-Tested)",
-      "listing_id": "528753476549202861",
-      "spread_hybrid_disc": 0.1015213032531678
-    },
-    "listing:496102379118897263": {
-      "sent_at_utc": "2026-05-10T07:50:44.066254+00:00",
-      "item": "MAC-10 | Heat (Field-Tested)",
-      "listing_id": "496102379118897263",
-      "spread_hybrid_disc": 0.0849714052457899
-    },
-    "listing:524249876749162155": {
-      "sent_at_utc": "2026-05-10T08:00:50.230721+00:00",
-      "item": "MP7 | Army Recon (Factory New)",
-      "listing_id": "524249876749162155",
-      "spread_hybrid_disc": -0.0991584454453267
-    },
-    "listing:503983678403705935": {
-      "sent_at_utc": "2026-05-10T08:00:53.179926+00:00",
-      "item": "MP7 | Army Recon (Factory New)",
-      "listing_id": "503983678403705935",
-      "spread_hybrid_disc": -0.0067192597925942
-    },
-    "listing:529879376339092164": {
-      "sent_at_utc": "2026-05-10T08:01:19.270448+00:00",
-      "item": "MP7 | Army Recon (Factory New)",
-      "listing_id": "529879376339092164",
-      "spread_hybrid_disc": -0.0006407357947584
-    },
-    "listing:490471993875582099": {
-      "sent_at_utc": "2026-05-10T08:02:00.293985+00:00",
-      "item": "MP7 | Army Recon (Factory New)",
-      "listing_id": "490471993875582099",
-      "spread_hybrid_disc": 0.0104193028525912
-    },
-    "listing:491597893798706618": {
-      "sent_at_utc": "2026-05-10T08:02:01.293139+00:00",
-      "item": "MP7 | Army Recon (Factory New)",
-      "listing_id": "491597893798706618",
-      "spread_hybrid_disc": 0.0773701633468428
-    },
-    "listing:509613178095446403": {
-      "sent_at_utc": "2026-05-10T08:02:42.285866+00:00",
-      "item": "MP7 | Army Recon (Factory New)",
-      "listing_id": "509613178095446403",
-      "spread_hybrid_disc": 0.0838846705050584
-    },
-    "listing:523123976860977154": {
-      "sent_at_utc": "2026-05-10T08:03:03.278112+00:00",
-      "item": "MP7 | Army Recon (Factory New)",
-      "listing_id": "523123976860977154",
-      "spread_hybrid_disc": 0.0884199707297835
-    },
-    "listing:527627576412012764": {
-      "sent_at_utc": "2026-05-10T08:03:44.295112+00:00",
-      "item": "MP7 | Army Recon (Factory New)",
-      "listing_id": "527627576412012764",
-      "spread_hybrid_disc": 0.0919393850721937
-    },
-    "listing:643593816533250097": {
-      "sent_at_utc": "2026-05-10T08:04:08.338773+00:00",
-      "item": "MP7 | Army Recon (Factory New)",
-      "listing_id": "643593816533250097",
-      "spread_hybrid_disc": 0.1006947795874833
-    },
-    "listing:524249876749161399": {
-      "sent_at_utc": "2026-05-10T08:04:49.283955+00:00",
-      "item": "MP7 | Army Recon (Factory New)",
-      "listing_id": "524249876749161399",
-      "spread_hybrid_disc": 0.1105923087463884
-    },
-    "listing:524249876749161615": {
-      "sent_at_utc": "2026-05-10T08:05:30.390692+00:00",
-      "item": "MP7 | Army Recon (Factory New)",
-      "listing_id": "524249876749161615",
-      "spread_hybrid_disc": 0.1121658226765472
-    },
-    "listing:501731878517094089": {
-      "sent_at_utc": "2026-05-10T08:05:51.331899+00:00",
-      "item": "MP7 | Army Recon (Factory New)",
-      "listing_id": "501731878517094089",
-      "spread_hybrid_disc": 0.1123715548730485
-    },
-    "listing:496102379115971939": {
-      "sent_at_utc": "2026-05-10T08:05:56.365018+00:00",
-      "item": "MP7 | Army Recon (Factory New)",
-      "listing_id": "496102379115971939",
-      "spread_hybrid_disc": 0.1196422332430374
-    },
-    "listing:519746277047792552": {
-      "sent_at_utc": "2026-05-10T08:27:27.759911+00:00",
-      "item": "Tec-9 | Urban DDPAT (Factory New)",
-      "listing_id": "519746277047792552",
-      "spread_hybrid_disc": 0.0988091464052541
-    },
-    "listing:526501676528276777": {
-      "sent_at_utc": "2026-05-10T08:53:58.210817+00:00",
-      "item": "AWP | Duality (Field-Tested)",
-      "listing_id": "526501676528276777",
-      "spread_hybrid_disc": 0.1133646041133071
-    },
-    "listing:523123976862833566": {
-      "sent_at_utc": "2026-05-10T09:12:22.643334+00:00",
-      "item": "AUG | Radiation Hazard (Factory New)",
-      "listing_id": "523123976862833566",
-      "spread_hybrid_disc": 0.0486448283510216
-    },
-    "listing:661604971830822369": {
-      "sent_at_utc": "2026-05-10T09:12:43.596591+00:00",
-      "item": "AUG | Radiation Hazard (Factory New)",
-      "listing_id": "661604971830822369",
-      "spread_hybrid_disc": 0.1157955902629812
-    },
-    "listing:491598779489907758": {
-      "sent_at_utc": "2026-05-10T09:21:31.744019+00:00",
-      "item": "MP9 | Orange Peel (Factory New)",
-      "listing_id": "491598779489907758",
-      "spread_hybrid_disc": 0.0493739236041319
-    },
-    "listing:515242677340256173": {
-      "sent_at_utc": "2026-05-10T09:22:12.748306+00:00",
-      "item": "MP9 | Orange Peel (Factory New)",
-      "listing_id": "515242677340256173",
-      "spread_hybrid_disc": 0.077760141326853
-    },
-    "listing:500605978632033143": {
-      "sent_at_utc": "2026-05-10T09:51:50.018761+00:00",
-      "item": "AWP | Duality (Field-Tested)",
-      "listing_id": "500605978632033143",
-      "spread_hybrid_disc": 0.1069519722033569
-    },
-    "listing:525375776830028167": {
-      "sent_at_utc": "2026-05-10T10:27:57.999069+00:00",
+    "listing:511864977778687545": {
+      "sent_at_utc": "2026-05-11T06:21:11.456727+00:00",
       "item": "AWP | Atheris (Battle-Scarred)",
-      "listing_id": "525375776830028167",
-      "spread_hybrid_disc": 0.0308459403756161
+      "listing_id": "511864977778687545",
+      "spread_hybrid_disc": 0.0768043917203146
     },
     "listing:649223316113065360": {
-      "sent_at_utc": "2026-05-10T10:37:05.603120+00:00",
+      "sent_at_utc": "2026-05-11T06:27:00.634138+00:00",
       "item": "Dual Berettas | Melondrama (Battle-Scarred)",
       "listing_id": "649223316113065360",
-      "spread_hybrid_disc": 0.0034888239557173
+      "spread_hybrid_disc": -0.0236394294756152
     },
-    "listing:508487278134019970": {
-      "sent_at_utc": "2026-05-10T16:28:49.838644+00:00",
-      "item": "AWP | Atheris (Battle-Scarred)",
-      "listing_id": "508487278134019970",
-      "spread_hybrid_disc": 0.0457089705442532
+    "listing:498354037508562811": {
+      "sent_at_utc": "2026-05-11T06:27:42.249429+00:00",
+      "item": "Dual Berettas | Melondrama (Battle-Scarred)",
+      "listing_id": "498354037508562811",
+      "spread_hybrid_disc": 0.0121097182976932
     },
-    "listing:501731878520167553": {
-      "sent_at_utc": "2026-05-10T17:24:27.039809+00:00",
-      "item": "MP7 | Army Recon (Factory New)",
-      "listing_id": "501731878520167553",
-      "spread_hybrid_disc": 0.084584579912937
+    "listing:505109578243598960": {
+      "sent_at_utc": "2026-05-11T06:28:23.201004+00:00",
+      "item": "Dual Berettas | Melondrama (Battle-Scarred)",
+      "listing_id": "505109578243598960",
+      "spread_hybrid_disc": 0.0997292322662866
     },
-    "listing:496102379119679975": {
-      "sent_at_utc": "2026-05-10T17:25:07.994503+00:00",
-      "item": "MP7 | Army Recon (Factory New)",
-      "listing_id": "496102379119679975",
-      "spread_hybrid_disc": 0.0880142375822728
+    "listing:508487278136456486": {
+      "sent_at_utc": "2026-05-11T06:30:16.358067+00:00",
+      "item": "AWP | Duality (Field-Tested)",
+      "listing_id": "508487278136456486",
+      "spread_hybrid_disc": 0.0532369051003589
     },
-    "listing:496102379119680119": {
-      "sent_at_utc": "2026-05-10T17:25:48.947834+00:00",
-      "item": "MP7 | Army Recon (Factory New)",
-      "listing_id": "496102379119680119",
-      "spread_hybrid_disc": 0.088710560776638
+    "listing:519746277052871432": {
+      "sent_at_utc": "2026-05-11T06:42:18.434384+00:00",
+      "item": "R8 Revolver | Blaze (Factory New)",
+      "listing_id": "519746277052871432",
+      "spread_hybrid_disc": 0.0622966424206541
     },
-    "listing:496102379119680299": {
-      "sent_at_utc": "2026-05-10T17:26:09.933809+00:00",
-      "item": "MP7 | Army Recon (Factory New)",
-      "listing_id": "496102379119680299",
-      "spread_hybrid_disc": 0.0890395580195351
+    "listing:519746277052871108": {
+      "sent_at_utc": "2026-05-11T06:42:40.399086+00:00",
+      "item": "R8 Revolver | Blaze (Factory New)",
+      "listing_id": "519746277052871108",
+      "spread_hybrid_disc": 0.0766465538404426
     },
-    "listing:494976479270844546": {
-      "sent_at_utc": "2026-05-10T17:29:50.124273+00:00",
-      "item": "Glock-18 | Shinobu (Battle-Scarred)",
-      "listing_id": "494976479270844546",
-      "spread_hybrid_disc": 0.1132672159463705
+    "listing:519746277052872080": {
+      "sent_at_utc": "2026-05-11T06:43:02.407438+00:00",
+      "item": "R8 Revolver | Blaze (Factory New)",
+      "listing_id": "519746277052872080",
+      "spread_hybrid_disc": 0.0775044153902108
     },
-    "listing:502857778655211868": {
-      "sent_at_utc": "2026-05-10T17:36:01.863327+00:00",
-      "item": "Tec-9 | Fuel Injector (Field-Tested)",
-      "listing_id": "502857778655211868",
-      "spread_hybrid_disc": 0.0187836588207512
+    "listing:519746277052871936": {
+      "sent_at_utc": "2026-05-11T06:43:43.355907+00:00",
+      "item": "R8 Revolver | Blaze (Factory New)",
+      "listing_id": "519746277052871936",
+      "spread_hybrid_disc": 0.0889500974531315
     },
-    "listing:521998076809065462": {
-      "sent_at_utc": "2026-05-10T17:50:31.266391+00:00",
-      "item": "Tec-9 | Urban DDPAT (Factory New)",
-      "listing_id": "521998076809065462",
-      "spread_hybrid_disc": 0.088906699113159
+    "listing:519746277052872332": {
+      "sent_at_utc": "2026-05-11T06:43:45.281850+00:00",
+      "item": "R8 Revolver | Blaze (Factory New)",
+      "listing_id": "519746277052872332",
+      "spread_hybrid_disc": 0.0889509820605132
     },
-    "listing:512990877836715659": {
-      "sent_at_utc": "2026-05-10T18:27:05.075665+00:00",
-      "item": "Glock-18 | Coral Bloom (Factory New)",
-      "listing_id": "512990877836715659",
-      "spread_hybrid_disc": 0.0591484225284272
-    },
-    "listing:520872176900859252": {
-      "sent_at_utc": "2026-05-10T19:05:18.379733+00:00",
-      "item": "M4A4 | Desolate Space (Battle-Scarred)",
-      "listing_id": "520872176900859252",
-      "spread_hybrid_disc": 0.0792485090469697
-    },
-    "listing:497228278923483053": {
-      "sent_at_utc": "2026-05-10T19:15:51.625418+00:00",
-      "item": "MP7 | Abyssal Apparition (Battle-Scarred)",
-      "listing_id": "497228278923483053",
-      "spread_hybrid_disc": -0.0182971994417791
-    },
-    "listing:500605978633943807": {
-      "sent_at_utc": "2026-05-10T19:21:10.874787+00:00",
-      "item": "Five-SeveN | Scumbria (Factory New)",
-      "listing_id": "500605978633943807",
-      "spread_hybrid_disc": 0.1185367381323627
-    },
-    "listing:501731878522800305": {
-      "sent_at_utc": "2026-05-10T20:03:54.677455+00:00",
-      "item": "AK-47 | Wintergreen (Factory New)",
-      "listing_id": "501731878522800305",
-      "spread_hybrid_disc": 0.091196898821161
-    },
-    "listing:491598779493123098": {
-      "sent_at_utc": "2026-05-10T20:19:34.020816+00:00",
-      "item": "MAG-7 | Justice (Field-Tested)",
-      "listing_id": "491598779493123098",
-      "spread_hybrid_disc": 0.0633224130366787
+    "listing:519746277052872908": {
+      "sent_at_utc": "2026-05-11T06:44:10.322370+00:00",
+      "item": "R8 Revolver | Blaze (Factory New)",
+      "listing_id": "519746277052872908",
+      "spread_hybrid_disc": 0.0920972961123419
     }
   },
-  "last_alert_sent_at_utc": "2026-05-10T20:03:54.677615+00:00"
+  "last_alert_sent_at_utc": "2026-05-11T06:44:10.322502+00:00"
 }

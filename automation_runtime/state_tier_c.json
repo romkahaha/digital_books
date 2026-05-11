@@ -1,33 +1,31 @@
 {
   "version": 1,
-  "items_signature": "99ffd45143e3284e88f40f165aa34d42704f195ae681ebd635c687434764d6d1",
-  "items_count": 159,
-  "batch_pointer": 27,
-  "last_run_at_utc": "2026-05-10T20:58:38.384103+00:00",
+  "items_signature": "d94cedb80a27b8055fd8720615913df7dad3d15b78274f0a307a49d522c99a19",
+  "items_count": 134,
+  "batch_pointer": 35,
+  "last_run_at_utc": "2026-05-11T07:10:06.728097+00:00",
   "last_status": "ok",
   "last_batch_items": [
-    "Desert Eagle | Mecha Industries (Factory New)",
-    "AK-47 | Aquamarine Revenge (Field-Tested)",
-    "Dual Berettas | Flora Carnivora (Factory New)",
+    "Nova | Wurst Hölle (Factory New)",
     "G3SG1 | Stinger (Field-Tested)",
-    "MAC-10 | Rangeen (Factory New)"
+    "AK-47 | Aquamarine Revenge (Field-Tested)",
+    "M4A1-S | Flashback (Battle-Scarred)",
+    "Desert Eagle | Trigger Discipline (Factory New)"
   ],
   "last_error": null,
-  "last_finished_at_utc": "2026-05-10T20:59:45.774665+00:00",
-  "last_successful_monitoring_at_utc": "2026-05-10T20:59:45.774665+00:00",
+  "last_finished_at_utc": "2026-05-11T07:11:10.692597+00:00",
+  "last_successful_monitoring_at_utc": "2026-05-11T07:11:10.692597+00:00",
   "last_failed_monitoring_at_utc": null,
   "consecutive_errors": 0,
   "last_listing_errors": [],
   "last_listing_error_count": 0,
-  "last_listing_rows": 786,
-  "last_enriched_rows": 786,
+  "last_listing_rows": 870,
+  "last_enriched_rows": 870,
   "last_opportunities_rows": 0,
   "last_alert_stats": {
-    "loaded": 0,
-    "filtered": 0,
-    "considered": 0,
-    "sent": 0,
-    "skipped": 0
+    "mode": "background",
+    "queued_rows": 0,
+    "sender_pid": 378725
   },
-  "last_batch_start_pointer": 22
+  "last_batch_start_pointer": 30
 }
