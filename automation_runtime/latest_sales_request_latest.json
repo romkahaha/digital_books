@@ -1,10 +1,12 @@
 {
   "version": 1,
-  "mode": "request",
-  "trigger_run": true,
+  "mode": "clear",
+  "trigger_run": false,
   "request_id": "20260512T132606_670100Z-vmi2737474",
   "requested_at_utc": "2026-05-12T13:26:06.670188+00:00",
   "requested_by": "vmi2737474",
   "item": "MP7 | Abyssal Apparition (Battle-Scarred)",
-  "max_sales_rows": 30
+  "max_sales_rows": 30,
+  "last_status": "success",
+  "last_completed_at_utc": "2026-05-12T13:27:03.600781+00:00"
 }
