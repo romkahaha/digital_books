@@ -1,12 +1,10 @@
 {
   "version": 1,
-  "mode": "clear",
-  "trigger_run": false,
-  "request_id": "20260512T135212_151720Z-vmi2737474",
-  "requested_at_utc": "2026-05-12T13:52:12.151791+00:00",
+  "mode": "request",
+  "trigger_run": true,
+  "request_id": "20260512T144810_706956Z-vmi2737474",
+  "requested_at_utc": "2026-05-12T14:48:10.707014+00:00",
   "requested_by": "vmi2737474",
-  "item": "M4A4 | Poly Mag (Factory New)",
-  "max_sales_rows": 30,
-  "last_status": "success",
-  "last_completed_at_utc": "2026-05-12T14:09:17.537134+00:00"
+  "item": "P2000 | Turf (Factory New)",
+  "max_sales_rows": 30
 }
