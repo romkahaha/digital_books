@@ -1,7 +1,441 @@
 {
   "version": 1,
   "request_id": "20260512T150454_456708Z-vmi2737474",
-  "status": "pending",
-  "requested_at_utc": "2026-05-12T15:04:54.456765+00:00",
-  "item": "AWP | Duality (Field-Tested)"
+  "status": "success",
+  "completed_at_utc": "2026-05-12T15:05:35.120343+00:00",
+  "item": "AWP | Duality (Field-Tested)",
+  "latest_sales": {
+    "version": 1,
+    "source": "network",
+    "item": "AWP | Duality (Field-Tested)",
+    "url": "https://csfloat.com/api/v1/history/AWP%20%7C%20Duality%20%28Field-Tested%29/sales",
+    "fetched_at_utc": "2026-05-12T15:05:35.119468+00:00",
+    "raw_row_count": 40,
+    "reference_currency": "USD",
+    "fx_usd_to_eur": 0.85193,
+    "fx_source": "Frankfurter 2026-05-12 (ECB)",
+    "sales_rows": [
+      {
+        "sale_id": "974317001373781284",
+        "sold_at": "2026-05-12T14:28:18.666067Z",
+        "price_usd": 3.41,
+        "price_eur": 2.91,
+        "reference_currency": "USD",
+        "fx_usd_to_eur": 0.85193,
+        "fx_source": "Frankfurter 2026-05-12 (ECB)",
+        "float_value": 0.3264635503292084,
+        "paint_seed": 102,
+        "stickers": [
+          "Sticker | Bad News Eagles (Gold) | Paris 2023",
+          "Sticker | Bad News Eagles (Gold) | Paris 2023",
+          "Sticker | Bad News Eagles (Gold) | Paris 2023",
+          "Sticker | Bad News Eagles (Gold) | Paris 2023"
+        ],
+        "notes": [
+          "4 stickers"
+        ]
+      },
+      {
+        "sale_id": "974215182974846382",
+        "sold_at": "2026-05-12T14:03:41.344407Z",
+        "price_usd": 4.7,
+        "price_eur": 4.0,
+        "reference_currency": "USD",
+        "fx_usd_to_eur": 0.85193,
+        "fx_source": "Frankfurter 2026-05-12 (ECB)",
+        "float_value": 0.17414043843746185,
+        "paint_seed": 993,
+        "stickers": [],
+        "notes": []
+      },
+      {
+        "sale_id": "968267870209443005",
+        "sold_at": "2026-05-12T13:23:09.123709Z",
+        "price_usd": 3.59,
+        "price_eur": 3.06,
+        "reference_currency": "USD",
+        "fx_usd_to_eur": 0.85193,
+        "fx_source": "Frankfurter 2026-05-12 (ECB)",
+        "float_value": 0.33944499492645264,
+        "paint_seed": 889,
+        "stickers": [],
+        "notes": []
+      },
+      {
+        "sale_id": "973863098790316777",
+        "sold_at": "2026-05-12T13:02:29.604522Z",
+        "price_usd": 5.16,
+        "price_eur": 4.4,
+        "reference_currency": "USD",
+        "fx_usd_to_eur": 0.85193,
+        "fx_source": "Frankfurter 2026-05-12 (ECB)",
+        "float_value": 0.15690839290618896,
+        "paint_seed": 515,
+        "stickers": [],
+        "notes": []
+      },
+      {
+        "sale_id": "974279442434229540",
+        "sold_at": "2026-05-12T11:58:40.350848Z",
+        "price_usd": 3.3,
+        "price_eur": 2.81,
+        "reference_currency": "USD",
+        "fx_usd_to_eur": 0.85193,
+        "fx_source": "Frankfurter 2026-05-12 (ECB)",
+        "float_value": 0.3527432382106781,
+        "paint_seed": 326,
+        "stickers": [],
+        "notes": []
+      },
+      {
+        "sale_id": "974279441280795929",
+        "sold_at": "2026-05-12T11:58:40.069868Z",
+        "price_usd": 3.3,
+        "price_eur": 2.81,
+        "reference_currency": "USD",
+        "fx_usd_to_eur": 0.85193,
+        "fx_source": "Frankfurter 2026-05-12 (ECB)",
+        "float_value": 0.3291138708591461,
+        "paint_seed": 508,
+        "stickers": [
+          "Sticker | GamerLegion (Glitter) | Paris 2023"
+        ],
+        "notes": [
+          "1 stickers"
+        ]
+      },
+      {
+        "sale_id": "974279439884092683",
+        "sold_at": "2026-05-12T11:58:39.776483Z",
+        "price_usd": 3.3,
+        "price_eur": 2.81,
+        "reference_currency": "USD",
+        "fx_usd_to_eur": 0.85193,
+        "fx_source": "Frankfurter 2026-05-12 (ECB)",
+        "float_value": 0.3695639967918396,
+        "paint_seed": 599,
+        "stickers": [],
+        "notes": []
+      },
+      {
+        "sale_id": "974279438135067903",
+        "sold_at": "2026-05-12T11:58:39.430696Z",
+        "price_usd": 3.3,
+        "price_eur": 2.81,
+        "reference_currency": "USD",
+        "fx_usd_to_eur": 0.85193,
+        "fx_source": "Frankfurter 2026-05-12 (ECB)",
+        "float_value": 0.3203553855419159,
+        "paint_seed": 557,
+        "stickers": [],
+        "notes": []
+      },
+      {
+        "sale_id": "974279436964857074",
+        "sold_at": "2026-05-12T11:58:39.034527Z",
+        "price_usd": 3.3,
+        "price_eur": 2.81,
+        "reference_currency": "USD",
+        "fx_usd_to_eur": 0.85193,
+        "fx_source": "Frankfurter 2026-05-12 (ECB)",
+        "float_value": 0.27913981676101685,
+        "paint_seed": 608,
+        "stickers": [],
+        "notes": []
+      },
+      {
+        "sale_id": "974279435828200680",
+        "sold_at": "2026-05-12T11:58:38.763132Z",
+        "price_usd": 3.3,
+        "price_eur": 2.81,
+        "reference_currency": "USD",
+        "fx_usd_to_eur": 0.85193,
+        "fx_source": "Frankfurter 2026-05-12 (ECB)",
+        "float_value": 0.2622649371623993,
+        "paint_seed": 135,
+        "stickers": [],
+        "notes": []
+      },
+      {
+        "sale_id": "974267634201791640",
+        "sold_at": "2026-05-12T11:38:30.075476Z",
+        "price_usd": 3.38,
+        "price_eur": 2.88,
+        "reference_currency": "USD",
+        "fx_usd_to_eur": 0.85193,
+        "fx_source": "Frankfurter 2026-05-12 (ECB)",
+        "float_value": 0.34237733483314514,
+        "paint_seed": 716,
+        "stickers": [],
+        "notes": []
+      },
+      {
+        "sale_id": "974236895821300984",
+        "sold_at": "2026-05-12T11:20:39.74498Z",
+        "price_usd": 4.88,
+        "price_eur": 4.16,
+        "reference_currency": "USD",
+        "fx_usd_to_eur": 0.85193,
+        "fx_source": "Frankfurter 2026-05-12 (ECB)",
+        "float_value": 0.16203707456588745,
+        "paint_seed": 180,
+        "stickers": [],
+        "notes": []
+      },
+      {
+        "sale_id": "974263776318718439",
+        "sold_at": "2026-05-12T10:56:25.27447Z",
+        "price_usd": 3.37,
+        "price_eur": 2.87,
+        "reference_currency": "USD",
+        "fx_usd_to_eur": 0.85193,
+        "fx_source": "Frankfurter 2026-05-12 (ECB)",
+        "float_value": 0.3042295575141907,
+        "paint_seed": 479,
+        "stickers": [],
+        "notes": []
+      },
+      {
+        "sale_id": "973609943901012040",
+        "sold_at": "2026-05-12T10:52:19.155567Z",
+        "price_usd": 3.3,
+        "price_eur": 2.81,
+        "reference_currency": "USD",
+        "fx_usd_to_eur": 0.85193,
+        "fx_source": "Frankfurter 2026-05-12 (ECB)",
+        "float_value": 0.2828710377216339,
+        "paint_seed": 109,
+        "stickers": [],
+        "notes": []
+      },
+      {
+        "sale_id": "972047267034955803",
+        "sold_at": "2026-05-12T10:45:06.154226Z",
+        "price_usd": 3.29,
+        "price_eur": 2.8,
+        "reference_currency": "USD",
+        "fx_usd_to_eur": 0.85193,
+        "fx_source": "Frankfurter 2026-05-12 (ECB)",
+        "float_value": 0.2606129050254822,
+        "paint_seed": 626,
+        "stickers": [],
+        "notes": []
+      },
+      {
+        "sale_id": "974256651324492859",
+        "sold_at": "2026-05-12T10:28:06.533625Z",
+        "price_usd": 3.24,
+        "price_eur": 2.76,
+        "reference_currency": "USD",
+        "fx_usd_to_eur": 0.85193,
+        "fx_source": "Frankfurter 2026-05-12 (ECB)",
+        "float_value": 0.2724335789680481,
+        "paint_seed": 461,
+        "stickers": [
+          "Sticker | Vitality | Paris 2023",
+          "Sticker | Vitality | Paris 2023",
+          "Sticker | Vitality | Paris 2023",
+          "Sticker | Vitality | Paris 2023",
+          "Sticker | Vitality | Paris 2023"
+        ],
+        "notes": [
+          "5 stickers"
+        ]
+      },
+      {
+        "sale_id": "974256643988655020",
+        "sold_at": "2026-05-12T10:28:04.765901Z",
+        "price_usd": 3.24,
+        "price_eur": 2.76,
+        "reference_currency": "USD",
+        "fx_usd_to_eur": 0.85193,
+        "fx_source": "Frankfurter 2026-05-12 (ECB)",
+        "float_value": 0.3199597895145416,
+        "paint_seed": 541,
+        "stickers": [],
+        "notes": []
+      },
+      {
+        "sale_id": "974244227091398693",
+        "sold_at": "2026-05-12T10:14:56.238097Z",
+        "price_usd": 3.4,
+        "price_eur": 2.9,
+        "reference_currency": "USD",
+        "fx_usd_to_eur": 0.85193,
+        "fx_source": "Frankfurter 2026-05-12 (ECB)",
+        "float_value": 0.2821372449398041,
+        "paint_seed": 569,
+        "stickers": [],
+        "notes": []
+      },
+      {
+        "sale_id": "974182854323995354",
+        "sold_at": "2026-05-12T10:13:13.69551Z",
+        "price_usd": 3.55,
+        "price_eur": 3.02,
+        "reference_currency": "USD",
+        "fx_usd_to_eur": 0.85193,
+        "fx_source": "Frankfurter 2026-05-12 (ECB)",
+        "float_value": 0.2253870815038681,
+        "paint_seed": 936,
+        "stickers": [],
+        "notes": []
+      },
+      {
+        "sale_id": "974003421386507752",
+        "sold_at": "2026-05-12T09:13:04.066698Z",
+        "price_usd": 4.75,
+        "price_eur": 4.05,
+        "reference_currency": "USD",
+        "fx_usd_to_eur": 0.85193,
+        "fx_source": "Frankfurter 2026-05-12 (ECB)",
+        "float_value": 0.17354753613471985,
+        "paint_seed": 125,
+        "stickers": [
+          "Sticker | Bad News Eagles (Gold) | Antwerp 2022"
+        ],
+        "notes": [
+          "1 stickers"
+        ]
+      },
+      {
+        "sale_id": "974224378231390661",
+        "sold_at": "2026-05-12T08:19:52.010136Z",
+        "price_usd": 3.39,
+        "price_eur": 2.89,
+        "reference_currency": "USD",
+        "fx_usd_to_eur": 0.85193,
+        "fx_source": "Frankfurter 2026-05-12 (ECB)",
+        "float_value": 0.3593957722187042,
+        "paint_seed": 30,
+        "stickers": [],
+        "notes": []
+      },
+      {
+        "sale_id": "974214045936782157",
+        "sold_at": "2026-05-12T07:38:51.290936Z",
+        "price_usd": 3.99,
+        "price_eur": 3.4,
+        "reference_currency": "USD",
+        "fx_usd_to_eur": 0.85193,
+        "fx_source": "Frankfurter 2026-05-12 (ECB)",
+        "float_value": 0.17976219952106476,
+        "paint_seed": 209,
+        "stickers": [],
+        "notes": []
+      },
+      {
+        "sale_id": "974204428750029281",
+        "sold_at": "2026-05-12T07:16:35.425005Z",
+        "price_usd": 3.4,
+        "price_eur": 2.9,
+        "reference_currency": "USD",
+        "fx_usd_to_eur": 0.85193,
+        "fx_source": "Frankfurter 2026-05-12 (ECB)",
+        "float_value": 0.28619301319122314,
+        "paint_seed": 717,
+        "stickers": [],
+        "notes": []
+      },
+      {
+        "sale_id": "974199860456719876",
+        "sold_at": "2026-05-12T06:42:26.522839Z",
+        "price_usd": 3.39,
+        "price_eur": 2.89,
+        "reference_currency": "USD",
+        "fx_usd_to_eur": 0.85193,
+        "fx_source": "Frankfurter 2026-05-12 (ECB)",
+        "float_value": 0.313541054725647,
+        "paint_seed": 108,
+        "stickers": [],
+        "notes": []
+      },
+      {
+        "sale_id": "973791822029654780",
+        "sold_at": "2026-05-12T06:38:52.580276Z",
+        "price_usd": 3.62,
+        "price_eur": 3.08,
+        "reference_currency": "USD",
+        "fx_usd_to_eur": 0.85193,
+        "fx_source": "Frankfurter 2026-05-12 (ECB)",
+        "float_value": 0.22153106331825256,
+        "paint_seed": 677,
+        "stickers": [],
+        "notes": []
+      },
+      {
+        "sale_id": "974197262613872960",
+        "sold_at": "2026-05-12T06:32:07.141612Z",
+        "price_usd": 3.39,
+        "price_eur": 2.89,
+        "reference_currency": "USD",
+        "fx_usd_to_eur": 0.85193,
+        "fx_source": "Frankfurter 2026-05-12 (ECB)",
+        "float_value": 0.3343447148799896,
+        "paint_seed": 336,
+        "stickers": [],
+        "notes": []
+      },
+      {
+        "sale_id": "973930348817812564",
+        "sold_at": "2026-05-12T05:59:30.432649Z",
+        "price_usd": 5.24,
+        "price_eur": 4.46,
+        "reference_currency": "USD",
+        "fx_usd_to_eur": 0.85193,
+        "fx_source": "Frankfurter 2026-05-12 (ECB)",
+        "float_value": 0.15393100678920746,
+        "paint_seed": 688,
+        "stickers": [],
+        "notes": []
+      },
+      {
+        "sale_id": "974181838589397751",
+        "sold_at": "2026-05-12T05:30:49.768902Z",
+        "price_usd": 3.39,
+        "price_eur": 2.89,
+        "reference_currency": "USD",
+        "fx_usd_to_eur": 0.85193,
+        "fx_source": "Frankfurter 2026-05-12 (ECB)",
+        "float_value": 0.29587599635124207,
+        "paint_seed": 201,
+        "stickers": [],
+        "notes": []
+      },
+      {
+        "sale_id": "973994411388177255",
+        "sold_at": "2026-05-12T05:02:33.190414Z",
+        "price_usd": 4.69,
+        "price_eur": 4.0,
+        "reference_currency": "USD",
+        "fx_usd_to_eur": 0.85193,
+        "fx_source": "Frankfurter 2026-05-12 (ECB)",
+        "float_value": 0.17394840717315674,
+        "paint_seed": 952,
+        "stickers": [
+          "Sticker | Baited",
+          "Sticker | Rush More",
+          "Sticker | magixx (Champion) | Shanghai 2024",
+          "Sticker | Primaris Keychain",
+          "Sticker | Perfect World | Shanghai 2024"
+        ],
+        "notes": [
+          "5 stickers"
+        ]
+      },
+      {
+        "sale_id": "974165007568864934",
+        "sold_at": "2026-05-12T04:23:56.938584Z",
+        "price_usd": 3.39,
+        "price_eur": 2.89,
+        "reference_currency": "USD",
+        "fx_usd_to_eur": 0.85193,
+        "fx_source": "Frankfurter 2026-05-12 (ECB)",
+        "float_value": 0.3269074559211731,
+        "paint_seed": 228,
+        "stickers": [],
+        "notes": []
+      }
+    ]
+  }
 }
