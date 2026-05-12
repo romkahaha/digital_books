@@ -89,7 +89,61 @@
       "item": "R8 Revolver | Blaze (Factory New)",
       "listing_id": "519746277052872908",
       "spread_hybrid_disc": 0.0920972961123419
+    },
+    "listing:511864977782550561": {
+      "sent_at_utc": "2026-05-11T21:15:42.813414+00:00",
+      "item": "M4A1-S | Black Lotus (Battle-Scarred)",
+      "listing_id": "511864977782550561",
+      "spread_hybrid_disc": 0.0935836507369289
+    },
+    "listing:517494758891895298": {
+      "sent_at_utc": "2026-05-11T21:28:23.997370+00:00",
+      "item": "P250 | Boreal Forest (Factory New)",
+      "listing_id": "517494758891895298",
+      "spread_hybrid_disc": 0.0652984865908893
+    },
+    "listing:502857778659772996": {
+      "sent_at_utc": "2026-05-11T21:32:42.779246+00:00",
+      "item": "Glock-18 | Coral Bloom (Factory New)",
+      "listing_id": "502857778659772996",
+      "spread_hybrid_disc": 0.1114674223567981
+    },
+    "listing:512991163849003379": {
+      "sent_at_utc": "2026-05-11T22:13:13.582315+00:00",
+      "item": "AWP | Duality (Field-Tested)",
+      "listing_id": "512991163849003379",
+      "spread_hybrid_disc": 0.0944213145038957
+    },
+    "listing:521998362818650014": {
+      "sent_at_utc": "2026-05-11T22:53:17.927016+00:00",
+      "item": "AK-47 | Searing Rage (Field-Tested)",
+      "listing_id": "521998362818650014",
+      "spread_hybrid_disc": 0.0987570992142089
+    },
+    "listing:510739077836259646": {
+      "sent_at_utc": "2026-05-11T23:06:58.613461+00:00",
+      "item": "FAMAS | Mecha Industries (Factory New)",
+      "listing_id": "510739077836259646",
+      "spread_hybrid_disc": 0.0457241973255549
+    },
+    "listing:630081042873729172": {
+      "sent_at_utc": "2026-05-11T23:07:00.743785+00:00",
+      "item": "FAMAS | Mecha Industries (Factory New)",
+      "listing_id": "630081042873729172",
+      "spread_hybrid_disc": 0.1002656573556728
+    },
+    "listing:512991163849203935": {
+      "sent_at_utc": "2026-05-12T00:55:17.129380+00:00",
+      "item": "R8 Revolver | Blaze (Factory New)",
+      "listing_id": "512991163849203935",
+      "spread_hybrid_disc": 0.0832552231032096
+    },
+    "listing:497228564958548513": {
+      "sent_at_utc": "2026-05-12T01:36:08.429486+00:00",
+      "item": "Desert Eagle | Mulberry (Minimal Wear)",
+      "listing_id": "497228564958548513",
+      "spread_hybrid_disc": 0.0825196469777411
     }
   },
-  "last_alert_sent_at_utc": "2026-05-11T06:44:10.322502+00:00"
+  "last_alert_sent_at_utc": "2026-05-12T01:36:08.429554+00:00"
 }
