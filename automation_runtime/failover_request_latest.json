@@ -1,11 +1,11 @@
 {
   "version": 1,
-  "mode": "request",
+  "mode": "clear",
   "request_id": "20260512T110152Z-vmi2737474-request",
   "requested_at_utc": "2026-05-12T11:01:52.141760+00:00",
   "requested_by": "vmi2737474",
   "main_repo_root": "/home/roma/cs-arbitrage/cs-skins-monitoring-bot",
-  "trigger_run": true,
+  "trigger_run": false,
   "lease_seconds": 5400,
   "max_runtime_minutes": 90,
   "cooldown_until_utc": "2026-05-12T12:31:52.140420+00:00",
@@ -17,5 +17,8 @@
   "last_status": "error",
   "last_error": "Steam rate limit (429) for \"3/5 AK-47 | Searing Rage (Field-Tested)\": 429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/AK-47%20%7C%20Searing%20Rage%20%28Field-Tested%29/render/?query=&start=0&count=100&currency=3&language=english&format=json",
   "last_finished_at_utc": "2026-05-12T11:01:44.917745+00:00",
-  "last_successful_monitoring_at_utc": "2026-05-12T11:00:52.831123+00:00"
+  "last_successful_monitoring_at_utc": "2026-05-12T11:00:52.831123+00:00",
+  "last_failover_status": "success",
+  "last_failover_exit_code": 0,
+  "last_failover_completed_at_utc": "2026-05-12T12:33:09.786507+00:00"
 }

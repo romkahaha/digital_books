@@ -59,7 +59,25 @@
       "item": "AK-47 | Emerald Pinstripe (Battle-Scarred)",
       "listing_id": "501732164535856589",
       "spread_hybrid_disc": 0.10113709546678
+    },
+    "listing:500606264646164063": {
+      "sent_at_utc": "2026-05-12T11:45:58.563643+00:00",
+      "item": "AWP | Duality (Field-Tested)",
+      "listing_id": "500606264646164063",
+      "spread_hybrid_disc": 0.1190811896849057
+    },
+    "listing:512991163851294095": {
+      "sent_at_utc": "2026-05-12T12:05:40.664209+00:00",
+      "item": "AWP | Green Energy (Battle-Scarred)",
+      "listing_id": "512991163851294095",
+      "spread_hybrid_disc": 0.094312414287846
+    },
+    "listing:500606264646253379": {
+      "sent_at_utc": "2026-05-12T12:25:11.754281+00:00",
+      "item": "AWP | Duality (Field-Tested)",
+      "listing_id": "500606264646253379",
+      "spread_hybrid_disc": 0.0528173853691684
     }
   },
-  "last_alert_sent_at_utc": "2026-05-12T10:08:41.050399+00:00"
+  "last_alert_sent_at_utc": "2026-05-12T12:25:11.754312+00:00"
 }
