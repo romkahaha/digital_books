@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "items_signature": "cbe469370a3a0324dd93c20941e477f4ab13ed050d6adbe4dc04a41904592289",
-  "items_count": 267,
+  "items_signature": "394ba1cc1c0436a79bc96adc0f4ac57b25e79dcf2335bdc7d5ed859dc6d132ef",
+  "items_count": 227,
   "batch_pointer": 0,
   "last_run_at_utc": null,
   "last_status": null,
@@ -18,132 +18,48 @@
   "last_opportunities_rows": 0,
   "last_alert_stats": {},
   "sent_alerts": {
-    "listing:492724679421073077": {
-      "sent_at_utc": "2026-05-11T06:11:20.977223+00:00",
-      "item": "Desert Eagle | Mulberry (Minimal Wear)",
-      "listing_id": "492724679421073077",
-      "spread_hybrid_disc": 0.0709366851061616
-    },
-    "listing:511864977778687545": {
-      "sent_at_utc": "2026-05-11T06:21:11.456727+00:00",
-      "item": "AWP | Atheris (Battle-Scarred)",
-      "listing_id": "511864977778687545",
-      "spread_hybrid_disc": 0.0768043917203146
-    },
-    "listing:649223316113065360": {
-      "sent_at_utc": "2026-05-11T06:27:00.634138+00:00",
-      "item": "Dual Berettas | Melondrama (Battle-Scarred)",
-      "listing_id": "649223316113065360",
-      "spread_hybrid_disc": -0.0236394294756152
-    },
-    "listing:498354037508562811": {
-      "sent_at_utc": "2026-05-11T06:27:42.249429+00:00",
-      "item": "Dual Berettas | Melondrama (Battle-Scarred)",
-      "listing_id": "498354037508562811",
-      "spread_hybrid_disc": 0.0121097182976932
-    },
-    "listing:505109578243598960": {
-      "sent_at_utc": "2026-05-11T06:28:23.201004+00:00",
-      "item": "Dual Berettas | Melondrama (Battle-Scarred)",
-      "listing_id": "505109578243598960",
-      "spread_hybrid_disc": 0.0997292322662866
-    },
-    "listing:508487278136456486": {
-      "sent_at_utc": "2026-05-11T06:30:16.358067+00:00",
-      "item": "AWP | Duality (Field-Tested)",
-      "listing_id": "508487278136456486",
-      "spread_hybrid_disc": 0.0532369051003589
-    },
-    "listing:519746277052871432": {
-      "sent_at_utc": "2026-05-11T06:42:18.434384+00:00",
-      "item": "R8 Revolver | Blaze (Factory New)",
-      "listing_id": "519746277052871432",
-      "spread_hybrid_disc": 0.0622966424206541
-    },
-    "listing:519746277052871108": {
-      "sent_at_utc": "2026-05-11T06:42:40.399086+00:00",
-      "item": "R8 Revolver | Blaze (Factory New)",
-      "listing_id": "519746277052871108",
-      "spread_hybrid_disc": 0.0766465538404426
-    },
-    "listing:519746277052872080": {
-      "sent_at_utc": "2026-05-11T06:43:02.407438+00:00",
-      "item": "R8 Revolver | Blaze (Factory New)",
-      "listing_id": "519746277052872080",
-      "spread_hybrid_disc": 0.0775044153902108
-    },
-    "listing:519746277052871936": {
-      "sent_at_utc": "2026-05-11T06:43:43.355907+00:00",
-      "item": "R8 Revolver | Blaze (Factory New)",
-      "listing_id": "519746277052871936",
-      "spread_hybrid_disc": 0.0889500974531315
-    },
-    "listing:519746277052872332": {
-      "sent_at_utc": "2026-05-11T06:43:45.281850+00:00",
-      "item": "R8 Revolver | Blaze (Factory New)",
-      "listing_id": "519746277052872332",
-      "spread_hybrid_disc": 0.0889509820605132
-    },
-    "listing:519746277052872908": {
-      "sent_at_utc": "2026-05-11T06:44:10.322370+00:00",
-      "item": "R8 Revolver | Blaze (Factory New)",
-      "listing_id": "519746277052872908",
-      "spread_hybrid_disc": 0.0920972961123419
-    },
     "listing:511864977782550561": {
-      "sent_at_utc": "2026-05-11T21:15:42.813414+00:00",
+      "sent_at_utc": "2026-05-12T06:29:25.217449+00:00",
       "item": "M4A1-S | Black Lotus (Battle-Scarred)",
       "listing_id": "511864977782550561",
-      "spread_hybrid_disc": 0.0935836507369289
+      "spread_hybrid_disc": 0.0697051339500526
+    },
+    "listing:502858064668356640": {
+      "sent_at_utc": "2026-05-12T06:29:47.193269+00:00",
+      "item": "MAG-7 | Justice (Field-Tested)",
+      "listing_id": "502858064668356640",
+      "spread_hybrid_disc": 0.087477059662687
+    },
+    "listing:518620663117422256": {
+      "sent_at_utc": "2026-05-12T07:45:36.896493+00:00",
+      "item": "MAC-10 | Disco Tech (Field-Tested)",
+      "listing_id": "518620663117422256",
+      "spread_hybrid_disc": 0.0436262425736843
     },
     "listing:517494758891895298": {
-      "sent_at_utc": "2026-05-11T21:28:23.997370+00:00",
+      "sent_at_utc": "2026-05-12T07:56:20.371133+00:00",
       "item": "P250 | Boreal Forest (Factory New)",
       "listing_id": "517494758891895298",
-      "spread_hybrid_disc": 0.0652984865908893
+      "spread_hybrid_disc": 0.0656172834893907
     },
-    "listing:502857778659772996": {
-      "sent_at_utc": "2026-05-11T21:32:42.779246+00:00",
-      "item": "Glock-18 | Coral Bloom (Factory New)",
-      "listing_id": "502857778659772996",
-      "spread_hybrid_disc": 0.1114674223567981
+    "listing:523123976862833566": {
+      "sent_at_utc": "2026-05-12T08:52:47.054105+00:00",
+      "item": "AUG | Radiation Hazard (Factory New)",
+      "listing_id": "523123976862833566",
+      "spread_hybrid_disc": 0.0718003401713807
     },
-    "listing:512991163849003379": {
-      "sent_at_utc": "2026-05-11T22:13:13.582315+00:00",
-      "item": "AWP | Duality (Field-Tested)",
-      "listing_id": "512991163849003379",
-      "spread_hybrid_disc": 0.0944213145038957
+    "listing:490472879532453459": {
+      "sent_at_utc": "2026-05-12T08:53:28.179236+00:00",
+      "item": "AUG | Radiation Hazard (Factory New)",
+      "listing_id": "490472879532453459",
+      "spread_hybrid_disc": 0.1023893784554075
     },
-    "listing:521998362818650014": {
-      "sent_at_utc": "2026-05-11T22:53:17.927016+00:00",
-      "item": "AK-47 | Searing Rage (Field-Tested)",
-      "listing_id": "521998362818650014",
-      "spread_hybrid_disc": 0.0987570992142089
-    },
-    "listing:510739077836259646": {
-      "sent_at_utc": "2026-05-11T23:06:58.613461+00:00",
-      "item": "FAMAS | Mecha Industries (Factory New)",
-      "listing_id": "510739077836259646",
-      "spread_hybrid_disc": 0.0457241973255549
-    },
-    "listing:630081042873729172": {
-      "sent_at_utc": "2026-05-11T23:07:00.743785+00:00",
-      "item": "FAMAS | Mecha Industries (Factory New)",
-      "listing_id": "630081042873729172",
-      "spread_hybrid_disc": 0.1002656573556728
-    },
-    "listing:512991163849203935": {
-      "sent_at_utc": "2026-05-12T00:55:17.129380+00:00",
-      "item": "R8 Revolver | Blaze (Factory New)",
-      "listing_id": "512991163849203935",
-      "spread_hybrid_disc": 0.0832552231032096
-    },
-    "listing:497228564958548513": {
-      "sent_at_utc": "2026-05-12T01:36:08.429486+00:00",
-      "item": "Desert Eagle | Mulberry (Minimal Wear)",
-      "listing_id": "497228564958548513",
-      "spread_hybrid_disc": 0.0825196469777411
+    "listing:501732164535856589": {
+      "sent_at_utc": "2026-05-12T10:08:41.050253+00:00",
+      "item": "AK-47 | Emerald Pinstripe (Battle-Scarred)",
+      "listing_id": "501732164535856589",
+      "spread_hybrid_disc": 0.10113709546678
     }
   },
-  "last_alert_sent_at_utc": "2026-05-11T06:44:10.322502+00:00"
+  "last_alert_sent_at_utc": "2026-05-12T10:08:41.050399+00:00"
 }
