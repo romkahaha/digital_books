@@ -1,10 +1,12 @@
 {
   "version": 1,
-  "mode": "request",
-  "trigger_run": true,
+  "mode": "clear",
+  "trigger_run": false,
   "request_id": "20260512T133103_747717Z-vmi2737474",
   "requested_at_utc": "2026-05-12T13:31:03.747794+00:00",
   "requested_by": "vmi2737474",
   "item": "M4A4 | Poly Mag (Factory New)",
-  "max_sales_rows": 30
+  "max_sales_rows": 30,
+  "last_status": "success",
+  "last_completed_at_utc": "2026-05-12T13:31:34.060549+00:00"
 }
