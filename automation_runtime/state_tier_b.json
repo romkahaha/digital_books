@@ -2,19 +2,19 @@
   "version": 1,
   "items_signature": "0c4babf75343ff39f6bf358de61e11de6db2f2f38e40f16a92e1bcfbbf3a7258",
   "items_count": 68,
-  "batch_pointer": 67,
-  "last_run_at_utc": "2026-05-13T12:48:18.411699+00:00",
+  "batch_pointer": 63,
+  "last_run_at_utc": "2026-05-13T20:32:37.482172+00:00",
   "last_status": "ok",
   "last_batch_items": [
-    "AWP | Mortis (Battle-Scarred)",
-    "Five-SeveN | Heat Treated (Minimal Wear)",
-    "Glock-18 | Nuclear Garden (Minimal Wear)",
-    "P250 | Nevermore (Factory New)",
-    "AWP | PAW (Factory New)"
+    "Desert Eagle | Printstream (Minimal Wear)",
+    "Glock-18 | Moonrise (Factory New)",
+    "AK-47 | Slate (Factory New)",
+    "AK-47 | Nightwish (Battle-Scarred)",
+    "AWP | Mortis (Battle-Scarred)"
   ],
   "last_error": null,
-  "last_finished_at_utc": "2026-05-13T12:50:34.156883+00:00",
-  "last_successful_monitoring_at_utc": "2026-05-13T12:50:34.156883+00:00",
+  "last_finished_at_utc": "2026-05-13T20:34:57.896873+00:00",
+  "last_successful_monitoring_at_utc": "2026-05-13T20:34:57.896873+00:00",
   "last_failed_monitoring_at_utc": "2026-05-13T09:05:57.545256+00:00",
   "consecutive_errors": 0,
   "last_listing_errors": [],
@@ -25,7 +25,7 @@
   "last_alert_stats": {
     "mode": "background",
     "queued_rows": 0,
-    "sender_pid": 538448
+    "sender_pid": 547302
   },
-  "last_batch_start_pointer": 62
+  "last_batch_start_pointer": 58
 }

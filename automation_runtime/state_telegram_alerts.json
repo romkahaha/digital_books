@@ -43,10 +43,10 @@
       "spread_hybrid_disc": 0.0656172834893907
     },
     "listing:523123976862833566": {
-      "sent_at_utc": "2026-05-12T08:52:47.054105+00:00",
+      "sent_at_utc": "2026-05-13T19:38:31.220343+00:00",
       "item": "AUG | Radiation Hazard (Factory New)",
       "listing_id": "523123976862833566",
-      "spread_hybrid_disc": 0.0718003401713807
+      "spread_hybrid_disc": 0.0755620409204328
     },
     "listing:490472879532453459": {
       "sent_at_utc": "2026-05-12T08:53:28.179236+00:00",
@@ -89,7 +89,31 @@
       "item": "AWP | Duality (Field-Tested)",
       "listing_id": "505109958955949369",
       "spread_hybrid_disc": 0.0275601260497836
+    },
+    "listing:502858159142925011": {
+      "sent_at_utc": "2026-05-13T15:47:03.003328+00:00",
+      "item": "FAMAS | Rapid Eye Movement (Battle-Scarred)",
+      "listing_id": "502858159142925011",
+      "spread_hybrid_disc": 0.0238343200979468
+    },
+    "listing:506235858863668969": {
+      "sent_at_utc": "2026-05-13T16:23:56.713431+00:00",
+      "item": "AWP | Black Nile (Battle-Scarred)",
+      "listing_id": "506235858863668969",
+      "spread_hybrid_disc": -0.0792008183822827
+    },
+    "listing:527627957095381326": {
+      "sent_at_utc": "2026-05-13T19:34:31.388750+00:00",
+      "item": "UMP-45 | Wild Child (Field-Tested)",
+      "listing_id": "527627957095381326",
+      "spread_hybrid_disc": 0.0431059752747611
+    },
+    "listing:490473260169224956": {
+      "sent_at_utc": "2026-05-13T19:58:47.189446+00:00",
+      "item": "AK-47 | Searing Rage (Field-Tested)",
+      "listing_id": "490473260169224956",
+      "spread_hybrid_disc": 0.1079416862411861
     }
   },
-  "last_alert_sent_at_utc": "2026-05-13T12:48:38.629366+00:00"
+  "last_alert_sent_at_utc": "2026-05-13T19:58:47.189678+00:00"
 }
