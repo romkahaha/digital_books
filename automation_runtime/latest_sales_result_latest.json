@@ -1,5 +1,6 @@
 {
   "version": 1,
+<<<<<<< HEAD
   "request_id": "20260512T150454_456708Z-vmi2737474",
   "status": "success",
   "completed_at_utc": "2026-05-12T15:05:35.120343+00:00",
@@ -438,4 +439,10 @@
       }
     ]
   }
+=======
+  "request_id": "20260512T142405_375808Z-vmi2737474",
+  "status": "pending",
+  "requested_at_utc": "2026-05-12T14:24:05.375932+00:00",
+  "item": "AWP | Crakow! (Battle-Scarred)"
+>>>>>>> 390d8e8 (Request latest-sales fetch for AWP | Crakow! (Battle-Scarred))
 }

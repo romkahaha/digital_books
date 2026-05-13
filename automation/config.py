@@ -307,9 +307,9 @@ def nightly_defaults() -> dict[str, Any]:
         "monitor_tiers": {
             "enabled": True,
             "shares": {
-                "A": 0.2,
-                "B": 0.3,
-                "C": 0.5,
+                "A": 0.3,
+                "B": 0.35,
+                "C": 0.35,
             },
             "score_weights": {
                 "steam_sales_7d_n": 0.75,
