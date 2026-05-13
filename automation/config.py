@@ -88,7 +88,7 @@ def monitoring_defaults() -> dict[str, Any]:
         "monitoring": {
             "enabled": True,
             "batch_size": 5,
-            "max_listings_per_item": 200,
+            "max_listings_per_item": 100,
             "fail_if_all_listing_fetches_error": True,
         },
             "cycle": {
@@ -113,14 +113,14 @@ def monitoring_defaults() -> dict[str, Any]:
                     },
                     "max_listings_per_item": {
                         "A": 100,
-                        "B": 200,
-                        "C": 200,
+                        "B": 80,
+                        "C": 50,
                     },
                 },
             },
         "steam_scm": {
             "listings_per_request": 100,
-            "max_listings_per_item": 200,
+            "max_listings_per_item": 100,
             "request_timeout_sec": 45.0,
             "retry_attempts": 3,
             "retry_sleep_min_sec": 2.0,

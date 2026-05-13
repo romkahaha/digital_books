@@ -29,6 +29,7 @@ import importlib
 import importlib.util
 import json
 import os
+from json import JSONDecodeError
 from decimal import ROUND_HALF_UP, Decimal
 import random
 import sys
@@ -66,6 +67,9 @@ CONFIG: dict[str, Any] = {
     "items_py_path": _DEFAULT_ITEMS_PY,
     # Куки браузера (альтернатива — env STEAM_COOKIES)
     "steam_cookies": "",
+    # Steam SSR route action id for the Market listing Search action.
+    # If Steam rotates route ids again, this can be overridden in steam_scm_runtime.json.
+    "steam_market_route_id": "4OPT6VBA",
     # Куда писать CSV при --batch
     "batch_out_csv": "data/scm_listings_batch.csv",
     # Ограничить число скинов с начала списка (None = все)
@@ -187,7 +191,14 @@ def _effective(key: str, override: Any = None) -> Any:
             return int(float(v))
         except (TypeError, ValueError):
             return base
-    if key in ("items_module", "items_variable", "items_py_path", "batch_out_csv", "steam_cookies"):
+    if key in (
+        "items_module",
+        "items_variable",
+        "items_py_path",
+        "batch_out_csv",
+        "steam_cookies",
+        "steam_market_route_id",
+    ):
         if key == "items_py_path" and (v is None or str(v).strip() == ""):
             return base
         return str(v)
@@ -364,6 +375,105 @@ def parse_render_payload(data: dict) -> list[dict[str, Any]]:
     return rows
 
 
+def _route_action_payload_to_render_payload(data: dict) -> dict:
+    """Normalize Steam's new SSR Market Search action response to the old /render/ shape."""
+    listinginfo: list[dict[str, Any]] = []
+    assets: dict[str, dict[str, dict[str, dict]]] = {str(APP_ID): {CONTEXT_ID: {}}}
+    asset_bucket = assets[str(APP_ID)][CONTEXT_ID]
+
+    for listing in data.get("listings") or []:
+        if not isinstance(listing, dict):
+            continue
+        listing_id = str(listing.get("listingid") or "")
+        asset = listing.get("asset") if isinstance(listing.get("asset"), dict) else {}
+        desc = listing.get("description") if isinstance(listing.get("description"), dict) else {}
+        asset_id = str(asset.get("assetid") or asset.get("id") or "")
+        if not listing_id or not asset_id:
+            continue
+
+        enriched_asset = dict(asset)
+        for key in (
+            "market_hash_name",
+            "market_name",
+            "name",
+            "market_actions",
+            "commodity",
+            "type",
+            "name_color",
+        ):
+            if key in desc and key not in enriched_asset:
+                enriched_asset[key] = desc.get(key)
+        asset_bucket[asset_id] = enriched_asset
+
+        e_currency = listing.get("eCurrency")
+        converted_currencyid = None
+        try:
+            converted_currencyid = 2000 + int(e_currency)
+        except (TypeError, ValueError):
+            pass
+
+        listinginfo.append(
+            {
+                "listingid": listing_id,
+                "converted_price": listing.get("unPricePerUnit", listing.get("unPrice")),
+                "converted_fee": listing.get("unFeePerUnit", listing.get("unFee")),
+                "converted_currencyid": converted_currencyid,
+                "asset": {"id": asset_id},
+            }
+        )
+
+    return {
+        "success": True,
+        "more": bool(data.get("more")),
+        "start": data.get("start"),
+        "total_count": data.get("total_count"),
+        "listinginfo": listinginfo,
+        "assets": assets,
+        "__source": "steam_market_route_action",
+    }
+
+
+def fetch_market_search_raw(
+    market_hash_name: str,
+    *,
+    start: int = 0,
+    count: int | None = None,
+    currency: int | None = None,
+    session: requests.Session | None = None,
+    timeout: float | None = None,
+) -> dict:
+    count = count if count is not None else int(_effective("listings_per_request"))
+    timeout = timeout if timeout is not None else float(_effective("request_timeout_sec"))
+    sess = session or _session()
+    seg = urllib.parse.quote(market_hash_name, safe="")
+    url = f"https://steamcommunity.com/market/listings/{APP_ID}/{seg}"
+    route_id = str(_effective("steam_market_route_id") or "").strip()
+    if not route_id:
+        raise RuntimeError("steam_market_route_id is empty")
+    headers = {
+        "Accept": "application/json, text/plain, */*",
+        "Content-Type": "application/json; charset=utf-8",
+        "x-valve-request-type": "routeAction",
+        "x-valve-action-type": f"{route_id}:Search",
+        "Referer": url,
+    }
+    query = {
+        "appid": APP_ID,
+        "strItemName": market_hash_name,
+        "filters": {},
+        "accessoryFilters": {},
+        "propertyFilters": {},
+        "disableGrouping": True,
+        "start": int(start),
+        "count": min(max(1, int(count)), 100),
+    }
+    if currency is not None:
+        query["currency"] = int(currency)
+    r = sess.post(url, headers=headers, data=json.dumps([query]), timeout=timeout)
+    r.raise_for_status()
+    return _route_action_payload_to_render_payload(r.json())
+
+
 def fetch_render_raw(
     market_hash_name: str,
     *,
@@ -390,7 +500,27 @@ def fetch_render_raw(
     sess.headers["Referer"] = f"https://steamcommunity.com/market/listings/{APP_ID}/{seg}"
     r = sess.get(url, params=params, timeout=timeout)
     r.raise_for_status()
-    return r.json()
+    try:
+        return r.json()
+    except (ValueError, JSONDecodeError) as exc:
+        _batch_log(
+            f'  [steam_scm] "{market_hash_name}": /render/ returned non-JSON '
+            f"({r.headers.get('content-type')}; final_url={r.url}) — trying Steam Market Search action"
+        )
+        try:
+            return fetch_market_search_raw(
+                market_hash_name,
+                start=start,
+                count=count,
+                currency=currency,
+                session=sess,
+                timeout=timeout,
+            )
+        except Exception as fallback_exc:
+            raise RuntimeError(
+                f"Steam /render/ returned non-JSON and Market Search action fallback failed: {fallback_exc}"
+            ) from exc
+
 
 
 def _minor_units_major(
@@ -582,7 +712,9 @@ def fetch_steam_scm_top_listings(
             if len(merged) >= total_cap:
                 break
 
-        if not page_rows or len(page_rows) < need:
+        if not page_rows:
+            break
+        if len(page_rows) < need and not data.get("more"):
             break
         if len(merged) >= total_cap:
             break
