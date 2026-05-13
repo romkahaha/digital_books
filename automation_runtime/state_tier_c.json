@@ -3,29 +3,25 @@
   "items_signature": "809d4dafa189dcc0dccf293bd0568010a21f568cae4f7ccd6b3736f2a7d3ce22",
   "items_count": 114,
   "batch_pointer": 107,
-  "last_run_at_utc": "2026-05-13T20:25:21.418607+00:00",
-  "last_status": "ok",
+  "last_run_at_utc": "2026-05-13T22:21:47.752589+00:00",
+  "last_status": "error",
   "last_batch_items": [
-    "AWP | Hyper Beast (Battle-Scarred)",
-    "FAMAS | Mecha Industries (Factory New)",
-    "USP-S | Kill Confirmed (Field-Tested)",
-    "SG 553 | Pulse (Minimal Wear)",
-    "XM1014 | Blue Tire (Factory New)"
+    "R8 Revolver | Fade (Minimal Wear)",
+    "M4A1-S | Guardian (Field-Tested)",
+    "MAC-10 | Whitefish (Factory New)",
+    "M4A1-S | Atomic Alloy (Field-Tested)",
+    "MAC-10 | Strats (Factory New)"
   ],
-  "last_error": null,
-  "last_finished_at_utc": "2026-05-13T20:26:51.792853+00:00",
+  "last_error": "Steam /render/ returned non-JSON and Market Search action fallback failed: 429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/MAC-10%20%7C%20Strats%20%28Factory%20New%29",
+  "last_finished_at_utc": "2026-05-13T22:23:14.174620+00:00",
   "last_successful_monitoring_at_utc": "2026-05-13T20:26:51.792853+00:00",
-  "last_failed_monitoring_at_utc": null,
-  "consecutive_errors": 0,
+  "last_failed_monitoring_at_utc": "2026-05-13T22:23:14.174620+00:00",
+  "consecutive_errors": 1,
   "last_listing_errors": [],
   "last_listing_error_count": 0,
-  "last_listing_rows": 238,
+  "last_listing_rows": 0,
   "last_enriched_rows": 238,
   "last_opportunities_rows": 0,
-  "last_alert_stats": {
-    "mode": "background",
-    "queued_rows": 0,
-    "sender_pid": 547186
-  },
-  "last_batch_start_pointer": 102
+  "last_alert_stats": {},
+  "last_batch_start_pointer": 107
 }

@@ -1,11 +1,11 @@
 {
   "version": 1,
-  "mode": "request",
+  "mode": "clear",
   "request_id": "20260513T221929Z-vmi2737474-request",
   "requested_at_utc": "2026-05-13T22:19:29.063412+00:00",
   "requested_by": "vmi2737474",
   "main_repo_root": "/home/roma/cs-arbitrage/cs-skins-monitoring-bot",
-  "trigger_run": true,
+  "trigger_run": false,
   "lease_seconds": 19800,
   "max_runtime_minutes": 330,
   "cooldown_until_utc": "2026-05-14T03:49:29.063140+00:00",
@@ -17,5 +17,8 @@
   "last_status": "error",
   "last_error": "Steam /render/ returned non-JSON and Market Search action fallback failed: 429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/P250%20%7C%20Nevermore%20%28Factory%20New%29",
   "last_finished_at_utc": "2026-05-13T21:04:23.128010+00:00",
-  "last_successful_monitoring_at_utc": "2026-05-13T21:02:58.623953+00:00"
+  "last_successful_monitoring_at_utc": "2026-05-13T21:02:58.623953+00:00",
+  "last_failover_status": "error",
+  "last_failover_exit_code": 1,
+  "last_failover_completed_at_utc": "2026-05-13T22:23:14.460831+00:00"
 }

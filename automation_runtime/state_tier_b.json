@@ -2,9 +2,9 @@
   "version": 1,
   "items_signature": "0c4babf75343ff39f6bf358de61e11de6db2f2f38e40f16a92e1bcfbbf3a7258",
   "items_count": 68,
-  "batch_pointer": 63,
-  "last_run_at_utc": "2026-05-13T21:02:58.987963+00:00",
-  "last_status": "error",
+  "batch_pointer": 0,
+  "last_run_at_utc": "2026-05-13T22:20:03.059926+00:00",
+  "last_status": "ok",
   "last_batch_items": [
     "Five-SeveN | Heat Treated (Minimal Wear)",
     "Glock-18 | Nuclear Garden (Minimal Wear)",
@@ -12,16 +12,22 @@
     "AWP | PAW (Factory New)",
     "M4A1-S | Decimator (Minimal Wear)"
   ],
-  "last_error": "Steam /render/ returned non-JSON and Market Search action fallback failed: 429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/P250%20%7C%20Nevermore%20%28Factory%20New%29",
-  "last_finished_at_utc": "2026-05-13T21:04:23.076515+00:00",
-  "last_successful_monitoring_at_utc": "2026-05-13T20:34:57.896873+00:00",
+  "last_error": null,
+  "last_finished_at_utc": "2026-05-13T22:21:47.329000+00:00",
+  "last_successful_monitoring_at_utc": "2026-05-13T22:21:47.329000+00:00",
   "last_failed_monitoring_at_utc": "2026-05-13T21:04:23.076515+00:00",
-  "consecutive_errors": 1,
+  "consecutive_errors": 0,
   "last_listing_errors": [],
   "last_listing_error_count": 0,
-  "last_listing_rows": 0,
-  "last_enriched_rows": 400,
+  "last_listing_rows": 339,
+  "last_enriched_rows": 339,
   "last_opportunities_rows": 0,
-  "last_alert_stats": {},
+  "last_alert_stats": {
+    "loaded": 0,
+    "filtered": 0,
+    "considered": 0,
+    "sent": 0,
+    "skipped": 0
+  },
   "last_batch_start_pointer": 63
 }
