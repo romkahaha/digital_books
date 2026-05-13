@@ -788,6 +788,7 @@ def run_batch_to_csv(
     items: list[str],
     out_csv: str | Path | None = None,
     *,
+    max_listings_per_item: int | None = None,
     session: requests.Session | None = None,
 ) -> tuple[Path, list[dict[str, Any]], Any]:
     """
@@ -808,7 +809,10 @@ def run_batch_to_csv(
         label = f"{i + 1}/{n} {name}"
         _batch_log(f'  [steam_scm] >> батч {label} (delay_between_skins_* после предмета)')
         rows, meta = fetch_steam_scm_top_listings(
-            name, session=sess, log_skin_label=label
+            name,
+            max_listings=max_listings_per_item,
+            session=sess,
+            log_skin_label=label,
         )
         dt = time.monotonic() - t0
         _batch_log(
