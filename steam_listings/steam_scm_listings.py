@@ -384,11 +384,20 @@ def parse_render_payload(data: dict) -> list[dict[str, Any]]:
     return rows
 
 
-def _route_action_payload_to_render_payload(data: dict) -> dict:
+def _route_action_payload_to_render_payload(data: dict | None) -> dict:
     """Normalize Steam's new SSR Market Search action response to the old /render/ shape."""
     listinginfo: list[dict[str, Any]] = []
     assets: dict[str, dict[str, dict[str, dict]]] = {str(APP_ID): {CONTEXT_ID: {}}}
     asset_bucket = assets[str(APP_ID)][CONTEXT_ID]
+    if not isinstance(data, dict):
+        return {
+            "success": True,
+            "more": False,
+            "start": None,
+            "total_count": None,
+            "listinginfo": listinginfo,
+            "assets": assets,
+        }
 
     for listing in data.get("listings") or []:
         if not isinstance(listing, dict):

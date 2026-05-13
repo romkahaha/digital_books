@@ -77,7 +77,19 @@
       "item": "AWP | Duality (Field-Tested)",
       "listing_id": "500606264646253379",
       "spread_hybrid_disc": 0.0528173853691684
+    },
+    "listing:519746657745964426": {
+      "sent_at_utc": "2026-05-13T12:11:03.580342+00:00",
+      "item": "AWP | Duality (Field-Tested)",
+      "listing_id": "519746657745964426",
+      "spread_hybrid_disc": 0.0529651479889898
+    },
+    "listing:505109958955949369": {
+      "sent_at_utc": "2026-05-13T12:48:38.629204+00:00",
+      "item": "AWP | Duality (Field-Tested)",
+      "listing_id": "505109958955949369",
+      "spread_hybrid_disc": 0.0275601260497836
     }
   },
-  "last_alert_sent_at_utc": "2026-05-13T11:41:00.579903+00:00"
+  "last_alert_sent_at_utc": "2026-05-13T12:48:38.629366+00:00"
 }
