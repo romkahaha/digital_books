@@ -346,6 +346,13 @@ def _iter_listings(listinginfo: Any) -> list[tuple[str, dict]]:
     return []
 
 
+def _positive_minor_units(value: Any) -> bool:
+    try:
+        return int(value) > 0
+    except (TypeError, ValueError):
+        return False
+
+
 def parse_render_payload(data: dict) -> list[dict[str, Any]]:
     if not data.get("success"):
         return []
@@ -360,6 +367,8 @@ def parse_render_payload(data: dict) -> list[dict[str, Any]]:
         cfee = info.get("converted_fee")
         if cfee is None and info.get("fee") is not None:
             cfee = info.get("fee")
+        if not _positive_minor_units(cprice):
+            continue
         row: dict[str, Any] = {
             "listing_id": listing_id,
             "asset_id": aid or None,
@@ -411,11 +420,14 @@ def _route_action_payload_to_render_payload(data: dict) -> dict:
             converted_currencyid = 2000 + int(e_currency)
         except (TypeError, ValueError):
             pass
+        converted_price = listing.get("unPricePerUnit", listing.get("unPrice"))
+        if not _positive_minor_units(converted_price):
+            continue
 
         listinginfo.append(
             {
                 "listingid": listing_id,
-                "converted_price": listing.get("unPricePerUnit", listing.get("unPrice")),
+                "converted_price": converted_price,
                 "converted_fee": listing.get("unFeePerUnit", listing.get("unFee")),
                 "converted_currencyid": converted_currencyid,
                 "asset": {"id": asset_id},
@@ -719,7 +731,7 @@ def fetch_steam_scm_top_listings(
         if len(merged) >= total_cap:
             break
 
-        start_offset += len(page_rows)
+        start_offset += len(lis)
         if len(merged) < total_cap:
             d_lo = float(_effective("delay_between_render_pages_min_sec"))
             d_hi = float(_effective("delay_between_render_pages_max_sec"))
@@ -740,6 +752,11 @@ def fetch_steam_scm_top_listings(
             row.get("converted_currencyid"),
             row.get("converted_fee"),
         )
+    merged = [
+        row
+        for row in merged
+        if row.get("ask") is not None and _positive_minor_units(row.get("converted_price"))
+    ]
     return merged[:total_cap], meta
 
 
