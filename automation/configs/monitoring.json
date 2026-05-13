@@ -60,7 +60,7 @@
       "max_listings_per_item": {
         "A": 100,
         "B": 80,
-        "C": 50
+        "C": 60
       }
     }
   },

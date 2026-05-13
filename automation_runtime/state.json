@@ -13,33 +13,33 @@
     "B",
     "C"
   ],
-  "queue_pointer": 0,
+  "queue_pointer": 1,
   "last_tier": "A",
-  "last_tier_queue_index": 0,
-  "last_batch_start_pointer": 30,
+  "last_tier_queue_index": 1,
+  "last_batch_start_pointer": 35,
   "last_batch_items": [
-    "AWP | Duality (Battle-Scarred)",
-    "Sawed-Off | Kiss♥Love (Field-Tested)",
-    "Glock-18 | Shinobu (Battle-Scarred)",
-    "AK-47 | Searing Rage (Minimal Wear)",
-    "AWP | Atheris (Minimal Wear)"
+    "USP-S | Jawbreaker (Minimal Wear)",
+    "AK-47 | Inheritance (Field-Tested)",
+    "USP-S | Royal Guard (Minimal Wear)",
+    "Glock-18 | Shinobu (Minimal Wear)",
+    "AK-47 | Midnight Laminate (Battle-Scarred)"
   ],
   "last_error": null,
-  "last_run_at_utc": "2026-05-13T11:02:12.962058+00:00",
-  "last_finished_at_utc": "2026-05-13T11:02:12.960625+00:00",
-  "last_successful_monitoring_at_utc": "2026-05-13T11:02:12.960625+00:00",
+  "last_run_at_utc": "2026-05-13T11:08:05.310180+00:00",
+  "last_finished_at_utc": "2026-05-13T11:08:05.308749+00:00",
+  "last_successful_monitoring_at_utc": "2026-05-13T11:08:05.308749+00:00",
   "last_failed_monitoring_at_utc": "2026-05-13T09:05:57.818270+00:00",
   "last_status": "running",
   "consecutive_errors": 0,
   "last_listing_errors": [],
   "last_listing_error_count": 0,
-  "last_listing_rows": 493,
-  "last_enriched_rows": 493,
+  "last_listing_rows": 1000,
+  "last_enriched_rows": 1000,
   "last_opportunities_rows": 0,
   "last_alert_stats": {
     "mode": "background",
     "queued_rows": 0,
-    "sender_pid": 526240
+    "sender_pid": 527806
   },
   "tiers": {
     "A": {

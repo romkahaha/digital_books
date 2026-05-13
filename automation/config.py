@@ -114,7 +114,7 @@ def monitoring_defaults() -> dict[str, Any]:
                     "max_listings_per_item": {
                         "A": 100,
                         "B": 80,
-                        "C": 50,
+                        "C": 60,
                     },
                 },
             },
