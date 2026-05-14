@@ -1,11 +1,11 @@
 {
   "version": 1,
-  "mode": "request",
+  "mode": "clear",
   "request_id": "20260514T115231Z-vmi2737474-request",
   "requested_at_utc": "2026-05-14T11:52:31.403455+00:00",
   "requested_by": "vmi2737474",
   "main_repo_root": "/home/roma/cs-arbitrage/cs-skins-monitoring-bot",
-  "trigger_run": true,
+  "trigger_run": false,
   "lease_seconds": 5400,
   "max_runtime_minutes": 90,
   "cooldown_until_utc": "2026-05-14T13:22:31.403128+00:00",
@@ -17,5 +17,8 @@
   "last_status": "error",
   "last_error": "Steam rate limit (429) for \"2/5 Five-SeveN | Heat Treated (Battle-Scarred)\": 429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/Five-SeveN%20%7C%20Heat%20Treated%20%28Battle-Scarred%29/render/?query=&start=0&count=100&currency=3&language=english&format=json",
   "last_finished_at_utc": "2026-05-14T11:52:26.733239+00:00",
-  "last_successful_monitoring_at_utc": "2026-05-14T11:52:17.729532+00:00"
+  "last_successful_monitoring_at_utc": "2026-05-14T11:52:17.729532+00:00",
+  "last_failover_status": "success",
+  "last_failover_exit_code": 0,
+  "last_failover_completed_at_utc": "2026-05-14T11:56:20.523642+00:00"
 }
