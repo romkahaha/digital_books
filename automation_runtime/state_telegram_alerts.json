@@ -59,7 +59,25 @@
       "item": "R8 Revolver | Blaze (Factory New)",
       "listing_id": "507361758773523311",
       "spread_hybrid_disc": 0.0773595861564256
+    },
+    "listing:506235858869474509": {
+      "sent_at_utc": "2026-05-14T19:40:03.091941+00:00",
+      "item": "AK-47 | Wintergreen (Minimal Wear)",
+      "listing_id": "506235858869474509",
+      "spread_hybrid_disc": 0.1119690546329054
+    },
+    "listing:680750447961144679": {
+      "sent_at_utc": "2026-05-14T19:49:04.708571+00:00",
+      "item": "Desert Eagle | Mulberry (Field-Tested)",
+      "listing_id": "680750447961144679",
+      "spread_hybrid_disc": 0.1100734896141226
+    },
+    "listing:489347463798373779": {
+      "sent_at_utc": "2026-05-14T20:16:08.281497+00:00",
+      "item": "R8 Revolver | Blaze (Factory New)",
+      "listing_id": "489347463798373779",
+      "spread_hybrid_disc": 0.0989152716658371
     }
   },
-  "last_alert_sent_at_utc": "2026-05-14T10:50:55.392202+00:00"
+  "last_alert_sent_at_utc": "2026-05-14T20:16:08.281718+00:00"
 }
