@@ -659,19 +659,22 @@ def fetch_steam_scm_top_listings(
             return 0
 
     while len(merged) < total_cap:
-        need = min(chunk, 100, total_cap - len(merged))
+        remaining = total_cap - len(merged)
+        request_count = min(chunk, 100)
+        if chunk < 100:
+            request_count = min(request_count, remaining)
         last_err: str | None = None
         data: dict[str, Any] | None = None
         for attempt in range(tries):
             try:
                 _batch_log(
-                    f'  [steam_scm] "{label}": render start={start_offset} count={need} '
+                    f'  [steam_scm] "{label}": render start={start_offset} count={request_count} '
                     f"(got {len(merged)}/{total_cap})"
                 )
                 data = fetch_render_raw(
                     market_hash_name,
                     start=start_offset,
-                    count=need,
+                    count=request_count,
                     currency=cur,
                     session=sess,
                 )
@@ -743,7 +746,7 @@ def fetch_steam_scm_top_listings(
 
         if not page_rows:
             break
-        if len(page_rows) < need and not data.get("more"):
+        if len(page_rows) < request_count and not data.get("more"):
             break
         if len(merged) >= total_cap:
             break
