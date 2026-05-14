@@ -1,11 +1,11 @@
 {
   "version": 1,
-  "mode": "request",
+  "mode": "clear",
   "request_id": "20260514T145256Z-vmi2737474-request",
   "requested_at_utc": "2026-05-14T14:52:56.255606+00:00",
   "requested_by": "vmi2737474",
   "main_repo_root": "/home/roma/cs-arbitrage/cs-skins-monitoring-bot",
-  "trigger_run": true,
+  "trigger_run": false,
   "lease_seconds": 5400,
   "max_runtime_minutes": 90,
   "cooldown_until_utc": "2026-05-14T16:22:56.255306+00:00",
@@ -17,5 +17,8 @@
   "last_status": "error",
   "last_error": "Steam rate limit (429) for \"1/5 P2000 | Wicked Sick (Field-Tested)\": 429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/P2000%20%7C%20Wicked%20Sick%20%28Field-Tested%29/render/?query=&start=0&count=100&currency=3&language=english&format=json",
   "last_finished_at_utc": "2026-05-14T14:52:51.434894+00:00",
-  "last_successful_monitoring_at_utc": "2026-05-14T13:25:15.433477+00:00"
+  "last_successful_monitoring_at_utc": "2026-05-14T13:25:15.433477+00:00",
+  "last_failover_status": "success",
+  "last_failover_exit_code": 0,
+  "last_failover_completed_at_utc": "2026-05-14T14:56:44.920635+00:00"
 }
