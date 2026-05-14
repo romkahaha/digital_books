@@ -3,31 +3,25 @@
   "items_signature": "8a51cc0546a277f095a4a7b87f0ca8cc7f7343a8ade25fa21427128685c1008c",
   "items_count": 31,
   "batch_pointer": 9,
-  "last_run_at_utc": "2026-05-14T14:53:29.453263+00:00",
-  "last_status": "ok",
+  "last_run_at_utc": "2026-05-14T16:26:01.120605+00:00",
+  "last_status": "error",
   "last_batch_items": [
-    "P2000 | Wicked Sick (Field-Tested)",
-    "AK-47 | Slate (Battle-Scarred)",
-    "AK-47 | Slate (Minimal Wear)",
-    "M4A1-S | Black Lotus (Minimal Wear)",
-    "P250 | Visions (Field-Tested)"
+    "AK-47 | Elite Build (Minimal Wear)",
+    "Desert Eagle | Mulberry (Field-Tested)",
+    "AK-47 | Ice Coaled (Battle-Scarred)",
+    "AK-47 | Searing Rage (Battle-Scarred)",
+    "Glock-18 | Shinobu (Battle-Scarred)"
   ],
-  "last_error": null,
-  "last_finished_at_utc": "2026-05-14T14:56:04.451045+00:00",
+  "last_error": "Steam /render/ returned non-JSON and Market Search action fallback failed: 429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/Desert%20Eagle%20%7C%20Mulberry%20%28Field-Tested%29",
+  "last_finished_at_utc": "2026-05-14T16:26:52.663370+00:00",
   "last_successful_monitoring_at_utc": "2026-05-14T14:56:04.451045+00:00",
-  "last_failed_monitoring_at_utc": "2026-05-14T14:52:51.187776+00:00",
-  "consecutive_errors": 0,
+  "last_failed_monitoring_at_utc": "2026-05-14T16:26:52.663370+00:00",
+  "consecutive_errors": 1,
   "last_listing_errors": [],
   "last_listing_error_count": 0,
-  "last_listing_rows": 439,
+  "last_listing_rows": 0,
   "last_enriched_rows": 439,
   "last_opportunities_rows": 0,
-  "last_alert_stats": {
-    "loaded": 0,
-    "filtered": 0,
-    "considered": 0,
-    "sent": 0,
-    "skipped": 0
-  },
-  "last_batch_start_pointer": 4
+  "last_alert_stats": {},
+  "last_batch_start_pointer": 9
 }
