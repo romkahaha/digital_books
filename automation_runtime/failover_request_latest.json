@@ -1,21 +1,21 @@
 {
   "version": 1,
   "mode": "standby",
-  "request_id": "20260514T060024Z-vmi2737474-standby",
-  "requested_at_utc": "2026-05-14T06:00:24.922279+00:00",
+  "request_id": "20260514T081113Z-vmi2737474-standby",
+  "requested_at_utc": "2026-05-14T08:11:13.817141+00:00",
   "requested_by": "vmi2737474",
   "main_repo_root": "/home/roma/cs-arbitrage/cs-skins-monitoring-bot",
   "trigger_run": false,
   "lease_seconds": 5400,
   "max_runtime_minutes": 90,
-  "cooldown_until_utc": "2026-05-14T07:30:24.922033+00:00",
+  "cooldown_until_utc": "2026-05-14T09:41:13.816843+00:00",
   "reason": "main monitoring cycle started",
-  "batch_pointer": 0,
+  "batch_pointer": 2,
   "items_count": 155,
   "items_signature": "943fbc4b48cc7cbc155f6195dbfcac13fcfc65ae9d46684c077541a252c0aec9",
   "sent_alerts_count": 16,
   "last_status": "error",
-  "last_error": "Steam /render/ returned non-JSON and Market Search action fallback failed: 429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/MAC-10%20%7C%20Strats%20%28Factory%20New%29",
-  "last_finished_at_utc": "2026-05-13T22:23:14.234628+00:00",
-  "last_successful_monitoring_at_utc": "2026-05-13T22:21:47.395893+00:00"
+  "last_error": "all Steam listing fetches failed for this batch (5 item errors: M4A4 | Evil Daimyo (Field-Tested), Desert Eagle | Heat Treated (Minimal Wear), AWP | Atheris (Battle-Scarred))",
+  "last_finished_at_utc": "2026-05-14T07:34:35.027053+00:00",
+  "last_successful_monitoring_at_utc": "2026-05-14T06:01:19.450410+00:00"
 }

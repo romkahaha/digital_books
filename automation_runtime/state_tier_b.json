@@ -1,33 +1,78 @@
 {
   "version": 1,
-  "items_signature": "0c4babf75343ff39f6bf358de61e11de6db2f2f38e40f16a92e1bcfbbf3a7258",
-  "items_count": 68,
+  "items_signature": "bc4384f4d7c743a8a54a549f5f6d6dd7afe49b79faa6863d282331f31998f93d",
+  "items_count": 46,
   "batch_pointer": 0,
-  "last_run_at_utc": "2026-05-13T22:20:03.059926+00:00",
-  "last_status": "ok",
+  "last_run_at_utc": "2026-05-14T07:32:57.944964+00:00",
+  "last_status": "error",
   "last_batch_items": [
-    "Five-SeveN | Heat Treated (Minimal Wear)",
-    "Glock-18 | Nuclear Garden (Minimal Wear)",
-    "P250 | Nevermore (Factory New)",
-    "AWP | PAW (Factory New)",
-    "M4A1-S | Decimator (Minimal Wear)"
+    "M4A4 | Evil Daimyo (Field-Tested)",
+    "Desert Eagle | Heat Treated (Minimal Wear)",
+    "AWP | Atheris (Battle-Scarred)",
+    "USP-S | Cortex (Well-Worn)",
+    "M4A1-S | Black Lotus (Battle-Scarred)"
   ],
-  "last_error": null,
-  "last_finished_at_utc": "2026-05-13T22:21:47.329000+00:00",
-  "last_successful_monitoring_at_utc": "2026-05-13T22:21:47.329000+00:00",
-  "last_failed_monitoring_at_utc": "2026-05-13T21:04:23.076515+00:00",
-  "consecutive_errors": 0,
-  "last_listing_errors": [],
-  "last_listing_error_count": 0,
-  "last_listing_rows": 339,
-  "last_enriched_rows": 339,
+  "last_error": "all Steam listing fetches failed for this batch (5 item errors: M4A4 | Evil Daimyo (Field-Tested), Desert Eagle | Heat Treated (Minimal Wear), AWP | Atheris (Battle-Scarred))",
+  "last_finished_at_utc": "2026-05-14T07:34:34.800212+00:00",
+  "last_successful_monitoring_at_utc": null,
+  "last_failed_monitoring_at_utc": "2026-05-14T07:34:34.800212+00:00",
+  "consecutive_errors": 2,
+  "last_listing_errors": [
+    {
+      "market_hash_name": "M4A4 | Evil Daimyo (Field-Tested)",
+      "meta": {
+        "total_count": null,
+        "success": false,
+        "note": "success=false",
+        "pages_fetched": 0,
+        "listings_target_cap": 80
+      }
+    },
+    {
+      "market_hash_name": "Desert Eagle | Heat Treated (Minimal Wear)",
+      "meta": {
+        "total_count": null,
+        "success": false,
+        "note": "success=false",
+        "pages_fetched": 0,
+        "listings_target_cap": 80
+      }
+    },
+    {
+      "market_hash_name": "AWP | Atheris (Battle-Scarred)",
+      "meta": {
+        "total_count": null,
+        "success": false,
+        "note": "success=false",
+        "pages_fetched": 0,
+        "listings_target_cap": 80
+      }
+    },
+    {
+      "market_hash_name": "USP-S | Cortex (Well-Worn)",
+      "meta": {
+        "total_count": null,
+        "success": false,
+        "note": "success=false",
+        "pages_fetched": 0,
+        "listings_target_cap": 80
+      }
+    },
+    {
+      "market_hash_name": "M4A1-S | Black Lotus (Battle-Scarred)",
+      "meta": {
+        "total_count": null,
+        "success": false,
+        "note": "success=false",
+        "pages_fetched": 0,
+        "listings_target_cap": 80
+      }
+    }
+  ],
+  "last_listing_error_count": 5,
+  "last_listing_rows": 0,
+  "last_enriched_rows": 0,
   "last_opportunities_rows": 0,
-  "last_alert_stats": {
-    "loaded": 0,
-    "filtered": 0,
-    "considered": 0,
-    "sent": 0,
-    "skipped": 0
-  },
-  "last_batch_start_pointer": 63
+  "last_alert_stats": {},
+  "last_batch_start_pointer": 0
 }

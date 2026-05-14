@@ -1,33 +1,31 @@
 {
   "version": 1,
-  "items_signature": "a482fc0098727f7e3a3b3a2fcf41e70fd511e3d355dd00320cb9a33faa03b16d",
-  "items_count": 45,
+  "items_signature": "8a51cc0546a277f095a4a7b87f0ca8cc7f7343a8ade25fa21427128685c1008c",
+  "items_count": 31,
   "batch_pointer": 10,
-  "last_run_at_utc": "2026-05-13T21:00:58.459093+00:00",
+  "last_run_at_utc": "2026-05-14T06:00:59.949591+00:00",
   "last_status": "ok",
   "last_batch_items": [
-    "AK-47 | Midnight Laminate (Field-Tested)",
-    "Glock-18 | Shinobu (Field-Tested)",
-    "AK-47 | Slate (Well-Worn)",
-    "M4A4 | Tooth Fairy (Field-Tested)",
-    "Glock-18 | Vogue (Field-Tested)"
+    "AK-47 | Slate (Battle-Scarred)",
+    "AK-47 | Slate (Minimal Wear)",
+    "M4A1-S | Black Lotus (Minimal Wear)",
+    "P250 | Visions (Field-Tested)",
+    "AK-47 | Elite Build (Minimal Wear)"
   ],
   "last_error": null,
-  "last_finished_at_utc": "2026-05-13T21:02:58.570582+00:00",
-  "last_successful_monitoring_at_utc": "2026-05-13T21:02:58.570582+00:00",
-  "last_failed_monitoring_at_utc": "2026-05-13T20:39:15.874180+00:00",
+  "last_finished_at_utc": "2026-05-14T06:01:19.248352+00:00",
+  "last_successful_monitoring_at_utc": "2026-05-14T06:01:19.248352+00:00",
+  "last_failed_monitoring_at_utc": null,
   "consecutive_errors": 0,
   "last_listing_errors": [],
   "last_listing_error_count": 0,
-  "last_listing_rows": 338,
-  "last_enriched_rows": 338,
+  "last_listing_rows": 496,
+  "last_enriched_rows": 496,
   "last_opportunities_rows": 0,
   "last_alert_stats": {
-    "loaded": 0,
-    "filtered": 0,
-    "considered": 0,
-    "sent": 0,
-    "skipped": 0
+    "mode": "background",
+    "queued_rows": 0,
+    "sender_pid": 586098
   },
   "last_batch_start_pointer": 5
 }
