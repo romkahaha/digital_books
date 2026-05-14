@@ -492,7 +492,15 @@ def fetch_market_search_raw(
         query["currency"] = int(currency)
     r = sess.post(url, headers=headers, data=json.dumps([query]), timeout=timeout)
     r.raise_for_status()
-    return _route_action_payload_to_render_payload(r.json())
+    try:
+        payload = r.json()
+    except (ValueError, JSONDecodeError):
+        _batch_log(
+            f'  [steam_scm] "{market_hash_name}": Steam Market Search action returned non-JSON '
+            f"({r.headers.get('content-type')}; final_url={r.url})"
+        )
+        payload = None
+    return _route_action_payload_to_render_payload(payload)
 
 
 def fetch_render_raw(
