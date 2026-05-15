@@ -33,6 +33,7 @@ DEFAULT_USER_AGENT = (
 
 FRANKFURTER_LATEST = "https://api.frankfurter.app/latest"
 ECB_DAILY_XML = "https://www.ecb.europa.eu/stats/eurofxref/eurofxref-daily.xml"
+_FIT_PAYLOAD_CACHE: dict[Path, dict[str, Any] | None] = {}
 
 
 @dataclass(frozen=True)
@@ -55,6 +56,7 @@ class EnrichmentConfig:
     github_fetch_branch: str
     github_fetch_timeout_sec: float
     github_fetch_poll_interval_sec: float
+    fit_json_path: Path
     log_dir: Path
     csfloat_base_url: str
     csfloat_timeout_sec: float
@@ -112,6 +114,7 @@ def load_enrichment_config(config: dict[str, Any], *, root: Path | None = None) 
         github_fetch_branch=str(github_cfg.get("branch", "main")).strip() or "main",
         github_fetch_timeout_sec=max(5.0, float(github_cfg.get("timeout_sec", 180.0))),
         github_fetch_poll_interval_sec=max(1.0, float(github_cfg.get("poll_interval_sec", 5.0))),
+        fit_json_path=_resolve_path(base_root, cfg.get("fit_json", "steam_listings/data/float_fit_rel_curves.json")),
         log_dir=_resolve_path(base_root, cfg.get("log_dir", "automation_runtime/alert_enrichment")),
         csfloat_base_url=str(cfg.get("csfloat_base_url", "https://csfloat.com")).rstrip("/"),
         csfloat_timeout_sec=max(5.0, float(cfg.get("csfloat_timeout_sec", 30.0))),
@@ -726,6 +729,82 @@ def _better_worse_direction(candidate_float: float | None, comp_float: float | N
     return "worse", comp_dist - cand_dist
 
 
+def _load_fit_payload(path: Path) -> dict[str, Any] | None:
+    cached = _FIT_PAYLOAD_CACHE.get(path)
+    if path in _FIT_PAYLOAD_CACHE:
+        return cached
+    try:
+        payload = json.loads(path.read_text(encoding="utf-8"))
+    except Exception:
+        payload = None
+    if not isinstance(payload, dict) or not isinstance(payload.get("per_skin"), dict):
+        payload = None
+    _FIT_PAYLOAD_CACHE[path] = payload
+    return payload
+
+
+def _interp_item_curve(item_fit: dict[str, Any] | None, x: float | None, model_name: str = "hybrid") -> float | None:
+    if not isinstance(item_fit, dict) or x is None or not math.isfinite(float(x)):
+        return None
+    try:
+        x_grid = [float(v) for v in item_fit.get("x_grid", [])]
+        y_grid = [float(v) for v in item_fit.get(model_name, [])]
+    except Exception:
+        return None
+    if len(x_grid) < 2 or len(x_grid) != len(y_grid):
+        return None
+    xq = float(x)
+    if xq < x_grid[0] or xq > x_grid[-1]:
+        return None
+    for idx in range(1, len(x_grid)):
+        x0 = x_grid[idx - 1]
+        x1 = x_grid[idx]
+        if xq > x1:
+            continue
+        y0 = y_grid[idx - 1]
+        y1 = y_grid[idx]
+        if not all(math.isfinite(v) for v in (x0, x1, y0, y1)) or x1 == x0:
+            return None
+        frac = (xq - x0) / (x1 - x0)
+        return y0 * (1.0 - frac) + y1 * frac
+    return y_grid[-1] if math.isfinite(y_grid[-1]) else None
+
+
+def _model_float_direction(
+    *,
+    item_fit: dict[str, Any] | None,
+    candidate_float: float | None,
+    comp_float: float | None,
+) -> tuple[str, float | None, float | None, float | None]:
+    cand_rel = _interp_item_curve(item_fit, candidate_float)
+    comp_rel = _interp_item_curve(item_fit, comp_float)
+    if cand_rel is None or comp_rel is None:
+        fallback_direction, fallback_delta = _better_worse_direction(candidate_float, comp_float)
+        return fallback_direction, fallback_delta, cand_rel, comp_rel
+    delta = comp_rel - cand_rel
+    if abs(delta) < 0.0025:
+        return "same", delta, cand_rel, comp_rel
+    if delta > 0:
+        return "better", delta, cand_rel, comp_rel
+    return "worse", delta, cand_rel, comp_rel
+
+
+def _model_local_slope(item_fit: dict[str, Any] | None, candidate_float: float | None) -> float | None:
+    if candidate_float is None:
+        return None
+    f = float(candidate_float)
+    eps = 0.005
+    lo = max(0.0, f - eps)
+    hi = min(1.0, f + eps)
+    if hi <= lo:
+        return None
+    y_lo = _interp_item_curve(item_fit, lo)
+    y_hi = _interp_item_curve(item_fit, hi)
+    if y_lo is None or y_hi is None:
+        return None
+    return (y_hi - y_lo) / (hi - lo)
+
+
 def _quantile(sorted_values: list[float], q: float) -> float:
     if not sorted_values:
         raise ValueError("empty values")
@@ -740,7 +819,10 @@ def _quantile(sorted_values: list[float], q: float) -> float:
 
 def _bucket_view(sale: dict[str, Any], *, steam_ask: float | None, candidate_float: float | None) -> dict[str, Any]:
     comp_float = _num(sale.get("float_value"))
-    direction, edge_delta = _better_worse_direction(candidate_float, comp_float)
+    direction = str(sale.get("_direction_vs_candidate") or "")
+    edge_delta = _num(sale.get("_model_rel_delta"))
+    if direction not in {"better", "worse", "same"}:
+        direction, edge_delta = _better_worse_direction(candidate_float, comp_float)
     stickers = sale.get("stickers") if isinstance(sale.get("stickers"), list) else []
     notes = sale.get("notes") if isinstance(sale.get("notes"), list) else []
     return {
@@ -752,7 +834,9 @@ def _bucket_view(sale: dict[str, Any], *, steam_ask: float | None, candidate_flo
         "realized_net_exit_pct": _net_exit_pct(_num(sale.get("price_eur")), steam_ask, fee_pct=0.02),
         "float_delta_abs": None if comp_float is None or candidate_float is None else abs(comp_float - candidate_float),
         "direction_vs_candidate": direction,
-        "edge_distance_delta": edge_delta,
+        "model_rel_delta": edge_delta,
+        "candidate_model_rel": _num(sale.get("_candidate_model_rel")),
+        "comp_model_rel": _num(sale.get("_comp_model_rel")),
         "stickers": stickers[:5],
         "notes": notes[:5],
         "contaminated": bool(stickers or notes),
@@ -810,22 +894,22 @@ def _pick_relevant_comps(
         direction = str(_bucket_view(entry, steam_ask=steam_ask, candidate_float=candidate_float).get("direction_vs_candidate") or "same")
         if idx == 0:
             if direction == "worse":
-                why = "Closest clean same-zone comp; slightly worse float than candidate."
+                why = "Closest clean same-zone comp; model values this float slightly below the candidate."
             elif direction == "better":
-                why = "Closest clean same-zone comp; slightly better float than candidate."
+                why = "Closest clean same-zone comp; model values this float slightly above the candidate."
             else:
                 why = "Closest clean same-zone comp."
         elif direction == "worse":
-            why = "Clean same-zone comp with a slightly worse float; useful for fast-sale downside."
+            why = "Clean same-zone comp on the model-lower side; useful for fast-sale downside."
         elif direction == "better":
-            why = "Clean same-zone comp with a slightly better float; useful for upside inside the float zone."
+            why = "Clean same-zone comp on the model-higher side; useful for upside inside the float zone."
         else:
             why = "Additional clean same-zone comp."
         add(entry, why)
     if len(selected) < 3 and near_worse:
-        add(near_worse[0], "Nearby worse-float comp for conservative downside.")
+        add(near_worse[0], "Nearby model-lower comp for conservative downside.")
     if len(selected) < 3 and better_upside:
-        add(better_upside[0], "Nearby better-float comp for patient upside.")
+        add(better_upside[0], "Nearby model-higher comp for patient upside.")
     if len(selected) < 3 and generic_floor:
         add(generic_floor[0], "Generic floor comp; panic downside only.")
     return selected[:3]
@@ -842,6 +926,7 @@ def _build_computed_comp_context(
 ) -> dict[str, Any]:
     steam_ask = _num(row.get("ask"))
     candidate_float = _num(row.get("float_value"))
+    exterior = _item_exterior(str(row.get("item") or ""))
     same_zone_prices = _comp_prices(same_zone_clean)
     near_worse_prices = _comp_prices(near_worse)
     better_prices = _comp_prices(better_upside)
@@ -884,7 +969,7 @@ def _build_computed_comp_context(
         patient_high = max(same_zone_prices_sorted + better_prices) if (same_zone_prices_sorted or better_prices) else same_zone_prices_sorted[0]
         patient_sale_range = [same_zone_prices_sorted[0], max(same_zone_prices_sorted[0], patient_high)]
     elif near_worse_prices:
-        # Sparse exact-float history: nearby worse-float comps are not proof of
+        # Sparse exact-float history: nearby model-lower comps are not proof of
         # upside, but they are better fast-exit evidence than a generic floor.
         fast_sale_range = _range_from_prices(near_worse_prices, low_q=0.0, high_q=0.50)
         realistic_sale_range = _range_from_prices(near_worse_prices, low_q=0.25, high_q=0.75)
@@ -923,9 +1008,6 @@ def _build_computed_comp_context(
             return "maybe"
         return "no"
 
-    target_15 = target_flag(fast_sale_range, gross_for_minus_15)
-    target_10 = target_flag(fast_sale_range, gross_for_minus_10)
-
     def net_exit_range(range_value: list[float] | None) -> list[float] | None:
         if not range_value:
             return None
@@ -934,6 +1016,54 @@ def _build_computed_comp_context(
         if low is None or high is None:
             return None
         return [low, high]
+
+    target_15 = target_flag(fast_sale_range, gross_for_minus_15)
+    target_10 = target_flag(fast_sale_range, gross_for_minus_10)
+    fast_net_exit = net_exit_range(fast_sale_range)
+    hybrid_disc_fair = _num(row.get("pred_hybrid_eur_disc"))
+    hybrid_fair = _num(row.get("pred_hybrid_eur"))
+    hybrid_disc_edge = _pct_of_ask(hybrid_disc_fair, steam_ask)
+    hybrid_edge = _pct_of_ask(hybrid_fair, steam_ask)
+    model_dispersion = _dispersion_pct(
+        [_num(row.get("pred_smooth_eur")), _num(row.get("pred_segmented_eur")), _num(row.get("pred_hybrid_eur"))]
+    )
+    sales_7d = _num(row.get("steam_sales_7d_n"))
+    downside_risk = _num(row.get("steam_sales_7d_downside_risk%"))
+    tail_ratio = _num(row.get("steam_sales_7d_tail_ratio"))
+    band_risk = _num(row.get("steam_sales_7d_band_risk%"))
+    ext = str(exterior or "").lower()
+    extreme_float = (
+        (ext == "factory new" and candidate_float is not None and candidate_float <= 0.003)
+        or (ext == "battle-scarred" and candidate_float is not None and candidate_float >= 0.985)
+    )
+    model_liquidity_support_maybe = False
+    support_reason: str | None = None
+    if target_15 == "no" and same_zone_count > 0 and fast_net_exit:
+        fast_high_net = _num(fast_net_exit[-1])
+        strong_model_edge = (
+            (hybrid_disc_edge is not None and hybrid_disc_edge >= 7.0)
+            or (hybrid_edge is not None and hybrid_edge >= 7.0)
+        )
+        tight_models = model_dispersion is None or model_dispersion <= 3.0
+        controlled_steam_risk = (
+            (sales_7d is not None and sales_7d >= 200)
+            and (downside_risk is None or downside_risk <= 8.0)
+            and (tail_ratio is None or tail_ratio >= 0.92)
+            and (band_risk is None or band_risk <= 15.0)
+        )
+        if (
+            fast_high_net is not None
+            and fast_high_net >= -25.0
+            and steam_ask is not None
+            and steam_ask <= 15.0
+            and extreme_float
+            and strong_model_edge
+            and tight_models
+            and controlled_steam_risk
+        ):
+            model_liquidity_support_maybe = True
+            target_15 = "maybe"
+            support_reason = "strong model/liquidity support with sparse extreme-float comps"
 
     relevant_comps = _pick_relevant_comps(
         same_zone_clean,
@@ -954,7 +1084,7 @@ def _build_computed_comp_context(
         "start_listing_range_eur": start_listing_range,
         "target_15pct_fast": target_15,
         "target_10pct_fast": target_10,
-        "fast_net_exit_pct": net_exit_range(fast_sale_range),
+        "fast_net_exit_pct": fast_net_exit,
         "realistic_net_exit_pct": net_exit_range(realistic_sale_range),
         "patient_net_exit_pct": net_exit_range(patient_sale_range),
         "same_zone_floor_net_exit_pct": net_exit_range([same_zone_floor, same_zone_floor] if same_zone_floor is not None else None),
@@ -963,6 +1093,10 @@ def _build_computed_comp_context(
         "same_zone_count": len(same_zone_clean),
         "near_worse_count": len(near_worse),
         "generic_floor_count": len(generic_floor),
+        "model_liquidity_support_maybe": model_liquidity_support_maybe,
+        "model_liquidity_support_reason": support_reason,
+        "hybrid_disc_edge_pct_of_ask": hybrid_disc_edge,
+        "hybrid_fair_edge_pct_of_ask": hybrid_edge,
         "relevant_comps": relevant_comps,
         "fast_basis_ids": [entry.get("sale_id") for entry in relevant_comps if isinstance(entry, dict) and str(entry.get("bucket_reason") or "") == "same_zone_clean"],
         "conservative_basis_ids": [
@@ -988,10 +1122,10 @@ def _computed_range_basis(note: dict[str, Any]) -> dict[str, str]:
     if same_zone_count > 0:
         fast_text = f"Deterministic fast range from {same_zone_count} clean same-zone comps, excluding the worst same-zone print from the main fast range when there is enough depth."
         realistic_text = f"Deterministic realistic range from the central same-zone cluster ({same_zone_count} clean comps)."
-        patient_text = "Deterministic patient range from upper same-zone comps plus nearby better-float upside when available."
+        patient_text = "Deterministic patient range from upper same-zone comps plus nearby model-higher upside when available."
     elif near_worse_count > 0:
-        fast_text = f"No clean same-zone comps; fast range falls back to {near_worse_count} nearby worse-float comps."
-        realistic_text = "No clean same-zone comps; realistic range is anchored to nearby worse-float comps."
+        fast_text = f"No clean same-zone comps; fast range falls back to {near_worse_count} nearby model-lower comps."
+        realistic_text = "No clean same-zone comps; realistic range is anchored to nearby model-lower comps."
         patient_text = "Patient range remains constrained because no direct same-zone liquidity was found."
     else:
         fast_text = "No clean same-zone comps; fast range is weakly supported."
@@ -1013,8 +1147,12 @@ def _computed_range_basis(note: dict[str, Any]) -> dict[str, str]:
 def _build_comp_buckets(row: dict[str, Any], latest_sales: dict[str, Any], cfg: EnrichmentConfig) -> dict[str, Any]:
     candidate_float = _num(row.get("float_value"))
     steam_ask = _num(row.get("ask"))
+    item = str(row.get("item") or "").strip()
     exterior = _item_exterior(str(row.get("item") or ""))
     mode, same_zone_threshold, nearby_threshold = _float_bucket_mode(candidate_float, exterior)
+    fit_payload = _load_fit_payload(cfg.fit_json_path)
+    per_skin = fit_payload.get("per_skin", {}) if isinstance(fit_payload, dict) else {}
+    item_fit = per_skin.get(item) if isinstance(per_skin, dict) else None
     sales_rows = latest_sales.get("sales_rows") or []
     if not isinstance(sales_rows, list):
         sales_rows = []
@@ -1035,6 +1173,15 @@ def _build_comp_buckets(row: dict[str, Any], latest_sales: dict[str, Any], cfg: 
         sale["_contaminated"] = bool(stickers or notes)
         sale["_outlier"] = False
         sale["_sale_id"] = f"sale_{idx}"
+        direction_name, model_delta, cand_model_rel, comp_model_rel = _model_float_direction(
+            item_fit=item_fit,
+            candidate_float=candidate_float,
+            comp_float=comp_float,
+        )
+        sale["_direction_vs_candidate"] = direction_name
+        sale["_model_rel_delta"] = model_delta
+        sale["_candidate_model_rel"] = cand_model_rel
+        sale["_comp_model_rel"] = comp_model_rel
         working.append(sale)
 
     clean_prices = sorted(s["_price"] for s in working if not s["_contaminated"])
@@ -1058,6 +1205,9 @@ def _build_comp_buckets(row: dict[str, Any], latest_sales: dict[str, Any], cfg: 
         return candidate_float is not None and abs(sale["_float"] - candidate_float) <= nearby_threshold
 
     def direction(sale: dict[str, Any]) -> str:
+        out = str(sale.get("_direction_vs_candidate") or "")
+        if out in {"better", "worse", "same"}:
+            return out
         return _better_worse_direction(candidate_float, sale["_float"])[0]
 
     same_zone_clean: list[dict[str, Any]] = []
@@ -1138,10 +1288,13 @@ def _build_comp_buckets(row: dict[str, Any], latest_sales: dict[str, Any], cfg: 
         generic_floor=generic_floor,
         cfg=cfg,
     )
+    computed["model_local_slope_rel_per_float"] = _model_local_slope(item_fit, candidate_float)
+    computed["model_candidate_rel"] = _interp_item_curve(item_fit, candidate_float)
 
     return {
         "candidate_exterior": exterior,
         "float_mode": mode,
+        "direction_method": "model_hybrid_local_delta" if isinstance(item_fit, dict) else "edge_distance_fallback",
         "same_zone_threshold": same_zone_threshold,
         "nearby_threshold": nearby_threshold,
         "computed": computed,
@@ -1277,7 +1430,9 @@ def _post_validate_note(note: dict[str, Any]) -> dict[str, Any]:
     if verdict == "PASS" and target_15 == "maybe":
         # Borderline fast-sale math is still worth a human look; PASS is for clear misses.
         verdict = "MAYBE"
-        out["verdict_override_reason"] = "borderline fast -15% exit"
+        computed = out.get("computed_context") if isinstance(out.get("computed_context"), dict) else {}
+        reason = str(computed.get("model_liquidity_support_reason") or "").strip()
+        out["verdict_override_reason"] = reason or "borderline fast -15% exit"
     out["verdict"] = verdict
     if original_verdict != verdict:
         summary = str(out.get("summary") or "").strip()
@@ -1285,6 +1440,7 @@ def _post_validate_note(note: dict[str, Any]) -> dict[str, Any]:
             summary = re.sub(r"\bmaking this a PASS\b", "making this a borderline MAYBE", summary, flags=re.IGNORECASE)
             summary = re.sub(r"\bmake this a PASS\b", "make this a borderline MAYBE", summary, flags=re.IGNORECASE)
             summary = re.sub(r"\bthis is a PASS\b", "this is a borderline MAYBE", summary, flags=re.IGNORECASE)
+            summary = re.sub(r"\bthis item is a PASS\b", "this item is a borderline MAYBE", summary, flags=re.IGNORECASE)
             out["summary"] = summary
     return out
 

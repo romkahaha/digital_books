@@ -42,6 +42,8 @@ Comp interpretation:
 - INPUT_JSON also contains precomputed comp_buckets:
   same_zone_clean, near_worse_float, better_float_upside, generic_floor, possible_outliers.
 - INPUT_JSON.comp_buckets.computed is authoritative deterministic context prepared by code.
+- INPUT_JSON.comp_buckets.direction_method says how nearby comps were split. When it is model_hybrid_local_delta, near_worse_float means the model values that comp float lower than the candidate, and better_float_upside means the model values it higher. Do not assume monotonic "closer to 0/1 is always better".
+- INPUT_JSON.comp_buckets.computed.model_local_slope_rel_per_float is the local hybrid-curve slope at the candidate. Use it only as context; actual bucket direction is based on model(candidate_float) versus model(comp_float), which is safer on non-monotonic curves.
 - Do not move comps between buckets.
 - Do not promote generic_floor comps into fast-sale evidence.
 - Do not recalculate fast_sale_range_eur, realistic_sale_range_eur, patient_sale_range_eur, conservative_floor_range_eur, panic_floor_range_eur, target_15pct_fast, or target_10pct_fast if computed values are present in INPUT_JSON.comp_buckets.computed.
@@ -56,11 +58,12 @@ Critical rules:
 - Do not judge only the item as a whole. Judge the exact candidate float zone.
 - For low-float items, compare to similar low floats, not generic sales.
 - For high-float Battle-Scarred items, compare to similar high floats, not generic BS sales.
-- Separate generic floor, same-zone comps, better-float/rank upside comps, and worse-float downside comps.
+- Separate generic floor, same-zone comps, model-higher/rank upside comps, and model-lower downside comps.
 - Do not transfer rank-float prices directly to non-rank candidates.
 - Treat sticker/craft/outlier sales cautiously unless the candidate has a similar sticker/craft reason.
 - If there are no relevant comps for the candidate float zone, lower float_liquidity and confidence.
-- Sparse exact-float comps are uncertainty, not an automatic PASS. If the candidate is materially better than nearby worse-float comps, model agreement is strong or mixed, general liquidity is medium/high, and risk metrics are controlled, use MAYBE rather than PASS unless nearby/generic comps clearly imply exits worse than -15%.
+- Sparse exact-float comps are uncertainty, not an automatic PASS. If the model locally values the candidate above nearby model-lower comps, model agreement is strong or mixed, general liquidity is medium/high, and risk metrics are controlled, use MAYBE rather than PASS unless nearby/generic comps clearly imply exits worse than -15%.
+- If INPUT_JSON.comp_buckets.computed.model_liquidity_support_maybe is true, treat the case as a human-review MAYBE even when raw same-zone comps alone look weak. This flag is only set for small-ticket, liquid, controlled-risk, strong-model edge cases with sparse extreme-float comps.
 - If model fair values disagree strongly, lower confidence.
 - If comps contradict the model, trust comps more.
 
@@ -70,10 +73,10 @@ Range construction rules:
 - Do not build sale ranges from generic item floor if relevant same-zone comps exist.
 - If there are 3 or more clean same-zone comps, fast_sale_range_eur and realistic_sale_range_eur should mostly stay near those comps.
 - Generic floor is downside context, not normal fast exit, when exact float-zone liquidity is good.
-- For fast_sale_range_eur, use conservative same-zone comps and nearby worse-float comps.
+- For fast_sale_range_eur, use conservative same-zone comps and nearby model-lower comps.
 - If same_zone_clean is empty but near_worse_float exists, treat near_worse_float as conservative fast-sale evidence with low confidence; keep generic_floor separate as panic/hard-floor evidence.
 - For realistic_sale_range_eur, use the central cluster or median area of same-zone comps.
-- For patient_sale_range_eur, use upper same-zone comps and nearby better-float comps.
+- For patient_sale_range_eur, use upper same-zone comps and nearby model-higher comps.
 - Rank, near-rank, ultra-low, ultra-high, or extreme sales should only influence patient upside if the candidate is comparable. Otherwise mention them only as upside/outliers.
 - Sticker-contaminated sales should not determine sale ranges unless the candidate has comparable sticker/craft value.
 - If a range bound relies on generic floor, outlier, sticker-contaminated sale, or weak evidence, state this in range_basis and lower confidence.
@@ -85,7 +88,7 @@ Important distinction between fast_sale_range_eur and fast_floor_range_eur:
 - fast_sale_range_eur means a practical quick sale without panic undercutting.
 - fast_floor_range_eur means hard cut / liquidation price if capital must be freed.
 - Do not put liquidation/generic-floor prices into fast_sale_range_eur when same-zone comps are available.
-- If clean same-zone comps exist, fast_sale_range_eur should usually start near the lower clean same-zone comp or nearby worse-float comp.
+- If clean same-zone comps exist, fast_sale_range_eur should usually start near the lower clean same-zone comp or nearby model-lower comp.
 - fast_sale_range_eur lower bound should not be below gross_for_minus_15pct unless there is direct same-zone evidence below that threshold or float liquidity is clearly weak.
 - Generic floor, weak unrelated floats, or broad item downside should go into fast_floor_range_eur, not fast_sale_range_eur.
 - If fast_sale_range_eur lower bound is below all clean same-zone comps by more than 10%, explain why in range_basis.fast and lower confidence.
@@ -94,7 +97,7 @@ Range evidence rules:
 
 - Every sale range bound must be supported by either:
   1. a clean same-zone comp,
-  2. a nearby worse-float comp,
+  2. a nearby model-lower comp,
   3. an explicit hard-floor / generic-floor argument.
 - If fast_sale_range_eur lower bound is below the lowest clean same-zone comp by more than 5-7%, it must NOT be described as based on same-zone comps.
 - In that case, it belongs in fast_floor_range_eur, not fast_sale_range_eur.
@@ -108,7 +111,7 @@ Float-zone strictness for fast_sale_range:
 
 - When estimating fast_sale_range, especially the lower bound, use only:
   1. exact / closest same-zone comps;
-  2. slightly worse-float comps that are still visually and economically near the target;
+  2. slightly model-lower comps that are still visually and economically near the target;
   3. if there are not enough close comps, say confidence is low instead of expanding the zone too far.
 - Do NOT use broad high-float / low-float category comps to justify the fast lower bound.
 - For example:
@@ -117,7 +120,7 @@ Float-zone strictness for fast_sale_range:
   - Comps around 0.77-0.93 are generic/high-float floor evidence, not same-zone fast-sale evidence.
 - Separate the ranges explicitly in your reasoning:
   - same_zone_fast_sale: based only on close float comps;
-  - conservative_floor: based on broader worse-float comps;
+  - conservative_floor: based on broader model-lower comps;
   - panic_floor: generic floor, used only for worst-case.
 - If the lower bound comes from broader comps, label it as conservative_floor in range_basis, not as same-zone fast-sale evidence.
 

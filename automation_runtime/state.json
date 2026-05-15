@@ -13,7 +13,7 @@
     "B",
     "C"
   ],
-  "queue_pointer": 3,
+  "queue_pointer": 4,
   "last_tier": "A",
   "last_tier_queue_index": 3,
   "last_batch_start_pointer": 2,
@@ -24,19 +24,23 @@
     "AK-47 | Slate (Battle-Scarred)",
     "AK-47 | Slate (Minimal Wear)"
   ],
-  "last_error": "Steam /render/ returned non-JSON and Market Search action fallback failed: 429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/P2000%20%7C%20Wicked%20Sick%20%28Field-Tested%29",
-  "last_run_at_utc": "2026-05-15T18:25:31.847599+00:00",
-  "last_finished_at_utc": "2026-05-15T18:26:29.144509+00:00",
-  "last_successful_monitoring_at_utc": "2026-05-15T18:25:31.847092+00:00",
+  "last_error": null,
+  "last_run_at_utc": "2026-05-15T19:53:15.309084+00:00",
+  "last_finished_at_utc": "2026-05-15T19:53:38.894804+00:00",
+  "last_successful_monitoring_at_utc": "2026-05-15T19:53:38.894804+00:00",
   "last_failed_monitoring_at_utc": "2026-05-15T18:26:29.144509+00:00",
-  "last_status": "error",
-  "consecutive_errors": 1,
+  "last_status": "ok",
+  "consecutive_errors": 0,
   "last_listing_errors": [],
   "last_listing_error_count": 0,
-  "last_listing_rows": 0,
-  "last_enriched_rows": 497,
+  "last_listing_rows": 498,
+  "last_enriched_rows": 498,
   "last_opportunities_rows": 0,
-  "last_alert_stats": {},
+  "last_alert_stats": {
+    "mode": "background",
+    "queued_rows": 0,
+    "sender_pid": 679787
+  },
   "tiers": {
     "A": {
       "items_signature": "8a51cc0546a277f095a4a7b87f0ca8cc7f7343a8ade25fa21427128685c1008c",

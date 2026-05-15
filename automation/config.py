@@ -174,6 +174,7 @@ def monitoring_defaults() -> dict[str, Any]:
             "prompt_template_path": str(root / "automation" / "prompts" / "alert_enrichment_gemini.txt"),
             "fee_pct": 0.02,
             "max_sales_rows": 30,
+            "fit_json": str(root / "steam_listings" / "data" / "float_fit_rel_curves.json"),
             "cache_ttl_minutes": 15.0,
             "use_stale_cache_on_error": True,
             "log_dir": str(root / "automation_runtime" / "alert_enrichment"),
