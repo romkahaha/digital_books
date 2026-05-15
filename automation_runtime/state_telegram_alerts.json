@@ -19,19 +19,19 @@
   "last_alert_stats": {},
   "sent_alerts": {
     "listing:630081042873729172": {
-      "sent_at_utc": "2026-05-14T08:44:24.574227+00:00",
+      "sent_at_utc": "2026-05-15T16:14:22.737338+00:00",
       "item": "FAMAS | Mecha Industries (Factory New)",
       "listing_id": "630081042873729172",
-      "spread_hybrid_disc": 0.0230368778539127
+      "spread_hybrid_disc": 0.0235889123910768
     },
     "listing:641338773498450617": {
-      "sent_at_utc": "2026-05-14T08:55:24.591836+00:00",
+      "sent_at_utc": "2026-05-15T15:43:51.406911+00:00",
       "item": "R8 Revolver | Phoenix Marker (Factory New)",
       "listing_id": "641338773498450617",
       "spread_hybrid_disc": 0.0451615912088066
     },
     "listing:498354464759342875": {
-      "sent_at_utc": "2026-05-14T08:55:25.491675+00:00",
+      "sent_at_utc": "2026-05-15T15:44:32.432734+00:00",
       "item": "R8 Revolver | Phoenix Marker (Factory New)",
       "listing_id": "498354464759342875",
       "spread_hybrid_disc": 0.1040563594951009
@@ -77,7 +77,31 @@
       "item": "R8 Revolver | Blaze (Factory New)",
       "listing_id": "489347463798373779",
       "spread_hybrid_disc": 0.0989152716658371
+    },
+    "listing:489347463801718431": {
+      "sent_at_utc": "2026-05-15T16:02:53.615041+00:00",
+      "item": "R8 Revolver | Blaze (Factory New)",
+      "listing_id": "489347463801718431",
+      "spread_hybrid_disc": 0.0581789285684338
+    },
+    "listing:496102759711273465": {
+      "sent_at_utc": "2026-05-15T16:18:27.163153+00:00",
+      "item": "USP-S | Cyrex (Factory New)",
+      "listing_id": "496102759711273465",
+      "spread_hybrid_disc": 0.1048216963720913
+    },
+    "listing:520872660498029181": {
+      "sent_at_utc": "2026-05-15T16:55:59.221593+00:00",
+      "item": "AWP | Green Energy (Battle-Scarred)",
+      "listing_id": "520872660498029181",
+      "spread_hybrid_disc": 0.1016791682860405
+    },
+    "listing:529879860448704397": {
+      "sent_at_utc": "2026-05-15T18:11:16.553106+00:00",
+      "item": "R8 Revolver | Blaze (Factory New)",
+      "listing_id": "529879860448704397",
+      "spread_hybrid_disc": 0.113556525961641
     }
   },
-  "last_alert_sent_at_utc": "2026-05-14T20:16:08.281718+00:00"
+  "last_alert_sent_at_utc": "2026-05-15T18:11:16.553369+00:00"
 }

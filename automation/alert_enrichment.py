@@ -527,6 +527,62 @@ def load_latest_sales(item: str, cfg: EnrichmentConfig, *, job_dir: Path) -> dic
     return fresh
 
 
+def _exclude_candidate_self_sales(
+    row: dict[str, Any],
+    latest_sales: dict[str, Any],
+    *,
+    job_dir: Path,
+) -> dict[str, Any]:
+    """Remove exact candidate sale from comps when backtesting already-sold alerts."""
+    candidate_float = _num(row.get("float_value"))
+    candidate_seed = _num(row.get("paint_seed"))
+    sales_rows = latest_sales.get("sales_rows") or []
+    if candidate_float is None or candidate_seed is None or not isinstance(sales_rows, list):
+        return latest_sales
+
+    kept: list[Any] = []
+    removed: list[dict[str, Any]] = []
+    for sale in sales_rows:
+        if not isinstance(sale, dict):
+            kept.append(sale)
+            continue
+        sale_float = _num(sale.get("float_value"))
+        sale_seed = _num(sale.get("paint_seed"))
+        same_seed = sale_seed is not None and int(round(sale_seed)) == int(round(candidate_seed))
+        same_float = sale_float is not None and abs(float(sale_float) - float(candidate_float)) <= 1e-5
+        if same_seed and same_float:
+            removed.append(sale)
+        else:
+            kept.append(sale)
+
+    if not removed:
+        return latest_sales
+
+    filtered = dict(latest_sales)
+    filtered["sales_rows"] = kept
+    filtered["self_sales_excluded_count"] = len(removed)
+    filtered["self_sales_exclusion"] = {
+        "method": "same paint_seed and float within 1e-5",
+        "candidate_float": candidate_float,
+        "candidate_seed": int(round(candidate_seed)),
+    }
+    write_json(
+        job_dir / "latest_sales_self_excluded.json",
+        {
+            "excluded_count": len(removed),
+            "excluded_sales": removed,
+            "candidate": {
+                "item": row.get("item"),
+                "listing_id": row.get("listing_id"),
+                "float_value": candidate_float,
+                "paint_seed": int(round(candidate_seed)),
+            },
+        },
+    )
+    write_json(job_dir / "latest_sales.json", filtered)
+    return filtered
+
+
 def _num(value: Any) -> float | None:
     try:
         out = float(value)
@@ -828,9 +884,13 @@ def _build_computed_comp_context(
         patient_high = max(same_zone_prices_sorted + better_prices) if (same_zone_prices_sorted or better_prices) else same_zone_prices_sorted[0]
         patient_sale_range = [same_zone_prices_sorted[0], max(same_zone_prices_sorted[0], patient_high)]
     elif near_worse_prices:
-        fast_sale_range = None
-        realistic_sale_range = None
-        patient_sale_range = None
+        # Sparse exact-float history: nearby worse-float comps are not proof of
+        # upside, but they are better fast-exit evidence than a generic floor.
+        fast_sale_range = _range_from_prices(near_worse_prices, low_q=0.0, high_q=0.50)
+        realistic_sale_range = _range_from_prices(near_worse_prices, low_q=0.25, high_q=0.75)
+        patient_high = max(near_worse_prices + better_prices) if (near_worse_prices or better_prices) else None
+        if patient_high is not None:
+            patient_sale_range = [max(near_worse_prices), max(max(near_worse_prices), patient_high)]
 
     conservative_floor_range = _range_from_prices(near_worse_prices, low_q=0.0, high_q=0.70)
     panic_floor_range = _range_from_prices(generic_floor_prices, low_q=0.0, high_q=0.70)
@@ -852,12 +912,15 @@ def _build_computed_comp_context(
         if not range_value or target_gross is None:
             return "no"
         low = _num(range_value[0])
+        high = _num(range_value[-1])
         if low is None:
             return "no"
         if low >= target_gross:
             if same_zone_floor is not None and same_zone_floor < target_gross:
                 return "maybe"
             return "yes"
+        if high is not None and high >= target_gross:
+            return "maybe"
         return "no"
 
     target_15 = target_flag(fast_sale_range, gross_for_minus_15)
@@ -1007,21 +1070,31 @@ def _build_comp_buckets(row: dict[str, Any], latest_sales: dict[str, Any], cfg: 
         contaminated = bool(sale["_contaminated"])
         outlier = bool(sale["_outlier"])
         sale["_bucket_reason"] = ""
-        if contaminated or outlier:
+        if contaminated:
             sale["_bucket_reason"] = "contaminated_or_outlier"
             possible_outliers.append(sale)
             continue
         if is_same_zone(sale):
+            # Close float-zone comps are exactly the evidence we need. Do not
+            # discard clean float-premium sales just because they are high
+            # relative to generic item-wide history.
+            sale["_outlier"] = False
             sale["_bucket_reason"] = "same_zone_clean"
             same_zone_clean.append(sale)
             continue
         if is_nearby(sale) and direction(sale) == "worse":
+            sale["_outlier"] = False
             sale["_bucket_reason"] = "near_worse_float"
             near_worse.append(sale)
             continue
         if is_nearby(sale) and direction(sale) == "better":
+            sale["_outlier"] = False
             sale["_bucket_reason"] = "better_float_upside"
             better_upside.append(sale)
+            continue
+        if outlier:
+            sale["_bucket_reason"] = "contaminated_or_outlier"
+            possible_outliers.append(sale)
             continue
         sale["_bucket_reason"] = "generic_floor"
         generic_floor.append(sale)
@@ -1180,6 +1253,7 @@ def _coerce_label(value: Any, allowed: set[str], default: str) -> str:
 def _post_validate_note(note: dict[str, Any]) -> dict[str, Any]:
     out = dict(note)
     verdict = str(out.get("verdict") or "MAYBE").upper()
+    original_verdict = verdict
     confidence = str(out.get("confidence") or "medium").lower()
     target_15 = str(out.get("target_15pct_fast") or "maybe").lower()
     float_liq = str(out.get("float_liquidity") or "medium").lower()
@@ -1200,7 +1274,18 @@ def _post_validate_note(note: dict[str, Any]) -> dict[str, Any]:
         fast_low = _num(fast_sale_range[0])
         if fast_low is not None and fast_low < gross_for_minus_15:
             verdict = "MAYBE"
+    if verdict == "PASS" and target_15 == "maybe":
+        # Borderline fast-sale math is still worth a human look; PASS is for clear misses.
+        verdict = "MAYBE"
+        out["verdict_override_reason"] = "borderline fast -15% exit"
     out["verdict"] = verdict
+    if original_verdict != verdict:
+        summary = str(out.get("summary") or "").strip()
+        if summary:
+            summary = re.sub(r"\bmaking this a PASS\b", "making this a borderline MAYBE", summary, flags=re.IGNORECASE)
+            summary = re.sub(r"\bmake this a PASS\b", "make this a borderline MAYBE", summary, flags=re.IGNORECASE)
+            summary = re.sub(r"\bthis is a PASS\b", "this is a borderline MAYBE", summary, flags=re.IGNORECASE)
+            out["summary"] = summary
     return out
 
 
@@ -1481,6 +1566,9 @@ def format_ai_note_message(row: dict[str, Any], latest_sales: dict[str, Any], no
             text = str(risk).strip()
             if text:
                 lines.append(f"• {html.escape(text)}")
+    override_reason = str(note.get("verdict_override_reason") or "").strip()
+    if override_reason:
+        lines.extend(["", f"Post-check: {html.escape(override_reason)} -> human review instead of hard PASS."])
     summary = str(note.get("summary") or "").strip()
     if summary:
         lines.extend(["", html.escape(summary)])
@@ -1505,6 +1593,7 @@ def run_enrichment_job(job_json: Path, config: dict[str, Any], *, dry_run: bool 
     append_status(job_dir, "started", started_at_utc=utc_now_iso())
     try:
         latest_sales = load_latest_sales(item, cfg, job_dir=job_dir)
+        latest_sales = _exclude_candidate_self_sales(row, latest_sales, job_dir=job_dir)
         note = call_gemini(row, latest_sales, cfg, job_dir=job_dir)
         message = format_ai_note_message(row, latest_sales, note)
         write_json(

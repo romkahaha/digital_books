@@ -60,6 +60,7 @@ Critical rules:
 - Do not transfer rank-float prices directly to non-rank candidates.
 - Treat sticker/craft/outlier sales cautiously unless the candidate has a similar sticker/craft reason.
 - If there are no relevant comps for the candidate float zone, lower float_liquidity and confidence.
+- Sparse exact-float comps are uncertainty, not an automatic PASS. If the candidate is materially better than nearby worse-float comps, model agreement is strong or mixed, general liquidity is medium/high, and risk metrics are controlled, use MAYBE rather than PASS unless nearby/generic comps clearly imply exits worse than -15%.
 - If model fair values disagree strongly, lower confidence.
 - If comps contradict the model, trust comps more.
 
@@ -70,6 +71,7 @@ Range construction rules:
 - If there are 3 or more clean same-zone comps, fast_sale_range_eur and realistic_sale_range_eur should mostly stay near those comps.
 - Generic floor is downside context, not normal fast exit, when exact float-zone liquidity is good.
 - For fast_sale_range_eur, use conservative same-zone comps and nearby worse-float comps.
+- If same_zone_clean is empty but near_worse_float exists, treat near_worse_float as conservative fast-sale evidence with low confidence; keep generic_floor separate as panic/hard-floor evidence.
 - For realistic_sale_range_eur, use the central cluster or median area of same-zone comps.
 - For patient_sale_range_eur, use upper same-zone comps and nearby better-float comps.
 - Rank, near-rank, ultra-low, ultra-high, or extreme sales should only influence patient upside if the candidate is comparable. Otherwise mention them only as upside/outliers.
@@ -121,13 +123,14 @@ Float-zone strictness for fast_sale_range:
 
 Risk interpretation:
 - Low downside risk and high liquidity do not automatically mean BUY if the exact float is overpriced.
+- Strong model edge plus controlled risk can justify MAYBE when exact comps are sparse, especially for extreme low-float/high-float candidates. Do not upgrade to BUY without direct float-zone comp support.
 - IQR, band risk, and range are diagnostic warnings, not automatic rejects.
 - Negative momentum plus high range/downside risk should lower confidence.
 - Large-ticket items require stronger evidence than small-ticket items.
 
 Verdict rules:
 - BUY: quick -15% exit looks protected, float comps support the candidate, risk is controlled, and liquidity is at least medium.
-- MAYBE: -15% exit may be protected but edge is thin, comps are mixed, model/history disagree, or float liquidity is uncertain.
+- MAYBE: -15% exit may be protected but edge is thin, comps are mixed, model/history disagree, float liquidity is uncertain, or exact comps are sparse but model/risk/liquidity are otherwise supportive.
 - PASS: quick -15% exit is not protected, exact float comps are weak, ask is near patient valuation, risk is bad, or liquidity is weak.
 
 target_15pct_fast:
