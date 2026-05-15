@@ -1,9 +1,8 @@
 name: Latest Sales Fetch
 
 on:
-  push:
-    branches:
-      - main
+  # Kept for manual legacy diagnostics only. The live AI latest-sales worker
+  # is /home/roma/cs-arbitrage/csfloat-latest-sales-worker.
   workflow_dispatch:
 
 permissions:
