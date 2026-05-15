@@ -13,80 +13,29 @@
     "B",
     "C"
   ],
-  "queue_pointer": 6,
-  "last_tier": "C",
-  "last_tier_queue_index": 6,
-  "last_batch_start_pointer": 62,
+  "queue_pointer": 3,
+  "last_tier": "A",
+  "last_tier_queue_index": 3,
+  "last_batch_start_pointer": 11,
   "last_batch_items": [
-    "AWP | Asiimov (Battle-Scarred)",
-    "Desert Eagle | Printstream (Factory New)",
-    "AWP | Hyper Beast (Battle-Scarred)",
-    "AWP | POP AWP (Factory New)",
-    "SG 553 | Darkwing (Factory New)"
+    "AK-47 | Ice Coaled (Battle-Scarred)",
+    "AK-47 | Searing Rage (Battle-Scarred)",
+    "Glock-18 | Shinobu (Battle-Scarred)",
+    "USP-S | Jawbreaker (Battle-Scarred)",
+    "AK-47 | Searing Rage (Minimal Wear)"
   ],
-  "last_error": "all Steam listing fetches failed for this batch (5 item errors: AWP | Asiimov (Battle-Scarred), Desert Eagle | Printstream (Factory New), AWP | Hyper Beast (Battle-Scarred))",
-  "last_run_at_utc": "2026-05-14T20:39:32.358566+00:00",
-  "last_finished_at_utc": "2026-05-14T20:41:28.656057+00:00",
-  "last_successful_monitoring_at_utc": "2026-05-14T20:39:32.357700+00:00",
-  "last_failed_monitoring_at_utc": "2026-05-14T20:41:28.656057+00:00",
+  "last_error": "Steam /render/ returned non-JSON and Market Search action fallback failed: 429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/AK-47%20%7C%20Searing%20Rage%20%28Battle-Scarred%29",
+  "last_run_at_utc": "2026-05-15T01:42:42.169672+00:00",
+  "last_finished_at_utc": "2026-05-15T01:43:50.653958+00:00",
+  "last_successful_monitoring_at_utc": "2026-05-15T01:42:42.169206+00:00",
+  "last_failed_monitoring_at_utc": "2026-05-15T01:43:50.653958+00:00",
   "last_status": "error",
   "consecutive_errors": 1,
-  "last_listing_errors": [
-    {
-      "market_hash_name": "AWP | Asiimov (Battle-Scarred)",
-      "meta": {
-        "total_count": null,
-        "success": false,
-        "note": "success=false",
-        "pages_fetched": 0,
-        "listings_target_cap": 60
-      }
-    },
-    {
-      "market_hash_name": "Desert Eagle | Printstream (Factory New)",
-      "meta": {
-        "total_count": null,
-        "success": false,
-        "note": "success=false",
-        "pages_fetched": 0,
-        "listings_target_cap": 60
-      }
-    },
-    {
-      "market_hash_name": "AWP | Hyper Beast (Battle-Scarred)",
-      "meta": {
-        "total_count": null,
-        "success": false,
-        "note": "success=false",
-        "pages_fetched": 0,
-        "listings_target_cap": 60
-      }
-    },
-    {
-      "market_hash_name": "AWP | POP AWP (Factory New)",
-      "meta": {
-        "total_count": null,
-        "success": false,
-        "note": "success=false",
-        "pages_fetched": 0,
-        "listings_target_cap": 60
-      }
-    },
-    {
-      "market_hash_name": "SG 553 | Darkwing (Factory New)",
-      "meta": {
-        "total_count": null,
-        "success": false,
-        "note": "success=false",
-        "pages_fetched": 0,
-        "listings_target_cap": 60
-      }
-    }
-  ],
-  "last_listing_error_count": 5,
+  "last_listing_errors": [],
+  "last_listing_error_count": 0,
   "last_listing_rows": 0,
-  "last_enriched_rows": 274,
-  "last_opportunities_rows": 1,
+  "last_enriched_rows": 419,
+  "last_opportunities_rows": 0,
   "last_alert_stats": {},
   "tiers": {
     "A": {
