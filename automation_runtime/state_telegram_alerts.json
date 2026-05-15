@@ -101,7 +101,19 @@
       "item": "R8 Revolver | Blaze (Factory New)",
       "listing_id": "529879860448704397",
       "spread_hybrid_disc": 0.113556525961641
+    },
+    "listing:493850959898646682": {
+      "sent_at_utc": "2026-05-15T19:58:47.769004+00:00",
+      "item": "Desert Eagle | Mulberry (Field-Tested)",
+      "listing_id": "493850959898646682",
+      "spread_hybrid_disc": 0.1177505697114821
+    },
+    "listing:510739458499223871": {
+      "sent_at_utc": "2026-05-15T20:29:19.036227+00:00",
+      "item": "M4A1-S | Black Lotus (Battle-Scarred)",
+      "listing_id": "510739458499223871",
+      "spread_hybrid_disc": 0.0459418062238725
     }
   },
-  "last_alert_sent_at_utc": "2026-05-15T18:11:16.553369+00:00"
+  "last_alert_sent_at_utc": "2026-05-15T20:29:19.036655+00:00"
 }
