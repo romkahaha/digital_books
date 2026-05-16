@@ -1,27 +1,31 @@
 {
   "version": 1,
-  "items_signature": "bc4384f4d7c743a8a54a549f5f6d6dd7afe49b79faa6863d282331f31998f93d",
-  "items_count": 46,
-  "batch_pointer": 9,
-  "last_run_at_utc": "2026-05-16T01:42:34.388963+00:00",
-  "last_status": "error",
+  "items_signature": "aa8a4aac24b1a443db506031eb94aa3a51d00897cad0664f4cf2885a0a27cdf9",
+  "items_count": 72,
+  "batch_pointer": 70,
+  "last_run_at_utc": "2026-05-16T06:20:03.575999+00:00",
+  "last_status": "ok",
   "last_batch_items": [
-    "AK-47 | Nouveau Rouge (Battle-Scarred)",
-    "UMP-45 | K.O. Factory (Battle-Scarred)",
-    "USP-S | Cortex (Battle-Scarred)",
-    "Dual Berettas | Melondrama (Battle-Scarred)",
-    "M4A1-S | Black Lotus (Factory New)"
+    "StatTrak™ Dual Berettas | Melondrama (Battle-Scarred)",
+    "Desert Eagle | The Bronze (Factory New)",
+    "StatTrak™ Glock-18 | Vogue (Minimal Wear)",
+    "StatTrak™ USP-S | Torque (Factory New)",
+    "M4A1-S | Nitro (Factory New)"
   ],
-  "last_error": "Steam /render/ returned non-JSON and Market Search action fallback failed: 429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/USP-S%20%7C%20Cortex%20%28Battle-Scarred%29",
-  "last_finished_at_utc": "2026-05-16T01:43:19.319534+00:00",
-  "last_successful_monitoring_at_utc": "2026-05-15T22:35:43.890912+00:00",
-  "last_failed_monitoring_at_utc": "2026-05-16T01:43:19.319534+00:00",
-  "consecutive_errors": 1,
+  "last_error": null,
+  "last_finished_at_utc": "2026-05-16T06:20:23.711706+00:00",
+  "last_successful_monitoring_at_utc": "2026-05-16T06:20:23.711706+00:00",
+  "last_failed_monitoring_at_utc": null,
+  "consecutive_errors": 0,
   "last_listing_errors": [],
   "last_listing_error_count": 0,
-  "last_listing_rows": 0,
-  "last_enriched_rows": 339,
+  "last_listing_rows": 359,
+  "last_enriched_rows": 359,
   "last_opportunities_rows": 0,
-  "last_alert_stats": {},
-  "last_batch_start_pointer": 9
+  "last_alert_stats": {
+    "mode": "background",
+    "queued_rows": 0,
+    "sender_pid": 701769
+  },
+  "last_batch_start_pointer": 65
 }
