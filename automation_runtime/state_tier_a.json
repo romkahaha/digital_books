@@ -3,31 +3,25 @@
   "items_signature": "d43e4f564de78287bc4fefa965a67888cdeb3fc33f57719a6c90800226f0bb87",
   "items_count": 61,
   "batch_pointer": 13,
-  "last_run_at_utc": "2026-05-16T15:57:06.564570+00:00",
-  "last_status": "ok",
+  "last_run_at_utc": "2026-05-16T17:30:23.840824+00:00",
+  "last_status": "error",
   "last_batch_items": [
-    "USP-S | Cortex (Field-Tested)",
-    "AK-47 | Elite Build (Minimal Wear)",
-    "AK-47 | Searing Rage (Battle-Scarred)",
-    "M4A1-S | Solitude (Minimal Wear)",
-    "AWP | Black Nile (Field-Tested)"
+    "USP-S | Jawbreaker (Battle-Scarred)",
+    "AK-47 | Ice Coaled (Battle-Scarred)",
+    "AWP | Atheris (Well-Worn)",
+    "USP-S | Jawbreaker (Minimal Wear)",
+    "AK-47 | Searing Rage (Minimal Wear)"
   ],
-  "last_error": null,
-  "last_finished_at_utc": "2026-05-16T15:58:46.794718+00:00",
+  "last_error": "Steam /render/ returned non-JSON and Market Search action fallback failed: 429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/USP-S%20%7C%20Jawbreaker%20%28Battle-Scarred%29",
+  "last_finished_at_utc": "2026-05-16T17:30:24.226277+00:00",
   "last_successful_monitoring_at_utc": "2026-05-16T15:58:46.794718+00:00",
-  "last_failed_monitoring_at_utc": "2026-05-16T15:56:31.577105+00:00",
-  "consecutive_errors": 0,
+  "last_failed_monitoring_at_utc": "2026-05-16T17:30:24.226277+00:00",
+  "consecutive_errors": 1,
   "last_listing_errors": [],
   "last_listing_error_count": 0,
-  "last_listing_rows": 257,
+  "last_listing_rows": 0,
   "last_enriched_rows": 257,
   "last_opportunities_rows": 0,
-  "last_alert_stats": {
-    "loaded": 0,
-    "filtered": 0,
-    "considered": 0,
-    "sent": 0,
-    "skipped": 0
-  },
-  "last_batch_start_pointer": 8
+  "last_alert_stats": {},
+  "last_batch_start_pointer": 13
 }
