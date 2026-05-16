@@ -3,31 +3,25 @@
   "items_signature": "d43e4f564de78287bc4fefa965a67888cdeb3fc33f57719a6c90800226f0bb87",
   "items_count": 61,
   "batch_pointer": 28,
-  "last_run_at_utc": "2026-05-16T06:21:56.940090+00:00",
-  "last_status": "ok",
+  "last_run_at_utc": "2026-05-16T07:53:58.846581+00:00",
+  "last_status": "error",
   "last_batch_items": [
-    "AK-47 | Emerald Pinstripe (Field-Tested)",
-    "MP9 | Food Chain (Field-Tested)",
-    "AK-47 | Crane Flight (Minimal Wear)",
-    "AK-47 | Nouveau Rouge (Battle-Scarred)",
-    "M4A1-S | Black Lotus (Battle-Scarred)"
+    "M4A4 | Evil Daimyo (Field-Tested)",
+    "M4A1-S | Nightmare (Field-Tested)",
+    "XM1014 | Entombed (Minimal Wear)",
+    "USP-S | Cortex (Battle-Scarred)",
+    "AK-47 | Redline (Field-Tested)"
   ],
-  "last_error": null,
-  "last_finished_at_utc": "2026-05-16T06:24:09.685520+00:00",
+  "last_error": "Steam /render/ returned non-JSON and Market Search action fallback failed: 429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/XM1014%20%7C%20Entombed%20%28Minimal%20Wear%29",
+  "last_finished_at_utc": "2026-05-16T07:55:13.756031+00:00",
   "last_successful_monitoring_at_utc": "2026-05-16T06:24:09.685520+00:00",
-  "last_failed_monitoring_at_utc": "2026-05-16T06:21:21.380063+00:00",
-  "consecutive_errors": 0,
+  "last_failed_monitoring_at_utc": "2026-05-16T07:55:13.756031+00:00",
+  "consecutive_errors": 1,
   "last_listing_errors": [],
   "last_listing_error_count": 0,
-  "last_listing_rows": 500,
+  "last_listing_rows": 0,
   "last_enriched_rows": 500,
   "last_opportunities_rows": 0,
-  "last_alert_stats": {
-    "loaded": 0,
-    "filtered": 0,
-    "considered": 0,
-    "sent": 0,
-    "skipped": 0
-  },
-  "last_batch_start_pointer": 23
+  "last_alert_stats": {},
+  "last_batch_start_pointer": 28
 }
