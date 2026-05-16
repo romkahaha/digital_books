@@ -147,8 +147,8 @@ BANDS: dict[str, dict[str, Any]] = {
     "steam_daily_ret_7d": {
         "fmt": "pct",
         "bands": [
-            {"label": "bad", "lo": None, "hi": -0.10},
-            {"label": "ok", "lo": -0.10, "hi": -0.03},
+            {"label": "bad", "lo": None, "hi": -0.08},
+            {"label": "ok", "lo": -0.08, "hi": -0.03},
             {"label": "good", "lo": -0.03, "hi": 0.03},
             {"label": "very_good", "lo": 0.03, "hi": 0.08},
             {"label": "excellent", "lo": 0.08, "hi": None},

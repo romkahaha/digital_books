@@ -20,7 +20,7 @@ STRUCTURAL_GAP = -1337.0
 
 @dataclass(frozen=True)
 class FilterConfig:
-    risk_ret_7d_min: float = -0.03
+    risk_ret_7d_min: float = -0.08
     risk_downside_14d_max: float = 0.17
     risk_sales_7d_n_min: int = 21
     risk_tail_ratio_min: float = 0.85

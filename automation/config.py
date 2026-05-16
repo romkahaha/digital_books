@@ -321,7 +321,7 @@ def nightly_defaults() -> dict[str, Any]:
             },
         },
         "risk_filter": {
-            "ret_7d_min": -0.03,
+            "ret_7d_min": -0.08,
             "downside_14d_max": 0.17,
             "sales_7d_n_min": 21,
             "tail_ratio_min": 0.85,

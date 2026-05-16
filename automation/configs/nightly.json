@@ -55,7 +55,7 @@
     "fail_if_outside_expected_range": false
   },
   "risk_filter": {
-    "ret_7d_min": -0.05,
+    "ret_7d_min": -0.08,
     "downside_14d_max": 0.15,
     "sales_7d_n_min": 50,
     "tail_ratio_min": 0.8,
