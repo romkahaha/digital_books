@@ -53,7 +53,13 @@
       "item": "StatTrak™ P250 | Visions (Field-Tested)",
       "listing_id": "505109958970039913",
       "spread_hybrid_disc": 0.0851506805387363
+    },
+    "listing:515243058131902538": {
+      "sent_at_utc": "2026-05-16T20:30:23.631738+00:00",
+      "item": "Nova | Moon in Libra (Factory New)",
+      "listing_id": "515243058131902538",
+      "spread_hybrid_disc": 0.1009488392165733
     }
   },
-  "last_alert_sent_at_utc": "2026-05-16T12:14:29.954373+00:00"
+  "last_alert_sent_at_utc": "2026-05-16T20:30:23.631864+00:00"
 }
