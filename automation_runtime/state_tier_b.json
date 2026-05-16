@@ -3,31 +3,25 @@
   "items_signature": "aa8a4aac24b1a443db506031eb94aa3a51d00897cad0664f4cf2885a0a27cdf9",
   "items_count": 72,
   "batch_pointer": 33,
-  "last_run_at_utc": "2026-05-16T12:56:42.926418+00:00",
-  "last_status": "ok",
+  "last_run_at_utc": "2026-05-16T15:58:47.203218+00:00",
+  "last_status": "error",
   "last_batch_items": [
-    "AWP | Black Nile (Factory New)",
-    "AK-47 | Blue Laminate (Field-Tested)",
-    "StatTrak™ AWP | Ice Coaled (Battle-Scarred)",
-    "StatTrak™ MP9 | Starlight Protector (Field-Tested)",
-    "AK-47 | Point Disarray (Battle-Scarred)"
+    "Five-SeveN | Boost Protocol (Minimal Wear)",
+    "M4A1-S | Decimator (Battle-Scarred)",
+    "StatTrak™ AK-47 | Ice Coaled (Minimal Wear)",
+    "StatTrak™ Glock-18 | Block-18 (Factory New)",
+    "M4A4 | Hellish (Battle-Scarred)"
   ],
-  "last_error": null,
-  "last_finished_at_utc": "2026-05-16T12:58:23.827294+00:00",
+  "last_error": "Steam /render/ returned non-JSON and Market Search action fallback failed: 429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/M4A4%20%7C%20Hellish%20%28Battle-Scarred%29",
+  "last_finished_at_utc": "2026-05-16T16:00:16.369426+00:00",
   "last_successful_monitoring_at_utc": "2026-05-16T12:58:23.827294+00:00",
-  "last_failed_monitoring_at_utc": "2026-05-16T12:56:05.386028+00:00",
-  "consecutive_errors": 0,
+  "last_failed_monitoring_at_utc": "2026-05-16T16:00:16.369426+00:00",
+  "consecutive_errors": 1,
   "last_listing_errors": [],
   "last_listing_error_count": 0,
-  "last_listing_rows": 372,
+  "last_listing_rows": 0,
   "last_enriched_rows": 372,
   "last_opportunities_rows": 0,
-  "last_alert_stats": {
-    "loaded": 0,
-    "filtered": 0,
-    "considered": 0,
-    "sent": 0,
-    "skipped": 0
-  },
-  "last_batch_start_pointer": 28
+  "last_alert_stats": {},
+  "last_batch_start_pointer": 33
 }
