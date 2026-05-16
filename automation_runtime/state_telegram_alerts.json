@@ -29,7 +29,31 @@
       "item": "FAMAS | Mecha Industries (Factory New)",
       "listing_id": "630081042873729172",
       "spread_hybrid_disc": 0.0295875289088567
+    },
+    "listing:511864723318840269": {
+      "sent_at_utc": "2026-05-16T09:26:47.477361+00:00",
+      "item": "StatTrak™ AWP | Queen's Gambit (Battle-Scarred)",
+      "listing_id": "511864723318840269",
+      "spread_hybrid_disc": 0.0659717221640001
+    },
+    "listing:521998560408031230": {
+      "sent_at_utc": "2026-05-16T09:35:09.121898+00:00",
+      "item": "MAC-10 | Heat (Field-Tested)",
+      "listing_id": "521998560408031230",
+      "spread_hybrid_disc": 0.0803669562212343
+    },
+    "listing:490473260181196216": {
+      "sent_at_utc": "2026-05-16T11:24:08.384457+00:00",
+      "item": "M4A1-S | Black Lotus (Battle-Scarred)",
+      "listing_id": "490473260181196216",
+      "spread_hybrid_disc": 0.072396214036313
+    },
+    "listing:505109958970039913": {
+      "sent_at_utc": "2026-05-16T12:14:29.954143+00:00",
+      "item": "StatTrak™ P250 | Visions (Field-Tested)",
+      "listing_id": "505109958970039913",
+      "spread_hybrid_disc": 0.0851506805387363
     }
   },
-  "last_alert_sent_at_utc": "2026-05-16T06:17:58.939892+00:00"
+  "last_alert_sent_at_utc": "2026-05-16T12:14:29.954373+00:00"
 }
