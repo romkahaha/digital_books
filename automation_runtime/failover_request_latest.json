@@ -1,11 +1,11 @@
 {
   "version": 1,
-  "mode": "request",
+  "mode": "clear",
   "request_id": "20260517T193516Z-vmi2737474-request",
   "requested_at_utc": "2026-05-17T19:35:16.649529+00:00",
   "requested_by": "vmi2737474",
   "main_repo_root": "/home/roma/cs-arbitrage/cs-skins-monitoring-bot",
-  "trigger_run": true,
+  "trigger_run": false,
   "lease_seconds": 5088,
   "max_runtime_minutes": 85,
   "cooldown_until_utc": "2026-05-17T21:00:04.649236+00:00",
@@ -17,5 +17,8 @@
   "last_status": "error",
   "last_error": "Steam rate limit (429) for \"1/5 USP-S | Cortex (Well-Worn)\": 429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/USP-S%20%7C%20Cortex%20%28Well-Worn%29/render/?query=&start=0&count=100&currency=3&language=english&format=json",
   "last_finished_at_utc": "2026-05-17T19:35:11.024562+00:00",
-  "last_successful_monitoring_at_utc": "2026-05-17T19:24:08.683487+00:00"
+  "last_successful_monitoring_at_utc": "2026-05-17T19:24:08.683487+00:00",
+  "last_failover_status": "success",
+  "last_failover_exit_code": 0,
+  "last_failover_completed_at_utc": "2026-05-17T20:52:22.427956+00:00"
 }
