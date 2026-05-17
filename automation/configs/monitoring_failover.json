@@ -51,6 +51,8 @@
     "batch_size": null,
     "cycle_sleep_sec": 600.0,
     "recoverable_error_sleep_sec": 900.0,
+    "batch_sleep_min_sec": 10.0,
+    "batch_sleep_max_sec": 20.0,
     "commit_runtime": false,
     "commit_every_batches": 5,
     "max_runtime_minutes": 90.0,

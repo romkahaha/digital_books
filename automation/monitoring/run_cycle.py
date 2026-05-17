@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import argparse
 import os
+import random
 import subprocess
 import sys
 import time
@@ -324,6 +325,8 @@ def main() -> int:
     max_batches = None if max_batches is None else int(max_batches)
     max_cycles = None if max_cycles is None else int(max_cycles)
     recoverable_error_sleep_sec = float(value_or_config(args.cycle_sleep_sec, cycle_cfg, "recoverable_error_sleep_sec", cycle_sleep_sec))
+    batch_sleep_min_sec = max(0.0, float(cycle_cfg.get("batch_sleep_min_sec", 0.0) or 0.0))
+    batch_sleep_max_sec = max(batch_sleep_min_sec, float(cycle_cfg.get("batch_sleep_max_sec", batch_sleep_min_sec) or 0.0))
     commit_enabled = bool(cycle_cfg.get("commit_runtime", True)) and not args.no_git
     respect_active_window = bool(cycle_cfg.get("respect_active_window", True)) and not args.ignore_schedule
     checkpoint_message = str(cycle_cfg.get("checkpoint_message", "Update monitoring runtime [skip ci]"))
@@ -404,6 +407,7 @@ def main() -> int:
         print(f"max listings per item: {default_max_listings}")
         print(f"cycle sleep after full list: {cycle_sleep_sec:.1f}s")
     print(f"telegram mode: {telegram_mode}")
+    print(f"batch sleep: {batch_sleep_min_sec:.1f}..{batch_sleep_max_sec:.1f}s")
     print(f"runtime checkpoint: {'on' if commit_enabled else 'off'} every {commit_every_batches} batches")
     print(f"max runtime: {max_runtime_minutes:.1f} minutes")
     print(f"dry run: {'on' if args.dry_run else 'off'}")
@@ -674,6 +678,19 @@ def main() -> int:
         if checkpoint_due:
             commit_runtime(root, checkpoint_message)
             batches_since_commit = 0
+
+        should_batch_sleep = batch_sleep_max_sec > 0 and not (cycle_boundary_done and not use_tiers)
+        if should_batch_sleep:
+            sleep_sec = random.uniform(batch_sleep_min_sec, batch_sleep_max_sec)
+            remaining_runtime_sec = max(0.0, max_runtime_minutes * 60.0 - (time.monotonic() - started))
+            if remaining_runtime_sec <= sleep_sec:
+                print(
+                    "not sleeping between batches because max runtime is near: "
+                    f"remaining={remaining_runtime_sec:.1f}s sleep={sleep_sec:.1f}s"
+                )
+                break
+            print(f"sleeping between batches: {sleep_sec:.1f}s")
+            time.sleep(sleep_sec)
 
         if cycle_boundary_done:
             if max_cycles is not None and cycles_done >= max_cycles:
