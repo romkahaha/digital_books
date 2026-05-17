@@ -2,9 +2,9 @@
   "version": 1,
   "items_signature": "05c097ec901c3a8673dc267595242981931507099d6598e5ab798a45964cf9c5",
   "items_count": 113,
-  "batch_pointer": 96,
-  "last_run_at_utc": "2026-05-17T14:42:29.637214+00:00",
-  "last_status": "error",
+  "batch_pointer": 101,
+  "last_run_at_utc": "2026-05-17T14:43:02.266305+00:00",
+  "last_status": "ok",
   "last_batch_items": [
     "PP-Bizon | High Roller (Minimal Wear)",
     "P90 | Shallow Grave (Minimal Wear)",
@@ -12,16 +12,22 @@
     "StatTrak™ AK-47 | The Outsiders (Battle-Scarred)",
     "Glock-18 | Gamma Doppler (Field-Tested)"
   ],
-  "last_error": "Steam rate limit (429) for \"1/5 PP-Bizon | High Roller (Minimal Wear)\": 429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/PP-Bizon%20%7C%20High%20Roller%20%28Minimal%20Wear%29/render/?query=&start=0&count=100&currency=3&language=english&format=json",
-  "last_finished_at_utc": "2026-05-17T14:42:29.909779+00:00",
-  "last_successful_monitoring_at_utc": "2026-05-17T11:40:32.935615+00:00",
+  "last_error": null,
+  "last_finished_at_utc": "2026-05-17T14:44:18.081564+00:00",
+  "last_successful_monitoring_at_utc": "2026-05-17T14:44:18.081564+00:00",
   "last_failed_monitoring_at_utc": "2026-05-17T14:42:29.909779+00:00",
-  "consecutive_errors": 2,
+  "consecutive_errors": 0,
   "last_listing_errors": [],
   "last_listing_error_count": 0,
-  "last_listing_rows": 0,
-  "last_enriched_rows": 206,
+  "last_listing_rows": 258,
+  "last_enriched_rows": 258,
   "last_opportunities_rows": 0,
-  "last_alert_stats": {},
+  "last_alert_stats": {
+    "loaded": 0,
+    "filtered": 0,
+    "considered": 0,
+    "sent": 0,
+    "skipped": 0
+  },
   "last_batch_start_pointer": 96
 }
