@@ -152,6 +152,7 @@
     "push_on_cycle_start": true,
     "request_on_rate_limit": true,
     "lease_seconds": 5400,
+    "recoverable_error_sleep_sec": 900,
     "request_on_nightly_start": true,
     "nightly_lease_seconds": 19800,
     "copy_precomputed_plots": true

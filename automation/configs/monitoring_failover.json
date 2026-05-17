@@ -50,7 +50,7 @@
     "enabled": true,
     "batch_size": null,
     "cycle_sleep_sec": 600.0,
-    "recoverable_error_sleep_sec": 5400.0,
+    "recoverable_error_sleep_sec": 900.0,
     "commit_runtime": false,
     "commit_every_batches": 5,
     "max_runtime_minutes": 90.0,
