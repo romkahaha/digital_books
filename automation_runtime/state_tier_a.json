@@ -2,9 +2,9 @@
   "version": 1,
   "items_signature": "c87163719fca4bfffb5f1e590a3bac013b478a41cace51f59811a509cc8eeebb",
   "items_count": 97,
-  "batch_pointer": 9,
-  "last_run_at_utc": "2026-05-17T11:42:07.340090+00:00",
-  "last_status": "error",
+  "batch_pointer": 14,
+  "last_run_at_utc": "2026-05-17T11:42:42.052817+00:00",
+  "last_status": "ok",
   "last_batch_items": [
     "P2000 | Wicked Sick (Field-Tested)",
     "UMP-45 | Wild Child (Field-Tested)",
@@ -12,16 +12,22 @@
     "USP-S | Cortex (Field-Tested)",
     "AK-47 | Searing Rage (Battle-Scarred)"
   ],
-  "last_error": "Steam rate limit (429) for \"1/5 P2000 | Wicked Sick (Field-Tested)\": 429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/P2000%20%7C%20Wicked%20Sick%20%28Field-Tested%29/render/?query=&start=0&count=100&currency=3&language=english&format=json",
-  "last_finished_at_utc": "2026-05-17T11:42:07.631689+00:00",
-  "last_successful_monitoring_at_utc": "2026-05-17T11:42:06.472708+00:00",
+  "last_error": null,
+  "last_finished_at_utc": "2026-05-17T11:45:24.895458+00:00",
+  "last_successful_monitoring_at_utc": "2026-05-17T11:45:24.895458+00:00",
   "last_failed_monitoring_at_utc": "2026-05-17T11:42:07.631689+00:00",
-  "consecutive_errors": 1,
+  "consecutive_errors": 0,
   "last_listing_errors": [],
   "last_listing_error_count": 0,
-  "last_listing_rows": 0,
-  "last_enriched_rows": 497,
+  "last_listing_rows": 500,
+  "last_enriched_rows": 500,
   "last_opportunities_rows": 0,
-  "last_alert_stats": {},
+  "last_alert_stats": {
+    "loaded": 0,
+    "filtered": 0,
+    "considered": 0,
+    "sent": 0,
+    "skipped": 0
+  },
   "last_batch_start_pointer": 9
 }
