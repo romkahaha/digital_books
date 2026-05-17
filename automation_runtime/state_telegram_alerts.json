@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "items_signature": "ecfca795c5e0655cc4c7d7fda27f06ea5cf812ad46d93107bd596171350c2e74",
-  "items_count": 205,
+  "items_signature": "509cd62885d9d2d8527459e4c706d40a2a4b508488eba3c40f36bd2573e66205",
+  "items_count": 323,
   "batch_pointer": 0,
   "last_run_at_utc": null,
   "last_status": null,
@@ -18,48 +18,36 @@
   "last_opportunities_rows": 0,
   "last_alert_stats": {},
   "sent_alerts": {
-    "listing:519746657757641530": {
-      "sent_at_utc": "2026-05-16T06:11:35.772310+00:00",
-      "item": "StatTrak™ AWP | Ice Coaled (Battle-Scarred)",
-      "listing_id": "519746657757641530",
-      "spread_hybrid_disc": 0.0531313882770466
+    "listing:489347463809616183": {
+      "sent_at_utc": "2026-05-17T08:23:58.356827+00:00",
+      "item": "AK-47 | Crane Flight (Minimal Wear)",
+      "listing_id": "489347463809616183",
+      "spread_hybrid_disc": 0.1038476771722173
     },
-    "listing:630081042873729172": {
-      "sent_at_utc": "2026-05-16T06:17:58.939719+00:00",
-      "item": "FAMAS | Mecha Industries (Factory New)",
-      "listing_id": "630081042873729172",
-      "spread_hybrid_disc": 0.0295875289088567
+    "listing:506235858881621017": {
+      "sent_at_utc": "2026-05-17T10:36:43.679659+00:00",
+      "item": "Glock-18 | Shinobu (Battle-Scarred)",
+      "listing_id": "506235858881621017",
+      "spread_hybrid_disc": 0.050347333322847
     },
-    "listing:511864723318840269": {
-      "sent_at_utc": "2026-05-16T09:26:47.477361+00:00",
-      "item": "StatTrak™ AWP | Queen's Gambit (Battle-Scarred)",
-      "listing_id": "511864723318840269",
-      "spread_hybrid_disc": 0.0659717221640001
+    "listing:516368958042826912": {
+      "sent_at_utc": "2026-05-17T10:53:00.612376+00:00",
+      "item": "Glock-18 | Vogue (Minimal Wear)",
+      "listing_id": "516368958042826912",
+      "spread_hybrid_disc": 0.1062426177430948
     },
-    "listing:521998560408031230": {
-      "sent_at_utc": "2026-05-16T09:35:09.121898+00:00",
-      "item": "MAC-10 | Heat (Field-Tested)",
-      "listing_id": "521998560408031230",
-      "spread_hybrid_disc": 0.0803669562212343
+    "listing:498354559533178483": {
+      "sent_at_utc": "2026-05-17T11:05:32.068242+00:00",
+      "item": "StatTrak™ USP-S | Jawbreaker (Battle-Scarred)",
+      "listing_id": "498354559533178483",
+      "spread_hybrid_disc": -0.1893173904615124
     },
-    "listing:490473260181196216": {
-      "sent_at_utc": "2026-05-16T11:24:08.384457+00:00",
-      "item": "M4A1-S | Black Lotus (Battle-Scarred)",
-      "listing_id": "490473260181196216",
-      "spread_hybrid_disc": 0.072396214036313
-    },
-    "listing:505109958970039913": {
-      "sent_at_utc": "2026-05-16T12:14:29.954143+00:00",
-      "item": "StatTrak™ P250 | Visions (Field-Tested)",
-      "listing_id": "505109958970039913",
-      "spread_hybrid_disc": 0.0851506805387363
-    },
-    "listing:515243058131902538": {
-      "sent_at_utc": "2026-05-16T20:30:23.631738+00:00",
-      "item": "Nova | Moon in Libra (Factory New)",
-      "listing_id": "515243058131902538",
-      "spread_hybrid_disc": 0.1009488392165733
+    "listing:519746657765021170": {
+      "sent_at_utc": "2026-05-17T11:40:19.330598+00:00",
+      "item": "USP-S | Cyrex (Factory New)",
+      "listing_id": "519746657765021170",
+      "spread_hybrid_disc": 0.098315145519115
     }
   },
-  "last_alert_sent_at_utc": "2026-05-16T20:30:23.631864+00:00"
+  "last_alert_sent_at_utc": "2026-05-17T11:40:19.330731+00:00"
 }
