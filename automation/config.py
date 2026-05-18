@@ -131,6 +131,8 @@ def monitoring_defaults() -> dict[str, Any]:
             "delay_between_skins_max_sec": 10.0,
             "delay_between_render_pages_min_sec": 2.0,
             "delay_between_render_pages_max_sec": 5.0,
+            "prefer_route_action": False,
+            "route_action_fallback_to_render": True,
             "batch_log_progress": 1,
         },
         "opportunity_filter": {

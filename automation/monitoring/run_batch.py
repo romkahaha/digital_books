@@ -83,6 +83,8 @@ def _apply_steam_scm_config(
         "delay_between_skins_max_sec",
         "delay_between_render_pages_min_sec",
         "delay_between_render_pages_max_sec",
+        "prefer_route_action",
+        "route_action_fallback_to_render",
         "batch_log_progress",
     ]
     for key in direct_keys:

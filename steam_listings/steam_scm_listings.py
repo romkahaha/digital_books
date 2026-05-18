@@ -70,6 +70,10 @@ CONFIG: dict[str, Any] = {
     # Steam SSR route action id for the Market listing Search action.
     # If Steam rotates route ids again, this can be overridden in steam_scm_runtime.json.
     "steam_market_route_id": "4OPT6VBA",
+    # Steam's old /render endpoint now often returns a large HTML page. Prefer the
+    # lighter routeAction JSON response and keep /render only as a non-429 fallback.
+    "prefer_route_action": False,
+    "route_action_fallback_to_render": True,
     # Куда писать CSV при --batch
     "batch_out_csv": "data/scm_listings_batch.csv",
     # Ограничить число скинов с начала списка (None = все)
@@ -516,6 +520,29 @@ def fetch_render_raw(
     currency = currency if currency is not None else int(_effective("steam_currency"))
     timeout = timeout if timeout is not None else float(_effective("request_timeout_sec"))
     sess = session or _session()
+    prefer_route_action = bool(_effective("prefer_route_action"))
+    if prefer_route_action:
+        try:
+            _batch_log(
+                f'  [steam_scm] "{market_hash_name}": routeAction start={start} count={min(int(count), 100)}'
+            )
+            return fetch_market_search_raw(
+                market_hash_name,
+                start=start,
+                count=count,
+                currency=currency,
+                session=sess,
+                timeout=timeout,
+            )
+        except requests.HTTPError:
+            raise
+        except Exception as exc:
+            if not bool(_effective("route_action_fallback_to_render")):
+                raise
+            _batch_log(
+                f'  [steam_scm] "{market_hash_name}": routeAction failed ({exc}) — trying /render/'
+            )
+
     url = _listing_path(market_hash_name)
     params = {
         "query": "",
@@ -642,6 +669,7 @@ def fetch_steam_scm_top_listings(
         "note": None,
         "pages_fetched": 0,
         "listings_target_cap": total_cap,
+        "source": None,
     }
     sess = session or _session()
     merged: list[dict[str, Any]] = []
@@ -667,8 +695,9 @@ def fetch_steam_scm_top_listings(
         data: dict[str, Any] | None = None
         for attempt in range(tries):
             try:
+                request_mode = "routeAction" if bool(_effective("prefer_route_action")) else "render"
                 _batch_log(
-                    f'  [steam_scm] "{label}": render start={start_offset} count={request_count} '
+                    f'  [steam_scm] "{label}": {request_mode} start={start_offset} count={request_count} '
                     f"(got {len(merged)}/{total_cap})"
                 )
                 data = fetch_render_raw(
@@ -723,6 +752,8 @@ def fetch_steam_scm_top_listings(
         meta["success"] = True
         if data.get("total_count") is not None:
             meta["total_count"] = data.get("total_count")
+        if data.get("__source") is not None:
+            meta["source"] = data.get("__source")
         lis = _iter_listings(data.get("listinginfo"))
         if not lis:
             if (data.get("total_count") or 0) == 0:
