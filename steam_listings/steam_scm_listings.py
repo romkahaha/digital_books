@@ -503,7 +503,9 @@ def fetch_market_search_raw(
             f'  [steam_scm] "{market_hash_name}": Steam Market Search action returned non-JSON '
             f"({r.headers.get('content-type')}; final_url={r.url})"
         )
-        payload = None
+        raise RuntimeError(
+            f"Steam Market Search action returned non-JSON ({r.headers.get('content-type')}; final_url={r.url})"
+        )
     return _route_action_payload_to_render_payload(payload)
 
 
