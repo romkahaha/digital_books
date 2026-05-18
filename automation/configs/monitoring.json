@@ -158,7 +158,7 @@
     "lease_seconds": 5400,
     "recoverable_error_sleep_sec": 900,
     "request_on_nightly_start": true,
-    "nightly_lease_seconds": 19800,
+    "nightly_lease_seconds": 25200,
     "copy_precomputed_plots": true
   }
 }
