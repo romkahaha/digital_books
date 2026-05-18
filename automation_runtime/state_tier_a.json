@@ -2,25 +2,25 @@
   "version": 1,
   "items_signature": "c87163719fca4bfffb5f1e590a3bac013b478a41cace51f59811a509cc8eeebb",
   "items_count": 97,
-  "batch_pointer": 54,
-  "last_run_at_utc": "2026-05-17T20:49:03.666090+00:00",
+  "batch_pointer": 91,
+  "last_run_at_utc": "2026-05-18T06:00:23.858046+00:00",
   "last_status": "ok",
   "last_batch_items": [
-    "AK-47 | Crane Flight (Minimal Wear)",
-    "AK-47 | Nouveau Rouge (Battle-Scarred)",
-    "MP9 | Food Chain (Field-Tested)",
-    "M4A1-S | Black Lotus (Battle-Scarred)",
-    "AK-47 | Frontside Misty (Field-Tested)"
+    "StatTrak™ Glock-18 | Vogue (Field-Tested)",
+    "USP-S | Cyrex (Factory New)",
+    "AWP | Exoskeleton (Field-Tested)",
+    "AK-47 | Phantom Disruptor (Battle-Scarred)",
+    "AWP | Chrome Cannon (Minimal Wear)"
   ],
   "last_error": null,
-  "last_finished_at_utc": "2026-05-17T20:51:02.537564+00:00",
-  "last_successful_monitoring_at_utc": "2026-05-17T20:51:02.537564+00:00",
+  "last_finished_at_utc": "2026-05-18T06:02:44.103953+00:00",
+  "last_successful_monitoring_at_utc": "2026-05-18T06:02:44.103953+00:00",
   "last_failed_monitoring_at_utc": "2026-05-17T20:34:03.211817+00:00",
   "consecutive_errors": 0,
   "last_listing_errors": [],
   "last_listing_error_count": 0,
-  "last_listing_rows": 419,
-  "last_enriched_rows": 419,
+  "last_listing_rows": 500,
+  "last_enriched_rows": 500,
   "last_opportunities_rows": 0,
   "last_alert_stats": {
     "loaded": 0,
@@ -29,5 +29,5 @@
     "sent": 0,
     "skipped": 0
   },
-  "last_batch_start_pointer": 49
+  "last_batch_start_pointer": 86
 }

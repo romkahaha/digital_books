@@ -2,26 +2,32 @@
   "version": 1,
   "items_signature": "36c5d8e5ff238aacd390ab5fda536afdd189a0b7cfae2c93b4509c196ee720a4",
   "items_count": 113,
-  "batch_pointer": 104,
-  "last_run_at_utc": "2026-05-17T20:51:21.419916+00:00",
-  "last_status": "error",
+  "batch_pointer": 93,
+  "last_run_at_utc": "2026-05-18T05:56:51.181591+00:00",
+  "last_status": "ok",
   "last_batch_items": [
-    "UMP-45 | K.O. Factory (Factory New)",
-    "AK-47 | Legion of Anubis (Battle-Scarred)",
-    "AK-47 | The Oligarch (Battle-Scarred)",
-    "StatTrak™ AWP | Mortis (Minimal Wear)",
-    "StatTrak™ P2000 | Wicked Sick (Minimal Wear)"
+    "M4A4 | Full Throttle (Field-Tested)",
+    "Galil AR | Rainbow Spoon (Minimal Wear)",
+    "AWP | Hyper Beast (Field-Tested)",
+    "Dual Berettas | Melondrama (Factory New)",
+    "M4A4 | Full Throttle (Battle-Scarred)"
   ],
-  "last_error": "Steam /render/ returned non-JSON and Market Search action fallback failed: 429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/AK-47%20%7C%20The%20Oligarch%20%28Battle-Scarred%29",
-  "last_finished_at_utc": "2026-05-17T20:52:22.114279+00:00",
-  "last_successful_monitoring_at_utc": "2026-05-17T20:14:07.322184+00:00",
+  "last_error": null,
+  "last_finished_at_utc": "2026-05-18T05:58:31.358029+00:00",
+  "last_successful_monitoring_at_utc": "2026-05-18T05:58:31.358029+00:00",
   "last_failed_monitoring_at_utc": "2026-05-17T20:52:22.114279+00:00",
-  "consecutive_errors": 1,
+  "consecutive_errors": 0,
   "last_listing_errors": [],
   "last_listing_error_count": 0,
-  "last_listing_rows": 0,
-  "last_enriched_rows": 353,
+  "last_listing_rows": 400,
+  "last_enriched_rows": 400,
   "last_opportunities_rows": 0,
-  "last_alert_stats": {},
-  "last_batch_start_pointer": 104
+  "last_alert_stats": {
+    "loaded": 0,
+    "filtered": 0,
+    "considered": 0,
+    "sent": 0,
+    "skipped": 0
+  },
+  "last_batch_start_pointer": 88
 }
