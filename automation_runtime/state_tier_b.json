@@ -2,32 +2,26 @@
   "version": 1,
   "items_signature": "652fb74bbc40b65766dab2229b4105cc23c24460f724633c955c8550e65d9587",
   "items_count": 148,
-  "batch_pointer": 79,
-  "last_run_at_utc": "2026-05-19T15:30:49.464438+00:00",
-  "last_status": "ok",
+  "batch_pointer": 84,
+  "last_run_at_utc": "2026-05-19T17:23:05.801485+00:00",
+  "last_status": "error",
   "last_batch_items": [
-    "StatTrak™ AK-47 | Head Shot (Field-Tested)",
-    "Five-SeveN | Urban Hazard (Factory New)",
-    "Desert Eagle | Conspiracy (Factory New)",
-    "USP-S | Guardian (Minimal Wear)",
-    "AK-47 | Blue Laminate (Minimal Wear)"
+    "MAC-10 | Heat (Field-Tested)",
+    "Desert Eagle | Mecha Industries (Factory New)",
+    "StatTrak™ FAMAS | Rapid Eye Movement (Minimal Wear)",
+    "MAC-10 | Pipsqueak (Factory New)",
+    "StatTrak™ Zeus x27 | Olympus (Minimal Wear)"
   ],
-  "last_error": null,
-  "last_finished_at_utc": "2026-05-19T15:32:53.738421+00:00",
-  "last_successful_monitoring_at_utc": "2026-05-19T15:32:53.738421+00:00",
-  "last_failed_monitoring_at_utc": "2026-05-19T15:15:49.039187+00:00",
-  "consecutive_errors": 0,
+  "last_error": "Steam /render/ returned non-JSON and Market Search action fallback failed: 429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/Desert%20Eagle%20%7C%20Mecha%20Industries%20%28Factory%20New%29",
+  "last_finished_at_utc": "2026-05-19T17:23:43.980432+00:00",
+  "last_successful_monitoring_at_utc": "2026-05-19T16:27:03.981760+00:00",
+  "last_failed_monitoring_at_utc": "2026-05-19T17:23:43.980432+00:00",
+  "consecutive_errors": 1,
   "last_listing_errors": [],
   "last_listing_error_count": 0,
-  "last_listing_rows": 400,
+  "last_listing_rows": 0,
   "last_enriched_rows": 400,
   "last_opportunities_rows": 0,
-  "last_alert_stats": {
-    "loaded": 0,
-    "filtered": 0,
-    "considered": 0,
-    "sent": 0,
-    "skipped": 0
-  },
-  "last_batch_start_pointer": 74
+  "last_alert_stats": {},
+  "last_batch_start_pointer": 84
 }
