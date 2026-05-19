@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "items_signature": "509cd62885d9d2d8527459e4c706d40a2a4b508488eba3c40f36bd2573e66205",
-  "items_count": 323,
+  "items_signature": "5e98a4175f99b61590cfb7668a1e626f5493a567534c9b9319641590d0df9e58",
+  "items_count": 423,
   "batch_pointer": 0,
   "last_run_at_utc": null,
   "last_status": null,
@@ -18,36 +18,126 @@
   "last_opportunities_rows": 0,
   "last_alert_stats": {},
   "sent_alerts": {
-    "listing:489347463809616183": {
-      "sent_at_utc": "2026-05-17T08:23:58.356827+00:00",
-      "item": "AK-47 | Crane Flight (Minimal Wear)",
-      "listing_id": "489347463809616183",
-      "spread_hybrid_disc": 0.1038476771722173
+    "listing:526502160744495987": {
+      "sent_at_utc": "2026-05-19T06:13:23.047841+00:00",
+      "item": "MP7 | Prey (Factory New)",
+      "listing_id": "526502160744495987",
+      "spread_hybrid_disc": 0.0876951025345916
     },
-    "listing:506235858881621017": {
-      "sent_at_utc": "2026-05-17T10:36:43.679659+00:00",
-      "item": "Glock-18 | Shinobu (Battle-Scarred)",
-      "listing_id": "506235858881621017",
-      "spread_hybrid_disc": 0.050347333322847
-    },
-    "listing:516368958042826912": {
-      "sent_at_utc": "2026-05-17T10:53:00.612376+00:00",
-      "item": "Glock-18 | Vogue (Minimal Wear)",
-      "listing_id": "516368958042826912",
-      "spread_hybrid_disc": 0.1062426177430948
-    },
-    "listing:498354559533178483": {
-      "sent_at_utc": "2026-05-17T11:05:32.068242+00:00",
-      "item": "StatTrak™ USP-S | Jawbreaker (Battle-Scarred)",
-      "listing_id": "498354559533178483",
-      "spread_hybrid_disc": -0.1893173904615124
-    },
-    "listing:519746657765021170": {
-      "sent_at_utc": "2026-05-17T11:40:19.330598+00:00",
+    "listing:510739458511282287": {
+      "sent_at_utc": "2026-05-19T06:26:22.237710+00:00",
       "item": "USP-S | Cyrex (Factory New)",
-      "listing_id": "519746657765021170",
-      "spread_hybrid_disc": 0.098315145519115
+      "listing_id": "510739458511282287",
+      "spread_hybrid_disc": -0.0290986897111065
+    },
+    "listing:677372747560638018": {
+      "sent_at_utc": "2026-05-19T06:27:03.194789+00:00",
+      "item": "USP-S | Cyrex (Factory New)",
+      "listing_id": "677372747560638018",
+      "spread_hybrid_disc": 0.096248044730885
+    },
+    "listing:680750447977498183": {
+      "sent_at_utc": "2026-05-19T06:27:44.167467+00:00",
+      "item": "USP-S | Cyrex (Factory New)",
+      "listing_id": "680750447977498183",
+      "spread_hybrid_disc": 0.105167168940935
+    },
+    "listing:507361758790667915": {
+      "sent_at_utc": "2026-05-19T06:28:05.073859+00:00",
+      "item": "USP-S | Cyrex (Factory New)",
+      "listing_id": "507361758790667915",
+      "spread_hybrid_disc": 0.1102403909903473
+    },
+    "listing:519746657748262378": {
+      "sent_at_utc": "2026-05-19T06:28:46.157347+00:00",
+      "item": "MP7 | Cirrus (Factory New)",
+      "listing_id": "519746657748262378",
+      "spread_hybrid_disc": 0.1055159050635202
+    },
+    "listing:492725060004071393": {
+      "sent_at_utc": "2026-05-19T06:31:06.191603+00:00",
+      "item": "StatTrak™ USP-S | Jawbreaker (Battle-Scarred)",
+      "listing_id": "492725060004071393",
+      "spread_hybrid_disc": 0.0332998771551446
+    },
+    "listing:497228659627490387": {
+      "sent_at_utc": "2026-05-19T06:43:07.275666+00:00",
+      "item": "MP7 | Sunbaked (Factory New)",
+      "listing_id": "497228659627490387",
+      "spread_hybrid_disc": 0.0844422040021648
+    },
+    "listing:499480459442830648": {
+      "sent_at_utc": "2026-05-19T07:04:04.382955+00:00",
+      "item": "AWP | Asiimov (Battle-Scarred)",
+      "listing_id": "499480459442830648",
+      "spread_hybrid_disc": 0.0996700998022198
+    },
+    "listing:518620757861948036": {
+      "sent_at_utc": "2026-05-19T07:04:26.511798+00:00",
+      "item": "AWP | Asiimov (Battle-Scarred)",
+      "listing_id": "518620757861948036",
+      "spread_hybrid_disc": 0.1114337448976342
+    },
+    "listing:690883546445793778": {
+      "sent_at_utc": "2026-05-19T07:26:34.830978+00:00",
+      "item": "StatTrak™ AWP | Queen's Gambit (Battle-Scarred)",
+      "listing_id": "690883546445793778",
+      "spread_hybrid_disc": 0.0548305219458893
+    },
+    "listing:494976859792773312": {
+      "sent_at_utc": "2026-05-19T07:31:08.696232+00:00",
+      "item": "Five-SeveN | Orange Peel (Factory New)",
+      "listing_id": "494976859792773312",
+      "spread_hybrid_disc": 0.0037470337044729
+    },
+    "listing:494976859822174152": {
+      "sent_at_utc": "2026-05-19T08:06:59.206904+00:00",
+      "item": "M4A4 | Tooth Fairy (Minimal Wear)",
+      "listing_id": "494976859822174152",
+      "spread_hybrid_disc": 0.0331180470127058
+    },
+    "listing:492725060005292009": {
+      "sent_at_utc": "2026-05-19T08:08:06.977098+00:00",
+      "item": "Tec-9 | Bamboo Forest (Factory New)",
+      "listing_id": "492725060005292009",
+      "spread_hybrid_disc": -0.0120301346156364
+    },
+    "listing:529879860463437145": {
+      "sent_at_utc": "2026-05-19T08:36:11.084205+00:00",
+      "item": "M4A4 | Tooth Fairy (Minimal Wear)",
+      "listing_id": "529879860463437145",
+      "spread_hybrid_disc": 0.0891810507258072
+    },
+    "listing:514117158237236976": {
+      "sent_at_utc": "2026-05-19T10:09:55.822869+00:00",
+      "item": "MAC-10 | Heat (Field-Tested)",
+      "listing_id": "514117158237236976",
+      "spread_hybrid_disc": 0.0612841074640218
+    },
+    "listing:493850959913625814": {
+      "sent_at_utc": "2026-05-19T10:44:58.910357+00:00",
+      "item": "Desert Eagle | Mulberry (Minimal Wear)",
+      "listing_id": "493850959913625814",
+      "spread_hybrid_disc": 0.069355811796882
+    },
+    "listing:518620757863229672": {
+      "sent_at_utc": "2026-05-19T12:27:00.208117+00:00",
+      "item": "StatTrak™ Zeus x27 | Olympus (Minimal Wear)",
+      "listing_id": "518620757863229672",
+      "spread_hybrid_disc": 0.0420098013108998
+    },
+    "listing:493850959913867158": {
+      "sent_at_utc": "2026-05-19T13:03:24.237678+00:00",
+      "item": "P250 | Asiimov (Field-Tested)",
+      "listing_id": "493850959913867158",
+      "spread_hybrid_disc": 0.0780669642344397
+    },
+    "listing:508487658702954489": {
+      "sent_at_utc": "2026-05-19T13:35:28.006836+00:00",
+      "item": "MP7 | Sunbaked (Factory New)",
+      "listing_id": "508487658702954489",
+      "spread_hybrid_disc": 0.0854916584515129
     }
   },
-  "last_alert_sent_at_utc": "2026-05-17T11:40:19.330731+00:00"
+  "last_alert_sent_at_utc": "2026-05-19T13:35:28.006985+00:00"
 }
