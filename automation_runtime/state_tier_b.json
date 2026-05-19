@@ -2,20 +2,20 @@
   "version": 1,
   "items_signature": "652fb74bbc40b65766dab2229b4105cc23c24460f724633c955c8550e65d9587",
   "items_count": 148,
-  "batch_pointer": 74,
-  "last_run_at_utc": "2026-05-19T14:34:50.030869+00:00",
+  "batch_pointer": 79,
+  "last_run_at_utc": "2026-05-19T15:30:49.464438+00:00",
   "last_status": "ok",
   "last_batch_items": [
-    "StatTrak™ USP-S | Jawbreaker (Battle-Scarred)",
-    "M4A1-S | Blood Tiger (Minimal Wear)",
-    "AWP | Black Nile (Battle-Scarred)",
-    "M4A1-S | Player Two (Field-Tested)",
-    "M4A4 | The Emperor (Field-Tested)"
+    "StatTrak™ AK-47 | Head Shot (Field-Tested)",
+    "Five-SeveN | Urban Hazard (Factory New)",
+    "Desert Eagle | Conspiracy (Factory New)",
+    "USP-S | Guardian (Minimal Wear)",
+    "AK-47 | Blue Laminate (Minimal Wear)"
   ],
   "last_error": null,
-  "last_finished_at_utc": "2026-05-19T14:35:12.759791+00:00",
-  "last_successful_monitoring_at_utc": "2026-05-19T14:35:12.759791+00:00",
-  "last_failed_monitoring_at_utc": null,
+  "last_finished_at_utc": "2026-05-19T15:32:53.738421+00:00",
+  "last_successful_monitoring_at_utc": "2026-05-19T15:32:53.738421+00:00",
+  "last_failed_monitoring_at_utc": "2026-05-19T15:15:49.039187+00:00",
   "consecutive_errors": 0,
   "last_listing_errors": [],
   "last_listing_error_count": 0,
@@ -23,9 +23,11 @@
   "last_enriched_rows": 400,
   "last_opportunities_rows": 0,
   "last_alert_stats": {
-    "mode": "background",
-    "queued_rows": 0,
-    "sender_pid": 943188
+    "loaded": 0,
+    "filtered": 0,
+    "considered": 0,
+    "sent": 0,
+    "skipped": 0
   },
-  "last_batch_start_pointer": 69
+  "last_batch_start_pointer": 74
 }

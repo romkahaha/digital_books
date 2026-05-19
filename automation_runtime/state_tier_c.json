@@ -2,9 +2,9 @@
   "version": 1,
   "items_signature": "fc877656cbc8596ba1baf855446c53d11288c2daebc053f8c92916e08a8e664e",
   "items_count": 148,
-  "batch_pointer": 106,
-  "last_run_at_utc": "2026-05-19T14:35:31.739044+00:00",
-  "last_status": "error",
+  "batch_pointer": 111,
+  "last_run_at_utc": "2026-05-19T14:36:20.829551+00:00",
+  "last_status": "ok",
   "last_batch_items": [
     "AWP | Hyper Beast (Battle-Scarred)",
     "Glock-18 | Sacrifice (Factory New)",
@@ -12,16 +12,22 @@
     "StatTrak™ M4A1-S | Basilisk (Field-Tested)",
     "Glock-18 | Warhawk (Factory New)"
   ],
-  "last_error": "Steam rate limit (429) for \"2/5 Glock-18 | Sacrifice (Factory New)\": 429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/Glock-18%20%7C%20Sacrifice%20%28Factory%20New%29/render/?query=&start=0&count=100&currency=3&language=english&format=json",
-  "last_finished_at_utc": "2026-05-19T14:35:38.075995+00:00",
-  "last_successful_monitoring_at_utc": "2026-05-19T14:31:26.990858+00:00",
+  "last_error": null,
+  "last_finished_at_utc": "2026-05-19T14:37:36.917300+00:00",
+  "last_successful_monitoring_at_utc": "2026-05-19T14:37:36.917300+00:00",
   "last_failed_monitoring_at_utc": "2026-05-19T14:35:38.075995+00:00",
-  "consecutive_errors": 1,
+  "consecutive_errors": 0,
   "last_listing_errors": [],
   "last_listing_error_count": 0,
-  "last_listing_rows": 0,
-  "last_enriched_rows": 257,
+  "last_listing_rows": 286,
+  "last_enriched_rows": 286,
   "last_opportunities_rows": 0,
-  "last_alert_stats": {},
+  "last_alert_stats": {
+    "loaded": 0,
+    "filtered": 0,
+    "considered": 0,
+    "sent": 0,
+    "skipped": 0
+  },
   "last_batch_start_pointer": 106
 }
