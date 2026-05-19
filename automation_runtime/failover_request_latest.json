@@ -1,11 +1,11 @@
 {
   "version": 1,
-  "mode": "request",
+  "mode": "clear",
   "request_id": "20260519T173614Z-vmi2737474-request",
   "requested_at_utc": "2026-05-19T17:36:14.262930+00:00",
   "requested_by": "vmi2737474",
   "main_repo_root": "/home/roma/cs-arbitrage/cs-skins-monitoring-bot",
-  "trigger_run": true,
+  "trigger_run": false,
   "lease_seconds": 5400,
   "max_runtime_minutes": 90,
   "cooldown_until_utc": "2026-05-19T19:06:14.262643+00:00",
@@ -17,5 +17,8 @@
   "last_status": "error",
   "last_error": "Steam rate limit (429) for \"1/5 MAC-10 | Heat (Field-Tested)\": 429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/MAC-10%20%7C%20Heat%20%28Field-Tested%29/render/?query=&start=0&count=100&currency=3&language=english&format=json",
   "last_finished_at_utc": "2026-05-19T17:36:09.105651+00:00",
-  "last_successful_monitoring_at_utc": "2026-05-19T17:22:50.599337+00:00"
+  "last_successful_monitoring_at_utc": "2026-05-19T17:22:50.599337+00:00",
+  "last_failover_status": "success",
+  "last_failover_exit_code": 0,
+  "last_failover_completed_at_utc": "2026-05-19T18:53:13.112163+00:00"
 }
