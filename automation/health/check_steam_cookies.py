@@ -191,6 +191,24 @@ def validate_listing_fetch(repo_root: Path, cookies: str, cfg: dict[str, Any]) -
     return True, "Steam listing endpoint returned listings", len(rows), meta
 
 
+def is_transient_steam_error(reason: str, meta: dict[str, Any] | None = None) -> bool:
+    text = reason.lower()
+    if meta:
+        text += " " + str(meta.get("note") or "").lower()
+    transient_markers = [
+        "429",
+        "too many requests",
+        "502",
+        "503",
+        "504",
+        "bad gateway",
+        "service unavailable",
+        "gateway timeout",
+        "temporarily unavailable",
+    ]
+    return any(marker in text for marker in transient_markers)
+
+
 def validate_pricehistory_fetch(repo_root: Path, cookies: str, cfg: dict[str, Any]) -> tuple[bool, str, int, dict[str, Any]]:
     if not cfg.get("check_pricehistory_endpoint", True):
         return True, "pricehistory endpoint check disabled", 0, {}
@@ -292,7 +310,10 @@ def run_check(args: argparse.Namespace) -> int:
             ok, reason, rows, meta = validate_listing_fetch(repo_root, cookies, steam_cfg)
             print(f"listing check: {reason}; rows={rows}; meta_success={meta.get('success') if meta else None}")
             if not ok:
-                failed_reason = reason
+                if is_transient_steam_error(reason, meta):
+                    print("listing check hit transient Steam error; continuing to pricehistory before blaming cookies")
+                else:
+                    failed_reason = reason
         if failed_reason is None and bool(steam_cfg.get("check_pricehistory_endpoint", True)):
             checked_endpoint = "pricehistory"
             ok, reason, rows, meta = validate_pricehistory_fetch(repo_root, cookies, steam_cfg)
