@@ -173,16 +173,19 @@ def validate_listing_fetch(repo_root: Path, cookies: str, cfg: dict[str, Any]) -
 
     module = _load_steam_scm_listings(repo_root)
     apply_steam_scm_config(module, cfg, cookies)
-    rows, meta = module.fetch_steam_scm_top_listings(
-        str(cfg.get("item", "Dreams & Nightmares Case")),
-        limit=int(cfg.get("limit", 10)),
-        max_listings=int(cfg.get("max_listings", 10)),
-        currency=int(cfg.get("currency", 3)),
-        retry_attempts=int(cfg.get("retry_attempts", 2)),
-        retry_sleep_min_sec=float(cfg.get("retry_sleep_min_sec", 2.0)),
-        retry_sleep_max_sec=float(cfg.get("retry_sleep_max_sec", 5.0)),
-        log_skin_label="steam-cookie-health-check",
-    )
+    try:
+        rows, meta = module.fetch_steam_scm_top_listings(
+            str(cfg.get("item", "Dreams & Nightmares Case")),
+            limit=int(cfg.get("limit", 10)),
+            max_listings=int(cfg.get("max_listings", 10)),
+            currency=int(cfg.get("currency", 3)),
+            retry_attempts=int(cfg.get("retry_attempts", 2)),
+            retry_sleep_min_sec=float(cfg.get("retry_sleep_min_sec", 2.0)),
+            retry_sleep_max_sec=float(cfg.get("retry_sleep_max_sec", 5.0)),
+            log_skin_label="steam-cookie-health-check",
+        )
+    except Exception as exc:
+        return False, f"Steam listing fetch raised: {exc}", 0, {"success": False, "note": str(exc)}
     min_rows = int(cfg.get("min_rows", 1))
     if not bool(meta.get("success")):
         return False, f"Steam listing fetch did not report success: {meta.get('note')}", len(rows), meta

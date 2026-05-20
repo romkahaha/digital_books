@@ -477,7 +477,7 @@ permissions:
 
 concurrency:
   group: monitoring-failover
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   run-failover:
