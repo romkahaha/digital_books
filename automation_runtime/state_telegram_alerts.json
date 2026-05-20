@@ -25,31 +25,31 @@
       "spread_hybrid_disc": 0.0876951025345916
     },
     "listing:510739458511282287": {
-      "sent_at_utc": "2026-05-19T20:23:10.810626+00:00",
+      "sent_at_utc": "2026-05-20T08:36:45.788722+00:00",
       "item": "USP-S | Cyrex (Factory New)",
       "listing_id": "510739458511282287",
-      "spread_hybrid_disc": 0.1159399068700526
+      "spread_hybrid_disc": -0.0290986897111065
     },
     "listing:677372747560638018": {
-      "sent_at_utc": "2026-05-19T06:27:03.194789+00:00",
+      "sent_at_utc": "2026-05-20T07:38:25.305132+00:00",
       "item": "USP-S | Cyrex (Factory New)",
       "listing_id": "677372747560638018",
       "spread_hybrid_disc": 0.096248044730885
     },
     "listing:680750447977498183": {
-      "sent_at_utc": "2026-05-19T06:27:44.167467+00:00",
+      "sent_at_utc": "2026-05-20T07:38:51.507415+00:00",
       "item": "USP-S | Cyrex (Factory New)",
       "listing_id": "680750447977498183",
       "spread_hybrid_disc": 0.105167168940935
     },
     "listing:507361758790667915": {
-      "sent_at_utc": "2026-05-19T06:28:05.073859+00:00",
+      "sent_at_utc": "2026-05-20T07:39:12.436964+00:00",
       "item": "USP-S | Cyrex (Factory New)",
       "listing_id": "507361758790667915",
       "spread_hybrid_disc": 0.1102403909903473
     },
     "listing:519746657748262378": {
-      "sent_at_utc": "2026-05-19T06:28:46.157347+00:00",
+      "sent_at_utc": "2026-05-20T07:58:00.148228+00:00",
       "item": "MP7 | Cirrus (Factory New)",
       "listing_id": "519746657748262378",
       "spread_hybrid_disc": 0.1055159050635202
@@ -79,7 +79,7 @@
       "spread_hybrid_disc": 0.1114337448976342
     },
     "listing:690883546445793778": {
-      "sent_at_utc": "2026-05-19T07:26:34.830978+00:00",
+      "sent_at_utc": "2026-05-20T09:01:30.064277+00:00",
       "item": "StatTrak™ AWP | Queen's Gambit (Battle-Scarred)",
       "listing_id": "690883546445793778",
       "spread_hybrid_disc": 0.0548305219458893
@@ -137,7 +137,31 @@
       "item": "MP7 | Sunbaked (Factory New)",
       "listing_id": "508487658702954489",
       "spread_hybrid_disc": 0.0854916584515129
+    },
+    "listing:515243691839057329": {
+      "sent_at_utc": "2026-05-20T07:18:56.839058+00:00",
+      "item": "SSG 08 | Big Iron (Minimal Wear)",
+      "listing_id": "515243691839057329",
+      "spread_hybrid_disc": 0.1192493972892982
+    },
+    "listing:491599793794021330": {
+      "sent_at_utc": "2026-05-20T07:50:57.332659+00:00",
+      "item": "MP7 | Nemesis (Minimal Wear)",
+      "listing_id": "491599793794021330",
+      "spread_hybrid_disc": 0.1070811124705796
+    },
+    "listing:499481093142075609": {
+      "sent_at_utc": "2026-05-20T07:58:01.193375+00:00",
+      "item": "MP7 | Cirrus (Factory New)",
+      "listing_id": "499481093142075609",
+      "spread_hybrid_disc": 0.1158972546540919
+    },
+    "listing:524250891089438402": {
+      "sent_at_utc": "2026-05-20T09:01:51.023044+00:00",
+      "item": "StatTrak™ AWP | Queen's Gambit (Battle-Scarred)",
+      "listing_id": "524250891089438402",
+      "spread_hybrid_disc": 0.0995819816126293
     }
   },
-  "last_alert_sent_at_utc": "2026-05-19T13:35:28.006985+00:00"
+  "last_alert_sent_at_utc": "2026-05-20T09:01:51.023282+00:00"
 }
