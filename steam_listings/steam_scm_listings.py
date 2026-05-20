@@ -65,8 +65,10 @@ CONFIG: dict[str, Any] = {
     "items_module": "lists.skins_normal",
     "items_variable": "ITEMS",
     "items_py_path": _DEFAULT_ITEMS_PY,
-    # Куки браузера (альтернатива — env STEAM_COOKIES)
+    # Listing fetches must stay public/cookie-less. Steam cookies are for risk/pricehistory,
+    # not for monitoring listings; logged-in cookies can make routeAction redirect to /market/.
     "steam_cookies": "",
+    "use_steam_cookies_for_listings": False,
     # Steam SSR route action id for the Market listing Search action.
     # If Steam rotates route ids again, this can be overridden in steam_scm_runtime.json.
     "steam_market_route_id": "4OPT6VBA",
@@ -215,9 +217,10 @@ def _effective(key: str, override: Any = None) -> Any:
 def _session() -> requests.Session:
     s = requests.Session()
     s.headers.update({"User-Agent": DEFAULT_UA, "Accept-Language": "en-US,en;q=0.9"})
-    raw = (_effective("steam_cookies") or os.environ.get("STEAM_COOKIES") or "").strip()
-    if raw:
-        s.headers["Cookie"] = raw
+    if bool(_effective("use_steam_cookies_for_listings")):
+        raw = (_effective("steam_cookies") or os.environ.get("STEAM_COOKIES") or "").strip()
+        if raw:
+            s.headers["Cookie"] = raw
     return s
 
 
@@ -390,20 +393,18 @@ def parse_render_payload(data: dict) -> list[dict[str, Any]]:
 
 def _route_action_payload_to_render_payload(data: dict | None) -> dict:
     """Normalize Steam's new SSR Market Search action response to the old /render/ shape."""
+    if not isinstance(data, dict):
+        raise RuntimeError(f"Steam Market Search action returned unexpected payload type: {type(data).__name__}")
+    listings = data.get("listings")
+    if not isinstance(listings, list):
+        keys = ",".join(sorted(str(k) for k in data.keys())[:12])
+        raise RuntimeError(f"Steam Market Search action returned payload without listings list; keys={keys}")
+
     listinginfo: list[dict[str, Any]] = []
     assets: dict[str, dict[str, dict[str, dict]]] = {str(APP_ID): {CONTEXT_ID: {}}}
     asset_bucket = assets[str(APP_ID)][CONTEXT_ID]
-    if not isinstance(data, dict):
-        return {
-            "success": True,
-            "more": False,
-            "start": None,
-            "total_count": None,
-            "listinginfo": listinginfo,
-            "assets": assets,
-        }
 
-    for listing in data.get("listings") or []:
+    for listing in listings:
         if not isinstance(listing, dict):
             continue
         listing_id = str(listing.get("listingid") or "")
