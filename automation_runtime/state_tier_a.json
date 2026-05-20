@@ -2,26 +2,32 @@
   "version": 1,
   "items_signature": "c6520b9a209cf36208dc12e82ef05e505e6e070279a48ecb0c2557bf3d410a89",
   "items_count": 127,
-  "batch_pointer": 39,
-  "last_run_at_utc": "2026-05-20T20:27:53.204784+00:00",
-  "last_status": "error",
+  "batch_pointer": 49,
+  "last_run_at_utc": "2026-05-20T20:46:49.405428+00:00",
+  "last_status": "ok",
   "last_batch_items": [
-    "AK-47 | Midnight Laminate (Battle-Scarred)",
-    "Sawed-Off | Kiss♥Love (Field-Tested)",
-    "XM1014 | Entombed (Field-Tested)",
-    "UMP-45 | Wild Child (Well-Worn)",
-    "M4A4 | Converter (Factory New)"
+    "Desert Eagle | Printstream (Field-Tested)",
+    "Desert Eagle | Mint Fan (Factory New)",
+    "MP9 | Arctic Tri-Tone (Field-Tested)",
+    "P2000 | Wicked Sick (Minimal Wear)",
+    "M4A4 | Tooth Fairy (Minimal Wear)"
   ],
-  "last_error": "Steam rate limit (429) for \"1/5 AK-47 | Midnight Laminate (Battle-Scarred)\": 429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/AK-47%20%7C%20Midnight%20Laminate%20%28Battle-Scarred%29/render/?query=&start=0&count=100&currency=3&language=english&format=json",
-  "last_finished_at_utc": "2026-05-20T20:27:53.881136+00:00",
-  "last_successful_monitoring_at_utc": "2026-05-20T19:55:52.534044+00:00",
-  "last_failed_monitoring_at_utc": "2026-05-20T20:27:53.881136+00:00",
-  "consecutive_errors": 2,
+  "last_error": null,
+  "last_finished_at_utc": "2026-05-20T20:49:26.102673+00:00",
+  "last_successful_monitoring_at_utc": "2026-05-20T20:49:26.102673+00:00",
+  "last_failed_monitoring_at_utc": "2026-05-20T20:31:48.991186+00:00",
+  "consecutive_errors": 0,
   "last_listing_errors": [],
   "last_listing_error_count": 0,
-  "last_listing_rows": 0,
+  "last_listing_rows": 419,
   "last_enriched_rows": 419,
   "last_opportunities_rows": 0,
-  "last_alert_stats": {},
-  "last_batch_start_pointer": 39
+  "last_alert_stats": {
+    "loaded": 0,
+    "filtered": 0,
+    "considered": 0,
+    "sent": 0,
+    "skipped": 0
+  },
+  "last_batch_start_pointer": 44
 }

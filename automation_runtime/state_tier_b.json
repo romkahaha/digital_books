@@ -3,31 +3,25 @@
   "items_signature": "652fb74bbc40b65766dab2229b4105cc23c24460f724633c955c8550e65d9587",
   "items_count": 148,
   "batch_pointer": 43,
-  "last_run_at_utc": "2026-05-20T20:12:00.440203+00:00",
-  "last_status": "ok",
+  "last_run_at_utc": "2026-05-20T20:49:38.427621+00:00",
+  "last_status": "error",
   "last_batch_items": [
-    "UMP-45 | Momentum (Field-Tested)",
-    "MP9 | Arctic Tri-Tone (Factory New)",
-    "AWP | Neo-Noir (Minimal Wear)",
-    "MP7 | Fade (Field-Tested)",
-    "AK-47 | Neon Rider (Field-Tested)"
+    "Five-SeveN | Heat Treated (Battle-Scarred)",
+    "StatTrak™ AK-47 | Slate (Battle-Scarred)",
+    "AK-47 | Aphrodite (Minimal Wear)",
+    "Tec-9 | Fuel Injector (Field-Tested)",
+    "AK-47 | Frontside Misty (Minimal Wear)"
   ],
-  "last_error": null,
-  "last_finished_at_utc": "2026-05-20T20:13:49.279771+00:00",
+  "last_error": "Steam /render/ returned non-JSON and Market Search action fallback failed: 429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/StatTrak%E2%84%A2%20AK-47%20%7C%20Slate%20%28Battle-Scarred%29",
+  "last_finished_at_utc": "2026-05-20T20:50:25.067668+00:00",
   "last_successful_monitoring_at_utc": "2026-05-20T20:13:49.279771+00:00",
-  "last_failed_monitoring_at_utc": "2026-05-20T19:56:59.994017+00:00",
-  "consecutive_errors": 0,
+  "last_failed_monitoring_at_utc": "2026-05-20T20:50:25.067668+00:00",
+  "consecutive_errors": 1,
   "last_listing_errors": [],
   "last_listing_error_count": 0,
-  "last_listing_rows": 339,
+  "last_listing_rows": 0,
   "last_enriched_rows": 339,
   "last_opportunities_rows": 0,
-  "last_alert_stats": {
-    "loaded": 0,
-    "filtered": 0,
-    "considered": 0,
-    "sent": 0,
-    "skipped": 0
-  },
-  "last_batch_start_pointer": 38
+  "last_alert_stats": {},
+  "last_batch_start_pointer": 43
 }

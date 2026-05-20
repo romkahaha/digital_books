@@ -1,11 +1,11 @@
 {
   "version": 1,
-  "mode": "request",
+  "mode": "clear",
   "request_id": "20260520T202801Z-vmi2737474-request",
   "requested_at_utc": "2026-05-20T20:28:01.849919+00:00",
   "requested_by": "vmi2737474",
   "main_repo_root": "/home/roma/cs-arbitrage/cs-skins-monitoring-bot",
-  "trigger_run": true,
+  "trigger_run": false,
   "lease_seconds": 1925,
   "max_runtime_minutes": 33,
   "cooldown_until_utc": "2026-05-20T21:00:06.849565+00:00",
@@ -17,5 +17,8 @@
   "last_status": "error",
   "last_error": "Steam rate limit (429) for \"1/5 AK-47 | Midnight Laminate (Battle-Scarred)\": 429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/AK-47%20%7C%20Midnight%20Laminate%20%28Battle-Scarred%29/render/?query=&start=0&count=100&currency=3&language=english&format=json",
   "last_finished_at_utc": "2026-05-20T20:27:54.185661+00:00",
-  "last_successful_monitoring_at_utc": "2026-05-20T20:13:49.350867+00:00"
+  "last_successful_monitoring_at_utc": "2026-05-20T20:13:49.350867+00:00",
+  "last_failover_status": "success",
+  "last_failover_exit_code": 0,
+  "last_failover_completed_at_utc": "2026-05-20T20:50:25.413622+00:00"
 }
