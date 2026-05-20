@@ -161,7 +161,67 @@
       "item": "StatTrak™ AWP | Queen's Gambit (Battle-Scarred)",
       "listing_id": "524250891089438402",
       "spread_hybrid_disc": 0.0995819816126293
+    },
+    "listing:512991892024854161": {
+      "sent_at_utc": "2026-05-20T10:45:08.842005+00:00",
+      "item": "Glock-18 | Shinobu (Battle-Scarred)",
+      "listing_id": "512991892024854161",
+      "spread_hybrid_disc": 0.0704316430623621
+    },
+    "listing:501732892957559054": {
+      "sent_at_utc": "2026-05-20T11:16:49.184745+00:00",
+      "item": "FAMAS | Crypsis (Factory New)",
+      "listing_id": "501732892957559054",
+      "spread_hybrid_disc": 0.1164599497526389
+    },
+    "listing:494977493516433103": {
+      "sent_at_utc": "2026-05-20T11:17:34.840738+00:00",
+      "item": "AWP | Atheris (Battle-Scarred)",
+      "listing_id": "494977493516433103",
+      "spread_hybrid_disc": 0.0936919297271097
+    },
+    "listing:498355193247488329": {
+      "sent_at_utc": "2026-05-20T11:56:03.545180+00:00",
+      "item": "StatTrak™ Zeus x27 | Olympus (Minimal Wear)",
+      "listing_id": "498355193247488329",
+      "spread_hybrid_disc": 0.1002019251714112
+    },
+    "listing:509614192306908817": {
+      "sent_at_utc": "2026-05-20T12:11:33.232691+00:00",
+      "item": "P250 | Visions (Field-Tested)",
+      "listing_id": "509614192306908817",
+      "spread_hybrid_disc": 0.099030065718156
+    },
+    "listing:519747291465575562": {
+      "sent_at_utc": "2026-05-20T12:20:14.087142+00:00",
+      "item": "AWP | Asiimov (Battle-Scarred)",
+      "listing_id": "519747291465575562",
+      "spread_hybrid_disc": 0.0427071913267065
+    },
+    "listing:527628590814229269": {
+      "sent_at_utc": "2026-05-20T12:31:30.938958+00:00",
+      "item": "USP-S | Cyrex (Factory New)",
+      "listing_id": "527628590814229269",
+      "spread_hybrid_disc": 0.1031232850371947
+    },
+    "listing:492725693704140071": {
+      "sent_at_utc": "2026-05-20T12:42:18.029769+00:00",
+      "item": "StatTrak™ AWP | Queen's Gambit (Battle-Scarred)",
+      "listing_id": "492725693704140071",
+      "spread_hybrid_disc": 0.1006394797134505
+    },
+    "listing:516369591748084498": {
+      "sent_at_utc": "2026-05-20T14:04:19.445188+00:00",
+      "item": "StatTrak™ USP-S | Jawbreaker (Battle-Scarred)",
+      "listing_id": "516369591748084498",
+      "spread_hybrid_disc": 0.0423808769454091
+    },
+    "listing:500606993051816587": {
+      "sent_at_utc": "2026-05-20T15:12:01.228629+00:00",
+      "item": "StatTrak™ USP-S | Jawbreaker (Battle-Scarred)",
+      "listing_id": "500606993051816587",
+      "spread_hybrid_disc": 0.0002097874288136
     }
   },
-  "last_alert_sent_at_utc": "2026-05-20T09:01:51.023282+00:00"
+  "last_alert_sent_at_utc": "2026-05-20T15:12:01.228825+00:00"
 }
