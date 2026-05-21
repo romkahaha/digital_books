@@ -13,33 +13,33 @@
     "B",
     "C"
   ],
-  "queue_pointer": 3,
-  "last_tier": "B",
-  "last_tier_queue_index": 2,
-  "last_batch_start_pointer": 80,
+  "queue_pointer": 4,
+  "last_tier": "A",
+  "last_tier_queue_index": 3,
+  "last_batch_start_pointer": 32,
   "last_batch_items": [
-    "P90 | Nostalgia (Field-Tested)",
-    "MAC-10 | Disco Tech (Minimal Wear)",
-    "AK-47 | Aphrodite (Minimal Wear)",
-    "StatTrak™ AWP | Duality (Minimal Wear)",
-    "AK-47 | Blue Laminate (Minimal Wear)"
+    "AK-47 | Ice Coaled (Battle-Scarred)",
+    "AK-47 | Inheritance (Field-Tested)",
+    "AWP | Duality (Battle-Scarred)",
+    "AWP | Duality (Minimal Wear)",
+    "AWP | Atheris (Well-Worn)"
   ],
   "last_error": null,
-  "last_run_at_utc": "2026-05-21T10:57:21.721799+00:00",
-  "last_finished_at_utc": "2026-05-21T10:59:13.628982+00:00",
-  "last_successful_monitoring_at_utc": "2026-05-21T10:59:13.628982+00:00",
+  "last_run_at_utc": "2026-05-21T20:51:47.167950+00:00",
+  "last_finished_at_utc": "2026-05-21T20:54:21.454748+00:00",
+  "last_successful_monitoring_at_utc": "2026-05-21T20:54:21.454748+00:00",
   "last_failed_monitoring_at_utc": null,
   "last_status": "ok",
   "consecutive_errors": 0,
   "last_listing_errors": [],
   "last_listing_error_count": 0,
-  "last_listing_rows": 400,
-  "last_enriched_rows": 400,
+  "last_listing_rows": 500,
+  "last_enriched_rows": 500,
   "last_opportunities_rows": 0,
   "last_alert_stats": {
     "mode": "background",
     "queued_rows": 0,
-    "sender_pid": 1103618
+    "sender_pid": 1138493
   },
   "tiers": {
     "A": {

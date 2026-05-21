@@ -23,7 +23,61 @@
       "item": "USP-S | Cyrex (Factory New)",
       "listing_id": "510739458511282287",
       "spread_hybrid_disc": 0.0225560805552158
+    },
+    "listing:497229293337383551": {
+      "sent_at_utc": "2026-05-21T14:35:39.096212+00:00",
+      "item": "Desert Eagle | Mint Fan (Factory New)",
+      "listing_id": "497229293337383551",
+      "spread_hybrid_disc": 0.1106875226394803
+    },
+    "listing:501732892962487094": {
+      "sent_at_utc": "2026-05-21T15:56:38.784437+00:00",
+      "item": "StatTrak™ MAC-10 | Saibā Oni (Minimal Wear)",
+      "listing_id": "501732892962487094",
+      "spread_hybrid_disc": 0.0157445208249983
+    },
+    "listing:502858792862743260": {
+      "sent_at_utc": "2026-05-21T15:57:19.816609+00:00",
+      "item": "StatTrak™ MAC-10 | Saibā Oni (Minimal Wear)",
+      "listing_id": "502858792862743260",
+      "spread_hybrid_disc": 0.0540781104302575
+    },
+    "listing:520873191380364860": {
+      "sent_at_utc": "2026-05-21T16:12:10.727310+00:00",
+      "item": "StatTrak™ AWP | Duality (Minimal Wear)",
+      "listing_id": "520873191380364860",
+      "spread_hybrid_disc": 0.0699735104041066
+    },
+    "listing:518621391567171060": {
+      "sent_at_utc": "2026-05-21T16:19:42.706813+00:00",
+      "item": "Desert Eagle | Mulberry (Field-Tested)",
+      "listing_id": "518621391567171060",
+      "spread_hybrid_disc": 0.0549611668610036
+    },
+    "listing:507362392497799755": {
+      "sent_at_utc": "2026-05-21T16:30:57.907330+00:00",
+      "item": "SSG 08 | Big Iron (Minimal Wear)",
+      "listing_id": "507362392497799755",
+      "spread_hybrid_disc": 0.0677009841986523
+    },
+    "listing:499481093148661233": {
+      "sent_at_utc": "2026-05-21T17:02:09.387845+00:00",
+      "item": "FAMAS | Rapid Eye Movement (Battle-Scarred)",
+      "listing_id": "499481093148661233",
+      "spread_hybrid_disc": 0.1105341604672285
+    },
+    "listing:518621391567382704": {
+      "sent_at_utc": "2026-05-21T18:27:26.140890+00:00",
+      "item": "FAMAS | Djinn (Field-Tested)",
+      "listing_id": "518621391567382704",
+      "spread_hybrid_disc": 0.0998085930008485
+    },
+    "listing:490473893893710752": {
+      "sent_at_utc": "2026-05-21T18:59:22.982915+00:00",
+      "item": "Desert Eagle | Mint Fan (Factory New)",
+      "listing_id": "490473893893710752",
+      "spread_hybrid_disc": 0.107178180085474
     }
   },
-  "last_alert_sent_at_utc": "2026-05-21T07:35:46.816373+00:00"
+  "last_alert_sent_at_utc": "2026-05-21T18:59:22.983143+00:00"
 }
