@@ -2,25 +2,25 @@
   "version": 1,
   "items_signature": "fc877656cbc8596ba1baf855446c53d11288c2daebc053f8c92916e08a8e664e",
   "items_count": 148,
-  "batch_pointer": 19,
-  "last_run_at_utc": "2026-05-20T19:16:48.533445+00:00",
+  "batch_pointer": 24,
+  "last_run_at_utc": "2026-05-20T23:54:51.739702+00:00",
   "last_status": "ok",
   "last_batch_items": [
-    "M4A1-S | Blood Tiger (Factory New)",
-    "M4A4 | In Living Color (Minimal Wear)",
-    "StatTrak™ AK-47 | Head Shot (Minimal Wear)",
-    "M4A4 | Polysoup (Field-Tested)",
-    "USP-S | Monster Mashup (Field-Tested)"
+    "AUG | Death by Puppy (Minimal Wear)",
+    "AWP | Green Energy (Factory New)",
+    "MAC-10 | Saibā Oni (Factory New)",
+    "MP7 | Nemesis (Minimal Wear)",
+    "MP9 | Goo (Factory New)"
   ],
   "last_error": null,
-  "last_finished_at_utc": "2026-05-20T19:18:02.553234+00:00",
-  "last_successful_monitoring_at_utc": "2026-05-20T19:18:02.553234+00:00",
+  "last_finished_at_utc": "2026-05-20T23:56:09.187627+00:00",
+  "last_successful_monitoring_at_utc": "2026-05-20T23:56:09.187627+00:00",
   "last_failed_monitoring_at_utc": "2026-05-20T19:01:48.098636+00:00",
   "consecutive_errors": 0,
   "last_listing_errors": [],
   "last_listing_error_count": 0,
-  "last_listing_rows": 273,
-  "last_enriched_rows": 273,
+  "last_listing_rows": 300,
+  "last_enriched_rows": 300,
   "last_opportunities_rows": 0,
   "last_alert_stats": {
     "loaded": 0,
@@ -29,5 +29,5 @@
     "sent": 0,
     "skipped": 0
   },
-  "last_batch_start_pointer": 14
+  "last_batch_start_pointer": 19
 }

@@ -1,11 +1,11 @@
 {
   "version": 1,
-  "mode": "request",
+  "mode": "clear",
   "request_id": "20260520T233217Z-vmi2737474-request",
   "requested_at_utc": "2026-05-20T23:32:17.624712+00:00",
   "requested_by": "vmi2737474",
   "main_repo_root": "/home/roma/cs-arbitrage/cs-skins-monitoring-bot",
-  "trigger_run": true,
+  "trigger_run": false,
   "lease_seconds": 25200,
   "max_runtime_minutes": 420,
   "cooldown_until_utc": "2026-05-21T06:32:17.624379+00:00",
@@ -17,5 +17,8 @@
   "last_status": "error",
   "last_error": "Steam /render/ returned non-JSON and Market Search action fallback failed: 429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/StatTrak%E2%84%A2%20AK-47%20%7C%20Slate%20%28Battle-Scarred%29",
   "last_finished_at_utc": "2026-05-20T20:50:25.119219+00:00",
-  "last_successful_monitoring_at_utc": "2026-05-20T20:49:26.154738+00:00"
+  "last_successful_monitoring_at_utc": "2026-05-20T20:49:26.154738+00:00",
+  "last_failover_status": "error",
+  "last_failover_exit_code": 1,
+  "last_failover_completed_at_utc": "2026-05-21T00:00:03.281443+00:00"
 }
