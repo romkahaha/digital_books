@@ -739,6 +739,22 @@ def fetch_steam_scm_top_listings(
                     )
                     time.sleep(w)
                 continue
+            except Exception as e:
+                last_err = str(e)
+                if _is_rate_limited(last_err):
+                    _batch_log(
+                        f'  [steam_scm] "{label}": immediate batch abort on Steam rate limit: {last_err}'
+                    )
+                    raise SteamRateLimitError(f'Steam rate limit (429) for "{label}": {last_err}') from e
+                if attempt + 1 < tries:
+                    lo, hi = _retry_sleep()
+                    w = random.uniform(lo, hi)
+                    _batch_log(
+                        f'  [steam_scm] "{label}": retry {attempt + 1}/{tries}, '
+                        f"sleep {w:.1f}s (steam transient): {last_err}"
+                    )
+                    time.sleep(w)
+                continue
             if not data.get("success"):
                 last_err = "success=false"
                 if attempt + 1 < tries:
@@ -762,6 +778,7 @@ def fetch_steam_scm_top_listings(
                     f"({last_err!r}) — сохраняем уже собранные {len(merged)} строк"
                 )
                 break
+            meta["last_page_failed"] = last_err
             return [], meta
 
         assert data is not None
@@ -1156,17 +1173,28 @@ def run_batch_to_csv(
                 raw_entry = {}
                 item_fetch_state[name] = raw_entry
             entry = raw_entry
-        rows, meta = _fetch_monitoring_item(
-            name,
-            max_listings_per_item=max_listings_per_item,
-            session=sess,
-            log_skin_label=label,
-            fetch_strategy=strategy,
-            fetch_entry=entry,
-            tier=tier,
-            day_key=day_key,
-            stats=stats,
-        )
+        try:
+            rows, meta = _fetch_monitoring_item(
+                name,
+                max_listings_per_item=max_listings_per_item,
+                session=sess,
+                log_skin_label=label,
+                fetch_strategy=strategy,
+                fetch_entry=entry,
+                tier=tier,
+                day_key=day_key,
+                stats=stats,
+            )
+        except Exception as exc:
+            rows = []
+            meta = {
+                "success": False,
+                "note": "exception",
+                "error": str(exc),
+                "pages_fetched": 0,
+                "listings_target_cap": max_listings_per_item,
+            }
+            _batch_log(f'  [steam_scm] error батч {label}: {exc}')
         dt = time.monotonic() - t0
         _batch_log(
             f'  [steam_scm] ok батч {label}: {len(rows)} строк за {dt:.1f}s '
