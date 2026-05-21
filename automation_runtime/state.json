@@ -1,9 +1,9 @@
 {
   "version": 1,
   "mode": "tiered_weighted_sequence",
-  "items_signature": "5e98a4175f99b61590cfb7668a1e626f5493a567534c9b9319641590d0df9e58",
-  "items_count": 423,
-  "queue_signature": "338bd31b8716d803634354016ea4647ea9714ed6af3ac11433a2a144a2934f50",
+  "items_signature": "b529bf497fe472f60c8eea3c9cb4a9cc479d9b546cd1a2a61e220b46c493a6f8",
+  "items_count": 527,
+  "queue_signature": "a3ea4e6d56d8a9b8f82d2f0cf251f7a8704d9c2896302017b60892a46fd6ada2",
   "queue_pattern": [
     "A",
     "A",
@@ -13,42 +13,87 @@
     "B",
     "C"
   ],
-  "queue_pointer": 3,
+  "queue_pointer": 2,
   "last_tier": "A",
-  "last_tier_queue_index": 3,
-  "last_batch_start_pointer": 79,
+  "last_tier_queue_index": 1,
+  "last_batch_start_pointer": 7,
   "last_batch_items": [
-    "AK-47 | Redline (Field-Tested)",
-    "AK-47 | Wintergreen (Factory New)",
-    "StatTrak™ AK-47 | Ice Coaled (Field-Tested)",
-    "StatTrak™ AWP | Duality (Field-Tested)",
-    "Five-SeveN | Heat Treated (Field-Tested)"
+    "Glock-18 | Shinobu (Field-Tested)",
+    "M4A4 | Tooth Fairy (Field-Tested)",
+    "Glock-18 | Vogue (Field-Tested)",
+    "AK-47 | Slate (Well-Worn)",
+    "AK-47 | Wintergreen (Minimal Wear)"
   ],
-  "last_error": "Steam /render/ returned non-JSON and Market Search action fallback failed: Steam Market Search action returned unexpected payload type: NoneType",
-  "last_run_at_utc": "2026-05-21T01:17:23.417141+00:00",
-  "last_finished_at_utc": "2026-05-21T01:17:34.152294+00:00",
-  "last_successful_monitoring_at_utc": "2026-05-21T01:17:10.554984+00:00",
-  "last_failed_monitoring_at_utc": "2026-05-21T01:17:34.152294+00:00",
-  "last_status": "error",
-  "consecutive_errors": 1,
-  "last_listing_errors": [],
-  "last_listing_error_count": 0,
-  "last_listing_rows": 0,
-  "last_enriched_rows": 500,
+  "last_error": null,
+  "last_run_at_utc": "2026-05-21T09:26:00.182359+00:00",
+  "last_finished_at_utc": "2026-05-21T09:27:05.922858+00:00",
+  "last_successful_monitoring_at_utc": "2026-05-21T09:27:05.922858+00:00",
+  "last_failed_monitoring_at_utc": null,
+  "last_status": "ok",
+  "consecutive_errors": 0,
+  "last_listing_errors": [
+    {
+      "market_hash_name": "M4A4 | Tooth Fairy (Field-Tested)",
+      "meta": {
+        "success": false,
+        "note": "exception",
+        "error": "Steam rate limit (429) for \"2/5 M4A4 | Tooth Fairy (Field-Tested)\": 429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/M4A4%20%7C%20Tooth%20Fairy%20%28Field-Tested%29",
+        "pages_fetched": 0,
+        "listings_target_cap": 100
+      }
+    },
+    {
+      "market_hash_name": "Glock-18 | Vogue (Field-Tested)",
+      "meta": {
+        "success": false,
+        "note": "exception",
+        "error": "Steam rate limit (429) for \"3/5 Glock-18 | Vogue (Field-Tested)\": 429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/Glock-18%20%7C%20Vogue%20%28Field-Tested%29",
+        "pages_fetched": 0,
+        "listings_target_cap": 100
+      }
+    },
+    {
+      "market_hash_name": "AK-47 | Slate (Well-Worn)",
+      "meta": {
+        "success": false,
+        "note": "exception",
+        "error": "Steam rate limit (429) for \"4/5 AK-47 | Slate (Well-Worn)\": 429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/AK-47%20%7C%20Slate%20%28Well-Worn%29",
+        "pages_fetched": 0,
+        "listings_target_cap": 100
+      }
+    },
+    {
+      "market_hash_name": "AK-47 | Wintergreen (Minimal Wear)",
+      "meta": {
+        "success": false,
+        "note": "exception",
+        "error": "Steam rate limit (429) for \"5/5 AK-47 | Wintergreen (Minimal Wear)\": 429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/AK-47%20%7C%20Wintergreen%20%28Minimal%20Wear%29",
+        "pages_fetched": 0,
+        "listings_target_cap": 100
+      }
+    }
+  ],
+  "last_listing_error_count": 4,
+  "last_listing_rows": 19,
+  "last_enriched_rows": 19,
   "last_opportunities_rows": 0,
-  "last_alert_stats": {},
+  "last_alert_stats": {
+    "mode": "background",
+    "queued_rows": 0,
+    "sender_pid": 1098690
+  },
   "tiers": {
     "A": {
-      "items_signature": "c6520b9a209cf36208dc12e82ef05e505e6e070279a48ecb0c2557bf3d410a89",
-      "items_count": 127
+      "items_signature": "ecd49b4a336238246bad51b03d1fccb64bc7c2eb402a5663b512f81392e5f193",
+      "items_count": 158
     },
     "B": {
-      "items_signature": "652fb74bbc40b65766dab2229b4105cc23c24460f724633c955c8550e65d9587",
-      "items_count": 148
+      "items_signature": "dba3ddf166e7dc7385bc96a50796efd9c144b145f58200540e63b275c26722bc",
+      "items_count": 185
     },
     "C": {
-      "items_signature": "fc877656cbc8596ba1baf855446c53d11288c2daebc053f8c92916e08a8e664e",
-      "items_count": 148
+      "items_signature": "d320af8b29cf02bf3825a565cee0fa71571cd1c52ed41bd2d555d395a6c0ce8c",
+      "items_count": 184
     }
   }
 }
