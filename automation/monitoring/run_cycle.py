@@ -177,6 +177,7 @@ def batch_command(
     state_json: Path | None = None,
     alert_state_json: Path | None = None,
     max_listings_per_item: int | None = None,
+    tier: str | None = None,
 ) -> list[str]:
     cmd = [
         sys.executable,
@@ -196,6 +197,8 @@ def batch_command(
         cmd.extend(["--alert-state-json", str(alert_state_json)])
     if max_listings_per_item is not None:
         cmd.extend(["--max-listings-per-item", str(max_listings_per_item)])
+    if tier:
+        cmd.extend(["--tier", str(tier)])
     if telegram_mode == "real":
         cmd.append("--send-telegram")
     elif telegram_mode == "dry-run":
@@ -521,6 +524,7 @@ def main() -> int:
                 state_json=run_state_path,
                 alert_state_json=alert_state_path,
                 max_listings_per_item=effective_max_listings,
+                tier=str(selected_tier) if selected_tier else None,
             ),
             root,
             check=False,

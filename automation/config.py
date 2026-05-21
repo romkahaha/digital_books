@@ -90,6 +90,26 @@ def monitoring_defaults() -> dict[str, Any]:
             "batch_size": 5,
             "max_listings_per_item": 100,
             "fail_if_all_listing_fetches_error": True,
+            "fetch_strategy": {
+                "enabled": False,
+                "page0_listings": 20,
+                "deep_on_new_day": True,
+                "deep_on_page0_ids_change": True,
+                "deep_on_total_count_change": True,
+                "periodic_deep_minutes_by_tier": {
+                    "A": 90,
+                    "B": 120,
+                    "C": 120,
+                    "default": 120,
+                },
+                "changed_deep_cooldown_minutes_by_tier": {
+                    "A": 15,
+                    "B": 20,
+                    "C": 25,
+                    "default": 20,
+                },
+                "tail_stop_ask_multiplier": 3.0,
+            },
         },
         "cycle": {
             "enabled": True,

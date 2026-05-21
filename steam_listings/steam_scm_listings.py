@@ -35,6 +35,7 @@ import random
 import sys
 import threading
 import time
+from datetime import datetime, timezone
 import urllib.parse
 from pathlib import Path
 from typing import Any
@@ -90,6 +91,9 @@ CONFIG: dict[str, Any] = {
     "delay_between_render_pages_max_sec": 5.0,
     # 1 = print прогресс батча / ретраи / паузы
     "batch_log_progress": 1,
+    # Stop deep paging once the next page starts above first_ask * multiplier.
+    # None/0 disables the cutoff.
+    "tail_stop_ask_multiplier": None,
     # 1 = колонка asset_properties_json (все свойства предмета, может раздувать CSV)
     "include_asset_properties_json": 0,
 }
@@ -633,6 +637,7 @@ def fetch_steam_scm_top_listings(
     retry_sleep_min_sec: float | None = None,
     retry_sleep_max_sec: float | None = None,
     log_skin_label: str | None = None,
+    tail_stop_ask_multiplier: float | None = None,
 ) -> tuple[list[dict[str, Any]], dict[str, Any]]:
     """
     Листинги с /render/: не больше 100 за один HTTP-запрос; при ``max_listings_per_skin`` > 100
@@ -656,6 +661,14 @@ def fetch_steam_scm_top_listings(
     tries = max(1, tries)
     cur = currency if currency is not None else int(_effective("steam_currency"))
     label = log_skin_label or market_hash_name
+    tail_raw = tail_stop_ask_multiplier if tail_stop_ask_multiplier is not None else _effective("tail_stop_ask_multiplier")
+    try:
+        tail_multiplier = float(tail_raw) if tail_raw is not None else 0.0
+    except (TypeError, ValueError):
+        tail_multiplier = 0.0
+    if tail_multiplier <= 0:
+        tail_multiplier = 0.0
+    tail_first_ask: float | None = None
 
     def _retry_sleep() -> tuple[float, float]:
         lo = float(retry_sleep_min_sec if retry_sleep_min_sec is not None else _effective("retry_sleep_min_sec"))
@@ -769,6 +782,38 @@ def fetch_steam_scm_top_listings(
         page_rows = parse_render_payload(data)
         meta["pages_fetched"] = int(meta.get("pages_fetched") or 0) + 1
 
+        page_asks: list[float] = []
+        for row in page_rows:
+            ask_value = row.get("ask")
+            if ask_value is None:
+                ask_value = _buyer_pays_major_units(
+                    row.get("converted_price"),
+                    row.get("converted_currencyid"),
+                    row.get("converted_fee"),
+                )
+            try:
+                ask = float(ask_value)
+            except (TypeError, ValueError):
+                continue
+            if ask > 0:
+                page_asks.append(ask)
+        if page_asks and tail_first_ask is None:
+            tail_first_ask = min(page_asks)
+            meta["tail_cutoff_first_ask"] = tail_first_ask
+        if tail_multiplier and tail_first_ask and page_asks and start_offset > 0:
+            page_min_ask = min(page_asks)
+            cutoff_ask = tail_first_ask * tail_multiplier
+            if page_min_ask > cutoff_ask:
+                meta["tail_cutoff"] = True
+                meta["tail_cutoff_multiplier"] = tail_multiplier
+                meta["tail_cutoff_ask"] = page_min_ask
+                meta["tail_cutoff_limit_ask"] = cutoff_ask
+                _batch_log(
+                    f'  [steam_scm] "{label}": tail cutoff at start={start_offset} '
+                    f"ask={page_min_ask:.2f} first_ask={tail_first_ask:.2f} multiplier={tail_multiplier:.2f}"
+                )
+                break
+
         for row in page_rows:
             lid = str(row.get("listing_id") or "")
             if not lid or lid in seen_ids:
@@ -855,12 +900,217 @@ def load_items_from_module(
     return list(items)
 
 
+
+def _parse_utc_datetime(value: Any) -> datetime | None:
+    if not value:
+        return None
+    try:
+        text = str(value).strip().replace("Z", "+00:00")
+        dt = datetime.fromisoformat(text)
+    except Exception:
+        return None
+    if dt.tzinfo is None:
+        dt = dt.replace(tzinfo=timezone.utc)
+    return dt.astimezone(timezone.utc)
+
+
+def _age_minutes(value: Any, now: datetime) -> float | None:
+    dt = _parse_utc_datetime(value)
+    if dt is None:
+        return None
+    return max(0.0, (now - dt).total_seconds() / 60.0)
+
+
+def _strategy_tier_minutes(strategy: dict[str, Any], key: str, tier: str | None, default: float) -> float:
+    raw = strategy.get(key, default)
+    if isinstance(raw, dict):
+        raw = raw.get(str(tier or "default"), raw.get("default", default))
+    try:
+        return max(0.0, float(raw))
+    except (TypeError, ValueError):
+        return float(default)
+
+
+def _strategy_int(strategy: dict[str, Any], key: str, default: int) -> int:
+    try:
+        return max(1, int(float(strategy.get(key, default))))
+    except (TypeError, ValueError):
+        return int(default)
+
+
+def _strategy_float(strategy: dict[str, Any], key: str, default: float) -> float:
+    try:
+        return float(strategy.get(key, default))
+    except (TypeError, ValueError):
+        return float(default)
+
+
+def _page0_fingerprint(rows: list[dict[str, Any]], meta: dict[str, Any], *, page0_limit: int) -> dict[str, Any]:
+    listing_ids: list[str] = []
+    asks: list[float] = []
+    for row in rows[:page0_limit]:
+        listing_id = str(row.get("listing_id") or "")
+        if listing_id:
+            listing_ids.append(listing_id)
+        try:
+            ask = float(row.get("ask"))
+        except (TypeError, ValueError):
+            continue
+        if ask > 0:
+            asks.append(ask)
+    total_raw = meta.get("total_count")
+    try:
+        total_count = int(total_raw) if total_raw is not None else None
+    except (TypeError, ValueError):
+        total_count = None
+    return {
+        "page0_listing_ids": listing_ids,
+        "total_count": total_count,
+        "first_ask": min(asks) if asks else None,
+    }
+
+
+def _sentinel_change_reasons(entry: dict[str, Any], fp: dict[str, Any], strategy: dict[str, Any]) -> list[str]:
+    reasons: list[str] = []
+    if bool(strategy.get("deep_on_page0_ids_change", True)):
+        if list(entry.get("page0_listing_ids") or []) != list(fp.get("page0_listing_ids") or []):
+            reasons.append("page0_ids_changed")
+    if bool(strategy.get("deep_on_total_count_change", True)):
+        if entry.get("total_count") != fp.get("total_count"):
+            reasons.append("total_count_changed")
+    return reasons
+
+
+def _update_listing_fetch_entry(
+    entry: dict[str, Any],
+    fp: dict[str, Any],
+    *,
+    now_iso: str,
+    day_key: str | None,
+    deep: bool,
+    reason: str,
+    pending: bool | None = None,
+) -> None:
+    entry["page0_listing_ids"] = list(fp.get("page0_listing_ids") or [])
+    entry["total_count"] = fp.get("total_count")
+    entry["first_ask"] = fp.get("first_ask")
+    entry["last_page0_at_utc"] = now_iso
+    if day_key:
+        entry["day_key"] = day_key
+    if deep:
+        entry["last_deep_at_utc"] = now_iso
+        entry["last_deep_reason"] = reason
+        entry["deep_pending"] = False
+        entry.pop("deep_pending_since_utc", None)
+        entry.pop("deep_pending_reason", None)
+    elif pending is not None:
+        entry["deep_pending"] = bool(pending)
+        if pending:
+            entry.setdefault("deep_pending_since_utc", now_iso)
+            entry["deep_pending_reason"] = reason
+
+
+def _bump_stat(stats: dict[str, Any], key: str, reason: str | None = None) -> None:
+    stats[key] = int(stats.get(key) or 0) + 1
+    if reason:
+        by_reason = stats.setdefault(f"{key}_by_reason", {})
+        by_reason[reason] = int(by_reason.get(reason) or 0) + 1
+
+
+def _fetch_monitoring_item(
+    name: str,
+    *,
+    max_listings_per_item: int | None,
+    session: requests.Session,
+    log_skin_label: str,
+    fetch_strategy: dict[str, Any] | None,
+    fetch_entry: dict[str, Any] | None,
+    tier: str | None,
+    day_key: str | None,
+    stats: dict[str, Any],
+) -> tuple[list[dict[str, Any]], dict[str, Any]]:
+    strategy = fetch_strategy if isinstance(fetch_strategy, dict) else {}
+    if not bool(strategy.get("enabled", False)):
+        return fetch_steam_scm_top_listings(
+            name,
+            max_listings=max_listings_per_item,
+            session=session,
+            log_skin_label=log_skin_label,
+        )
+
+    entry = fetch_entry if isinstance(fetch_entry, dict) else {}
+    now = datetime.now(timezone.utc)
+    now_iso = now.isoformat()
+    page0_limit = _strategy_int(strategy, "page0_listings", 20)
+    periodic_minutes = _strategy_tier_minutes(strategy, "periodic_deep_minutes_by_tier", tier, 120.0)
+    cooldown_minutes = _strategy_tier_minutes(strategy, "changed_deep_cooldown_minutes_by_tier", tier, 20.0)
+    tail_multiplier = _strategy_float(strategy, "tail_stop_ask_multiplier", 3.0)
+
+    def fetch_deep(reason: str) -> tuple[list[dict[str, Any]], dict[str, Any]]:
+        _batch_log(
+            f'  [steam_scm] "{log_skin_label}": sentinel deep reason={reason} '
+            f"cap={max_listings_per_item} tail_multiplier={tail_multiplier:.2f}"
+        )
+        rows, meta = fetch_steam_scm_top_listings(
+            name,
+            max_listings=max_listings_per_item,
+            session=session,
+            log_skin_label=log_skin_label,
+            tail_stop_ask_multiplier=tail_multiplier,
+        )
+        fp = _page0_fingerprint(rows, meta, page0_limit=page0_limit)
+        _update_listing_fetch_entry(entry, fp, now_iso=now_iso, day_key=day_key, deep=True, reason=reason)
+        if meta.get("tail_cutoff"):
+            _bump_stat(stats, "tail_cutoffs")
+        _bump_stat(stats, "deep", reason)
+        return rows, meta
+
+    last_deep_age = _age_minutes(entry.get("last_deep_at_utc"), now)
+    if not entry.get("last_deep_at_utc"):
+        return fetch_deep("missing_sentinel")
+    if bool(strategy.get("deep_on_new_day", True)) and day_key and entry.get("day_key") != day_key:
+        return fetch_deep("new_day")
+    if bool(entry.get("deep_pending")) and (last_deep_age is None or last_deep_age >= cooldown_minutes):
+        return fetch_deep(str(entry.get("deep_pending_reason") or "pending_sentinel_changed"))
+    if periodic_minutes > 0 and (last_deep_age is None or last_deep_age >= periodic_minutes):
+        return fetch_deep(f"periodic_{periodic_minutes:g}m")
+
+    _batch_log(f'  [steam_scm] "{log_skin_label}": sentinel page0 check limit={page0_limit}')
+    rows, meta = fetch_steam_scm_top_listings(
+        name,
+        max_listings=page0_limit,
+        session=session,
+        log_skin_label=log_skin_label,
+    )
+    fp = _page0_fingerprint(rows, meta, page0_limit=page0_limit)
+    reasons = _sentinel_change_reasons(entry, fp, strategy)
+    if reasons:
+        reason = "+".join(reasons)
+        if last_deep_age is None or last_deep_age >= cooldown_minutes:
+            return fetch_deep(f"sentinel_changed:{reason}")
+        _batch_log(
+            f'  [steam_scm] "{log_skin_label}": sentinel changed ({reason}) but deep cooldown active '
+            f"age={last_deep_age:.1f}m cooldown={cooldown_minutes:.1f}m"
+        )
+        _update_listing_fetch_entry(entry, fp, now_iso=now_iso, day_key=day_key, deep=False, reason=reason, pending=True)
+        _bump_stat(stats, "page0_changed_cooldown", reason)
+    else:
+        _batch_log(f'  [steam_scm] "{log_skin_label}": sentinel unchanged -> page0 only')
+        _update_listing_fetch_entry(entry, fp, now_iso=now_iso, day_key=day_key, deep=False, reason="page0_unchanged")
+        _bump_stat(stats, "page0_only", "unchanged")
+    return rows, meta
+
+
 def run_batch_to_csv(
     items: list[str],
     out_csv: str | Path | None = None,
     *,
     max_listings_per_item: int | None = None,
     session: requests.Session | None = None,
+    fetch_strategy: dict[str, Any] | None = None,
+    fetch_state: dict[str, Any] | None = None,
+    tier: str | None = None,
+    day_key: str | None = None,
 ) -> tuple[Path, list[dict[str, Any]], Any]:
     """
     Для каждого market_hash_name — запрос листингов; в каждой строке CSV колонка
@@ -875,15 +1125,47 @@ def run_batch_to_csv(
     all_rows: list[dict[str, Any]] = []
     errors: list[dict[str, Any]] = []
     n = len(items)
+    strategy = fetch_strategy if isinstance(fetch_strategy, dict) else {}
+    strategy_enabled = bool(strategy.get("enabled", False))
+    state_root = fetch_state if isinstance(fetch_state, dict) else None
+    item_fetch_state: dict[str, Any] = {}
+    stats: dict[str, Any] = {
+        "enabled": strategy_enabled,
+        "tier": tier,
+        "day_key": day_key,
+        "items": n,
+        "deep": 0,
+        "page0_only": 0,
+        "page0_changed_cooldown": 0,
+        "tail_cutoffs": 0,
+    }
+    if state_root is not None:
+        state_root["version"] = 1
+        item_fetch_state = state_root.setdefault("items", {})
+        state_root["last_batch_started_at_utc"] = datetime.now(timezone.utc).isoformat()
+        state_root["last_batch_stats"] = stats
+
     for i, name in enumerate(items):
         t0 = time.monotonic()
         label = f"{i + 1}/{n} {name}"
         _batch_log(f'  [steam_scm] >> батч {label} (delay_between_skins_* после предмета)')
-        rows, meta = fetch_steam_scm_top_listings(
+        entry = None
+        if strategy_enabled and state_root is not None:
+            raw_entry = item_fetch_state.get(name)
+            if not isinstance(raw_entry, dict):
+                raw_entry = {}
+                item_fetch_state[name] = raw_entry
+            entry = raw_entry
+        rows, meta = _fetch_monitoring_item(
             name,
-            max_listings=max_listings_per_item,
+            max_listings_per_item=max_listings_per_item,
             session=sess,
             log_skin_label=label,
+            fetch_strategy=strategy,
+            fetch_entry=entry,
+            tier=tier,
+            day_key=day_key,
+            stats=stats,
         )
         dt = time.monotonic() - t0
         _batch_log(
@@ -910,15 +1192,19 @@ def run_batch_to_csv(
                     "scm_total_listings": tc,
                 }
             )
+        if state_root is not None:
+            state_root["last_batch_stats"] = stats
         if i + 1 < n:
             d_lo = float(_effective("delay_between_skins_min_sec"))
             d_hi = float(_effective("delay_between_skins_max_sec"))
             time.sleep(random.uniform(d_lo, d_hi))
 
+    if state_root is not None:
+        state_root["last_batch_finished_at_utc"] = datetime.now(timezone.utc).isoformat()
+        state_root["last_batch_stats"] = stats
     df = pd.DataFrame(all_rows)
     df.to_csv(out, index=False)
     return out, errors, df
-
 
 def main(argv: list[str] | None = None) -> int:
     p = argparse.ArgumentParser(description="Steam SCM listings + float")
