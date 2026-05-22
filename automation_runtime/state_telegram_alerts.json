@@ -509,7 +509,355 @@
       "item": "MAC-10 | Rangeen (Factory New)",
       "listing_id": "511865992129891396",
       "spread_hybrid_disc": 0.1137650847763808
+    },
+    "listing:518621391571658280": {
+      "sent_at_utc": "2026-05-22T13:49:07.675383+00:00",
+      "item": "AWP | Sun in Leo (Factory New)",
+      "listing_id": "518621391571658280",
+      "spread_hybrid_disc": 0.0763352058235528
+    },
+    "listing:517495491663336424": {
+      "sent_at_utc": "2026-05-22T14:06:16.929128+00:00",
+      "item": "Galil AR | Rainbow Spoon (Factory New)",
+      "listing_id": "517495491663336424",
+      "spread_hybrid_disc": 0.0979175767739418
+    },
+    "listing:519747291476452818": {
+      "sent_at_utc": "2026-05-22T14:06:58.034190+00:00",
+      "item": "Galil AR | Rainbow Spoon (Factory New)",
+      "listing_id": "519747291476452818",
+      "spread_hybrid_disc": 0.0988831839807191
+    },
+    "listing:520873191384392612": {
+      "sent_at_utc": "2026-05-22T14:07:19.050880+00:00",
+      "item": "Galil AR | Rainbow Spoon (Factory New)",
+      "listing_id": "520873191384392612",
+      "spread_hybrid_disc": 0.1093228346025345
+    },
+    "listing:520873191384136328": {
+      "sent_at_utc": "2026-05-22T14:38:51.425719+00:00",
+      "item": "M4A1-S | Mud-Spec (Factory New)",
+      "listing_id": "520873191384136328",
+      "spread_hybrid_disc": 0.0573024654562606
+    },
+    "listing:493851593622903002": {
+      "sent_at_utc": "2026-05-22T14:40:03.130996+00:00",
+      "item": "AK-47 | B the Monster (Field-Tested)",
+      "listing_id": "493851593622903002",
+      "spread_hybrid_disc": 0.1119181952288587
+    },
+    "listing:501732892968159362": {
+      "sent_at_utc": "2026-05-22T15:04:51.759565+00:00",
+      "item": "MP9 | Mount Fuji (Field-Tested)",
+      "listing_id": "501732892968159362",
+      "spread_hybrid_disc": 0.0671265350451529
+    },
+    "listing:496103393432740947": {
+      "sent_at_utc": "2026-05-22T15:09:30.573504+00:00",
+      "item": "R8 Revolver | Blaze (Factory New)",
+      "listing_id": "496103393432740947",
+      "spread_hybrid_disc": 0.114705651568732
+    },
+    "listing:493851593622696110": {
+      "sent_at_utc": "2026-05-22T15:12:03.403194+00:00",
+      "item": "MP7 | Prey (Factory New)",
+      "listing_id": "493851593622696110",
+      "spread_hybrid_disc": -0.8227371742022078
+    },
+    "listing:499481093146331241": {
+      "sent_at_utc": "2026-05-22T15:14:18.406108+00:00",
+      "item": "P90 | Elite Build (Factory New)",
+      "listing_id": "499481093146331241",
+      "spread_hybrid_disc": 0.1129198671409992
+    },
+    "listing:508488292407715014": {
+      "sent_at_utc": "2026-05-22T15:19:40.224700+00:00",
+      "item": "Glock-18 | Coral Bloom (Factory New)",
+      "listing_id": "508488292407715014",
+      "spread_hybrid_disc": 0.0795715487578117
+    },
+    "listing:501732892967392094": {
+      "sent_at_utc": "2026-05-22T15:20:21.338408+00:00",
+      "item": "Glock-18 | Coral Bloom (Factory New)",
+      "listing_id": "501732892967392094",
+      "spread_hybrid_disc": 0.0978720558310725
+    },
+    "listing:516369591757905118": {
+      "sent_at_utc": "2026-05-22T15:20:42.503371+00:00",
+      "item": "Glock-18 | Coral Bloom (Factory New)",
+      "listing_id": "516369591757905118",
+      "spread_hybrid_disc": 0.1100223749950016
+    },
+    "listing:506236492593913161": {
+      "sent_at_utc": "2026-05-22T15:21:23.650607+00:00",
+      "item": "Glock-18 | Coral Bloom (Factory New)",
+      "listing_id": "506236492593913161",
+      "spread_hybrid_disc": 0.1109599027149877
+    },
+    "listing:528754490730974369": {
+      "sent_at_utc": "2026-05-22T15:38:16.126796+00:00",
+      "item": "Tec-9 | Fuel Injector (Field-Tested)",
+      "listing_id": "528754490730974369",
+      "spread_hybrid_disc": 0.0840042958798779
+    },
+    "listing:515243691845845669": {
+      "sent_at_utc": "2026-05-22T15:47:16.148098+00:00",
+      "item": "FAMAS | Faulty Wiring (Factory New)",
+      "listing_id": "515243691845845669",
+      "spread_hybrid_disc": 0.0907047859766695
+    },
+    "listing:519747291476896086": {
+      "sent_at_utc": "2026-05-22T16:02:05.505420+00:00",
+      "item": "MP9 | Arctic Tri-Tone (Factory New)",
+      "listing_id": "519747291476896086",
+      "spread_hybrid_disc": 0.0456188608258181
+    },
+    "listing:514117791944821911": {
+      "sent_at_utc": "2026-05-22T16:02:46.492846+00:00",
+      "item": "MP9 | Arctic Tri-Tone (Factory New)",
+      "listing_id": "514117791944821911",
+      "spread_hybrid_disc": 0.0919489815555369
+    },
+    "listing:496103393434058079": {
+      "sent_at_utc": "2026-05-22T16:56:31.037786+00:00",
+      "item": "Desert Eagle | Mulberry (Minimal Wear)",
+      "listing_id": "496103393434058079",
+      "spread_hybrid_disc": 0.0943830959367109
+    },
+    "listing:505110592689502788": {
+      "sent_at_utc": "2026-05-22T17:00:39.121272+00:00",
+      "item": "CZ75-Auto | Tuxedo (Factory New)",
+      "listing_id": "505110592689502788",
+      "spread_hybrid_disc": 0.1096265809447172
+    },
+    "listing:509614192317721957": {
+      "sent_at_utc": "2026-05-22T17:06:26.700387+00:00",
+      "item": "AK-47 | Nouveau Rouge (Battle-Scarred)",
+      "listing_id": "509614192317721957",
+      "spread_hybrid_disc": 0.0250611085216139
+    },
+    "listing:491599793805581578": {
+      "sent_at_utc": "2026-05-22T17:08:58.616948+00:00",
+      "item": "StatTrak™ AWP | Duality (Minimal Wear)",
+      "listing_id": "491599793805581578",
+      "spread_hybrid_disc": -0.0077348156707381
+    },
+    "listing:508488292407706806": {
+      "sent_at_utc": "2026-05-22T17:35:56.157043+00:00",
+      "item": "R8 Revolver | Desert Brush (Factory New)",
+      "listing_id": "508488292407706806",
+      "spread_hybrid_disc": -0.2815610330313731
+    },
+    "listing:505110592688986476": {
+      "sent_at_utc": "2026-05-22T17:36:17.403572+00:00",
+      "item": "R8 Revolver | Desert Brush (Factory New)",
+      "listing_id": "505110592688986476",
+      "spread_hybrid_disc": -0.2337134929745834
+    },
+    "listing:505110592688985396": {
+      "sent_at_utc": "2026-05-22T17:36:58.460653+00:00",
+      "item": "R8 Revolver | Desert Brush (Factory New)",
+      "listing_id": "505110592688985396",
+      "spread_hybrid_disc": -0.2309353934976912
+    },
+    "listing:505110592688984028": {
+      "sent_at_utc": "2026-05-22T17:37:19.437667+00:00",
+      "item": "R8 Revolver | Desert Brush (Factory New)",
+      "listing_id": "505110592688984028",
+      "spread_hybrid_disc": -0.2227429143946526
+    },
+    "listing:505110592688984568": {
+      "sent_at_utc": "2026-05-22T17:38:00.455334+00:00",
+      "item": "R8 Revolver | Desert Brush (Factory New)",
+      "listing_id": "505110592688984568",
+      "spread_hybrid_disc": -0.2224585807522514
+    },
+    "listing:523124991197833588": {
+      "sent_at_utc": "2026-05-22T17:38:22.549550+00:00",
+      "item": "StatTrak™ USP-S | Jawbreaker (Battle-Scarred)",
+      "listing_id": "523124991197833588",
+      "spread_hybrid_disc": -0.0395470869660659
+    },
+    "listing:493851593624041826": {
+      "sent_at_utc": "2026-05-22T17:39:03.775287+00:00",
+      "item": "CZ75-Auto | Silver (Factory New)",
+      "listing_id": "493851593624041826",
+      "spread_hybrid_disc": -1.768851309166766
+    },
+    "listing:491599793805263878": {
+      "sent_at_utc": "2026-05-22T17:39:44.808039+00:00",
+      "item": "CZ75-Auto | Silver (Factory New)",
+      "listing_id": "491599793805263878",
+      "spread_hybrid_disc": -1.0745696394448192
+    },
+    "listing:507362392502924355": {
+      "sent_at_utc": "2026-05-22T17:40:05.790643+00:00",
+      "item": "CZ75-Auto | Silver (Factory New)",
+      "listing_id": "507362392502924355",
+      "spread_hybrid_disc": -1.066570162572424
+    },
+    "listing:499481093153473641": {
+      "sent_at_utc": "2026-05-22T17:40:27.906553+00:00",
+      "item": "CZ75-Auto | Silver (Factory New)",
+      "listing_id": "499481093153473641",
+      "spread_hybrid_disc": -0.9942288889912132
+    },
+    "listing:516369591757721446": {
+      "sent_at_utc": "2026-05-22T17:40:48.896787+00:00",
+      "item": "CZ75-Auto | Silver (Factory New)",
+      "listing_id": "516369591757721446",
+      "spread_hybrid_disc": -0.9166177327047664
+    },
+    "listing:524250891101234702": {
+      "sent_at_utc": "2026-05-22T17:41:12.936645+00:00",
+      "item": "CZ75-Auto | Silver (Factory New)",
+      "listing_id": "524250891101234702",
+      "spread_hybrid_disc": -0.7562502390659787
+    },
+    "listing:515243691850593493": {
+      "sent_at_utc": "2026-05-22T17:41:34.957835+00:00",
+      "item": "CZ75-Auto | Silver (Factory New)",
+      "listing_id": "515243691850593493",
+      "spread_hybrid_disc": -0.5910806923290237
+    },
+    "listing:502858792868816532": {
+      "sent_at_utc": "2026-05-22T17:42:15.990295+00:00",
+      "item": "CZ75-Auto | Silver (Factory New)",
+      "listing_id": "502858792868816532",
+      "spread_hybrid_disc": -0.5714048226677908
+    },
+    "listing:501732892968007190": {
+      "sent_at_utc": "2026-05-22T17:42:36.985566+00:00",
+      "item": "CZ75-Auto | Silver (Factory New)",
+      "listing_id": "501732892968007190",
+      "spread_hybrid_disc": -0.5701225400433798
+    },
+    "listing:506236492593264801": {
+      "sent_at_utc": "2026-05-22T17:43:17.712754+00:00",
+      "item": "CZ75-Auto | Silver (Factory New)",
+      "listing_id": "506236492593264801",
+      "spread_hybrid_disc": -0.5444707411561418
+    },
+    "listing:515243691850658437": {
+      "sent_at_utc": "2026-05-22T17:43:38.701267+00:00",
+      "item": "CZ75-Auto | Silver (Factory New)",
+      "listing_id": "515243691850658437",
+      "spread_hybrid_disc": -0.5324241429856884
+    },
+    "listing:518621391569726916": {
+      "sent_at_utc": "2026-05-22T17:44:19.738916+00:00",
+      "item": "CZ75-Auto | Silver (Factory New)",
+      "listing_id": "518621391569726916",
+      "spread_hybrid_disc": -0.5086502276348961
+    },
+    "listing:506236492594668045": {
+      "sent_at_utc": "2026-05-22T17:45:00.736547+00:00",
+      "item": "CZ75-Auto | Silver (Factory New)",
+      "listing_id": "506236492594668045",
+      "spread_hybrid_disc": -0.2527080808768807
+    },
+    "listing:518621391571873272": {
+      "sent_at_utc": "2026-05-22T17:45:41.697997+00:00",
+      "item": "CZ75-Auto | Silver (Factory New)",
+      "listing_id": "518621391571873272",
+      "spread_hybrid_disc": -0.2284223336330397
+    },
+    "listing:512991892034704733": {
+      "sent_at_utc": "2026-05-22T17:46:02.631038+00:00",
+      "item": "CZ75-Auto | Silver (Factory New)",
+      "listing_id": "512991892034704733",
+      "spread_hybrid_disc": -0.1404942959805344
+    },
+    "listing:528754490728273793": {
+      "sent_at_utc": "2026-05-22T17:46:23.567623+00:00",
+      "item": "CZ75-Auto | Silver (Factory New)",
+      "listing_id": "528754490728273793",
+      "spread_hybrid_disc": 0.0745583957325457
+    },
+    "listing:510740092225735556": {
+      "sent_at_utc": "2026-05-22T17:47:04.611264+00:00",
+      "item": "Glock-18 | Coral Bloom (Factory New)",
+      "listing_id": "510740092225735556",
+      "spread_hybrid_disc": 0.1133851432722614
+    },
+    "listing:527628590825408385": {
+      "sent_at_utc": "2026-05-22T17:53:17.373230+00:00",
+      "item": "Dual Berettas | Anodized Navy (Factory New)",
+      "listing_id": "527628590825408385",
+      "spread_hybrid_disc": -0.2238063237384189
+    },
+    "listing:515243691852192253": {
+      "sent_at_utc": "2026-05-22T17:53:58.349063+00:00",
+      "item": "Dual Berettas | Anodized Navy (Factory New)",
+      "listing_id": "515243691852192253",
+      "spread_hybrid_disc": 0.0907087678600645
+    },
+    "listing:515243691852161581": {
+      "sent_at_utc": "2026-05-22T20:15:28.338447+00:00",
+      "item": "Nova | Yorkshire (Factory New)",
+      "listing_id": "515243691852161581",
+      "spread_hybrid_disc": 0.0354314905591707
+    },
+    "listing:496103393434737795": {
+      "sent_at_utc": "2026-05-22T20:16:09.320093+00:00",
+      "item": "Nova | Yorkshire (Factory New)",
+      "listing_id": "496103393434737795",
+      "spread_hybrid_disc": 0.036304522601569
+    },
+    "listing:497229293343505999": {
+      "sent_at_utc": "2026-05-22T20:16:32.375054+00:00",
+      "item": "Nova | Yorkshire (Factory New)",
+      "listing_id": "497229293343505999",
+      "spread_hybrid_disc": 0.0575875054437462
+    },
+    "listing:525376791012760026": {
+      "sent_at_utc": "2026-05-22T20:17:13.342904+00:00",
+      "item": "Nova | Yorkshire (Factory New)",
+      "listing_id": "525376791012760026",
+      "spread_hybrid_disc": 0.0719161161620465
+    },
+    "listing:526502690918369579": {
+      "sent_at_utc": "2026-05-22T20:17:54.303190+00:00",
+      "item": "Nova | Yorkshire (Factory New)",
+      "listing_id": "526502690918369579",
+      "spread_hybrid_disc": 0.0828328856825768
+    },
+    "listing:499481093153147337": {
+      "sent_at_utc": "2026-05-22T20:18:35.306170+00:00",
+      "item": "Nova | Yorkshire (Factory New)",
+      "listing_id": "499481093153147337",
+      "spread_hybrid_disc": 0.0836112619219712
+    },
+    "listing:491599793805536434": {
+      "sent_at_utc": "2026-05-22T20:18:58.301931+00:00",
+      "item": "Nova | Yorkshire (Factory New)",
+      "listing_id": "491599793805536434",
+      "spread_hybrid_disc": 0.0884127981798851
+    },
+    "listing:528754490730929333": {
+      "sent_at_utc": "2026-05-22T20:19:39.250076+00:00",
+      "item": "Nova | Yorkshire (Factory New)",
+      "listing_id": "528754490730929333",
+      "spread_hybrid_disc": 0.1056889768446078
+    },
+    "listing:500606993058545851": {
+      "sent_at_utc": "2026-05-22T20:33:36.564833+00:00",
+      "item": "Tec-9 | Bamboo Forest (Factory New)",
+      "listing_id": "500606993058545851",
+      "spread_hybrid_disc": 0.0117579183199681
+    },
+    "listing:520873191385222628": {
+      "sent_at_utc": "2026-05-22T20:33:38.523212+00:00",
+      "item": "Tec-9 | Bamboo Forest (Factory New)",
+      "listing_id": "520873191385222628",
+      "spread_hybrid_disc": 0.1181898062391174
+    },
+    "listing:525376791013332534": {
+      "sent_at_utc": "2026-05-22T20:45:55.634376+00:00",
+      "item": "MP9 | Arctic Tri-Tone (Field-Tested)",
+      "listing_id": "525376791013332534",
+      "spread_hybrid_disc": 0.0552819528275866
     }
   },
-  "last_alert_sent_at_utc": "2026-05-22T11:41:13.890735+00:00"
+  "last_alert_sent_at_utc": "2026-05-22T20:45:55.634553+00:00"
 }
