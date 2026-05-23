@@ -85,22 +85,22 @@
       "spread_hybrid_disc": -0.6825589273063029
     },
     "listing:517495491660324340": {
-      "sent_at_utc": "2026-05-22T08:24:48.804468+00:00",
+      "sent_at_utc": "2026-05-22T22:20:18.706654+00:00",
       "item": "MP7 | Prey (Factory New)",
       "listing_id": "517495491660324340",
-      "spread_hybrid_disc": -0.6416703354535391
+      "spread_hybrid_disc": -0.4204523469881687
     },
     "listing:517495491660340576": {
-      "sent_at_utc": "2026-05-22T08:25:09.749693+00:00",
+      "sent_at_utc": "2026-05-22T22:20:20.593069+00:00",
       "item": "MP7 | Prey (Factory New)",
       "listing_id": "517495491660340576",
-      "spread_hybrid_disc": -0.5642086741900179
+      "spread_hybrid_disc": -0.3503520195156011
     },
     "listing:494977493524027231": {
-      "sent_at_utc": "2026-05-22T08:25:50.741861+00:00",
+      "sent_at_utc": "2026-05-22T22:20:25.471213+00:00",
       "item": "MP7 | Prey (Factory New)",
       "listing_id": "494977493524027231",
-      "spread_hybrid_disc": -0.5287574136921098
+      "spread_hybrid_disc": -0.3186991431084609
     },
     "listing:494977493524026691": {
       "sent_at_utc": "2026-05-22T08:26:11.656616+00:00",
@@ -109,10 +109,10 @@
       "spread_hybrid_disc": -0.5243837224702106
     },
     "listing:494977493524025935": {
-      "sent_at_utc": "2026-05-22T08:26:32.640976+00:00",
+      "sent_at_utc": "2026-05-22T22:20:27.312669+00:00",
       "item": "MP7 | Prey (Factory New)",
       "listing_id": "494977493524025935",
-      "spread_hybrid_disc": -0.5241103485418777
+      "spread_hybrid_disc": -0.3146906059941385
     },
     "listing:521999091289789865": {
       "sent_at_utc": "2026-05-22T08:27:13.600280+00:00",
@@ -121,16 +121,16 @@
       "spread_hybrid_disc": -0.4761653534960082
     },
     "listing:517495491660323980": {
-      "sent_at_utc": "2026-05-22T08:27:54.526871+00:00",
+      "sent_at_utc": "2026-05-22T22:20:36.175442+00:00",
       "item": "MP7 | Prey (Factory New)",
       "listing_id": "517495491660323980",
-      "spread_hybrid_disc": -0.4369811266922199
+      "spread_hybrid_disc": -0.2433453720315661
     },
     "listing:517495491660324772": {
-      "sent_at_utc": "2026-05-22T08:28:02.734990+00:00",
+      "sent_at_utc": "2026-05-22T22:20:44.956842+00:00",
       "item": "MP7 | Prey (Factory New)",
       "listing_id": "517495491660324772",
-      "spread_hybrid_disc": -0.4240948500036601
+      "spread_hybrid_disc": -0.2321955439747982
     },
     "listing:517495491660323548": {
       "sent_at_utc": "2026-05-22T08:28:23.669986+00:00",
@@ -271,34 +271,34 @@
       "spread_hybrid_disc": 0.1120262364941534
     },
     "listing:525376791010443354": {
-      "sent_at_utc": "2026-05-22T10:40:45.518274+00:00",
+      "sent_at_utc": "2026-05-23T00:28:23.810826+00:00",
       "item": "R8 Revolver | Desert Brush (Factory New)",
       "listing_id": "525376791010443354",
-      "spread_hybrid_disc": -0.2805687684295186
+      "spread_hybrid_disc": -0.1091915354798431
     },
     "listing:525376791010442922": {
-      "sent_at_utc": "2026-05-22T10:41:26.530093+00:00",
+      "sent_at_utc": "2026-05-23T00:28:25.777418+00:00",
       "item": "R8 Revolver | Desert Brush (Factory New)",
       "listing_id": "525376791010442922",
-      "spread_hybrid_disc": -0.2281061134337794
+      "spread_hybrid_disc": -0.0637499049445005
     },
     "listing:525376791010443642": {
-      "sent_at_utc": "2026-05-22T10:41:47.469829+00:00",
+      "sent_at_utc": "2026-05-23T00:28:30.638090+00:00",
       "item": "R8 Revolver | Desert Brush (Factory New)",
       "listing_id": "525376791010443642",
-      "spread_hybrid_disc": -0.2278576132922043
+      "spread_hybrid_disc": -0.0635346613274483
     },
     "listing:525376791010443210": {
-      "sent_at_utc": "2026-05-22T10:42:28.428060+00:00",
+      "sent_at_utc": "2026-05-23T00:28:32.590988+00:00",
       "item": "R8 Revolver | Desert Brush (Factory New)",
       "listing_id": "525376791010443210",
-      "spread_hybrid_disc": -0.2277239562813129
+      "spread_hybrid_disc": -0.0634188915001707
     },
     "listing:525376791010442778": {
-      "sent_at_utc": "2026-05-22T10:43:09.443175+00:00",
+      "sent_at_utc": "2026-05-23T00:28:34.438768+00:00",
       "item": "R8 Revolver | Desert Brush (Factory New)",
       "listing_id": "525376791010442778",
-      "spread_hybrid_disc": -0.2268981567941583
+      "spread_hybrid_disc": -0.0627036079295126
     },
     "listing:525376791010442490": {
       "sent_at_utc": "2026-05-22T10:43:50.423974+00:00",
@@ -857,7 +857,85 @@
       "item": "MP9 | Arctic Tri-Tone (Field-Tested)",
       "listing_id": "525376791013332534",
       "spread_hybrid_disc": 0.0552819528275866
+    },
+    "listing:496103393434897455": {
+      "sent_at_utc": "2026-05-22T21:19:04.478802+00:00",
+      "item": "StatTrak™ MAC-10 | Saibā Oni (Minimal Wear)",
+      "listing_id": "496103393434897455",
+      "spread_hybrid_disc": 0.0936478374548908
+    },
+    "listing:514117791947666667": {
+      "sent_at_utc": "2026-05-22T22:13:03.161858+00:00",
+      "item": "USP-S | Cyrex (Factory New)",
+      "listing_id": "514117791947666667",
+      "spread_hybrid_disc": 0.0837805312569904
+    },
+    "listing:528754490722671221": {
+      "sent_at_utc": "2026-05-22T22:13:05.204461+00:00",
+      "item": "USP-S | Cyrex (Factory New)",
+      "listing_id": "528754490722671221",
+      "spread_hybrid_disc": 0.0932329786250998
+    },
+    "listing:527628590825764857": {
+      "sent_at_utc": "2026-05-22T22:13:07.263162+00:00",
+      "item": "USP-S | Cyrex (Factory New)",
+      "listing_id": "527628590825764857",
+      "spread_hybrid_disc": 0.1189758583699176
+    },
+    "listing:497229293344819999": {
+      "sent_at_utc": "2026-05-22T22:20:29.305358+00:00",
+      "item": "MP7 | Prey (Factory New)",
+      "listing_id": "497229293344819999",
+      "spread_hybrid_disc": -0.2896063203447259
+    },
+    "listing:497229293344819675": {
+      "sent_at_utc": "2026-05-22T22:20:34.218301+00:00",
+      "item": "MP7 | Prey (Factory New)",
+      "listing_id": "497229293344819675",
+      "spread_hybrid_disc": -0.2453566874766009
+    },
+    "listing:497229293344819171": {
+      "sent_at_utc": "2026-05-22T22:20:41.079508+00:00",
+      "item": "MP7 | Prey (Factory New)",
+      "listing_id": "497229293344819171",
+      "spread_hybrid_disc": -0.2398411835467959
+    },
+    "listing:497229293344818415": {
+      "sent_at_utc": "2026-05-22T22:20:43.059846+00:00",
+      "item": "MP7 | Prey (Factory New)",
+      "listing_id": "497229293344818415",
+      "spread_hybrid_disc": -0.236727058848541
+    },
+    "listing:509614192318062157": {
+      "sent_at_utc": "2026-05-23T00:28:11.196420+00:00",
+      "item": "R8 Revolver | Desert Brush (Factory New)",
+      "listing_id": "509614192318062157",
+      "spread_hybrid_disc": -0.4793067996728366
+    },
+    "listing:509614192318544557": {
+      "sent_at_utc": "2026-05-23T00:28:13.060801+00:00",
+      "item": "R8 Revolver | Desert Brush (Factory New)",
+      "listing_id": "509614192318544557",
+      "spread_hybrid_disc": -0.1561924858116103
+    },
+    "listing:509614192318062553": {
+      "sent_at_utc": "2026-05-23T00:28:18.020462+00:00",
+      "item": "R8 Revolver | Desert Brush (Factory New)",
+      "listing_id": "509614192318062553",
+      "spread_hybrid_disc": -0.144783624118032
+    },
+    "listing:509614192318062985": {
+      "sent_at_utc": "2026-05-23T00:28:19.913026+00:00",
+      "item": "R8 Revolver | Desert Brush (Factory New)",
+      "listing_id": "509614192318062985",
+      "spread_hybrid_disc": -0.1393601346572837
+    },
+    "listing:493851593624898698": {
+      "sent_at_utc": "2026-05-23T00:28:21.946897+00:00",
+      "item": "R8 Revolver | Desert Brush (Factory New)",
+      "listing_id": "493851593624898698",
+      "spread_hybrid_disc": -0.131428267712039
     }
   },
-  "last_alert_sent_at_utc": "2026-05-22T20:45:55.634553+00:00"
+  "last_alert_sent_at_utc": "2026-05-23T00:28:34.438839+00:00"
 }
