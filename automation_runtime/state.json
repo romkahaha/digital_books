@@ -13,21 +13,21 @@
     "B",
     "C"
   ],
-  "queue_pointer": 4,
+  "queue_pointer": 2,
   "last_tier": "A",
-  "last_tier_queue_index": 3,
-  "last_batch_start_pointer": 6,
+  "last_tier_queue_index": 1,
+  "last_batch_start_pointer": 57,
   "last_batch_items": [
-    "AK-47 | Midnight Laminate (Field-Tested)",
-    "Glock-18 | Shinobu (Field-Tested)",
-    "M4A4 | Tooth Fairy (Field-Tested)",
-    "Glock-18 | Vogue (Field-Tested)",
-    "M4A1-S | Electrum (Minimal Wear)"
+    "UMP-45 | Wild Child (Battle-Scarred)",
+    "M4A4 | Tooth Fairy (Minimal Wear)",
+    "UMP-45 | Wild Child (Well-Worn)",
+    "AWP | Ice Coaled (Battle-Scarred)",
+    "M4A1-S | Glitched Paint (Minimal Wear)"
   ],
   "last_error": null,
-  "last_run_at_utc": "2026-05-23T20:53:33.854916+00:00",
-  "last_finished_at_utc": "2026-05-23T20:56:06.923215+00:00",
-  "last_successful_monitoring_at_utc": "2026-05-23T20:56:06.923215+00:00",
+  "last_run_at_utc": "2026-05-24T02:09:00.853670+00:00",
+  "last_finished_at_utc": "2026-05-24T02:11:30.085698+00:00",
+  "last_successful_monitoring_at_utc": "2026-05-24T02:11:30.085698+00:00",
   "last_failed_monitoring_at_utc": "2026-05-22T18:22:40.157883+00:00",
   "last_status": "ok",
   "consecutive_errors": 0,
@@ -37,9 +37,11 @@
   "last_enriched_rows": 500,
   "last_opportunities_rows": 0,
   "last_alert_stats": {
-    "mode": "background",
-    "queued_rows": 0,
-    "sender_pid": 1309697
+    "loaded": 0,
+    "filtered": 0,
+    "considered": 0,
+    "sent": 0,
+    "skipped": 0
   },
   "tiers": {
     "A": {
