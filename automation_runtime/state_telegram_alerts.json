@@ -847,7 +847,7 @@
       "spread_hybrid_disc": 0.0097104554435591
     },
     "listing:520873191385222628": {
-      "sent_at_utc": "2026-05-23T11:58:39.053305+00:00",
+      "sent_at_utc": "2026-05-24T16:23:50.665643+00:00",
       "item": "Tec-9 | Bamboo Forest (Factory New)",
       "listing_id": "520873191385222628",
       "spread_hybrid_disc": 0.1169056166365531
@@ -1153,7 +1153,7 @@
       "spread_hybrid_disc": 0.1148019729321515
     },
     "listing:512991892038819677": {
-      "sent_at_utc": "2026-05-24T06:08:53.113603+00:00",
+      "sent_at_utc": "2026-05-24T19:24:40.399899+00:00",
       "item": "Desert Eagle | Mint Fan (Factory New)",
       "listing_id": "512991892038819677",
       "spread_hybrid_disc": 0.1151189002222522
@@ -1171,7 +1171,7 @@
       "spread_hybrid_disc": 0.1155259935191296
     },
     "listing:510740092228359704": {
-      "sent_at_utc": "2026-05-24T06:08:56.096312+00:00",
+      "sent_at_utc": "2026-05-24T19:25:21.493128+00:00",
       "item": "Desert Eagle | Mint Fan (Factory New)",
       "listing_id": "510740092228359704",
       "spread_hybrid_disc": 0.1162297545171006
@@ -1981,7 +1981,7 @@
       "spread_hybrid_disc": 0.1063741794113263
     },
     "listing:512991892040591741": {
-      "sent_at_utc": "2026-05-24T06:08:44.993248+00:00",
+      "sent_at_utc": "2026-05-24T19:23:59.454648+00:00",
       "item": "Desert Eagle | Mint Fan (Factory New)",
       "listing_id": "512991892040591741",
       "spread_hybrid_disc": 0.1081256022687191
@@ -1993,13 +1993,13 @@
       "spread_hybrid_disc": 0.1091313479109021
     },
     "listing:493851593626605458": {
-      "sent_at_utc": "2026-05-24T06:09:37.026195+00:00",
+      "sent_at_utc": "2026-05-24T19:25:23.436794+00:00",
       "item": "Desert Eagle | Mint Fan (Factory New)",
       "listing_id": "493851593626605458",
       "spread_hybrid_disc": 0.1172200426474782
     },
     "listing:499481093159006481": {
-      "sent_at_utc": "2026-05-24T06:10:17.978185+00:00",
+      "sent_at_utc": "2026-05-24T19:25:44.350876+00:00",
       "item": "Desert Eagle | Mint Fan (Factory New)",
       "listing_id": "499481093159006481",
       "spread_hybrid_disc": 0.1197587404258133
@@ -2485,19 +2485,19 @@
       "spread_hybrid_disc": 0.0560038857843716
     },
     "listing:492725693721773483": {
-      "sent_at_utc": "2026-05-24T06:06:09.170053+00:00",
+      "sent_at_utc": "2026-05-24T19:19:50.641034+00:00",
       "item": "Desert Eagle | Mint Fan (Factory New)",
       "listing_id": "492725693721773483",
       "spread_hybrid_disc": 0.0744774798580089
     },
     "listing:526502690924467079": {
-      "sent_at_utc": "2026-05-24T06:06:50.110164+00:00",
+      "sent_at_utc": "2026-05-24T19:20:31.598056+00:00",
       "item": "Desert Eagle | Mint Fan (Factory New)",
       "listing_id": "526502690924467079",
       "spread_hybrid_disc": 0.0769159735878171
     },
     "listing:503984692787440726": {
-      "sent_at_utc": "2026-05-24T06:07:11.015449+00:00",
+      "sent_at_utc": "2026-05-24T19:21:12.677650+00:00",
       "item": "Desert Eagle | Mint Fan (Factory New)",
       "listing_id": "503984692787440726",
       "spread_hybrid_disc": 0.0770061117163094
@@ -2515,13 +2515,13 @@
       "spread_hybrid_disc": 0.095404011913409
     },
     "listing:507362392510278327": {
-      "sent_at_utc": "2026-05-24T06:08:01.059472+00:00",
+      "sent_at_utc": "2026-05-24T19:22:37.561045+00:00",
       "item": "Desert Eagle | Mint Fan (Factory New)",
       "listing_id": "507362392510278327",
       "spread_hybrid_disc": 0.0979581542847467
     },
     "listing:512991892043241449": {
-      "sent_at_utc": "2026-05-24T06:08:21.984401+00:00",
+      "sent_at_utc": "2026-05-24T19:23:18.494649+00:00",
       "item": "Desert Eagle | Mint Fan (Factory New)",
       "listing_id": "512991892043241449",
       "spread_hybrid_disc": 0.1033239960443651
@@ -2557,7 +2557,7 @@
       "spread_hybrid_disc": 0.0953725914717458
     },
     "listing:492725693722085423": {
-      "sent_at_utc": "2026-05-24T06:44:34.665269+00:00",
+      "sent_at_utc": "2026-05-24T19:07:30.996032+00:00",
       "item": "MP9 | Arctic Tri-Tone (Factory New)",
       "listing_id": "492725693722085423",
       "spread_hybrid_disc": 0.1014538614700569
@@ -3047,7 +3047,355 @@
       "item": "MP7 | Nemesis (Factory New)",
       "listing_id": "526502690922178091",
       "spread_hybrid_disc": 0.0960952482088963
+    },
+    "listing:505110592699007220": {
+      "sent_at_utc": "2026-05-24T16:14:08.082599+00:00",
+      "item": "Nova | Yorkshire (Factory New)",
+      "listing_id": "505110592699007220",
+      "spread_hybrid_disc": 0.0455111761327331
+    },
+    "listing:527628590833647849": {
+      "sent_at_utc": "2026-05-24T16:14:29.103641+00:00",
+      "item": "Nova | Yorkshire (Factory New)",
+      "listing_id": "527628590833647849",
+      "spread_hybrid_disc": 0.0682677320938959
+    },
+    "listing:502858792880823720": {
+      "sent_at_utc": "2026-05-24T16:15:10.077617+00:00",
+      "item": "Nova | Yorkshire (Factory New)",
+      "listing_id": "502858792880823720",
+      "spread_hybrid_disc": 0.0748185133929556
+    },
+    "listing:502858792880954904": {
+      "sent_at_utc": "2026-05-24T16:15:31.001370+00:00",
+      "item": "Nova | Yorkshire (Factory New)",
+      "listing_id": "502858792880954904",
+      "spread_hybrid_disc": 0.0942814429222118
+    },
+    "listing:506236492603905717": {
+      "sent_at_utc": "2026-05-24T16:15:52.962678+00:00",
+      "item": "Nova | Yorkshire (Factory New)",
+      "listing_id": "506236492603905717",
+      "spread_hybrid_disc": 0.0990351685174825
+    },
+    "listing:506236492603904637": {
+      "sent_at_utc": "2026-05-24T16:16:13.883193+00:00",
+      "item": "Nova | Yorkshire (Factory New)",
+      "listing_id": "506236492603904637",
+      "spread_hybrid_disc": 0.1077394757731116
+    },
+    "listing:510740092232545064": {
+      "sent_at_utc": "2026-05-24T16:23:29.734498+00:00",
+      "item": "Tec-9 | Bamboo Forest (Factory New)",
+      "listing_id": "510740092232545064",
+      "spread_hybrid_disc": 0.0651571001558893
+    },
+    "listing:497229293354234287": {
+      "sent_at_utc": "2026-05-24T16:31:57.022662+00:00",
+      "item": "UMP-45 | Crimson Foil (Factory New)",
+      "listing_id": "497229293354234287",
+      "spread_hybrid_disc": 0.0658832304376197
+    },
+    "listing:491599793815882870": {
+      "sent_at_utc": "2026-05-24T16:32:17.893486+00:00",
+      "item": "Glock-18 | Clear Polymer (Factory New)",
+      "listing_id": "491599793815882870",
+      "spread_hybrid_disc": 0.0872771032332808
+    },
+    "listing:520873191395054048": {
+      "sent_at_utc": "2026-05-24T16:32:38.780703+00:00",
+      "item": "UMP-45 | Crimson Foil (Factory New)",
+      "listing_id": "520873191395054048",
+      "spread_hybrid_disc": 0.1071333279132807
+    },
+    "listing:497229293353956043": {
+      "sent_at_utc": "2026-05-24T16:33:06.921686+00:00",
+      "item": "UMP-45 | Crimson Foil (Factory New)",
+      "listing_id": "497229293353956043",
+      "spread_hybrid_disc": 0.1179020419567089
+    },
+    "listing:501732892976896742": {
+      "sent_at_utc": "2026-05-24T16:33:27.856227+00:00",
+      "item": "UMP-45 | Crimson Foil (Factory New)",
+      "listing_id": "501732892976896742",
+      "spread_hybrid_disc": 0.1179693650682484
+    },
+    "listing:527628590835257193": {
+      "sent_at_utc": "2026-05-24T16:57:54.578868+00:00",
+      "item": "CZ75-Auto | Imprint (Factory New)",
+      "listing_id": "527628590835257193",
+      "spread_hybrid_disc": 0.0249575569489522
+    },
+    "listing:502858792881553944": {
+      "sent_at_utc": "2026-05-24T16:58:18.625983+00:00",
+      "item": "CZ75-Auto | Imprint (Factory New)",
+      "listing_id": "502858792881553944",
+      "spread_hybrid_disc": 0.0789227321400827
+    },
+    "listing:496103393443345719": {
+      "sent_at_utc": "2026-05-24T17:00:47.578758+00:00",
+      "item": "Desert Eagle | Mint Fan (Factory New)",
+      "listing_id": "496103393443345719",
+      "spread_hybrid_disc": 0.0087961074155654
+    },
+    "listing:512991892046312789": {
+      "sent_at_utc": "2026-05-24T17:01:28.573212+00:00",
+      "item": "Desert Eagle | Mint Fan (Factory New)",
+      "listing_id": "512991892046312789",
+      "spread_hybrid_disc": 0.0261448671819121
+    },
+    "listing:497229293353662931": {
+      "sent_at_utc": "2026-05-24T17:02:09.502207+00:00",
+      "item": "Desert Eagle | Mint Fan (Factory New)",
+      "listing_id": "497229293353662931",
+      "spread_hybrid_disc": 0.0266898006395659
+    },
+    "listing:503984692790099974": {
+      "sent_at_utc": "2026-05-24T17:02:30.433292+00:00",
+      "item": "Desert Eagle | Mint Fan (Factory New)",
+      "listing_id": "503984692790099974",
+      "spread_hybrid_disc": 0.0296499012097007
+    },
+    "listing:514117791957464427": {
+      "sent_at_utc": "2026-05-24T17:02:54.476645+00:00",
+      "item": "Desert Eagle | Mint Fan (Factory New)",
+      "listing_id": "514117791957464427",
+      "spread_hybrid_disc": 0.0298735354154888
+    },
+    "listing:491599793815368610": {
+      "sent_at_utc": "2026-05-24T17:03:35.445337+00:00",
+      "item": "Desert Eagle | Mint Fan (Factory New)",
+      "listing_id": "491599793815368610",
+      "spread_hybrid_disc": 0.0415757523456921
+    },
+    "listing:506236492604661501": {
+      "sent_at_utc": "2026-05-24T17:04:16.474609+00:00",
+      "item": "Desert Eagle | Mint Fan (Factory New)",
+      "listing_id": "506236492604661501",
+      "spread_hybrid_disc": 0.0650193183934596
+    },
+    "listing:525376791018646098": {
+      "sent_at_utc": "2026-05-24T17:04:57.423048+00:00",
+      "item": "Desert Eagle | Mint Fan (Factory New)",
+      "listing_id": "525376791018646098",
+      "spread_hybrid_disc": 0.0833734646530128
+    },
+    "listing:498355193268611077": {
+      "sent_at_utc": "2026-05-24T17:05:38.372938+00:00",
+      "item": "Desert Eagle | Mint Fan (Factory New)",
+      "listing_id": "498355193268611077",
+      "spread_hybrid_disc": 0.0964509831356904
+    },
+    "listing:516369591768821218": {
+      "sent_at_utc": "2026-05-24T17:05:59.322377+00:00",
+      "item": "Desert Eagle | Mint Fan (Factory New)",
+      "listing_id": "516369591768821218",
+      "spread_hybrid_disc": 0.1093988619383359
+    },
+    "listing:503984692790928154": {
+      "sent_at_utc": "2026-05-24T17:25:17.566862+00:00",
+      "item": "FAMAS | Yeti Camo (Factory New)",
+      "listing_id": "503984692790928154",
+      "spread_hybrid_disc": 0.0925385682257441
+    },
+    "listing:525376791022271622": {
+      "sent_at_utc": "2026-05-24T17:25:58.514882+00:00",
+      "item": "FAMAS | Yeti Camo (Factory New)",
+      "listing_id": "525376791022271622",
+      "spread_hybrid_disc": 0.0973336419920379
+    },
+    "listing:502858792881674616": {
+      "sent_at_utc": "2026-05-24T17:26:39.428737+00:00",
+      "item": "FAMAS | Yeti Camo (Factory New)",
+      "listing_id": "502858792881674616",
+      "spread_hybrid_disc": 0.1164702715040229
+    },
+    "listing:509614192326930361": {
+      "sent_at_utc": "2026-05-24T17:31:44.333616+00:00",
+      "item": "M4A4 | Polysoup (Factory New)",
+      "listing_id": "509614192326930361",
+      "spread_hybrid_disc": 0.1104016882945578
+    },
+    "listing:509614192326927589": {
+      "sent_at_utc": "2026-05-24T17:32:05.267274+00:00",
+      "item": "M4A4 | Polysoup (Factory New)",
+      "listing_id": "509614192326927589",
+      "spread_hybrid_disc": 0.1165602442093319
+    },
+    "listing:518621391583100196": {
+      "sent_at_utc": "2026-05-24T17:41:37.431590+00:00",
+      "item": "R8 Revolver | Blaze (Factory New)",
+      "listing_id": "518621391583100196",
+      "spread_hybrid_disc": 0.1034060755140865
+    },
+    "listing:516369591768885766": {
+      "sent_at_utc": "2026-05-24T17:41:59.548226+00:00",
+      "item": "R8 Revolver | Blaze (Factory New)",
+      "listing_id": "516369591768885766",
+      "spread_hybrid_disc": 0.115435822020703
+    },
+    "listing:520873191395000804": {
+      "sent_at_utc": "2026-05-24T17:44:23.892162+00:00",
+      "item": "Glock-18 | Coral Bloom (Factory New)",
+      "listing_id": "520873191395000804",
+      "spread_hybrid_disc": 0.1190538842857372
+    },
+    "listing:523124991207433168": {
+      "sent_at_utc": "2026-05-24T17:46:34.807856+00:00",
+      "item": "M4A4 | Poly Mag (Factory New)",
+      "listing_id": "523124991207433168",
+      "spread_hybrid_disc": 0.0321778715849165
+    },
+    "listing:519747291486973746": {
+      "sent_at_utc": "2026-05-24T17:47:15.737352+00:00",
+      "item": "M4A4 | Poly Mag (Factory New)",
+      "listing_id": "519747291486973746",
+      "spread_hybrid_disc": 0.0323092894995544
+    },
+    "listing:500606993072206303": {
+      "sent_at_utc": "2026-05-24T17:47:56.668765+00:00",
+      "item": "M4A4 | Poly Mag (Factory New)",
+      "listing_id": "500606993072206303",
+      "spread_hybrid_disc": 0.0360349793011808
+    },
+    "listing:510740092235455268": {
+      "sent_at_utc": "2026-05-24T17:48:37.675088+00:00",
+      "item": "M4A4 | Poly Mag (Factory New)",
+      "listing_id": "510740092235455268",
+      "spread_hybrid_disc": 0.0368840581113996
+    },
+    "listing:493851593633985242": {
+      "sent_at_utc": "2026-05-24T17:49:18.602866+00:00",
+      "item": "M4A4 | Poly Mag (Factory New)",
+      "listing_id": "493851593633985242",
+      "spread_hybrid_disc": 0.0471100090175252
+    },
+    "listing:516369591768274522": {
+      "sent_at_utc": "2026-05-24T17:49:42.680656+00:00",
+      "item": "M4A4 | Poly Mag (Factory New)",
+      "listing_id": "516369591768274522",
+      "spread_hybrid_disc": 0.0539515846698458
+    },
+    "listing:497229293353878859": {
+      "sent_at_utc": "2026-05-24T18:19:45.872973+00:00",
+      "item": "MP7 | Armor Core (Factory New)",
+      "listing_id": "497229293353878859",
+      "spread_hybrid_disc": 0.1113401335112816
+    },
+    "listing:525376791022291710": {
+      "sent_at_utc": "2026-05-24T18:20:06.761133+00:00",
+      "item": "MP7 | Armor Core (Factory New)",
+      "listing_id": "525376791022291710",
+      "spread_hybrid_disc": 0.1133101142864213
+    },
+    "listing:519747291486266490": {
+      "sent_at_utc": "2026-05-24T18:20:28.778972+00:00",
+      "item": "MP7 | Armor Core (Factory New)",
+      "listing_id": "519747291486266490",
+      "spread_hybrid_disc": 0.1158226469875577
+    },
+    "listing:528754490741066537": {
+      "sent_at_utc": "2026-05-24T18:21:09.751329+00:00",
+      "item": "MP7 | Armor Core (Factory New)",
+      "listing_id": "528754490741066537",
+      "spread_hybrid_disc": 0.1187360416924138
+    },
+    "listing:502858792881941016": {
+      "sent_at_utc": "2026-05-24T18:38:47.325651+00:00",
+      "item": "Galil AR | Crimson Tsunami (Factory New)",
+      "listing_id": "502858792881941016",
+      "spread_hybrid_disc": 0.0989954628566228
+    },
+    "listing:506236492604197713": {
+      "sent_at_utc": "2026-05-24T19:05:06.055162+00:00",
+      "item": "MP9 | Arctic Tri-Tone (Factory New)",
+      "listing_id": "506236492604197713",
+      "spread_hybrid_disc": 0.0812996641784675
+    },
+    "listing:500606993073170455": {
+      "sent_at_utc": "2026-05-24T19:05:28.026557+00:00",
+      "item": "MP9 | Arctic Tri-Tone (Factory New)",
+      "listing_id": "500606993073170455",
+      "spread_hybrid_disc": 0.0848849222163222
+    },
+    "listing:512991892046027093": {
+      "sent_at_utc": "2026-05-24T19:06:09.041277+00:00",
+      "item": "MP9 | Arctic Tri-Tone (Factory New)",
+      "listing_id": "512991892046027093",
+      "spread_hybrid_disc": 0.0867748056772731
+    },
+    "listing:515243691861545845": {
+      "sent_at_utc": "2026-05-24T19:06:49.990263+00:00",
+      "item": "MP9 | Arctic Tri-Tone (Factory New)",
+      "listing_id": "515243691861545845",
+      "spread_hybrid_disc": 0.0886958014579046
+    },
+    "listing:496103393443648911": {
+      "sent_at_utc": "2026-05-24T19:14:46.608977+00:00",
+      "item": "Five-SeveN | Kami (Factory New)",
+      "listing_id": "496103393443648911",
+      "spread_hybrid_disc": -0.0080276569716428
+    },
+    "listing:506236492605033345": {
+      "sent_at_utc": "2026-05-24T19:15:08.568914+00:00",
+      "item": "Five-SeveN | Kami (Factory New)",
+      "listing_id": "506236492605033345",
+      "spread_hybrid_disc": -0.0037005933860954
+    },
+    "listing:494977493535675751": {
+      "sent_at_utc": "2026-05-24T19:15:49.511994+00:00",
+      "item": "Five-SeveN | Kami (Factory New)",
+      "listing_id": "494977493535675751",
+      "spread_hybrid_disc": 0.0948756987982317
+    },
+    "listing:491599793816834530": {
+      "sent_at_utc": "2026-05-24T19:17:04.775828+00:00",
+      "item": "Desert Eagle | Mint Fan (Factory New)",
+      "listing_id": "491599793816834530",
+      "spread_hybrid_disc": 0.0092301708816033
+    },
+    "listing:506236492605290097": {
+      "sent_at_utc": "2026-05-24T19:17:45.769637+00:00",
+      "item": "Desert Eagle | Mint Fan (Factory New)",
+      "listing_id": "506236492605290097",
+      "spread_hybrid_disc": 0.0106875264588512
+    },
+    "listing:520873191395922404": {
+      "sent_at_utc": "2026-05-24T19:18:06.718686+00:00",
+      "item": "Desert Eagle | Mint Fan (Factory New)",
+      "listing_id": "520873191395922404",
+      "spread_hybrid_disc": 0.0170530101928538
+    },
+    "listing:498355193268815161": {
+      "sent_at_utc": "2026-05-24T19:18:47.660594+00:00",
+      "item": "Desert Eagle | Mint Fan (Factory New)",
+      "listing_id": "498355193268815161",
+      "spread_hybrid_disc": 0.0246900798004888
+    },
+    "listing:525376791022938018": {
+      "sent_at_utc": "2026-05-24T19:19:09.633977+00:00",
+      "item": "Desert Eagle | Mint Fan (Factory New)",
+      "listing_id": "525376791022938018",
+      "spread_hybrid_disc": 0.0251677588626575
+    },
+    "listing:516369591769264306": {
+      "sent_at_utc": "2026-05-24T19:21:35.710202+00:00",
+      "item": "Desert Eagle | Mint Fan (Factory New)",
+      "listing_id": "516369591769264306",
+      "spread_hybrid_disc": 0.0786884778672439
+    },
+    "listing:507362392514700207": {
+      "sent_at_utc": "2026-05-24T19:21:56.607018+00:00",
+      "item": "Desert Eagle | Mint Fan (Factory New)",
+      "listing_id": "507362392514700207",
+      "spread_hybrid_disc": 0.083098867255806
+    },
+    "listing:503984692791194266": {
+      "sent_at_utc": "2026-05-24T19:37:14.698976+00:00",
+      "item": "AK-47 | Wintergreen (Factory New)",
+      "listing_id": "503984692791194266",
+      "spread_hybrid_disc": 0.1193666757256244
     }
   },
-  "last_alert_sent_at_utc": "2026-05-24T14:19:23.093093+00:00"
+  "last_alert_sent_at_utc": "2026-05-24T19:37:14.699128+00:00"
 }
