@@ -5945,7 +5945,61 @@
       "item": "M4A4 | Polysoup (Factory New)",
       "listing_id": "510740092240402064",
       "spread_hybrid_disc": 0.1064395779833943
+    },
+    "listing:518621391588456780": {
+      "sent_at_utc": "2026-05-25T20:34:06.694394+00:00",
+      "item": "M4A4 | Poly Mag (Factory New)",
+      "listing_id": "518621391588456780",
+      "spread_hybrid_disc": -0.1700630151909372
+    },
+    "listing:496103393448340395": {
+      "sent_at_utc": "2026-05-25T20:34:27.625035+00:00",
+      "item": "M4A4 | Poly Mag (Factory New)",
+      "listing_id": "496103393448340395",
+      "spread_hybrid_disc": -0.1537149599140141
+    },
+    "listing:517495491678838960": {
+      "sent_at_utc": "2026-05-25T20:35:08.589345+00:00",
+      "item": "M4A4 | Poly Mag (Factory New)",
+      "listing_id": "517495491678838960",
+      "spread_hybrid_disc": -0.1484232384282289
+    },
+    "listing:515243691867456541": {
+      "sent_at_utc": "2026-05-25T20:35:13.731947+00:00",
+      "item": "M4A4 | Poly Mag (Factory New)",
+      "listing_id": "515243691867456541",
+      "spread_hybrid_disc": -0.14534463014148
+    },
+    "listing:490473893914665704": {
+      "sent_at_utc": "2026-05-25T20:35:54.698165+00:00",
+      "item": "M4A4 | Poly Mag (Factory New)",
+      "listing_id": "490473893914665704",
+      "spread_hybrid_disc": -0.1402525277593667
+    },
+    "listing:517495491678704572": {
+      "sent_at_utc": "2026-05-25T20:36:35.673682+00:00",
+      "item": "M4A4 | Poly Mag (Factory New)",
+      "listing_id": "517495491678704572",
+      "spread_hybrid_disc": -0.1126072105654238
+    },
+    "listing:520873191399299960": {
+      "sent_at_utc": "2026-05-25T20:37:16.630388+00:00",
+      "item": "M4A4 | Poly Mag (Factory New)",
+      "listing_id": "520873191399299960",
+      "spread_hybrid_disc": -0.0728314935098866
+    },
+    "listing:500606993077946071": {
+      "sent_at_utc": "2026-05-25T20:37:57.615806+00:00",
+      "item": "M4A4 | Poly Mag (Factory New)",
+      "listing_id": "500606993077946071",
+      "spread_hybrid_disc": 0.0588032362017142
+    },
+    "listing:523124991213379972": {
+      "sent_at_utc": "2026-05-25T20:38:38.614226+00:00",
+      "item": "M4A4 | Poly Mag (Factory New)",
+      "listing_id": "523124991213379972",
+      "spread_hybrid_disc": 0.0875682608848616
     }
   },
-  "last_alert_sent_at_utc": "2026-05-25T20:22:45.382008+00:00"
+  "last_alert_sent_at_utc": "2026-05-25T20:38:38.614413+00:00"
 }
