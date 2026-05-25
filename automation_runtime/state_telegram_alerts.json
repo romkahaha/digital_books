@@ -3395,7 +3395,37 @@
       "item": "AK-47 | Wintergreen (Factory New)",
       "listing_id": "503984692791194266",
       "spread_hybrid_disc": 0.1193666757256244
+    },
+    "listing:500606993073612571": {
+      "sent_at_utc": "2026-05-24T22:15:50.767550+00:00",
+      "item": "MP7 | Forest DDPAT (Factory New)",
+      "listing_id": "500606993073612571",
+      "spread_hybrid_disc": 0.0092630001344822
+    },
+    "listing:508488292418690262": {
+      "sent_at_utc": "2026-05-24T22:15:52.733017+00:00",
+      "item": "MP7 | Forest DDPAT (Factory New)",
+      "listing_id": "508488292418690262",
+      "spread_hybrid_disc": 0.056627978483101
+    },
+    "listing:493851593633444306": {
+      "sent_at_utc": "2026-05-24T22:15:57.618333+00:00",
+      "item": "MP7 | Forest DDPAT (Factory New)",
+      "listing_id": "493851593633444306",
+      "spread_hybrid_disc": 0.0653997411266466
+    },
+    "listing:503984692789514578": {
+      "sent_at_utc": "2026-05-24T22:15:59.482713+00:00",
+      "item": "MP7 | Forest DDPAT (Factory New)",
+      "listing_id": "503984692789514578",
+      "spread_hybrid_disc": 0.1087075898311997
+    },
+    "listing:509614192328002585": {
+      "sent_at_utc": "2026-05-24T23:52:26.714460+00:00",
+      "item": "Tec-9 | Bamboozle (Factory New)",
+      "listing_id": "509614192328002585",
+      "spread_hybrid_disc": 0.0879287876483889
     }
   },
-  "last_alert_sent_at_utc": "2026-05-24T19:37:14.699128+00:00"
+  "last_alert_sent_at_utc": "2026-05-24T23:52:26.714516+00:00"
 }
