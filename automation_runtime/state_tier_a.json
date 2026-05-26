@@ -3,14 +3,14 @@
   "items_signature": "697eefbb04a7c97e13191858dffac602e62fdc2519048daa77c9cb5d12894857",
   "items_count": 122,
   "batch_pointer": 20,
-  "last_run_at_utc": "2026-05-26T08:51:24.898610+00:00",
-  "last_status": "ok",
+  "last_run_at_utc": "2026-05-26T08:57:57.916317+00:00",
+  "last_status": "running",
   "last_batch_items": [
-    "Desert Eagle | Firebreathing (Minimal Wear)",
-    "AWP | Mortis (Field-Tested)",
-    "FAMAS | Rapid Eye Movement (Field-Tested)",
-    "Dual Berettas | Melondrama (Field-Tested)",
-    "MP7 | Abyssal Apparition (Field-Tested)"
+    "AK-47 | Slate (Minimal Wear)",
+    "AK-47 | Safety Net (Field-Tested)",
+    "P2000 | Wicked Sick (Field-Tested)",
+    "UMP-45 | K.O. Factory (Field-Tested)",
+    "AK-47 | Slate (Battle-Scarred)"
   ],
   "last_error": null,
   "last_finished_at_utc": "2026-05-26T08:53:53.563876+00:00",
@@ -27,7 +27,7 @@
     "queued_rows": 0,
     "sender_pid": 1434805
   },
-  "last_batch_start_pointer": 15,
+  "last_batch_start_pointer": 20,
   "listing_fetch_state": {
     "version": 1,
     "items": {
