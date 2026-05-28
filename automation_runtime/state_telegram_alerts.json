@@ -19,7 +19,7 @@
   "last_alert_stats": {},
   "sent_alerts": {
     "listing:511865992149502612": {
-      "sent_at_utc": "2026-05-28T07:21:51.796508+00:00",
+      "sent_at_utc": "2026-05-28T19:38:50.128912+00:00",
       "item": "MP7 | Abyssal Apparition (Battle-Scarred)",
       "listing_id": "511865992149502612",
       "spread_hybrid_disc": 0.0732483844498051
@@ -115,5 +115,5 @@
       "spread_hybrid_disc": 0.0067762415659505
     }
   },
-  "last_alert_sent_at_utc": "2026-05-28T13:18:49.537414+00:00"
+  "last_alert_sent_at_utc": "2026-05-28T19:38:50.129078+00:00"
 }
