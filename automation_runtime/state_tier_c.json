@@ -2,32 +2,32 @@
   "version": 1,
   "items_signature": "213a5ee0a282bba68cdfb1ee2022d0ab15ed8503acde1fda5d9dd361ca0c72e9",
   "items_count": 121,
-  "batch_pointer": 92,
-  "last_run_at_utc": "2026-05-28T17:46:03.507778+00:00",
+  "batch_pointer": 97,
+  "last_run_at_utc": "2026-05-28T19:33:55.018622+00:00",
   "last_status": "ok",
   "last_batch_items": [
-    "StatTrak™ MP7 | Just Smile (Factory New)",
-    "StatTrak™ M4A1-S | Decimator (Field-Tested)",
-    "StatTrak™ SSG 08 | Rapid Transit (Minimal Wear)",
-    "★ Navaja Knife | Doppler (Factory New)",
-    "SG 553 | Colony IV (Field-Tested)"
+    "★ Moto Gloves | POW! (Field-Tested)",
+    "AWP | Ice Coaled (Factory New)",
+    "StatTrak™ AK-47 | Asiimov (Field-Tested)",
+    "StatTrak™ Desert Eagle | Conspiracy (Minimal Wear)",
+    "★ Falchion Knife | Black Laminate (Battle-Scarred)"
   ],
   "last_error": null,
-  "last_finished_at_utc": "2026-05-28T17:48:04.158556+00:00",
-  "last_successful_monitoring_at_utc": "2026-05-28T17:48:04.158556+00:00",
+  "last_finished_at_utc": "2026-05-28T19:34:59.235239+00:00",
+  "last_successful_monitoring_at_utc": "2026-05-28T19:34:59.235239+00:00",
   "last_failed_monitoring_at_utc": "2026-05-28T17:04:17.490841+00:00",
   "consecutive_errors": 0,
   "last_listing_errors": [],
   "last_listing_error_count": 0,
-  "last_listing_rows": 246,
-  "last_enriched_rows": 246,
+  "last_listing_rows": 236,
+  "last_enriched_rows": 236,
   "last_opportunities_rows": 0,
   "last_alert_stats": {
     "mode": "background",
     "queued_rows": 0,
-    "sender_pid": 1582519
+    "sender_pid": 1587726
   },
-  "last_batch_start_pointer": 87,
+  "last_batch_start_pointer": 92,
   "listing_fetch_state": {
     "version": 1,
     "items": {
@@ -2884,13 +2884,14 @@
       },
       "★ Moto Gloves | POW! (Field-Tested)": {
         "page0_listing_ids": [
+          "494978127742805046",
+          "501733527180123374",
           "525376791008611782",
           "506237126803594145",
           "519747925682952417",
           "677372747559959202",
           "498355827459988177",
           "526502690932551815",
-          "511866626343040758",
           "523125625403382748",
           "497229927552568157",
           "517494857939663642",
@@ -2898,28 +2899,29 @@
           "509613178093721391",
           "499480078684702477",
           "519746277049539668",
-          "519745391330638040",
           "591801811361310836",
           "528754490748094313",
           "499481727365045950",
-          "500605092741250595",
-          "510738192163812274"
+          "510738192163812274",
+          "500605092741250595"
         ],
-        "total_count": 91,
-        "first_ask": 128.86,
-        "last_page0_at_utc": "2026-05-28T10:38:43.143318+00:00",
+        "total_count": 90,
+        "first_ask": 126.5,
+        "last_page0_at_utc": "2026-05-28T19:33:55.032631+00:00",
         "day_key": "2026-05-28",
-        "last_deep_at_utc": "2026-05-28T10:38:43.143318+00:00",
-        "last_deep_reason": "sentinel_changed:page0_ids_changed",
+        "last_deep_at_utc": "2026-05-28T19:33:55.032631+00:00",
+        "last_deep_reason": "sentinel_changed:page0_ids_changed+total_count_changed",
         "deep_pending": false
       },
       "AWP | Ice Coaled (Factory New)": {
         "page0_listing_ids": [
-          "498355827462759925",
+          "516370225970165510",
           "517496125876968816",
-          "491600428012765651",
-          "507363026709599931",
-          "518622025776749387",
+          "494978127741295062",
+          "511866626344348170",
+          "511866626344351302",
+          "511866626344350366",
+          "511866626344349250",
           "512991892024439693",
           "502858159152231767",
           "677372747545588830",
@@ -2932,22 +2934,18 @@
           "650349216061292565",
           "529878490367062836",
           "493850324805001036",
-          "524250891102014282",
-          "648096075387644366",
-          "511864091773354293"
+          "524250891102014282"
         ],
-        "total_count": 121,
-        "first_ask": 36.48,
-        "last_page0_at_utc": "2026-05-28T10:55:15.060020+00:00",
+        "total_count": 120,
+        "first_ask": 34.5,
+        "last_page0_at_utc": "2026-05-28T19:34:06.882583+00:00",
         "day_key": "2026-05-28",
-        "last_deep_at_utc": "2026-05-28T10:55:15.060020+00:00",
+        "last_deep_at_utc": "2026-05-28T19:34:06.882583+00:00",
         "last_deep_reason": "sentinel_changed:page0_ids_changed+total_count_changed",
         "deep_pending": false
       },
       "StatTrak™ AK-47 | Asiimov (Field-Tested)": {
         "page0_listing_ids": [
-          "506237126806555865",
-          "492726327922421307",
           "510740092231228688",
           "499480459449626440",
           "525376791015305262",
@@ -2965,30 +2963,32 @@
           "506236492606772793",
           "508486392198573986",
           "505109489449052876",
-          "502858159169343143"
+          "502858159169343143",
+          "507362392503566739",
+          "501732259242336216"
         ],
-        "total_count": 47,
-        "first_ask": 75.53,
-        "last_page0_at_utc": "2026-05-28T10:55:31.436267+00:00",
+        "total_count": 45,
+        "first_ask": 79.9,
+        "last_page0_at_utc": "2026-05-28T19:34:22.396950+00:00",
         "day_key": "2026-05-28",
-        "last_deep_at_utc": "2026-05-28T10:55:31.436267+00:00",
+        "last_deep_at_utc": "2026-05-28T19:34:22.396950+00:00",
         "last_deep_reason": "sentinel_changed:page0_ids_changed+total_count_changed",
         "deep_pending": false
       },
       "StatTrak™ Desert Eagle | Conspiracy (Minimal Wear)": {
         "page0_listing_ids": [
           "523125625409794636",
+          "509614826531004804",
           "512992526248296997",
           "517496125872396744",
           "514117791949303011",
           "509614192329093601",
-          "511866626337842574",
           "498355193262240769",
           "519747291481186638",
           "499481093149668837",
           "509614192308755365",
-          "512991892053088529",
           "490474528107056596",
+          "512991892053088529",
           "519747291471449358",
           "651473775092954250",
           "500606359338979985",
@@ -3000,17 +3000,19 @@
         ],
         "total_count": 39,
         "first_ask": 24.15,
-        "last_page0_at_utc": "2026-05-28T10:55:44.484034+00:00",
+        "last_page0_at_utc": "2026-05-28T19:34:36.254661+00:00",
         "day_key": "2026-05-28",
-        "last_deep_at_utc": "2026-05-28T10:55:44.484034+00:00",
+        "last_deep_at_utc": "2026-05-28T19:34:36.254661+00:00",
         "last_deep_reason": "sentinel_changed:page0_ids_changed",
         "deep_pending": false
       },
       "★ Falchion Knife | Black Laminate (Battle-Scarred)": {
         "page0_listing_ids": [
+          "499481727369204706",
+          "525377425226327401",
+          "490474528113920536",
           "528755124945364640",
-          "508488926622215049",
-          "510740726433662733",
+          "517496125877998344",
           "493850959911151786",
           "507363026714606991",
           "512992526248798909",
@@ -3018,7 +3020,6 @@
           "525376791026120958",
           "501732259250596164",
           "519747291494890974",
-          "490472879520186135",
           "508487658679422189",
           "634586617398563979",
           "652601015910688428",
@@ -3026,15 +3027,14 @@
           "515243691860206789",
           "490472879528000223",
           "788834295044908532",
-          "654851474806609918",
-          "639090217018274685"
+          "654851474806609918"
         ],
         "total_count": 33,
-        "first_ask": 80.65,
-        "last_page0_at_utc": "2026-05-28T10:55:56.177125+00:00",
+        "first_ask": 79.58,
+        "last_page0_at_utc": "2026-05-28T19:34:49.555911+00:00",
         "day_key": "2026-05-28",
-        "last_deep_at_utc": "2026-05-28T10:55:56.177125+00:00",
-        "last_deep_reason": "sentinel_changed:page0_ids_changed+total_count_changed",
+        "last_deep_at_utc": "2026-05-28T19:34:49.555911+00:00",
+        "last_deep_reason": "sentinel_changed:page0_ids_changed",
         "deep_pending": false
       },
       "StatTrak™ Desert Eagle | Printstream (Field-Tested)": {
@@ -3778,7 +3778,7 @@
         "deep_pending": false
       }
     },
-    "last_batch_started_at_utc": "2026-05-28T17:46:03.516890+00:00",
+    "last_batch_started_at_utc": "2026-05-28T19:33:55.032306+00:00",
     "last_batch_stats": {
       "enabled": true,
       "tier": "C",
@@ -3789,11 +3789,11 @@
       "page0_changed_cooldown": 0,
       "tail_cutoffs": 0,
       "deep_by_reason": {
-        "sentinel_changed:page0_ids_changed+total_count_changed": 4,
-        "sentinel_changed:page0_ids_changed": 1
+        "sentinel_changed:page0_ids_changed+total_count_changed": 3,
+        "sentinel_changed:page0_ids_changed": 2
       }
     },
-    "last_batch_finished_at_utc": "2026-05-28T17:48:01.788252+00:00"
+    "last_batch_finished_at_utc": "2026-05-28T19:34:56.258333+00:00"
   },
   "last_fetch_strategy_stats": {
     "enabled": true,
@@ -3805,8 +3805,8 @@
     "page0_changed_cooldown": 0,
     "tail_cutoffs": 0,
     "deep_by_reason": {
-      "sentinel_changed:page0_ids_changed+total_count_changed": 4,
-      "sentinel_changed:page0_ids_changed": 1
+      "sentinel_changed:page0_ids_changed+total_count_changed": 3,
+      "sentinel_changed:page0_ids_changed": 2
     }
   }
 }
