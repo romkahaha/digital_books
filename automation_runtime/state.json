@@ -13,35 +13,33 @@
     "B",
     "C"
   ],
-  "queue_pointer": 1,
-  "last_tier": "A",
-  "last_tier_queue_index": 0,
-  "last_batch_start_pointer": 110,
+  "queue_pointer": 6,
+  "last_tier": "B",
+  "last_tier_queue_index": 5,
+  "last_batch_start_pointer": 28,
   "last_batch_items": [
-    "Glock-18 | Moonrise (Factory New)",
-    "StatTrak™ AK-47 | Elite Build (Field-Tested)",
-    "M4A1-S | Black Lotus (Field-Tested)",
-    "AK-47 | Ice Coaled (Field-Tested)",
-    "AK-47 | Slate (Field-Tested)"
+    "AWP | Crakow! (Battle-Scarred)",
+    "AWP | Printstream (Battle-Scarred)",
+    "Galil AR | Chromatic Aberration (Minimal Wear)",
+    "AWP | PAW (Factory New)",
+    "P250 | Asiimov (Battle-Scarred)"
   ],
   "last_error": null,
-  "last_run_at_utc": "2026-05-29T20:18:25.718377+00:00",
-  "last_finished_at_utc": "2026-05-29T20:20:46.287657+00:00",
-  "last_successful_monitoring_at_utc": "2026-05-29T20:20:46.287657+00:00",
+  "last_run_at_utc": "2026-05-29T20:19:02.044025+00:00",
+  "last_finished_at_utc": "2026-05-29T20:21:05.565997+00:00",
+  "last_successful_monitoring_at_utc": "2026-05-29T20:21:05.565997+00:00",
   "last_failed_monitoring_at_utc": null,
   "last_status": "ok",
   "consecutive_errors": 0,
   "last_listing_errors": [],
   "last_listing_error_count": 0,
-  "last_listing_rows": 500,
-  "last_enriched_rows": 500,
+  "last_listing_rows": 400,
+  "last_enriched_rows": 400,
   "last_opportunities_rows": 0,
   "last_alert_stats": {
-    "loaded": 0,
-    "filtered": 0,
-    "considered": 0,
-    "sent": 0,
-    "skipped": 0
+    "mode": "background",
+    "queued_rows": 0,
+    "sender_pid": 1653724
   },
   "tiers": {
     "A": {
