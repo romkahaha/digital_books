@@ -13,54 +13,35 @@
     "B",
     "C"
   ],
-  "queue_pointer": 3,
+  "queue_pointer": 6,
   "last_tier": "B",
-  "last_tier_queue_index": 2,
-  "last_batch_start_pointer": 49,
+  "last_tier_queue_index": 5,
+  "last_batch_start_pointer": 94,
   "last_batch_items": [
-    "StatTrak™ USP-S | Ticket to Hell (Factory New)",
-    "MP7 | Fade (Field-Tested)",
-    "Desert Eagle | Mulberry (Factory New)",
-    "AWP | Mortis (Factory New)",
-    "P250 | Vino Primo (Minimal Wear)"
+    "AWP | Hyper Beast (Field-Tested)",
+    "Glock-18 | Gold Toof (Field-Tested)",
+    "XM1014 | Solitude (Minimal Wear)",
+    "★ Specialist Gloves | Buckshot (Field-Tested)",
+    "StatTrak™ FAMAS | Rapid Eye Movement (Minimal Wear)"
   ],
   "last_error": null,
-  "last_run_at_utc": "2026-05-29T13:55:39.256951+00:00",
-  "last_finished_at_utc": "2026-05-29T13:57:44.012795+00:00",
-  "last_successful_monitoring_at_utc": "2026-05-29T13:57:44.012795+00:00",
-  "last_failed_monitoring_at_utc": null,
+  "last_run_at_utc": "2026-05-29T15:26:46.088153+00:00",
+  "last_finished_at_utc": "2026-05-29T15:28:25.645971+00:00",
+  "last_successful_monitoring_at_utc": "2026-05-29T15:28:25.645971+00:00",
+  "last_failed_monitoring_at_utc": "2026-05-29T15:09:06.806653+00:00",
   "last_status": "ok",
   "consecutive_errors": 0,
-  "last_listing_errors": [
-    {
-      "market_hash_name": "MP7 | Fade (Field-Tested)",
-      "meta": {
-        "success": false,
-        "note": "exception",
-        "error": "Steam rate limit (429) for \"2/5 MP7 | Fade (Field-Tested)\": Steam /render/ returned non-JSON and Market Search action fallback failed: 429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/MP7%20%7C%20Fade%20%28Field-Tested%29",
-        "pages_fetched": 0,
-        "listings_target_cap": 80
-      }
-    },
-    {
-      "market_hash_name": "Desert Eagle | Mulberry (Factory New)",
-      "meta": {
-        "success": false,
-        "note": "exception",
-        "error": "Steam rate limit (429) for \"3/5 Desert Eagle | Mulberry (Factory New)\": 429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/Desert%20Eagle%20%7C%20Mulberry%20%28Factory%20New%29",
-        "pages_fetched": 0,
-        "listings_target_cap": 80
-      }
-    }
-  ],
-  "last_listing_error_count": 2,
-  "last_listing_rows": 240,
-  "last_enriched_rows": 240,
+  "last_listing_errors": [],
+  "last_listing_error_count": 0,
+  "last_listing_rows": 380,
+  "last_enriched_rows": 380,
   "last_opportunities_rows": 0,
   "last_alert_stats": {
-    "mode": "background",
-    "queued_rows": 0,
-    "sender_pid": 1643620
+    "loaded": 0,
+    "filtered": 0,
+    "considered": 0,
+    "sent": 0,
+    "skipped": 0
   },
   "tiers": {
     "A": {
