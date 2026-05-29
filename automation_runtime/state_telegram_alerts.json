@@ -35,7 +35,13 @@
       "item": "SG 553 | Danger Close (Factory New)",
       "listing_id": "505109958959735453",
       "spread_hybrid_disc": 0.0994481374777986
+    },
+    "listing:510740726441951229": {
+      "sent_at_utc": "2026-05-29T20:41:40.005588+00:00",
+      "item": "SG 553 | Danger Close (Factory New)",
+      "listing_id": "510740726441951229",
+      "spread_hybrid_disc": 0.072597866277567
     }
   },
-  "last_alert_sent_at_utc": "2026-05-29T12:20:02.788941+00:00"
+  "last_alert_sent_at_utc": "2026-05-29T20:41:40.005800+00:00"
 }
