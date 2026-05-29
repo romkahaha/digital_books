@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "items_signature": "c6400fa844f510e29b31932533047ce9ef8ef2015e1e2bce42791a69e33c6276",
-  "items_count": 346,
+  "items_signature": "e2c8416a4991e4200a46dbbe7ab382e94a4500e5717ae244d494e98e2baa9662",
+  "items_count": 373,
   "batch_pointer": 0,
   "last_run_at_utc": null,
   "last_status": null,
@@ -18,102 +18,24 @@
   "last_opportunities_rows": 0,
   "last_alert_stats": {},
   "sent_alerts": {
-    "listing:511865992149502612": {
-      "sent_at_utc": "2026-05-28T19:38:50.128912+00:00",
-      "item": "MP7 | Abyssal Apparition (Battle-Scarred)",
-      "listing_id": "511865992149502612",
-      "spread_hybrid_disc": 0.0732483844498051
+    "listing:492726327930906939": {
+      "sent_at_utc": "2026-05-29T10:50:33.778168+00:00",
+      "item": "P90 | Shapewood (Field-Tested)",
+      "listing_id": "492726327930906939",
+      "spread_hybrid_disc": 0.0927421774833202
     },
-    "listing:524251525311701759": {
-      "sent_at_utc": "2026-05-27T11:06:32.612553+00:00",
-      "item": "AK-47 | Midnight Laminate (Minimal Wear)",
-      "listing_id": "524251525311701759",
-      "spread_hybrid_disc": 0.1151162059729298
+    "listing:492726327930731763": {
+      "sent_at_utc": "2026-05-29T11:26:44.767400+00:00",
+      "item": "StatTrak™ P250 | Visions (Minimal Wear)",
+      "listing_id": "492726327930731763",
+      "spread_hybrid_disc": 0.0969469305033497
     },
-    "listing:499481727363751210": {
-      "sent_at_utc": "2026-05-27T14:13:10.980382+00:00",
-      "item": "AK-47 | Midnight Laminate (Minimal Wear)",
-      "listing_id": "499481727363751210",
-      "spread_hybrid_disc": 0.0802271861965153
-    },
-    "listing:519747925684544049": {
-      "sent_at_utc": "2026-05-27T14:13:51.666781+00:00",
-      "item": "AK-47 | Midnight Laminate (Minimal Wear)",
-      "listing_id": "519747925684544049",
-      "spread_hybrid_disc": 0.0973262588333069
-    },
-    "listing:494978127736948566": {
-      "sent_at_utc": "2026-05-27T14:14:32.635791+00:00",
-      "item": "AK-47 | Midnight Laminate (Minimal Wear)",
-      "listing_id": "494978127736948566",
-      "spread_hybrid_disc": 0.098461452357497
-    },
-    "listing:524251525313919323": {
-      "sent_at_utc": "2026-05-27T19:17:00.491831+00:00",
-      "item": "StatTrak™ AWP | Duality (Minimal Wear)",
-      "listing_id": "524251525313919323",
-      "spread_hybrid_disc": 0.0872311769766415
-    },
-    "listing:512992526247543013": {
-      "sent_at_utc": "2026-05-27T19:19:57.705639+00:00",
-      "item": "StatTrak™ AWP | Duality (Field-Tested)",
-      "listing_id": "512992526247543013",
-      "spread_hybrid_disc": 0.0841189032799997
-    },
-    "listing:511866626343025566": {
-      "sent_at_utc": "2026-05-28T06:31:11.381899+00:00",
-      "item": "AWP | Atheris (Field-Tested)",
-      "listing_id": "511866626343025566",
-      "spread_hybrid_disc": 0.0981002345665815
-    },
-    "listing:514118426154930666": {
-      "sent_at_utc": "2026-05-28T07:44:32.277537+00:00",
-      "item": "StatTrak™ AUG | Stymphalian (Field-Tested)",
-      "listing_id": "514118426154930666",
-      "spread_hybrid_disc": 0.0778628614774231
-    },
-    "listing:510740726434804977": {
-      "sent_at_utc": "2026-05-28T08:13:34.809965+00:00",
-      "item": "AK-47 | Midnight Laminate (Minimal Wear)",
-      "listing_id": "510740726434804977",
-      "spread_hybrid_disc": 0.0975168318027953
-    },
-    "listing:521999725504554092": {
-      "sent_at_utc": "2026-05-28T09:43:03.727557+00:00",
-      "item": "AK-47 | Midnight Laminate (Minimal Wear)",
-      "listing_id": "521999725504554092",
-      "spread_hybrid_disc": 0.0844473389627048
-    },
-    "listing:520873825594633728": {
-      "sent_at_utc": "2026-05-28T09:43:44.693413+00:00",
-      "item": "AK-47 | Midnight Laminate (Minimal Wear)",
-      "listing_id": "520873825594633728",
-      "spread_hybrid_disc": 0.1155926272731334
-    },
-    "listing:507363026715505407": {
-      "sent_at_utc": "2026-05-28T10:11:27.037113+00:00",
-      "item": "Glock-18 | Glockingbird (Minimal Wear)",
-      "listing_id": "507363026715505407",
-      "spread_hybrid_disc": 0.0786330700716219
-    },
-    "listing:515244326064476476": {
-      "sent_at_utc": "2026-05-28T10:47:25.405385+00:00",
-      "item": "Glock-18 | Grinder (Minimal Wear)",
-      "listing_id": "515244326064476476",
-      "spread_hybrid_disc": 0.0890404037756767
-    },
-    "listing:506237126807165705": {
-      "sent_at_utc": "2026-05-28T12:23:24.914331+00:00",
-      "item": "StatTrak™ M4A4 | Tooth Fairy (Field-Tested)",
-      "listing_id": "506237126807165705",
-      "spread_hybrid_disc": 0.1085934670538446
-    },
-    "listing:523125625410197980": {
-      "sent_at_utc": "2026-05-28T13:18:49.537223+00:00",
-      "item": "M4A4 | Desolate Space (Battle-Scarred)",
-      "listing_id": "523125625410197980",
-      "spread_hybrid_disc": 0.0067762415659505
+    "listing:505109958959735453": {
+      "sent_at_utc": "2026-05-29T12:20:02.788789+00:00",
+      "item": "SG 553 | Danger Close (Factory New)",
+      "listing_id": "505109958959735453",
+      "spread_hybrid_disc": 0.0994481374777986
     }
   },
-  "last_alert_sent_at_utc": "2026-05-28T19:38:50.129078+00:00"
+  "last_alert_sent_at_utc": "2026-05-29T12:20:02.788941+00:00"
 }
