@@ -13,35 +13,33 @@
     "B",
     "C"
   ],
-  "queue_pointer": 5,
-  "last_tier": "A",
-  "last_tier_queue_index": 4,
-  "last_batch_start_pointer": 107,
+  "queue_pointer": 3,
+  "last_tier": "B",
+  "last_tier_queue_index": 2,
+  "last_batch_start_pointer": 23,
   "last_batch_items": [
-    "Glock-18 | Mirror Mosaic (Field-Tested)",
-    "AK-47 | Nightwish (Battle-Scarred)",
-    "Desert Eagle | Printstream (Minimal Wear)",
-    "Glock-18 | Moonrise (Factory New)",
-    "StatTrak™ AK-47 | Elite Build (Field-Tested)"
+    "M4A4 | Neo-Noir (Field-Tested)",
+    "StatTrak™ P2000 | Wicked Sick (Field-Tested)",
+    "★ Driver Gloves | Racing Green (Field-Tested)",
+    "FAMAS | Bad Trip (Battle-Scarred)",
+    "M4A4 | Temukau (Minimal Wear)"
   ],
   "last_error": null,
-  "last_run_at_utc": "2026-05-29T18:36:59.311466+00:00",
-  "last_finished_at_utc": "2026-05-29T18:39:40.581411+00:00",
-  "last_successful_monitoring_at_utc": "2026-05-29T18:39:40.581411+00:00",
-  "last_failed_monitoring_at_utc": "2026-05-29T17:44:22.752664+00:00",
+  "last_run_at_utc": "2026-05-29T18:39:04.718639+00:00",
+  "last_finished_at_utc": "2026-05-29T18:40:58.731806+00:00",
+  "last_successful_monitoring_at_utc": "2026-05-29T18:40:58.731806+00:00",
+  "last_failed_monitoring_at_utc": null,
   "last_status": "ok",
   "consecutive_errors": 0,
   "last_listing_errors": [],
   "last_listing_error_count": 0,
-  "last_listing_rows": 419,
-  "last_enriched_rows": 419,
+  "last_listing_rows": 400,
+  "last_enriched_rows": 400,
   "last_opportunities_rows": 0,
   "last_alert_stats": {
-    "loaded": 0,
-    "filtered": 0,
-    "considered": 0,
-    "sent": 0,
-    "skipped": 0
+    "mode": "background",
+    "queued_rows": 0,
+    "sender_pid": 1651267
   },
   "tiers": {
     "A": {
