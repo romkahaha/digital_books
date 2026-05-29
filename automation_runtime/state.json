@@ -13,35 +13,33 @@
     "B",
     "C"
   ],
-  "queue_pointer": 6,
-  "last_tier": "B",
-  "last_tier_queue_index": 5,
-  "last_batch_start_pointer": 94,
+  "queue_pointer": 4,
+  "last_tier": "A",
+  "last_tier_queue_index": 3,
+  "last_batch_start_pointer": 34,
   "last_batch_items": [
-    "AWP | Hyper Beast (Field-Tested)",
-    "Glock-18 | Gold Toof (Field-Tested)",
-    "XM1014 | Solitude (Minimal Wear)",
-    "★ Specialist Gloves | Buckshot (Field-Tested)",
-    "StatTrak™ FAMAS | Rapid Eye Movement (Minimal Wear)"
+    "AWP | Duality (Minimal Wear)",
+    "AWP | Atheris (Well-Worn)",
+    "AK-47 | Inheritance (Field-Tested)",
+    "Glock-18 | Shinobu (Battle-Scarred)",
+    "USP-S | Royal Guard (Minimal Wear)"
   ],
   "last_error": null,
-  "last_run_at_utc": "2026-05-29T15:26:46.088153+00:00",
-  "last_finished_at_utc": "2026-05-29T15:28:25.645971+00:00",
-  "last_successful_monitoring_at_utc": "2026-05-29T15:28:25.645971+00:00",
-  "last_failed_monitoring_at_utc": "2026-05-29T15:09:06.806653+00:00",
+  "last_run_at_utc": "2026-05-29T15:27:55.981563+00:00",
+  "last_finished_at_utc": "2026-05-29T15:30:46.778642+00:00",
+  "last_successful_monitoring_at_utc": "2026-05-29T15:30:46.778642+00:00",
+  "last_failed_monitoring_at_utc": null,
   "last_status": "ok",
   "consecutive_errors": 0,
   "last_listing_errors": [],
   "last_listing_error_count": 0,
-  "last_listing_rows": 380,
-  "last_enriched_rows": 380,
+  "last_listing_rows": 418,
+  "last_enriched_rows": 418,
   "last_opportunities_rows": 0,
   "last_alert_stats": {
-    "loaded": 0,
-    "filtered": 0,
-    "considered": 0,
-    "sent": 0,
-    "skipped": 0
+    "mode": "background",
+    "queued_rows": 0,
+    "sender_pid": 1645805
   },
   "tiers": {
     "A": {
