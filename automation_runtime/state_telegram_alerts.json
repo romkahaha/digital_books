@@ -83,7 +83,19 @@
       "item": "AWP | Crakow! (Battle-Scarred)",
       "listing_id": "529881024862385542",
       "spread_hybrid_disc": -0.0510281232667368
+    },
+    "listing:525377425234415017": {
+      "sent_at_utc": "2026-05-30T14:03:25.802975+00:00",
+      "item": "StatTrak™ USP-S | Jawbreaker (Battle-Scarred)",
+      "listing_id": "525377425234415017",
+      "spread_hybrid_disc": 0.0272997124631898
+    },
+    "listing:501733527189550370": {
+      "sent_at_utc": "2026-05-30T15:56:32.813199+00:00",
+      "item": "Five-SeveN | Monkey Business (Field-Tested)",
+      "listing_id": "501733527189550370",
+      "spread_hybrid_disc": 0.0695715026446662
     }
   },
-  "last_alert_sent_at_utc": "2026-05-30T11:23:45.709396+00:00"
+  "last_alert_sent_at_utc": "2026-05-30T15:56:32.813340+00:00"
 }
