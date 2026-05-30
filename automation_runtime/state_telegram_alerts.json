@@ -95,7 +95,31 @@
       "item": "Five-SeveN | Monkey Business (Field-Tested)",
       "listing_id": "501733527189550370",
       "spread_hybrid_disc": 0.0695715026446662
+    },
+    "listing:518622025793841503": {
+      "sent_at_utc": "2026-05-30T18:29:59.447330+00:00",
+      "item": "SG 553 | Danger Close (Factory New)",
+      "listing_id": "518622025793841503",
+      "spread_hybrid_disc": 0.0098654148064759
+    },
+    "listing:525377425233880057": {
+      "sent_at_utc": "2026-05-30T18:30:40.466640+00:00",
+      "item": "SG 553 | Danger Close (Factory New)",
+      "listing_id": "525377425233880057",
+      "spread_hybrid_disc": 0.049357947081796
+    },
+    "listing:525377425233879337": {
+      "sent_at_utc": "2026-05-30T18:30:41.423351+00:00",
+      "item": "SG 553 | Danger Close (Factory New)",
+      "listing_id": "525377425233879337",
+      "spread_hybrid_disc": 0.0494475345640923
+    },
+    "listing:492726327937775055": {
+      "sent_at_utc": "2026-05-30T18:31:22.428778+00:00",
+      "item": "SG 553 | Danger Close (Factory New)",
+      "listing_id": "492726327937775055",
+      "spread_hybrid_disc": 0.098518671645548
     }
   },
-  "last_alert_sent_at_utc": "2026-05-30T15:56:32.813340+00:00"
+  "last_alert_sent_at_utc": "2026-05-30T18:31:22.428934+00:00"
 }
