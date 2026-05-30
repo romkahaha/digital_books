@@ -16,32 +16,71 @@
   "queue_pointer": 2,
   "last_tier": "A",
   "last_tier_queue_index": 1,
-  "last_batch_start_pointer": 72,
+  "last_batch_start_pointer": 24,
   "last_batch_items": [
-    "AWP | Mortis (Minimal Wear)",
-    "AWP | Printstream (Field-Tested)",
-    "AK-47 | Crane Flight (Minimal Wear)",
-    "Dual Berettas | Melondrama (Battle-Scarred)",
-    "Glock-18 | Vogue (Minimal Wear)"
+    "AK-47 | Ice Coaled (Minimal Wear)",
+    "USP-S | Cortex (Field-Tested)",
+    "Desert Eagle | Mulberry (Field-Tested)",
+    "M4A1-S | Black Lotus (Minimal Wear)",
+    "M4A1-S | Solitude (Minimal Wear)"
   ],
   "last_error": null,
-  "last_run_at_utc": "2026-05-30T02:00:12.229125+00:00",
-  "last_finished_at_utc": "2026-05-30T02:02:37.787575+00:00",
-  "last_successful_monitoring_at_utc": "2026-05-30T02:02:37.787575+00:00",
+  "last_run_at_utc": "2026-05-30T11:47:32.785375+00:00",
+  "last_finished_at_utc": "2026-05-30T11:48:41.810576+00:00",
+  "last_successful_monitoring_at_utc": "2026-05-30T11:48:41.810576+00:00",
   "last_failed_monitoring_at_utc": null,
   "last_status": "ok",
   "consecutive_errors": 0,
-  "last_listing_errors": [],
-  "last_listing_error_count": 0,
-  "last_listing_rows": 500,
-  "last_enriched_rows": 500,
+  "last_listing_errors": [
+    {
+      "market_hash_name": "USP-S | Cortex (Field-Tested)",
+      "meta": {
+        "success": false,
+        "note": "exception",
+        "error": "Steam rate limit (429) for \"2/5 USP-S | Cortex (Field-Tested)\": 429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/USP-S%20%7C%20Cortex%20%28Field-Tested%29",
+        "pages_fetched": 0,
+        "listings_target_cap": 100
+      }
+    },
+    {
+      "market_hash_name": "Desert Eagle | Mulberry (Field-Tested)",
+      "meta": {
+        "success": false,
+        "note": "exception",
+        "error": "Steam rate limit (429) for \"3/5 Desert Eagle | Mulberry (Field-Tested)\": 429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/Desert%20Eagle%20%7C%20Mulberry%20%28Field-Tested%29",
+        "pages_fetched": 0,
+        "listings_target_cap": 100
+      }
+    },
+    {
+      "market_hash_name": "M4A1-S | Black Lotus (Minimal Wear)",
+      "meta": {
+        "success": false,
+        "note": "exception",
+        "error": "Steam rate limit (429) for \"4/5 M4A1-S | Black Lotus (Minimal Wear)\": 429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/M4A1-S%20%7C%20Black%20Lotus%20%28Minimal%20Wear%29",
+        "pages_fetched": 0,
+        "listings_target_cap": 100
+      }
+    },
+    {
+      "market_hash_name": "M4A1-S | Solitude (Minimal Wear)",
+      "meta": {
+        "success": false,
+        "note": "exception",
+        "error": "Steam rate limit (429) for \"5/5 M4A1-S | Solitude (Minimal Wear)\": 429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/M4A1-S%20%7C%20Solitude%20%28Minimal%20Wear%29",
+        "pages_fetched": 0,
+        "listings_target_cap": 100
+      }
+    }
+  ],
+  "last_listing_error_count": 4,
+  "last_listing_rows": 100,
+  "last_enriched_rows": 100,
   "last_opportunities_rows": 0,
   "last_alert_stats": {
-    "loaded": 0,
-    "filtered": 0,
-    "considered": 0,
-    "sent": 0,
-    "skipped": 0
+    "mode": "background",
+    "queued_rows": 0,
+    "sender_pid": 1679491
   },
   "tiers": {
     "A": {

@@ -31,7 +31,7 @@
       "spread_hybrid_disc": 0.0969469305033497
     },
     "listing:505109958959735453": {
-      "sent_at_utc": "2026-05-29T12:20:02.788789+00:00",
+      "sent_at_utc": "2026-05-30T07:52:42.923496+00:00",
       "item": "SG 553 | Danger Close (Factory New)",
       "listing_id": "505109958959735453",
       "spread_hybrid_disc": 0.0994481374777986
@@ -41,7 +41,49 @@
       "item": "SG 553 | Danger Close (Factory New)",
       "listing_id": "510740726441951229",
       "spread_hybrid_disc": 0.072597866277567
+    },
+    "listing:502859427096816634": {
+      "sent_at_utc": "2026-05-30T06:03:04.072731+00:00",
+      "item": "Tec-9 | Remote Control (Minimal Wear)",
+      "listing_id": "502859427096816634",
+      "spread_hybrid_disc": 0.0776671810974061
+    },
+    "listing:505111226909708071": {
+      "sent_at_utc": "2026-05-30T07:37:46.475721+00:00",
+      "item": "M4A1-S | Black Lotus (Battle-Scarred)",
+      "listing_id": "505111226909708071",
+      "spread_hybrid_disc": 0.0770474936529929
+    },
+    "listing:515244326072877400": {
+      "sent_at_utc": "2026-05-30T07:52:21.911711+00:00",
+      "item": "SG 553 | Danger Close (Factory New)",
+      "listing_id": "515244326072877400",
+      "spread_hybrid_disc": 0.0895939384272163
+    },
+    "listing:525377425233242713": {
+      "sent_at_utc": "2026-05-30T08:36:56.985249+00:00",
+      "item": "StatTrak™ USP-S | Jawbreaker (Battle-Scarred)",
+      "listing_id": "525377425233242713",
+      "spread_hybrid_disc": 0.0945665819635399
+    },
+    "listing:498355827473690137": {
+      "sent_at_utc": "2026-05-30T08:57:43.050015+00:00",
+      "item": "AWP | Ice Coaled (Battle-Scarred)",
+      "listing_id": "498355827473690137",
+      "spread_hybrid_disc": 0.0797873736260577
+    },
+    "listing:496104027656230915": {
+      "sent_at_utc": "2026-05-30T10:35:14.965957+00:00",
+      "item": "AWP | Ice Coaled (Battle-Scarred)",
+      "listing_id": "496104027656230915",
+      "spread_hybrid_disc": 0.0933496397247726
+    },
+    "listing:529881024862385542": {
+      "sent_at_utc": "2026-05-30T11:23:45.709133+00:00",
+      "item": "AWP | Crakow! (Battle-Scarred)",
+      "listing_id": "529881024862385542",
+      "spread_hybrid_disc": -0.0510281232667368
     }
   },
-  "last_alert_sent_at_utc": "2026-05-29T20:41:40.005800+00:00"
+  "last_alert_sent_at_utc": "2026-05-30T11:23:45.709396+00:00"
 }
