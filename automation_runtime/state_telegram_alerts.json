@@ -137,7 +137,13 @@
       "item": "P250 | Asiimov (Field-Tested)",
       "listing_id": "497229927567136205",
       "spread_hybrid_disc": 0.1137439323457902
+    },
+    "listing:526503325147604258": {
+      "sent_at_utc": "2026-05-31T18:41:48.364452+00:00",
+      "item": "StatTrak™ AWP | Duality (Minimal Wear)",
+      "listing_id": "526503325147604258",
+      "spread_hybrid_disc": 0.0693600992166414
     }
   },
-  "last_alert_sent_at_utc": "2026-05-31T11:52:40.616424+00:00"
+  "last_alert_sent_at_utc": "2026-05-31T18:41:48.364652+00:00"
 }
