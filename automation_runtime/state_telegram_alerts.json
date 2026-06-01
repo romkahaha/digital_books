@@ -143,7 +143,31 @@
       "item": "StatTrak™ AWP | Duality (Minimal Wear)",
       "listing_id": "526503325147604258",
       "spread_hybrid_disc": 0.0693600992166414
+    },
+    "listing:492726327944021631": {
+      "sent_at_utc": "2026-06-01T06:38:01.182243+00:00",
+      "item": "StatTrak™ AK-47 | Searing Rage (Battle-Scarred)",
+      "listing_id": "492726327944021631",
+      "spread_hybrid_disc": 0.0899288029688256
+    },
+    "listing:526503325149749894": {
+      "sent_at_utc": "2026-06-01T08:59:44.601020+00:00",
+      "item": "AK-47 | Wintergreen (Minimal Wear)",
+      "listing_id": "526503325149749894",
+      "spread_hybrid_disc": 0.0356861977432853
+    },
+    "listing:498355827484963501": {
+      "sent_at_utc": "2026-06-01T09:34:24.513390+00:00",
+      "item": "AWP | Ice Coaled (Battle-Scarred)",
+      "listing_id": "498355827484963501",
+      "spread_hybrid_disc": 0.0918227640231607
+    },
+    "listing:492726327945469767": {
+      "sent_at_utc": "2026-06-01T10:23:16.855099+00:00",
+      "item": "StatTrak™ AK-47 | Searing Rage (Battle-Scarred)",
+      "listing_id": "492726327945469767",
+      "spread_hybrid_disc": 0.0285541384693576
     }
   },
-  "last_alert_sent_at_utc": "2026-05-31T18:41:48.364652+00:00"
+  "last_alert_sent_at_utc": "2026-06-01T10:23:16.858374+00:00"
 }
