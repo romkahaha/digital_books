@@ -167,7 +167,25 @@
       "item": "StatTrak™ AK-47 | Searing Rage (Battle-Scarred)",
       "listing_id": "492726327945469767",
       "spread_hybrid_disc": 0.0285541384693576
+    },
+    "listing:499481727391750822": {
+      "sent_at_utc": "2026-06-02T11:06:56.458465+00:00",
+      "item": "M4A4 | Desolate Space (Battle-Scarred)",
+      "listing_id": "499481727391750822",
+      "spread_hybrid_disc": 0.072635651328591
+    },
+    "listing:520873825620056136": {
+      "sent_at_utc": "2026-06-02T14:40:08.804081+00:00",
+      "item": "SG 553 | Danger Close (Factory New)",
+      "listing_id": "520873825620056136",
+      "spread_hybrid_disc": 0.1113387382290426
+    },
+    "listing:494976859819619016": {
+      "sent_at_utc": "2026-06-02T16:42:22.052314+00:00",
+      "item": "StatTrak™ MP7 | Just Smile (Factory New)",
+      "listing_id": "494976859819619016",
+      "spread_hybrid_disc": 0.0853607319394645
     }
   },
-  "last_alert_sent_at_utc": "2026-06-01T10:23:16.858374+00:00"
+  "last_alert_sent_at_utc": "2026-06-02T16:42:22.052426+00:00"
 }
