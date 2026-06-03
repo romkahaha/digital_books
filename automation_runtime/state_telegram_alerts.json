@@ -185,7 +185,19 @@
       "item": "StatTrak™ MP7 | Just Smile (Factory New)",
       "listing_id": "494976859819619016",
       "spread_hybrid_disc": 0.0853607319394645
+    },
+    "listing:494978127758080890": {
+      "sent_at_utc": "2026-06-02T19:05:11.052798+00:00",
+      "item": "M4A1-S | Stratosphere (Field-Tested)",
+      "listing_id": "494978127758080890",
+      "spread_hybrid_disc": 0.1171694152011172
+    },
+    "listing:517496125903755624": {
+      "sent_at_utc": "2026-06-02T19:22:41.840588+00:00",
+      "item": "M4A1-S | Black Lotus (Battle-Scarred)",
+      "listing_id": "517496125903755624",
+      "spread_hybrid_disc": 0.0043508047077208
     }
   },
-  "last_alert_sent_at_utc": "2026-06-02T16:42:22.052426+00:00"
+  "last_alert_sent_at_utc": "2026-06-02T19:22:41.840731+00:00"
 }
