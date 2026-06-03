@@ -197,7 +197,37 @@
       "item": "M4A1-S | Black Lotus (Battle-Scarred)",
       "listing_id": "517496125903755624",
       "spread_hybrid_disc": 0.0043508047077208
+    },
+    "listing:535511158546978490": {
+      "sent_at_utc": "2026-06-03T06:49:07.873853+00:00",
+      "item": "AK-47 | Wintergreen (Minimal Wear)",
+      "listing_id": "535511158546978490",
+      "spread_hybrid_disc": 0.1043153391237255
+    },
+    "listing:538888858266622507": {
+      "sent_at_utc": "2026-06-03T07:39:38.924919+00:00",
+      "item": "AWP | Atheris (Battle-Scarred)",
+      "listing_id": "538888858266622507",
+      "spread_hybrid_disc": 0.0915519632292642
+    },
+    "listing:558029156685208321": {
+      "sent_at_utc": "2026-06-03T08:28:26.608309+00:00",
+      "item": "AWP | Mortis (Battle-Scarred)",
+      "listing_id": "558029156685208321",
+      "spread_hybrid_disc": 0.1152758917763331
+    },
+    "listing:532133458828315478": {
+      "sent_at_utc": "2026-06-03T13:34:17.697166+00:00",
+      "item": "Desert Eagle | Mulberry (Field-Tested)",
+      "listing_id": "532133458828315478",
+      "spread_hybrid_disc": 0.1008362528596987
+    },
+    "listing:546770157618437317": {
+      "sent_at_utc": "2026-06-03T13:57:44.287938+00:00",
+      "item": "StatTrak™ AWP | Duality (Minimal Wear)",
+      "listing_id": "546770157618437317",
+      "spread_hybrid_disc": 0.0594409061312767
     }
   },
-  "last_alert_sent_at_utc": "2026-06-02T19:22:41.840731+00:00"
+  "last_alert_sent_at_utc": "2026-06-03T13:57:44.288099+00:00"
 }
