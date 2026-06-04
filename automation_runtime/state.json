@@ -13,54 +13,33 @@
     "B",
     "C"
   ],
-  "queue_pointer": 5,
-  "last_tier": "A",
-  "last_tier_queue_index": 4,
-  "last_batch_start_pointer": 106,
+  "queue_pointer": 6,
+  "last_tier": "B",
+  "last_tier_queue_index": 5,
+  "last_batch_start_pointer": 38,
   "last_batch_items": [
-    "StatTrak™ AK-47 | Slate (Field-Tested)",
-    "Glock-18 | Mirror Mosaic (Field-Tested)",
-    "AK-47 | Nightwish (Battle-Scarred)",
-    "Desert Eagle | Printstream (Minimal Wear)",
-    "Glock-18 | Moonrise (Factory New)"
+    "StatTrak™ Zeus x27 | Olympus (Field-Tested)",
+    "MP9 | Mount Fuji (Field-Tested)",
+    "StatTrak™ Glock-18 | Shinobu (Well-Worn)",
+    "M4A4 | Desolate Space (Battle-Scarred)",
+    "M4A1-S | Solitude (Factory New)"
   ],
   "last_error": null,
-  "last_run_at_utc": "2026-06-04T11:03:23.184498+00:00",
-  "last_finished_at_utc": "2026-06-04T11:05:02.002220+00:00",
-  "last_successful_monitoring_at_utc": "2026-06-04T11:05:02.002220+00:00",
+  "last_run_at_utc": "2026-06-04T12:35:11.974055+00:00",
+  "last_finished_at_utc": "2026-06-04T12:37:36.506294+00:00",
+  "last_successful_monitoring_at_utc": "2026-06-04T12:37:36.506294+00:00",
   "last_failed_monitoring_at_utc": "2026-05-31T10:07:31.193236+00:00",
   "last_status": "ok",
   "consecutive_errors": 0,
-  "last_listing_errors": [
-    {
-      "market_hash_name": "StatTrak™ AK-47 | Slate (Field-Tested)",
-      "meta": {
-        "success": false,
-        "note": "exception",
-        "error": "Steam rate limit (429) for \"1/5 StatTrak™ AK-47 | Slate (Field-Tested)\": 429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/StatTrak%E2%84%A2%20AK-47%20%7C%20Slate%20%28Field-Tested%29",
-        "pages_fetched": 0,
-        "listings_target_cap": 100
-      }
-    },
-    {
-      "market_hash_name": "Glock-18 | Mirror Mosaic (Field-Tested)",
-      "meta": {
-        "success": false,
-        "note": "exception",
-        "error": "Steam rate limit (429) for \"2/5 Glock-18 | Mirror Mosaic (Field-Tested)\": 429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/Glock-18%20%7C%20Mirror%20Mosaic%20%28Field-Tested%29",
-        "pages_fetched": 0,
-        "listings_target_cap": 100
-      }
-    }
-  ],
-  "last_listing_error_count": 2,
-  "last_listing_rows": 300,
-  "last_enriched_rows": 300,
+  "last_listing_errors": [],
+  "last_listing_error_count": 0,
+  "last_listing_rows": 326,
+  "last_enriched_rows": 326,
   "last_opportunities_rows": 0,
   "last_alert_stats": {
     "mode": "background",
     "queued_rows": 0,
-    "sender_pid": 1884336
+    "sender_pid": 1886450
   },
   "tiers": {
     "A": {

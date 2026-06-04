@@ -2,32 +2,32 @@
   "version": 1,
   "items_signature": "2b5b57a02303252d193e464e309ac0b9a078d1aefba9ef913ea78370d7a87a1f",
   "items_count": 131,
-  "batch_pointer": 38,
-  "last_run_at_utc": "2026-06-04T10:57:20.813872+00:00",
+  "batch_pointer": 43,
+  "last_run_at_utc": "2026-06-04T12:35:15.613354+00:00",
   "last_status": "ok",
   "last_batch_items": [
-    "AK-47 | Emerald Pinstripe (Minimal Wear)",
-    "AUG | Momentum (Field-Tested)",
-    "StatTrak™ M4A4 | Magnesium (Minimal Wear)",
-    "StatTrak™ AWP | Atheris (Field-Tested)",
-    "Glock-18 | Water Elemental (Minimal Wear)"
+    "StatTrak™ Zeus x27 | Olympus (Field-Tested)",
+    "MP9 | Mount Fuji (Field-Tested)",
+    "StatTrak™ Glock-18 | Shinobu (Well-Worn)",
+    "M4A4 | Desolate Space (Battle-Scarred)",
+    "M4A1-S | Solitude (Factory New)"
   ],
   "last_error": null,
-  "last_finished_at_utc": "2026-06-04T10:59:47.010714+00:00",
-  "last_successful_monitoring_at_utc": "2026-06-04T10:59:47.010714+00:00",
+  "last_finished_at_utc": "2026-06-04T12:37:36.099987+00:00",
+  "last_successful_monitoring_at_utc": "2026-06-04T12:37:36.099987+00:00",
   "last_failed_monitoring_at_utc": null,
   "consecutive_errors": 0,
   "last_listing_errors": [],
   "last_listing_error_count": 0,
-  "last_listing_rows": 339,
-  "last_enriched_rows": 339,
+  "last_listing_rows": 326,
+  "last_enriched_rows": 326,
   "last_opportunities_rows": 0,
   "last_alert_stats": {
     "mode": "background",
     "queued_rows": 0,
-    "sender_pid": 1884172
+    "sender_pid": 1886450
   },
-  "last_batch_start_pointer": 33,
+  "last_batch_start_pointer": 38,
   "listing_fetch_state": {
     "version": 1,
     "items": {
@@ -1208,13 +1208,13 @@
       },
       "StatTrak™ Zeus x27 | Olympus (Field-Tested)": {
         "page0_listing_ids": [
+          "558029156692141561",
+          "544518357809067389",
           "526503959297628123",
-          "529881659019860896",
+          "527629859206318658",
           "520874459760306293",
           "524252159480064157",
           "555777356870426673",
-          "556903256780162827",
-          "515244326087567488",
           "499481727391434202",
           "555777356874336093",
           "521999725527459416",
@@ -1227,51 +1227,51 @@
           "516368958051861904",
           "516368958051861976",
           "516368958051862048",
-          "508488292399096794"
+          "524252159476359397"
         ],
-        "total_count": 152,
-        "first_ask": 7.15,
-        "last_page0_at_utc": "2026-06-04T07:07:55.083847+00:00",
+        "total_count": 151,
+        "first_ask": 7.07,
+        "last_page0_at_utc": "2026-06-04T12:35:15.629479+00:00",
         "day_key": "2026-06-04",
-        "last_deep_at_utc": "2026-06-04T07:07:55.083847+00:00",
-        "last_deep_reason": "new_day",
+        "last_deep_at_utc": "2026-06-04T12:35:15.629479+00:00",
+        "last_deep_reason": "sentinel_changed:page0_ids_changed+total_count_changed",
         "deep_pending": false
       },
       "MP9 | Mount Fuji (Field-Tested)": {
         "page0_listing_ids": [
-          "508488292425754686",
-          "508488292425761634",
+          "535511158554221834",
           "529881024857676598",
           "529881024857676670",
           "559155056593673968",
-          "515244326084901076",
+          "551273757250371723",
+          "551273757250369779",
           "514118426168698110",
           "514118426168702574",
           "516370225974114062",
           "516370225974114458",
           "516370225974114926",
-          "516370225974113954",
           "516370225986940322",
           "516370225986940394",
           "516370225986940430",
           "516370225986940358",
           "516370225986940502",
-          "492726327938670591",
-          "527629225040881071",
-          "524251525330518455"
+          "544518357808674521",
+          "518622025807156211",
+          "517496125900820004"
         ],
         "total_count": 121,
         "first_ask": 6.92,
-        "last_page0_at_utc": "2026-06-04T07:14:29.257198+00:00",
+        "last_page0_at_utc": "2026-06-04T12:35:36.562658+00:00",
         "day_key": "2026-06-04",
-        "last_deep_at_utc": "2026-06-04T07:14:29.257198+00:00",
-        "last_deep_reason": "new_day",
+        "last_deep_at_utc": "2026-06-04T12:35:36.562658+00:00",
+        "last_deep_reason": "sentinel_changed:page0_ids_changed",
         "deep_pending": false
       },
       "StatTrak™ Glock-18 | Shinobu (Well-Worn)": {
         "page0_listing_ids": [
-          "549021957435465944",
-          "543392457902004156",
+          "536637058460483811",
+          "542266557996160270",
+          "556903256783186071",
           "547896057527506864",
           "491600428044792403",
           "498355827491995705",
@@ -1282,27 +1282,28 @@
           "503985327018381491",
           "503985327018381599",
           "677372747564967486",
-          "545644257713351352",
           "560280956502544614",
+          "545644257713351352",
           "528755124961223324",
           "526503959291958339",
           "510740726448610509",
           "492726327945418935",
-          "516369591778234246",
-          "490474528126247080"
+          "516369591778234246"
         ],
-        "total_count": 66,
-        "first_ask": 7.98,
-        "last_page0_at_utc": "2026-06-04T07:15:19.542952+00:00",
+        "total_count": 67,
+        "first_ask": 8.16,
+        "last_page0_at_utc": "2026-06-04T12:36:29.009117+00:00",
         "day_key": "2026-06-04",
-        "last_deep_at_utc": "2026-06-04T07:15:19.542952+00:00",
-        "last_deep_reason": "new_day",
+        "last_deep_at_utc": "2026-06-04T12:36:29.009117+00:00",
+        "last_deep_reason": "sentinel_changed:page0_ids_changed+total_count_changed",
         "deep_pending": false
       },
       "M4A4 | Desolate Space (Battle-Scarred)": {
         "page0_listing_ids": [
+          "545644257717003840",
+          "553525557062626737",
+          "538888858273636567",
           "545644257715618848",
-          "553525557061568769",
           "498355827492459277",
           "497228659636378463",
           "528755124960995588",
@@ -1313,25 +1314,25 @@
           "538888858272146671",
           "555777356874309597",
           "509614826525505804",
+          "528754490719530977",
           "515244326063144368",
-          "492726327925686399",
           "492726327925045779",
+          "492726327925686399",
           "534385258642842646",
-          "498355827492303685",
-          "490473893907798092",
-          "500607627296387357",
-          "505111226907042379"
+          "498355827492303685"
         ],
-        "total_count": 99,
-        "first_ask": 13.42,
-        "last_page0_at_utc": "2026-06-04T07:15:42.231453+00:00",
+        "total_count": 102,
+        "first_ask": 13.0,
+        "last_page0_at_utc": "2026-06-04T12:36:51.783143+00:00",
         "day_key": "2026-06-04",
-        "last_deep_at_utc": "2026-06-04T07:15:42.231453+00:00",
-        "last_deep_reason": "new_day",
+        "last_deep_at_utc": "2026-06-04T12:36:51.783143+00:00",
+        "last_deep_reason": "sentinel_changed:page0_ids_changed+total_count_changed",
         "deep_pending": false
       },
       "M4A1-S | Solitude (Factory New)": {
         "page0_listing_ids": [
+          "529881659020266976",
+          "538888858272756187",
           "545644257715556892",
           "545644257715557720",
           "546770157622444225",
@@ -1349,16 +1350,14 @@
           "506235858863353501",
           "500605092743256731",
           "514117791963382899",
-          "514117791963382107",
-          "535511158553048882",
-          "544518357808060721"
+          "514117791963382107"
         ],
-        "total_count": 810,
-        "first_ask": 33.0,
-        "last_page0_at_utc": "2026-06-04T07:16:02.734245+00:00",
+        "total_count": 814,
+        "first_ask": 32.9,
+        "last_page0_at_utc": "2026-06-04T12:37:17.673763+00:00",
         "day_key": "2026-06-04",
-        "last_deep_at_utc": "2026-06-04T07:16:02.734245+00:00",
-        "last_deep_reason": "new_day",
+        "last_deep_at_utc": "2026-06-04T12:37:17.673763+00:00",
+        "last_deep_reason": "sentinel_changed:page0_ids_changed+total_count_changed",
         "deep_pending": false
       },
       "AWP | The End (Minimal Wear)": {
@@ -4088,7 +4087,7 @@
         "deep_pending": false
       }
     },
-    "last_batch_started_at_utc": "2026-06-04T10:57:20.820359+00:00",
+    "last_batch_started_at_utc": "2026-06-04T12:35:15.629100+00:00",
     "last_batch_stats": {
       "enabled": true,
       "tier": "B",
@@ -4099,10 +4098,11 @@
       "page0_changed_cooldown": 0,
       "tail_cutoffs": 0,
       "deep_by_reason": {
-        "sentinel_changed:page0_ids_changed+total_count_changed": 5
+        "sentinel_changed:page0_ids_changed+total_count_changed": 4,
+        "sentinel_changed:page0_ids_changed": 1
       }
     },
-    "last_batch_finished_at_utc": "2026-06-04T10:59:44.896411+00:00"
+    "last_batch_finished_at_utc": "2026-06-04T12:37:32.895557+00:00"
   },
   "last_fetch_strategy_stats": {
     "enabled": true,
@@ -4114,7 +4114,8 @@
     "page0_changed_cooldown": 0,
     "tail_cutoffs": 0,
     "deep_by_reason": {
-      "sentinel_changed:page0_ids_changed+total_count_changed": 5
+      "sentinel_changed:page0_ids_changed+total_count_changed": 4,
+      "sentinel_changed:page0_ids_changed": 1
     }
   }
 }
