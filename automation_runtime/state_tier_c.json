@@ -2,32 +2,32 @@
   "version": 1,
   "items_signature": "fc12724f486579a04529cbc776988abcc3162fb536df79fd1ca9a899edc43e07",
   "items_count": 130,
-  "batch_pointer": 15,
-  "last_run_at_utc": "2026-06-04T18:11:15.583343+00:00",
+  "batch_pointer": 20,
+  "last_run_at_utc": "2026-06-04T19:57:56.779933+00:00",
   "last_status": "ok",
   "last_batch_items": [
-    "★ Driver Gloves | Rezan the Red (Field-Tested)",
-    "StatTrak™ AWP | Chromatic Aberration (Minimal Wear)",
-    "StatTrak™ SSG 08 | Memorial (Factory New)",
-    "★ Driver Gloves | Queen Jaguar (Field-Tested)",
-    "Desert Eagle | Kumicho Dragon (Battle-Scarred)"
+    "AUG | Stymphalian (Minimal Wear)",
+    "MP9 | Slide (Factory New)",
+    "★ Shadow Daggers | Rust Coat (Battle-Scarred)",
+    "AWP | Asiimov (Battle-Scarred)",
+    "StatTrak™ USP-S | Flashback (Factory New)"
   ],
   "last_error": null,
-  "last_finished_at_utc": "2026-06-04T18:12:44.730506+00:00",
-  "last_successful_monitoring_at_utc": "2026-06-04T18:12:44.730506+00:00",
+  "last_finished_at_utc": "2026-06-04T19:59:20.738031+00:00",
+  "last_successful_monitoring_at_utc": "2026-06-04T19:59:20.738031+00:00",
   "last_failed_monitoring_at_utc": null,
   "consecutive_errors": 0,
   "last_listing_errors": [],
   "last_listing_error_count": 0,
-  "last_listing_rows": 250,
-  "last_enriched_rows": 250,
+  "last_listing_rows": 300,
+  "last_enriched_rows": 300,
   "last_opportunities_rows": 0,
   "last_alert_stats": {
     "mode": "background",
     "queued_rows": 0,
-    "sender_pid": 1895720
+    "sender_pid": 1897066
   },
-  "last_batch_start_pointer": 10,
+  "last_batch_start_pointer": 15,
   "listing_fetch_state": {
     "version": 1,
     "items": {
@@ -498,69 +498,70 @@
       },
       "AUG | Stymphalian (Minimal Wear)": {
         "page0_listing_ids": [
+          "536637058460794815",
+          "536637058460794779",
+          "556903256784256351",
+          "556903256784258799",
+          "542266557996802510",
+          "556903256784834547",
+          "552399657157473240",
           "499481727383976658",
           "499481727389280286",
           "540014758175787776",
           "540014758175787920",
           "497229927571859477",
           "525377425238484673",
-          "509614826543638680",
+          "524252159483974081",
+          "524252159483974153",
+          "524252159483974189",
+          "524252159483974369",
+          "524252159483974441",
           "510739458499977351",
-          "496104027668288431",
-          "496104027668288323",
-          "496104027668288467",
-          "514118426167651734",
-          "555777356872139913",
-          "555777356872117917",
-          "555777356872140525",
-          "528755124969848024",
-          "528755124969848672",
-          "492726327945732783",
-          "492726327945734079",
-          "492726327945733287"
+          "496104027668288467"
         ],
-        "total_count": 162,
-        "first_ask": 6.02,
-        "last_page0_at_utc": "2026-06-04T07:50:18.263783+00:00",
+        "total_count": 174,
+        "first_ask": 5.6,
+        "last_page0_at_utc": "2026-06-04T19:57:56.798878+00:00",
         "day_key": "2026-06-04",
-        "last_deep_at_utc": "2026-06-04T07:50:18.263783+00:00",
-        "last_deep_reason": "new_day",
+        "last_deep_at_utc": "2026-06-04T19:57:56.798878+00:00",
+        "last_deep_reason": "periodic_720m",
         "deep_pending": false
       },
       "MP9 | Slide (Factory New)": {
         "page0_listing_ids": [
           "542266557989722570",
+          "551273757251381343",
+          "551273757251380911",
+          "551273757251380551",
+          "551273757251381091",
+          "551273757251381523",
+          "551273757251381919",
+          "551273757251380371",
+          "551273757251380803",
+          "551273757251381631",
           "559155056592905548",
+          "531007558924464570",
           "559155056590432924",
+          "526503959301941787",
           "511866626370608334",
           "519747925686008133",
           "519747925686009033",
           "519747925686009969",
           "519747925686010473",
-          "519747925686010869",
-          "503985326989980767",
-          "510740726432576469",
-          "517496125873338828",
-          "500607627285816785",
-          "496104027643744567",
-          "496104027643691935",
-          "516370225964935682",
-          "507363026718502011",
-          "506237126800676129",
-          "525376791011164146",
-          "505110592693712916"
+          "519747925686010869"
         ],
-        "total_count": 179,
+        "total_count": 188,
         "first_ask": 2.37,
-        "last_page0_at_utc": "2026-06-04T07:50:38.635849+00:00",
+        "last_page0_at_utc": "2026-06-04T19:58:15.293584+00:00",
         "day_key": "2026-06-04",
-        "last_deep_at_utc": "2026-06-04T07:50:38.635849+00:00",
-        "last_deep_reason": "new_day",
+        "last_deep_at_utc": "2026-06-04T19:58:15.293584+00:00",
+        "last_deep_reason": "periodic_720m",
         "deep_pending": false
       },
       "★ Shadow Daggers | Rust Coat (Battle-Scarred)": {
         "page0_listing_ids": [
-          "547896057530656468",
+          "528755759115927299",
+          "523126259580817795",
           "523126259578144867",
           "516370225972020770",
           "556903256781362563",
@@ -573,7 +574,6 @@
           "517496125895221536",
           "527629225059174831",
           "547896057530267740",
-          "547896057530282536",
           "511866626348161974",
           "525375776825748739",
           "524250891104354642",
@@ -582,24 +582,23 @@
           "714524901211634883"
         ],
         "total_count": 75,
-        "first_ask": 51.75,
-        "last_page0_at_utc": "2026-06-04T07:50:56.667926+00:00",
+        "first_ask": 51.22,
+        "last_page0_at_utc": "2026-06-04T19:58:30.373377+00:00",
         "day_key": "2026-06-04",
-        "last_deep_at_utc": "2026-06-04T07:50:56.667926+00:00",
-        "last_deep_reason": "new_day",
+        "last_deep_at_utc": "2026-06-04T19:58:30.373377+00:00",
+        "last_deep_reason": "periodic_720m",
         "deep_pending": false
       },
       "AWP | Asiimov (Battle-Scarred)": {
         "page0_listing_ids": [
-          "493852227840009860",
-          "534385258639228066",
+          "544518357811919633",
+          "549021957438932816",
           "520873825611473556",
-          "549021957435552452",
           "538888858266151375",
-          "490474528136568532",
+          "526503959302943775",
           "493849693292781616",
           "497228659615754855",
-          "502858159164630527",
+          "523126259579512435",
           "529881024878553106",
           "516368958053074060",
           "653725574912964292",
@@ -609,27 +608,26 @@
           "680750447964380755",
           "514118426175387666",
           "490473893906088272",
+          "519745391325180692",
           "519745391325175112",
           "519745391325183572"
         ],
-        "total_count": 160,
-        "first_ask": 97.0,
-        "last_page0_at_utc": "2026-06-04T07:51:14.024917+00:00",
+        "total_count": 159,
+        "first_ask": 92.0,
+        "last_page0_at_utc": "2026-06-04T19:58:46.976436+00:00",
         "day_key": "2026-06-04",
-        "last_deep_at_utc": "2026-06-04T07:51:14.024917+00:00",
-        "last_deep_reason": "new_day",
+        "last_deep_at_utc": "2026-06-04T19:58:46.976436+00:00",
+        "last_deep_reason": "periodic_720m",
         "deep_pending": false
       },
       "StatTrak™ USP-S | Flashback (Factory New)": {
         "page0_listing_ids": [
-          "520874459760864473",
-          "520874459761981697",
           "520874459761981733",
           "520874459761981661",
           "520874459761981769",
           "520874459761981841",
+          "543392457904257720",
           "510740726451675153",
-          "510740726451675441",
           "510740726451675045",
           "510740726451675873",
           "505110592699897392",
@@ -637,18 +635,20 @@
           "502859427089597482",
           "494978127765486666",
           "494978127765486594",
+          "552399657156192792",
           "512991258315567933",
           "499481093165931225",
           "509614826550887280",
           "511865992140379132",
-          "508487658676800741"
+          "508487658676800741",
+          "502858159144347407"
         ],
-        "total_count": 110,
+        "total_count": 111,
         "first_ask": 4.55,
-        "last_page0_at_utc": "2026-06-04T07:51:28.994672+00:00",
+        "last_page0_at_utc": "2026-06-04T19:59:05.378412+00:00",
         "day_key": "2026-06-04",
-        "last_deep_at_utc": "2026-06-04T07:51:28.994672+00:00",
-        "last_deep_reason": "new_day",
+        "last_deep_at_utc": "2026-06-04T19:59:05.378412+00:00",
+        "last_deep_reason": "periodic_720m",
         "deep_pending": false
       },
       "MP7 | Powercore (Minimal Wear)": {
@@ -4061,7 +4061,7 @@
         "deep_pending": false
       }
     },
-    "last_batch_started_at_utc": "2026-06-04T18:11:15.590745+00:00",
+    "last_batch_started_at_utc": "2026-06-04T19:57:56.798552+00:00",
     "last_batch_stats": {
       "enabled": true,
       "tier": "C",
@@ -4072,10 +4072,10 @@
       "page0_changed_cooldown": 0,
       "tail_cutoffs": 0,
       "deep_by_reason": {
-        "sentinel_changed:page0_ids_changed+total_count_changed": 5
+        "periodic_720m": 5
       }
     },
-    "last_batch_finished_at_utc": "2026-06-04T18:12:42.421294+00:00"
+    "last_batch_finished_at_utc": "2026-06-04T19:59:18.265338+00:00"
   },
   "last_fetch_strategy_stats": {
     "enabled": true,
@@ -4087,7 +4087,7 @@
     "page0_changed_cooldown": 0,
     "tail_cutoffs": 0,
     "deep_by_reason": {
-      "sentinel_changed:page0_ids_changed+total_count_changed": 5
+      "periodic_720m": 5
     }
   }
 }
