@@ -251,7 +251,13 @@
       "item": "M4A1-S | Black Lotus (Battle-Scarred)",
       "listing_id": "536637058457003007",
       "spread_hybrid_disc": -0.0003532338856255
+    },
+    "listing:534385258646818198": {
+      "sent_at_utc": "2026-06-04T09:42:14.225911+00:00",
+      "item": "AK-47 | Wintergreen (Minimal Wear)",
+      "listing_id": "534385258646818198",
+      "spread_hybrid_disc": -0.0425351743749888
     }
   },
-  "last_alert_sent_at_utc": "2026-06-03T20:44:43.411846+00:00"
+  "last_alert_sent_at_utc": "2026-06-04T09:42:14.226016+00:00"
 }
