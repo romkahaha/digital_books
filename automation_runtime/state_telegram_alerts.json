@@ -227,7 +227,31 @@
       "item": "StatTrak™ AWP | Duality (Minimal Wear)",
       "listing_id": "546770157618437317",
       "spread_hybrid_disc": 0.0594409061312767
+    },
+    "listing:560280956500360890": {
+      "sent_at_utc": "2026-06-03T17:56:54.541547+00:00",
+      "item": "SG 553 | Danger Close (Factory New)",
+      "listing_id": "560280956500360890",
+      "spread_hybrid_disc": 0.0558879487572493
+    },
+    "listing:535511158550665898": {
+      "sent_at_utc": "2026-06-03T19:54:47.736334+00:00",
+      "item": "Desert Eagle | Mulberry (Field-Tested)",
+      "listing_id": "535511158550665898",
+      "spread_hybrid_disc": 0.1114534141935716
+    },
+    "listing:532133458830194498": {
+      "sent_at_utc": "2026-06-03T20:29:13.083856+00:00",
+      "item": "FAMAS | Rapid Eye Movement (Battle-Scarred)",
+      "listing_id": "532133458830194498",
+      "spread_hybrid_disc": -0.0009208780906262
+    },
+    "listing:536637058457003007": {
+      "sent_at_utc": "2026-06-03T20:44:43.411734+00:00",
+      "item": "M4A1-S | Black Lotus (Battle-Scarred)",
+      "listing_id": "536637058457003007",
+      "spread_hybrid_disc": -0.0003532338856255
     }
   },
-  "last_alert_sent_at_utc": "2026-06-03T13:57:44.288099+00:00"
+  "last_alert_sent_at_utc": "2026-06-03T20:44:43.411846+00:00"
 }
