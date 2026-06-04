@@ -257,7 +257,19 @@
       "item": "AK-47 | Wintergreen (Minimal Wear)",
       "listing_id": "534385258646818198",
       "spread_hybrid_disc": -0.0425351743749888
+    },
+    "listing:550147857345022030": {
+      "sent_at_utc": "2026-06-04T14:05:32.455434+00:00",
+      "item": "StatTrak™ MP7 | Just Smile (Factory New)",
+      "listing_id": "550147857345022030",
+      "spread_hybrid_disc": 0.1133528768592304
+    },
+    "listing:532133458835644214": {
+      "sent_at_utc": "2026-06-04T17:38:22.031946+00:00",
+      "item": "AWP | Crakow! (Battle-Scarred)",
+      "listing_id": "532133458835644214",
+      "spread_hybrid_disc": -0.0778305084072565
     }
   },
-  "last_alert_sent_at_utc": "2026-06-04T09:42:14.226016+00:00"
+  "last_alert_sent_at_utc": "2026-06-04T17:38:22.032097+00:00"
 }
