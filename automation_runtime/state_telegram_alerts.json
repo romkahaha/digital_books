@@ -269,7 +269,19 @@
       "item": "AWP | Crakow! (Battle-Scarred)",
       "listing_id": "532133458835644214",
       "spread_hybrid_disc": -0.0778305084072565
+    },
+    "listing:546770157628571605": {
+      "sent_at_utc": "2026-06-05T06:38:25.120720+00:00",
+      "item": "M4A1-S | Black Lotus (Battle-Scarred)",
+      "listing_id": "546770157628571605",
+      "spread_hybrid_disc": 0.0997967131331718
+    },
+    "listing:543392457908860536": {
+      "sent_at_utc": "2026-06-05T08:01:30.992791+00:00",
+      "item": "MP7 | Abyssal Apparition (Battle-Scarred)",
+      "listing_id": "543392457908860536",
+      "spread_hybrid_disc": 0.1139476549381119
     }
   },
-  "last_alert_sent_at_utc": "2026-06-04T17:38:22.032097+00:00"
+  "last_alert_sent_at_utc": "2026-06-05T08:01:30.992921+00:00"
 }
