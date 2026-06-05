@@ -281,7 +281,19 @@
       "item": "MP7 | Abyssal Apparition (Battle-Scarred)",
       "listing_id": "543392457908860536",
       "spread_hybrid_disc": 0.1139476549381119
+    },
+    "listing:558029156699121781": {
+      "sent_at_utc": "2026-06-05T12:29:13.415067+00:00",
+      "item": "StatTrak™ AK-47 | Searing Rage (Battle-Scarred)",
+      "listing_id": "558029156699121781",
+      "spread_hybrid_disc": 0.1159100510130335
+    },
+    "listing:560280956511017682": {
+      "sent_at_utc": "2026-06-05T12:29:34.309360+00:00",
+      "item": "StatTrak™ AK-47 | Searing Rage (Battle-Scarred)",
+      "listing_id": "560280956511017682",
+      "spread_hybrid_disc": 0.1159448935913333
     }
   },
-  "last_alert_sent_at_utc": "2026-06-05T08:01:30.992921+00:00"
+  "last_alert_sent_at_utc": "2026-06-05T12:29:34.309570+00:00"
 }

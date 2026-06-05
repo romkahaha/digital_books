@@ -13,33 +13,54 @@
     "B",
     "C"
   ],
-  "queue_pointer": 6,
-  "last_tier": "B",
-  "last_tier_queue_index": 5,
-  "last_batch_start_pointer": 116,
+  "queue_pointer": 1,
+  "last_tier": "A",
+  "last_tier_queue_index": 0,
+  "last_batch_start_pointer": 23,
   "last_batch_items": [
-    "Dual Berettas | Royal Consorts (Minimal Wear)",
-    "StatTrak™ P2000 | Wicked Sick (Battle-Scarred)",
-    "StatTrak™ AWP | Phobos (Minimal Wear)",
-    "★ Gut Knife | Doppler (Factory New)",
-    "SG 553 | Cyrex (Field-Tested)"
+    "AK-47 | Slate (Battle-Scarred)",
+    "AK-47 | Ice Coaled (Minimal Wear)",
+    "USP-S | Cortex (Field-Tested)",
+    "Desert Eagle | Mulberry (Field-Tested)",
+    "M4A1-S | Black Lotus (Minimal Wear)"
   ],
   "last_error": null,
-  "last_run_at_utc": "2026-06-05T11:53:18.305928+00:00",
-  "last_finished_at_utc": "2026-06-05T11:55:06.223970+00:00",
-  "last_successful_monitoring_at_utc": "2026-06-05T11:55:06.223970+00:00",
+  "last_run_at_utc": "2026-06-05T15:28:20.795737+00:00",
+  "last_finished_at_utc": "2026-06-05T15:30:40.217043+00:00",
+  "last_successful_monitoring_at_utc": "2026-06-05T15:30:40.217043+00:00",
   "last_failed_monitoring_at_utc": "2026-06-04T15:15:55.174884+00:00",
   "last_status": "ok",
   "consecutive_errors": 0,
-  "last_listing_errors": [],
-  "last_listing_error_count": 0,
-  "last_listing_rows": 400,
-  "last_enriched_rows": 400,
+  "last_listing_errors": [
+    {
+      "market_hash_name": "Desert Eagle | Mulberry (Field-Tested)",
+      "meta": {
+        "success": false,
+        "note": "exception",
+        "error": "Steam rate limit (429) for \"4/5 Desert Eagle | Mulberry (Field-Tested)\": 429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/Desert%20Eagle%20%7C%20Mulberry%20%28Field-Tested%29",
+        "pages_fetched": 0,
+        "listings_target_cap": 100
+      }
+    },
+    {
+      "market_hash_name": "M4A1-S | Black Lotus (Minimal Wear)",
+      "meta": {
+        "success": false,
+        "note": "exception",
+        "error": "Steam rate limit (429) for \"5/5 M4A1-S | Black Lotus (Minimal Wear)\": 429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/M4A1-S%20%7C%20Black%20Lotus%20%28Minimal%20Wear%29",
+        "pages_fetched": 0,
+        "listings_target_cap": 100
+      }
+    }
+  ],
+  "last_listing_error_count": 2,
+  "last_listing_rows": 300,
+  "last_enriched_rows": 300,
   "last_opportunities_rows": 0,
   "last_alert_stats": {
     "mode": "background",
     "queued_rows": 0,
-    "sender_pid": 1915568
+    "sender_pid": 1919745
   },
   "tiers": {
     "A": {
