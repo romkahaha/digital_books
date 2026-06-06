@@ -347,7 +347,37 @@
       "item": "SG 553 | Danger Close (Factory New)",
       "listing_id": "525378059408939297",
       "spread_hybrid_disc": 0.1123072316016081
+    },
+    "listing:547896057545111008": {
+      "sent_at_utc": "2026-06-06T15:37:39.356915+00:00",
+      "item": "StatTrak™ MP7 | Just Smile (Factory New)",
+      "listing_id": "547896057545111008",
+      "spread_hybrid_disc": 0.1136267977926406
+    },
+    "listing:547896057547773640": {
+      "sent_at_utc": "2026-06-06T17:10:39.944984+00:00",
+      "item": "StatTrak™ AK-47 | Searing Rage (Battle-Scarred)",
+      "listing_id": "547896057547773640",
+      "spread_hybrid_disc": 0.1012357417390482
+    },
+    "listing:537762958382484776": {
+      "sent_at_utc": "2026-06-06T17:11:03.099825+00:00",
+      "item": "StatTrak™ AK-47 | Searing Rage (Battle-Scarred)",
+      "listing_id": "537762958382484776",
+      "spread_hybrid_disc": 0.1063953731467832
+    },
+    "listing:537762958382483552": {
+      "sent_at_utc": "2026-06-06T17:11:44.052453+00:00",
+      "item": "StatTrak™ AK-47 | Searing Rage (Battle-Scarred)",
+      "listing_id": "537762958382483552",
+      "spread_hybrid_disc": 0.1161437976250632
+    },
+    "listing:537762958382482616": {
+      "sent_at_utc": "2026-06-06T17:12:25.003975+00:00",
+      "item": "StatTrak™ AK-47 | Searing Rage (Battle-Scarred)",
+      "listing_id": "537762958382482616",
+      "spread_hybrid_disc": 0.116350545188969
     }
   },
-  "last_alert_sent_at_utc": "2026-06-06T12:09:25.513916+00:00"
+  "last_alert_sent_at_utc": "2026-06-06T17:12:25.004100+00:00"
 }
