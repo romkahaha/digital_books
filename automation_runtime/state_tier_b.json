@@ -2,32 +2,32 @@
   "version": 1,
   "items_signature": "2b5b57a02303252d193e464e309ac0b9a078d1aefba9ef913ea78370d7a87a1f",
   "items_count": 131,
-  "batch_pointer": 118,
-  "last_run_at_utc": "2026-06-06T09:44:05.738020+00:00",
+  "batch_pointer": 123,
+  "last_run_at_utc": "2026-06-06T11:22:50.134436+00:00",
   "last_status": "ok",
   "last_batch_items": [
-    "AK-47 | The Empress (Field-Tested)",
-    "Desert Eagle | The Bronze (Factory New)",
-    "AK-47 | The Oligarch (Field-Tested)",
-    "Dual Berettas | Royal Consorts (Minimal Wear)",
-    "StatTrak™ P2000 | Wicked Sick (Battle-Scarred)"
+    "StatTrak™ AWP | Phobos (Minimal Wear)",
+    "★ Gut Knife | Doppler (Factory New)",
+    "SG 553 | Cyrex (Field-Tested)",
+    "★ Paracord Knife | Rust Coat (Battle-Scarred)",
+    "AK-47 | The Oligarch (Battle-Scarred)"
   ],
   "last_error": null,
-  "last_finished_at_utc": "2026-06-06T09:45:40.312940+00:00",
-  "last_successful_monitoring_at_utc": "2026-06-06T09:45:40.312940+00:00",
+  "last_finished_at_utc": "2026-06-06T11:24:48.382077+00:00",
+  "last_successful_monitoring_at_utc": "2026-06-06T11:24:48.382077+00:00",
   "last_failed_monitoring_at_utc": "2026-06-04T15:15:54.943302+00:00",
   "consecutive_errors": 0,
   "last_listing_errors": [],
   "last_listing_error_count": 0,
-  "last_listing_rows": 351,
-  "last_enriched_rows": 351,
+  "last_listing_rows": 400,
+  "last_enriched_rows": 400,
   "last_opportunities_rows": 0,
   "last_alert_stats": {
     "mode": "background",
     "queued_rows": 0,
-    "sender_pid": 1935701
+    "sender_pid": 1936778
   },
-  "last_batch_start_pointer": 113,
+  "last_batch_start_pointer": 118,
   "listing_fetch_state": {
     "version": 1,
     "items": {
@@ -3691,12 +3691,11 @@
       },
       "StatTrak™ AWP | Phobos (Minimal Wear)": {
         "page0_listing_ids": [
-          "538888858284083515",
+          "540014758195969196",
           "560280956499432450",
           "523126259580615547",
           "556903256778535735",
           "526503959296267431",
-          "533259358752075251",
           "510740092244861456",
           "501732259249977684",
           "693135346244081876",
@@ -3710,14 +3709,15 @@
           "492723793462713381",
           "503982792727870927",
           "493850959899215806",
-          "644716473189461633"
+          "644716473189461633",
+          "501732259256701332"
         ],
-        "total_count": 144,
-        "first_ask": 6.99,
-        "last_page0_at_utc": "2026-06-06T06:01:44.840059+00:00",
+        "total_count": 146,
+        "first_ask": 6.73,
+        "last_page0_at_utc": "2026-06-06T11:22:50.147230+00:00",
         "day_key": "2026-06-06",
-        "last_deep_at_utc": "2026-06-06T06:01:44.840059+00:00",
-        "last_deep_reason": "new_day",
+        "last_deep_at_utc": "2026-06-06T11:22:50.147230+00:00",
+        "last_deep_reason": "sentinel_changed:page0_ids_changed+total_count_changed",
         "deep_pending": false
       },
       "★ Gut Knife | Doppler (Factory New)": {
@@ -3736,31 +3736,33 @@
           "507363026718037899",
           "507362392523366379",
           "510739458509773131",
-          "556903256794339663",
           "541140658098875003",
           "524251525337158907",
+          "542266558009855786",
           "503984059064415200",
           "521999091279011429",
           "527629859199709274"
         ],
-        "total_count": 259,
+        "total_count": 257,
         "first_ask": 163.81,
-        "last_page0_at_utc": "2026-06-06T06:09:29.049433+00:00",
+        "last_page0_at_utc": "2026-06-06T11:23:13.577331+00:00",
         "day_key": "2026-06-06",
-        "last_deep_at_utc": "2026-06-06T06:09:29.049433+00:00",
-        "last_deep_reason": "new_day",
+        "last_deep_at_utc": "2026-06-06T11:23:13.577331+00:00",
+        "last_deep_reason": "sentinel_changed:page0_ids_changed+total_count_changed",
         "deep_pending": false
       },
       "SG 553 | Cyrex (Field-Tested)": {
         "page0_listing_ids": [
+          "544518357823239077",
+          "543392457917632728",
+          "553525557075142713",
+          "552399657168576828",
           "533259358752014987",
           "529881659033547412",
           "535511158564123742",
           "522000359683116873",
           "553525557067946529",
           "553525557071755041",
-          "553525557067758753",
-          "552399657160843596",
           "529881659019657316",
           "552399657154968468",
           "549021957438757136",
@@ -3768,28 +3770,29 @@
           "542266557988527226",
           "490474528117206436",
           "522000359685711429",
-          "515244326059644268",
           "515244326059836256",
-          "553525557055573221",
-          "526503959303200779",
-          "634585276503591178"
+          "515244326059644268",
+          "553525557055573221"
         ],
-        "total_count": 95,
-        "first_ask": 5.61,
-        "last_page0_at_utc": "2026-06-06T06:09:52.371809+00:00",
+        "total_count": 97,
+        "first_ask": 5.38,
+        "last_page0_at_utc": "2026-06-06T11:23:42.942969+00:00",
         "day_key": "2026-06-06",
-        "last_deep_at_utc": "2026-06-06T06:09:52.371809+00:00",
-        "last_deep_reason": "new_day",
+        "last_deep_at_utc": "2026-06-06T11:23:42.942969+00:00",
+        "last_deep_reason": "sentinel_changed:page0_ids_changed+total_count_changed",
         "deep_pending": false
       },
       "★ Paracord Knife | Rust Coat (Battle-Scarred)": {
         "page0_listing_ids": [
+          "550147857358039162",
+          "536637058473775443",
+          "525378059408287949",
           "550147857356719294",
           "543392457913786164",
           "555777356884649733",
           "525378059398354361",
-          "516370225993734062",
           "554651456972029098",
+          "516370225993734062",
           "496102379126429183",
           "524252159476674505",
           "497228659608937499",
@@ -3800,22 +3803,20 @@
           "493852227851461964",
           "509614826526613164",
           "503981618206951485",
-          "514118426171861862",
-          "770819894185601217",
-          "509614192334210065",
-          "527628590834065413"
+          "514118426171861862"
         ],
-        "total_count": 92,
-        "first_ask": 57.86,
-        "last_page0_at_utc": "2026-06-06T06:10:14.994893+00:00",
+        "total_count": 95,
+        "first_ask": 55.86,
+        "last_page0_at_utc": "2026-06-06T11:24:07.765772+00:00",
         "day_key": "2026-06-06",
-        "last_deep_at_utc": "2026-06-06T06:10:14.994893+00:00",
-        "last_deep_reason": "new_day",
+        "last_deep_at_utc": "2026-06-06T11:24:07.765772+00:00",
+        "last_deep_reason": "sentinel_changed:page0_ids_changed+total_count_changed",
         "deep_pending": false
       },
       "AK-47 | The Oligarch (Battle-Scarred)": {
         "page0_listing_ids": [
-          "523126259585951575",
+          "540014758195639652",
+          "522000359686972257",
           "531007558920210594",
           "531007558929184854",
           "537762958378733576",
@@ -3829,19 +3830,18 @@
           "498355193271337573",
           "497229927575128673",
           "527628590828688489",
-          "501731878519556021",
           "529881024849240034",
           "525376791023422002",
+          "544518357823771013",
           "527626690809380372",
-          "497229927578567429",
-          "493851593618519966"
+          "497229927578567429"
         ],
-        "total_count": 106,
-        "first_ask": 43.06,
-        "last_page0_at_utc": "2026-06-06T06:10:40.106721+00:00",
+        "total_count": 107,
+        "first_ask": 43.05,
+        "last_page0_at_utc": "2026-06-06T11:24:25.151877+00:00",
         "day_key": "2026-06-06",
-        "last_deep_at_utc": "2026-06-06T06:10:40.106721+00:00",
-        "last_deep_reason": "new_day",
+        "last_deep_at_utc": "2026-06-06T11:24:25.151877+00:00",
+        "last_deep_reason": "sentinel_changed:page0_ids_changed+total_count_changed",
         "deep_pending": false
       },
       "StatTrak™ MP7 | Abyssal Apparition (Minimal Wear)": {
@@ -4093,7 +4093,7 @@
         "deep_pending": false
       }
     },
-    "last_batch_started_at_utc": "2026-06-06T09:44:05.743839+00:00",
+    "last_batch_started_at_utc": "2026-06-06T11:22:50.146671+00:00",
     "last_batch_stats": {
       "enabled": true,
       "tier": "B",
@@ -4102,14 +4102,12 @@
       "deep": 5,
       "page0_only": 0,
       "page0_changed_cooldown": 0,
-      "tail_cutoffs": 1,
+      "tail_cutoffs": 0,
       "deep_by_reason": {
-        "new_day": 1,
-        "sentinel_changed:page0_ids_changed+total_count_changed": 2,
-        "sentinel_changed:page0_ids_changed": 2
+        "sentinel_changed:page0_ids_changed+total_count_changed": 5
       }
     },
-    "last_batch_finished_at_utc": "2026-06-06T09:45:38.039862+00:00"
+    "last_batch_finished_at_utc": "2026-06-06T11:24:45.797133+00:00"
   },
   "last_fetch_strategy_stats": {
     "enabled": true,
@@ -4119,11 +4117,9 @@
     "deep": 5,
     "page0_only": 0,
     "page0_changed_cooldown": 0,
-    "tail_cutoffs": 1,
+    "tail_cutoffs": 0,
     "deep_by_reason": {
-      "new_day": 1,
-      "sentinel_changed:page0_ids_changed+total_count_changed": 2,
-      "sentinel_changed:page0_ids_changed": 2
+      "sentinel_changed:page0_ids_changed+total_count_changed": 5
     }
   }
 }
