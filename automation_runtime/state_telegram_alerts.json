@@ -305,7 +305,25 @@
       "item": "StatTrak™ MP7 | Just Smile (Factory New)",
       "listing_id": "536637058467906507",
       "spread_hybrid_disc": 0.1101714320524605
+    },
+    "listing:547896057543456160": {
+      "sent_at_utc": "2026-06-06T06:35:32.315700+00:00",
+      "item": "StatTrak™ AK-47 | Searing Rage (Battle-Scarred)",
+      "listing_id": "547896057543456160",
+      "spread_hybrid_disc": 0.0880353977887473
+    },
+    "listing:528755759126125523": {
+      "sent_at_utc": "2026-06-06T07:38:16.764816+00:00",
+      "item": "M4A1-S | Black Lotus (Battle-Scarred)",
+      "listing_id": "528755759126125523",
+      "spread_hybrid_disc": -0.0143132468757154
+    },
+    "listing:520874459776484981": {
+      "sent_at_utc": "2026-06-06T08:18:02.318363+00:00",
+      "item": "StatTrak™ USP-S | Jawbreaker (Battle-Scarred)",
+      "listing_id": "520874459776484981",
+      "spread_hybrid_disc": -0.1138712818176101
     }
   },
-  "last_alert_sent_at_utc": "2026-06-05T20:07:48.636977+00:00"
+  "last_alert_sent_at_utc": "2026-06-06T08:18:02.318586+00:00"
 }
