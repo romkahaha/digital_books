@@ -323,7 +323,31 @@
       "item": "StatTrak™ USP-S | Jawbreaker (Battle-Scarred)",
       "listing_id": "520874459776484981",
       "spread_hybrid_disc": -0.1138712818176101
+    },
+    "listing:558029156705839885": {
+      "sent_at_utc": "2026-06-06T12:00:14.898943+00:00",
+      "item": "StatTrak™ AK-47 | Searing Rage (Battle-Scarred)",
+      "listing_id": "558029156705839885",
+      "spread_hybrid_disc": 0.086567258151037
+    },
+    "listing:560280956517821898": {
+      "sent_at_utc": "2026-06-06T12:00:36.856378+00:00",
+      "item": "StatTrak™ AK-47 | Searing Rage (Battle-Scarred)",
+      "listing_id": "560280956517821898",
+      "spread_hybrid_disc": 0.0981561490482173
+    },
+    "listing:554651456981718714": {
+      "sent_at_utc": "2026-06-06T12:00:57.785782+00:00",
+      "item": "StatTrak™ AK-47 | Searing Rage (Battle-Scarred)",
+      "listing_id": "554651456981718714",
+      "spread_hybrid_disc": 0.1183356257173129
+    },
+    "listing:525378059408939297": {
+      "sent_at_utc": "2026-06-06T12:09:25.513755+00:00",
+      "item": "SG 553 | Danger Close (Factory New)",
+      "listing_id": "525378059408939297",
+      "spread_hybrid_disc": 0.1123072316016081
     }
   },
-  "last_alert_sent_at_utc": "2026-06-06T08:18:02.318586+00:00"
+  "last_alert_sent_at_utc": "2026-06-06T12:09:25.513916+00:00"
 }
