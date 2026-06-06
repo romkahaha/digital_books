@@ -293,7 +293,19 @@
       "item": "StatTrak™ AK-47 | Searing Rage (Battle-Scarred)",
       "listing_id": "560280956511017682",
       "spread_hybrid_disc": 0.1159448935913333
+    },
+    "listing:536637058467907011": {
+      "sent_at_utc": "2026-06-05T20:07:46.685164+00:00",
+      "item": "StatTrak™ MP7 | Just Smile (Factory New)",
+      "listing_id": "536637058467907011",
+      "spread_hybrid_disc": 0.1091796088283918
+    },
+    "listing:536637058467906507": {
+      "sent_at_utc": "2026-06-05T20:07:48.636852+00:00",
+      "item": "StatTrak™ MP7 | Just Smile (Factory New)",
+      "listing_id": "536637058467906507",
+      "spread_hybrid_disc": 0.1101714320524605
     }
   },
-  "last_alert_sent_at_utc": "2026-06-05T12:29:34.309570+00:00"
+  "last_alert_sent_at_utc": "2026-06-05T20:07:48.636977+00:00"
 }
