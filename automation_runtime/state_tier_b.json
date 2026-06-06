@@ -2,32 +2,32 @@
   "version": 1,
   "items_signature": "2b5b57a02303252d193e464e309ac0b9a078d1aefba9ef913ea78370d7a87a1f",
   "items_count": 131,
-  "batch_pointer": 26,
-  "last_run_at_utc": "2026-06-06T17:32:26.855693+00:00",
+  "batch_pointer": 31,
+  "last_run_at_utc": "2026-06-06T19:11:44.595576+00:00",
   "last_status": "ok",
   "last_batch_items": [
-    "AK-47 | Nouveau Rouge (Minimal Wear)",
-    "StatTrak™ AK-47 | Elite Build (Well-Worn)",
-    "M4A4 | Neo-Noir (Field-Tested)",
-    "StatTrak™ P2000 | Wicked Sick (Field-Tested)",
-    "★ Driver Gloves | Racing Green (Field-Tested)"
+    "FAMAS | Bad Trip (Battle-Scarred)",
+    "M4A4 | Temukau (Minimal Wear)",
+    "AWP | Crakow! (Battle-Scarred)",
+    "AWP | Printstream (Battle-Scarred)",
+    "Galil AR | Chromatic Aberration (Minimal Wear)"
   ],
   "last_error": null,
-  "last_finished_at_utc": "2026-06-06T17:34:32.408409+00:00",
-  "last_successful_monitoring_at_utc": "2026-06-06T17:34:32.408409+00:00",
+  "last_finished_at_utc": "2026-06-06T19:13:30.850490+00:00",
+  "last_successful_monitoring_at_utc": "2026-06-06T19:13:30.850490+00:00",
   "last_failed_monitoring_at_utc": "2026-06-04T15:15:54.943302+00:00",
   "consecutive_errors": 0,
   "last_listing_errors": [],
   "last_listing_error_count": 0,
-  "last_listing_rows": 400,
-  "last_enriched_rows": 400,
+  "last_listing_rows": 339,
+  "last_enriched_rows": 339,
   "last_opportunities_rows": 0,
   "last_alert_stats": {
     "mode": "background",
     "queued_rows": 0,
-    "sender_pid": 1944671
+    "sender_pid": 1945546
   },
-  "last_batch_start_pointer": 21,
+  "last_batch_start_pointer": 26,
   "listing_fetch_state": {
     "version": 1,
     "items": {
@@ -837,9 +837,6 @@
       },
       "FAMAS | Bad Trip (Battle-Scarred)": {
         "page0_listing_ids": [
-          "523126259592948895",
-          "522000359688372369",
-          "531007558938497226",
           "499481727364402810",
           "500606993054234779",
           "509614192319621605",
@@ -856,22 +853,22 @@
           "498355827477967801",
           "498355827477968233",
           "498355827477968413",
-          "498355827477968449"
+          "498355827477968449",
+          "498355827477968593",
+          "498355827477968701",
+          "498355827477969025"
         ],
-        "total_count": 97,
-        "first_ask": 54.4,
-        "last_page0_at_utc": "2026-06-06T12:24:04.125505+00:00",
+        "total_count": 93,
+        "first_ask": 57.41,
+        "last_page0_at_utc": "2026-06-06T19:11:44.607152+00:00",
         "day_key": "2026-06-06",
-        "last_deep_at_utc": "2026-06-06T12:24:04.125505+00:00",
-        "last_deep_reason": "sentinel_changed:page0_ids_changed",
+        "last_deep_at_utc": "2026-06-06T19:11:44.607152+00:00",
+        "last_deep_reason": "periodic_360m",
         "deep_pending": false
       },
       "M4A4 | Temukau (Minimal Wear)": {
         "page0_listing_ids": [
-          "532133458849165922",
           "552399657154971708",
-          "549021957450837872",
-          "553525557069725829",
           "491600428034959723",
           "529881659035514020",
           "516370225984917122",
@@ -881,62 +878,65 @@
           "549021957444716828",
           "515243691867920797",
           "510739458487940823",
-          "543392457907818300",
-          "512991258316909869",
           "503984059058784512",
+          "512991258316909869",
           "526502690926201271",
           "512991258313338345",
           "493851593638041614",
-          "499481093172863493"
+          "499481093172863493",
+          "547896057525213160",
+          "490474528115454352",
+          "521999725531084868"
         ],
-        "total_count": 223,
-        "first_ask": 71.07,
-        "last_page0_at_utc": "2026-06-06T12:31:16.161707+00:00",
+        "total_count": 230,
+        "first_ask": 73.83,
+        "last_page0_at_utc": "2026-06-06T19:12:08.364228+00:00",
         "day_key": "2026-06-06",
-        "last_deep_at_utc": "2026-06-06T12:31:16.161707+00:00",
-        "last_deep_reason": "sentinel_changed:page0_ids_changed+total_count_changed",
+        "last_deep_at_utc": "2026-06-06T19:12:08.364228+00:00",
+        "last_deep_reason": "periodic_360m",
         "deep_pending": false
       },
       "AWP | Crakow! (Battle-Scarred)": {
         "page0_listing_ids": [
-          "541140658101031223",
-          "546770157639192145",
-          "552399657170097972",
-          "523126259592260323",
+          "559155056614622944",
+          "529881659037932644",
+          "542266558011944902",
           "546770157637806829",
-          "550147857358184098",
           "543392457917298252",
           "559155056610684148",
           "527629859217698222",
-          "531007558936722570",
           "522000359674582461",
           "538888858266981715",
+          "537762958383318788",
           "546770157623489773",
           "544518357807947033",
           "493852227859072292",
           "549021957442495736",
           "558029156690167789",
+          "551273757265612431",
           "502859427091310398",
           "512992526275836421",
-          "540014758174767464"
+          "540014758174767464",
+          "511866626346261210"
         ],
-        "total_count": 104,
-        "first_ask": 22.61,
-        "last_page0_at_utc": "2026-06-06T12:31:41.683500+00:00",
+        "total_count": 102,
+        "first_ask": 22.88,
+        "last_page0_at_utc": "2026-06-06T19:12:33.497079+00:00",
         "day_key": "2026-06-06",
-        "last_deep_at_utc": "2026-06-06T12:31:41.683500+00:00",
-        "last_deep_reason": "sentinel_changed:page0_ids_changed+total_count_changed",
+        "last_deep_at_utc": "2026-06-06T19:12:33.497079+00:00",
+        "last_deep_reason": "periodic_360m",
         "deep_pending": false
       },
       "AWP | Printstream (Battle-Scarred)": {
         "page0_listing_ids": [
-          "554651456982736182",
-          "551273757264865503",
-          "541140658100969087",
-          "533259358754340371",
-          "544518357823561421",
+          "555777356895159213",
+          "544518357827000429",
+          "534385258663367470",
+          "535511158569081266",
+          "546770157641439337",
+          "541140658101382727",
+          "554651456983849770",
           "523126259592534715",
-          "555777356890100313",
           "542266558008969574",
           "558029156706103873",
           "531007558933042974",
@@ -948,46 +948,45 @@
           "520873825618289508",
           "507363026726959383",
           "508487278130767262",
-          "496102759717897789",
-          "516368958052782028"
+          "496102759717897789"
         ],
-        "total_count": 113,
-        "first_ask": 51.47,
-        "last_page0_at_utc": "2026-06-06T12:32:05.145935+00:00",
+        "total_count": 114,
+        "first_ask": 51.79,
+        "last_page0_at_utc": "2026-06-06T19:12:50.838646+00:00",
         "day_key": "2026-06-06",
-        "last_deep_at_utc": "2026-06-06T12:32:05.145935+00:00",
-        "last_deep_reason": "sentinel_changed:page0_ids_changed+total_count_changed",
+        "last_deep_at_utc": "2026-06-06T19:12:50.838646+00:00",
+        "last_deep_reason": "periodic_360m",
         "deep_pending": false
       },
       "Galil AR | Chromatic Aberration (Minimal Wear)": {
         "page0_listing_ids": [
-          "540014758196597288",
-          "549021957449165024",
-          "533259358752319151",
-          "543392457896394672",
-          "533259358751149511",
+          "554651456985327930",
+          "553525557078205701",
+          "538888858290476719",
+          "542266558012461286",
+          "540014758197795620",
+          "552399657170979000",
           "518622025807158011",
           "541140658101140015",
           "546770157637842685",
-          "517496125900858308",
           "523125625433038036",
-          "517496125900819500",
-          "526503959315991435",
-          "511866626348019774",
+          "517496125900858308",
           "511866626348079930",
+          "511866626348019774",
           "520873825598394972",
-          "515244326077482016",
+          "538888858289768311",
           "490473893895641828",
+          "515244326077482016",
           "516369591749066830",
           "516369591749069350",
           "529879376348396364"
         ],
-        "total_count": 176,
-        "first_ask": 9.58,
-        "last_page0_at_utc": "2026-06-06T12:32:26.341644+00:00",
+        "total_count": 175,
+        "first_ask": 9.08,
+        "last_page0_at_utc": "2026-06-06T19:13:13.709352+00:00",
         "day_key": "2026-06-06",
-        "last_deep_at_utc": "2026-06-06T12:32:26.341644+00:00",
-        "last_deep_reason": "sentinel_changed:page0_ids_changed+total_count_changed",
+        "last_deep_at_utc": "2026-06-06T19:13:13.709352+00:00",
+        "last_deep_reason": "periodic_360m",
         "deep_pending": false
       },
       "AWP | PAW (Factory New)": {
@@ -4089,7 +4088,7 @@
         "deep_pending": false
       }
     },
-    "last_batch_started_at_utc": "2026-06-06T17:32:26.862863+00:00",
+    "last_batch_started_at_utc": "2026-06-06T19:11:44.606936+00:00",
     "last_batch_stats": {
       "enabled": true,
       "tier": "B",
@@ -4100,11 +4099,10 @@
       "page0_changed_cooldown": 0,
       "tail_cutoffs": 0,
       "deep_by_reason": {
-        "sentinel_changed:page0_ids_changed+total_count_changed": 3,
-        "sentinel_changed:page0_ids_changed": 2
+        "periodic_360m": 5
       }
     },
-    "last_batch_finished_at_utc": "2026-06-06T17:34:30.432057+00:00"
+    "last_batch_finished_at_utc": "2026-06-06T19:13:28.042660+00:00"
   },
   "last_fetch_strategy_stats": {
     "enabled": true,
@@ -4116,8 +4114,7 @@
     "page0_changed_cooldown": 0,
     "tail_cutoffs": 0,
     "deep_by_reason": {
-      "sentinel_changed:page0_ids_changed+total_count_changed": 3,
-      "sentinel_changed:page0_ids_changed": 2
+      "periodic_360m": 5
     }
   }
 }
