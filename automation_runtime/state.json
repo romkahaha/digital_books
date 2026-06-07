@@ -13,33 +13,74 @@
     "B",
     "C"
   ],
-  "queue_pointer": 6,
-  "last_tier": "B",
-  "last_tier_queue_index": 5,
-  "last_batch_start_pointer": 99,
+  "queue_pointer": 2,
+  "last_tier": "A",
+  "last_tier_queue_index": 1,
+  "last_batch_start_pointer": 28,
   "last_batch_items": [
-    "StatTrak™ AK-47 | Ice Coaled (Minimal Wear)",
-    "★ Driver Gloves | Overtake (Field-Tested)",
-    "StatTrak™ P2000 | Wicked Sick (Minimal Wear)",
-    "AWP | Wildfire (Field-Tested)",
-    "Negev | Lionfish (Factory New)"
+    "M4A1-S | Solitude (Minimal Wear)",
+    "AK-47 | Elite Build (Minimal Wear)",
+    "P250 | Visions (Field-Tested)",
+    "AK-47 | Ice Coaled (Battle-Scarred)",
+    "AK-47 | Searing Rage (Battle-Scarred)"
   ],
   "last_error": null,
-  "last_run_at_utc": "2026-06-07T16:44:43.208441+00:00",
-  "last_finished_at_utc": "2026-06-07T16:46:57.869406+00:00",
-  "last_successful_monitoring_at_utc": "2026-06-07T16:46:57.869406+00:00",
+  "last_run_at_utc": "2026-06-07T18:33:42.986362+00:00",
+  "last_finished_at_utc": "2026-06-07T18:35:40.852971+00:00",
+  "last_successful_monitoring_at_utc": "2026-06-07T18:35:40.852971+00:00",
   "last_failed_monitoring_at_utc": "2026-06-04T15:15:55.174884+00:00",
   "last_status": "ok",
   "consecutive_errors": 0,
-  "last_listing_errors": [],
-  "last_listing_error_count": 0,
-  "last_listing_rows": 293,
-  "last_enriched_rows": 293,
+  "last_listing_errors": [
+    {
+      "market_hash_name": "AK-47 | Elite Build (Minimal Wear)",
+      "meta": {
+        "success": false,
+        "note": "exception",
+        "error": "Steam rate limit (429) for \"2/5 AK-47 | Elite Build (Minimal Wear)\": Steam /render/ returned non-JSON and Market Search action fallback failed: 429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/AK-47%20%7C%20Elite%20Build%20%28Minimal%20Wear%29",
+        "pages_fetched": 0,
+        "listings_target_cap": 100
+      }
+    },
+    {
+      "market_hash_name": "P250 | Visions (Field-Tested)",
+      "meta": {
+        "success": false,
+        "note": "exception",
+        "error": "Steam rate limit (429) for \"3/5 P250 | Visions (Field-Tested)\": 429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/P250%20%7C%20Visions%20%28Field-Tested%29",
+        "pages_fetched": 0,
+        "listings_target_cap": 100
+      }
+    },
+    {
+      "market_hash_name": "AK-47 | Ice Coaled (Battle-Scarred)",
+      "meta": {
+        "success": false,
+        "note": "exception",
+        "error": "Steam rate limit (429) for \"4/5 AK-47 | Ice Coaled (Battle-Scarred)\": 429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/AK-47%20%7C%20Ice%20Coaled%20%28Battle-Scarred%29",
+        "pages_fetched": 0,
+        "listings_target_cap": 100
+      }
+    },
+    {
+      "market_hash_name": "AK-47 | Searing Rage (Battle-Scarred)",
+      "meta": {
+        "success": false,
+        "note": "exception",
+        "error": "Steam rate limit (429) for \"5/5 AK-47 | Searing Rage (Battle-Scarred)\": 429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/AK-47%20%7C%20Searing%20Rage%20%28Battle-Scarred%29",
+        "pages_fetched": 0,
+        "listings_target_cap": 100
+      }
+    }
+  ],
+  "last_listing_error_count": 4,
+  "last_listing_rows": 19,
+  "last_enriched_rows": 19,
   "last_opportunities_rows": 0,
   "last_alert_stats": {
     "mode": "background",
     "queued_rows": 0,
-    "sender_pid": 1965475
+    "sender_pid": 1967705
   },
   "tiers": {
     "A": {
