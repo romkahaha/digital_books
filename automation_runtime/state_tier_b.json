@@ -2,32 +2,32 @@
   "version": 1,
   "items_signature": "2b5b57a02303252d193e464e309ac0b9a078d1aefba9ef913ea78370d7a87a1f",
   "items_count": 131,
-  "batch_pointer": 99,
-  "last_run_at_utc": "2026-06-07T15:07:22.063786+00:00",
+  "batch_pointer": 104,
+  "last_run_at_utc": "2026-06-07T16:44:44.981438+00:00",
   "last_status": "ok",
   "last_batch_items": [
-    "AWP | Hyper Beast (Field-Tested)",
-    "Glock-18 | Gold Toof (Field-Tested)",
-    "XM1014 | Solitude (Minimal Wear)",
-    "★ Specialist Gloves | Buckshot (Field-Tested)",
-    "StatTrak™ FAMAS | Rapid Eye Movement (Minimal Wear)"
+    "StatTrak™ AK-47 | Ice Coaled (Minimal Wear)",
+    "★ Driver Gloves | Overtake (Field-Tested)",
+    "StatTrak™ P2000 | Wicked Sick (Minimal Wear)",
+    "AWP | Wildfire (Field-Tested)",
+    "Negev | Lionfish (Factory New)"
   ],
   "last_error": null,
-  "last_finished_at_utc": "2026-06-07T15:09:18.256375+00:00",
-  "last_successful_monitoring_at_utc": "2026-06-07T15:09:18.256375+00:00",
+  "last_finished_at_utc": "2026-06-07T16:46:57.645574+00:00",
+  "last_successful_monitoring_at_utc": "2026-06-07T16:46:57.645574+00:00",
   "last_failed_monitoring_at_utc": "2026-06-04T15:15:54.943302+00:00",
   "consecutive_errors": 0,
   "last_listing_errors": [],
   "last_listing_error_count": 0,
-  "last_listing_rows": 379,
-  "last_enriched_rows": 379,
+  "last_listing_rows": 293,
+  "last_enriched_rows": 293,
   "last_opportunities_rows": 0,
   "last_alert_stats": {
     "mode": "background",
     "queued_rows": 0,
-    "sender_pid": 1963518
+    "sender_pid": 1965475
   },
-  "last_batch_start_pointer": 94,
+  "last_batch_start_pointer": 99,
   "listing_fetch_state": {
     "version": 1,
     "items": {
@@ -3100,71 +3100,72 @@
       },
       "StatTrak™ AK-47 | Ice Coaled (Minimal Wear)": {
         "page0_listing_ids": [
-          "526503959324867127",
+          "531007558949955918",
+          "544518357833436977",
           "540014758204144364",
-          "534385258668281038",
           "551273757272512695",
           "545644257737816304",
           "532133458854801578",
+          "540014758205342660",
           "532133458855062326",
-          "527629859221446362",
           "540014758181458496",
           "549021957450562544",
           "533259358745345195",
           "533259358745347103",
-          "533259358745348183",
           "540014758175494340",
           "498355827481651501",
-          "544518357824900117",
           "497229927565049753",
           "551273757258453939",
           "544518357827713733",
-          "500606993066989147"
+          "500606993066989147",
+          "510740726462215737",
+          "507363026721413151"
         ],
-        "total_count": 152,
-        "first_ask": 22.35,
-        "last_page0_at_utc": "2026-06-07T11:21:29.563409+00:00",
+        "total_count": 153,
+        "first_ask": 22.39,
+        "last_page0_at_utc": "2026-06-07T16:44:44.994916+00:00",
         "day_key": "2026-06-07",
-        "last_deep_at_utc": "2026-06-07T11:21:29.563409+00:00",
+        "last_deep_at_utc": "2026-06-07T16:44:44.994916+00:00",
         "last_deep_reason": "sentinel_changed:page0_ids_changed+total_count_changed",
         "deep_pending": false
       },
       "★ Driver Gloves | Overtake (Field-Tested)": {
         "page0_listing_ids": [
-          "551273757271642215",
-          "559155056620345216",
-          "541140658105536659",
-          "536637058464244443",
+          "535511158576698362",
           "535511158576536470",
           "528755124959980352",
           "542266558014666430",
           "528755759131388831",
           "526503959295041955",
-          "534385258658908402",
           "560280956500927926",
           "512991258302001801",
           "545644257719746788",
-          "524252159503024273",
+          "543392457927931752",
           "514116688949391882",
           "558029156699538373",
           "522000359688902793",
           "536637058455988311",
           "497229293330896819",
-          "520872035664562836"
+          "520872035664562836",
+          "503983678416459871",
+          "538888858298370079",
+          "503983678410807511"
         ],
-        "total_count": 130,
-        "first_ask": 69.0,
-        "last_page0_at_utc": "2026-06-07T11:27:43.377484+00:00",
+        "total_count": 127,
+        "first_ask": 73.38,
+        "last_page0_at_utc": "2026-06-07T16:45:05.707316+00:00",
         "day_key": "2026-06-07",
-        "last_deep_at_utc": "2026-06-07T11:27:43.377484+00:00",
+        "last_deep_at_utc": "2026-06-07T16:45:05.707316+00:00",
         "last_deep_reason": "sentinel_changed:page0_ids_changed+total_count_changed",
         "deep_pending": false
       },
       "StatTrak™ P2000 | Wicked Sick (Minimal Wear)": {
         "page0_listing_ids": [
+          "541140658109039639",
           "538888858290563839",
-          "531007558938060726",
+          "511865992136169472",
           "540014758195259996",
+          "531007558938060726",
           "529881659037775432",
           "531007558938658794",
           "528755759127352295",
@@ -3174,36 +3175,35 @@
           "541140658085706959",
           "535511158550875814",
           "546770157624015517",
+          "555777356901615489",
           "542266557992314750",
           "543392457899183484",
           "536637058459402875",
           "536637058465605819",
-          "494978127763133562",
-          "520874459780548373",
-          "526503959320255995",
-          "526503959320256499"
+          "494978127763133562"
         ],
-        "total_count": 31,
+        "total_count": 34,
         "first_ask": 7.33,
-        "last_page0_at_utc": "2026-06-07T11:28:00.855894+00:00",
+        "last_page0_at_utc": "2026-06-07T16:46:05.580457+00:00",
         "day_key": "2026-06-07",
-        "last_deep_at_utc": "2026-06-07T11:28:00.855894+00:00",
+        "last_deep_at_utc": "2026-06-07T16:46:05.580457+00:00",
         "last_deep_reason": "sentinel_changed:page0_ids_changed+total_count_changed",
         "deep_pending": false
       },
       "AWP | Wildfire (Field-Tested)": {
         "page0_listing_ids": [
+          "545644257738476004",
+          "533259358764530603",
           "547896057553818076",
-          "546770157645909997",
-          "533259358754314811",
           "553525557072337665",
           "534385258666628530",
           "493849693296489580",
           "520873825619263308",
           "514116777746593686",
+          "544518357832776341",
           "510739458490432887",
+          "556903256806546759",
           "630081676857230178",
-          "518620757864000972",
           "542266557998152798",
           "492725693734275599",
           "560280956521339278",
@@ -3211,29 +3211,28 @@
           "520871291138288796",
           "527629225062376275",
           "596305411429054069",
-          "492724679412097305",
-          "526503959303127303"
+          "492724679412097305"
         ],
-        "total_count": 125,
-        "first_ask": 57.44,
-        "last_page0_at_utc": "2026-06-07T11:28:11.192292+00:00",
+        "total_count": 128,
+        "first_ask": 56.09,
+        "last_page0_at_utc": "2026-06-07T16:46:12.577065+00:00",
         "day_key": "2026-06-07",
-        "last_deep_at_utc": "2026-06-07T11:28:11.192292+00:00",
+        "last_deep_at_utc": "2026-06-07T16:46:12.577065+00:00",
         "last_deep_reason": "sentinel_changed:page0_ids_changed+total_count_changed",
         "deep_pending": false
       },
       "Negev | Lionfish (Factory New)": {
         "page0_listing_ids": [
-          "535511158576242962",
           "547896057553625080",
           "538888858295580727",
           "538888858295579863",
           "551273757271858179",
+          "532133458857329678",
           "523126259599010251",
           "523126259599011799",
+          "529881659044890400",
           "526503959323163283",
           "526503959323164147",
-          "540014758202711528",
           "541140658108442831",
           "524252159504939509",
           "556903256804580619",
@@ -3243,13 +3242,13 @@
           "552399657176962272",
           "560280956523738930",
           "529881659040532600",
-          "526503959316456591"
+          "556903256797964683"
         ],
-        "total_count": 162,
+        "total_count": 159,
         "first_ask": 2.5,
-        "last_page0_at_utc": "2026-06-07T11:28:36.192251+00:00",
+        "last_page0_at_utc": "2026-06-07T16:46:39.020873+00:00",
         "day_key": "2026-06-07",
-        "last_deep_at_utc": "2026-06-07T11:28:36.192251+00:00",
+        "last_deep_at_utc": "2026-06-07T16:46:39.020873+00:00",
         "last_deep_reason": "sentinel_changed:page0_ids_changed+total_count_changed",
         "deep_pending": false
       },
@@ -4091,7 +4090,7 @@
         "deep_pending": false
       }
     },
-    "last_batch_started_at_utc": "2026-06-07T15:07:22.069293+00:00",
+    "last_batch_started_at_utc": "2026-06-07T16:44:44.994551+00:00",
     "last_batch_stats": {
       "enabled": true,
       "tier": "B",
@@ -4102,11 +4101,10 @@
       "page0_changed_cooldown": 0,
       "tail_cutoffs": 0,
       "deep_by_reason": {
-        "sentinel_changed:page0_ids_changed+total_count_changed": 3,
-        "sentinel_changed:page0_ids_changed": 2
+        "sentinel_changed:page0_ids_changed+total_count_changed": 5
       }
     },
-    "last_batch_finished_at_utc": "2026-06-07T15:09:16.027505+00:00"
+    "last_batch_finished_at_utc": "2026-06-07T16:46:55.153441+00:00"
   },
   "last_fetch_strategy_stats": {
     "enabled": true,
@@ -4118,8 +4116,7 @@
     "page0_changed_cooldown": 0,
     "tail_cutoffs": 0,
     "deep_by_reason": {
-      "sentinel_changed:page0_ids_changed+total_count_changed": 3,
-      "sentinel_changed:page0_ids_changed": 2
+      "sentinel_changed:page0_ids_changed+total_count_changed": 5
     }
   }
 }
