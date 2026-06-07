@@ -337,7 +337,7 @@
       "spread_hybrid_disc": 0.0981561490482173
     },
     "listing:554651456981718714": {
-      "sent_at_utc": "2026-06-06T12:00:57.785782+00:00",
+      "sent_at_utc": "2026-06-07T07:22:07.962014+00:00",
       "item": "StatTrak™ AK-47 | Searing Rage (Battle-Scarred)",
       "listing_id": "554651456981718714",
       "spread_hybrid_disc": 0.1183356257173129
@@ -361,19 +361,19 @@
       "spread_hybrid_disc": 0.1012357417390482
     },
     "listing:537762958382484776": {
-      "sent_at_utc": "2026-06-06T17:11:03.099825+00:00",
+      "sent_at_utc": "2026-06-07T07:20:03.517309+00:00",
       "item": "StatTrak™ AK-47 | Searing Rage (Battle-Scarred)",
       "listing_id": "537762958382484776",
       "spread_hybrid_disc": 0.1063953731467832
     },
     "listing:537762958382483552": {
-      "sent_at_utc": "2026-06-06T17:11:44.052453+00:00",
+      "sent_at_utc": "2026-06-07T07:20:44.605262+00:00",
       "item": "StatTrak™ AK-47 | Searing Rage (Battle-Scarred)",
       "listing_id": "537762958382483552",
       "spread_hybrid_disc": 0.1161437976250632
     },
     "listing:537762958382482616": {
-      "sent_at_utc": "2026-06-06T17:12:25.003975+00:00",
+      "sent_at_utc": "2026-06-07T07:21:25.682181+00:00",
       "item": "StatTrak™ AK-47 | Searing Rage (Battle-Scarred)",
       "listing_id": "537762958382482616",
       "spread_hybrid_disc": 0.116350545188969
@@ -383,7 +383,19 @@
       "item": "AWP | Atheris (Battle-Scarred)",
       "listing_id": "535511158571093882",
       "spread_hybrid_disc": 0.0879027559557893
+    },
+    "listing:555777356897950833": {
+      "sent_at_utc": "2026-06-07T07:19:22.488008+00:00",
+      "item": "StatTrak™ AK-47 | Searing Rage (Battle-Scarred)",
+      "listing_id": "555777356897950833",
+      "spread_hybrid_disc": 0.0968864787592308
+    },
+    "listing:560280956520770190": {
+      "sent_at_utc": "2026-06-07T07:21:46.654060+00:00",
+      "item": "StatTrak™ AK-47 | Searing Rage (Battle-Scarred)",
+      "listing_id": "560280956520770190",
+      "spread_hybrid_disc": 0.117769417790119
     }
   },
-  "last_alert_sent_at_utc": "2026-06-06T19:59:08.790632+00:00"
+  "last_alert_sent_at_utc": "2026-06-07T07:22:07.962196+00:00"
 }
