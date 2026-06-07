@@ -377,7 +377,13 @@
       "item": "StatTrak™ AK-47 | Searing Rage (Battle-Scarred)",
       "listing_id": "537762958382482616",
       "spread_hybrid_disc": 0.116350545188969
+    },
+    "listing:535511158571093882": {
+      "sent_at_utc": "2026-06-06T19:59:08.790424+00:00",
+      "item": "AWP | Atheris (Battle-Scarred)",
+      "listing_id": "535511158571093882",
+      "spread_hybrid_disc": 0.0879027559557893
     }
   },
-  "last_alert_sent_at_utc": "2026-06-06T17:12:25.004100+00:00"
+  "last_alert_sent_at_utc": "2026-06-06T19:59:08.790632+00:00"
 }
