@@ -2,32 +2,32 @@
   "version": 1,
   "items_signature": "2b5b57a02303252d193e464e309ac0b9a078d1aefba9ef913ea78370d7a87a1f",
   "items_count": 131,
-  "batch_pointer": 33,
-  "last_run_at_utc": "2026-06-07T18:26:01.958462+00:00",
+  "batch_pointer": 38,
+  "last_run_at_utc": "2026-06-07T20:05:50.933572+00:00",
   "last_status": "ok",
   "last_batch_items": [
-    "AWP | Crakow! (Battle-Scarred)",
-    "AWP | Printstream (Battle-Scarred)",
-    "Galil AR | Chromatic Aberration (Minimal Wear)",
-    "AWP | PAW (Factory New)",
-    "P250 | Asiimov (Battle-Scarred)"
+    "AK-47 | Emerald Pinstripe (Minimal Wear)",
+    "AUG | Momentum (Field-Tested)",
+    "StatTrak™ M4A4 | Magnesium (Minimal Wear)",
+    "StatTrak™ AWP | Atheris (Field-Tested)",
+    "Glock-18 | Water Elemental (Minimal Wear)"
   ],
   "last_error": null,
-  "last_finished_at_utc": "2026-06-07T18:28:09.912158+00:00",
-  "last_successful_monitoring_at_utc": "2026-06-07T18:28:09.912158+00:00",
+  "last_finished_at_utc": "2026-06-07T20:07:38.729223+00:00",
+  "last_successful_monitoring_at_utc": "2026-06-07T20:07:38.729223+00:00",
   "last_failed_monitoring_at_utc": "2026-06-04T15:15:54.943302+00:00",
   "consecutive_errors": 0,
   "last_listing_errors": [],
   "last_listing_error_count": 0,
-  "last_listing_rows": 359,
-  "last_enriched_rows": 359,
+  "last_listing_rows": 400,
+  "last_enriched_rows": 400,
   "last_opportunities_rows": 0,
   "last_alert_stats": {
     "mode": "background",
     "queued_rows": 0,
-    "sender_pid": 1967620
+    "sender_pid": 1973220
   },
-  "last_batch_start_pointer": 28,
+  "last_batch_start_pointer": 33,
   "listing_fetch_state": {
     "version": 1,
     "items": {
@@ -1056,43 +1056,46 @@
       },
       "AK-47 | Emerald Pinstripe (Minimal Wear)": {
         "page0_listing_ids": [
-          "527629859229611306",
-          "538888858297070191",
+          "540014758207082072",
           "546770157647247433",
+          "540014758206922664",
           "491599160093528690",
-          "538888858296985951",
-          "525375776827570915",
           "523126259596260859",
-          "540014758200105344",
-          "502858792870048488",
-          "550147857366452002",
+          "525375776827570915",
+          "522000359701136673",
           "526503959324404563",
+          "502858792870048488",
           "547896057549426112",
           "545644257734282940",
           "493850490549868996",
           "493850490549869392",
-          "549021957457588088",
           "650349216060318729",
           "633460107045606120",
           "500607627291511085",
-          "491598779486478758"
+          "491598779486478758",
+          "541140658101526763",
+          "541140658101517871",
+          "541140658101518519"
         ],
-        "total_count": 414,
-        "first_ask": 5.83,
-        "last_page0_at_utc": "2026-06-07T13:14:50.997423+00:00",
+        "total_count": 411,
+        "first_ask": 5.9,
+        "last_page0_at_utc": "2026-06-07T20:05:50.943457+00:00",
         "day_key": "2026-06-07",
-        "last_deep_at_utc": "2026-06-07T13:14:50.997423+00:00",
-        "last_deep_reason": "sentinel_changed:page0_ids_changed+total_count_changed",
+        "last_deep_at_utc": "2026-06-07T20:05:50.943457+00:00",
+        "last_deep_reason": "periodic_360m",
         "deep_pending": false
       },
       "AUG | Momentum (Field-Tested)": {
         "page0_listing_ids": [
+          "559155056623790524",
           "524252159501467093",
           "559155056620751296",
-          "534385258668230566",
+          "559155056622835840",
+          "547896057556979344",
           "529881659043150412",
           "520874459786529701",
           "533259358763267795",
+          "540014758206597044",
           "500607627272991281",
           "503983678409186935",
           "499480459439806828",
@@ -1103,33 +1106,28 @@
           "526503959316981651",
           "508487658686752509",
           "519746657753805442",
-          "529879756908143665",
-          "509614192312527085",
-          "542266558012045954",
-          "500606359338228737"
+          "529879756908143665"
         ],
-        "total_count": 132,
-        "first_ask": 6.9,
-        "last_page0_at_utc": "2026-06-07T13:22:27.169363+00:00",
+        "total_count": 136,
+        "first_ask": 6.83,
+        "last_page0_at_utc": "2026-06-07T20:06:16.892063+00:00",
         "day_key": "2026-06-07",
-        "last_deep_at_utc": "2026-06-07T13:22:27.169363+00:00",
-        "last_deep_reason": "sentinel_changed:page0_ids_changed+total_count_changed",
+        "last_deep_at_utc": "2026-06-07T20:06:16.892063+00:00",
+        "last_deep_reason": "periodic_360m",
         "deep_pending": false
       },
       "StatTrak™ M4A4 | Magnesium (Minimal Wear)": {
         "page0_listing_ids": [
-          "553525557083920017",
+          "558029156717320321",
           "553525557083557893",
           "537762958366066184",
           "534385258654013446",
           "549021957459083924",
           "547896057546451900",
-          "549021957453935132",
           "511865263789292013",
           "529881024847855654",
-          "526501962541231577",
           "517494857959136258",
-          "559155056597375884",
+          "526501962541231577",
           "559155056597376136",
           "559155056597376028",
           "528755124966294932",
@@ -1137,20 +1135,25 @@
           "636838417164131716",
           "525377425243042777",
           "528755759114691563",
-          "526502690906623679"
+          "526502690906623679",
+          "492723793448134929",
+          "554651456976929778"
         ],
         "total_count": 137,
-        "first_ask": 4.84,
-        "last_page0_at_utc": "2026-06-07T13:22:53.148807+00:00",
+        "first_ask": 4.69,
+        "last_page0_at_utc": "2026-06-07T20:06:36.493899+00:00",
         "day_key": "2026-06-07",
-        "last_deep_at_utc": "2026-06-07T13:22:53.148807+00:00",
-        "last_deep_reason": "sentinel_changed:page0_ids_changed",
+        "last_deep_at_utc": "2026-06-07T20:06:36.493899+00:00",
+        "last_deep_reason": "periodic_360m",
         "deep_pending": false
       },
       "StatTrak™ AWP | Atheris (Field-Tested)": {
         "page0_listing_ids": [
-          "554651456989801902",
-          "522000359698243569",
+          "554651456993499282",
+          "546770157649289569",
+          "546770157650027713",
+          "559155056621545672",
+          "535511158580074406",
           "505109958969081197",
           "545644257738711408",
           "549021957446129288",
@@ -1158,55 +1161,52 @@
           "531007558934534166",
           "519747291482233194",
           "531007558930570926",
+          "545644257741592200",
           "555777356888267157",
+          "525378059418232445",
           "559155056619221980",
           "525375776827080343",
           "524252159500284349",
           "528753857001681063",
-          "501731878525844429",
-          "496104027640219267",
-          "494977493537977807",
-          "509614192332828205",
-          "502858159140284015",
-          "511866626343600666"
+          "501731878525844429"
         ],
-        "total_count": 167,
-        "first_ask": 11.64,
-        "last_page0_at_utc": "2026-06-07T13:23:18.226503+00:00",
+        "total_count": 168,
+        "first_ask": 11.44,
+        "last_page0_at_utc": "2026-06-07T20:06:58.154051+00:00",
         "day_key": "2026-06-07",
-        "last_deep_at_utc": "2026-06-07T13:23:18.226503+00:00",
-        "last_deep_reason": "sentinel_changed:page0_ids_changed+total_count_changed",
+        "last_deep_at_utc": "2026-06-07T20:06:58.154051+00:00",
+        "last_deep_reason": "periodic_360m",
         "deep_pending": false
       },
       "Glock-18 | Water Elemental (Minimal Wear)": {
         "page0_listing_ids": [
-          "537762958390575380",
-          "544518357832920953",
-          "533259358763376875",
-          "528755759136324791",
+          "535511158580075162",
           "554651456990611902",
-          "534385258667946166",
-          "538888858295718571",
           "527629859228346914",
           "541140658107159575",
           "552399657176636508",
           "534385258668356026",
-          "533259358762985663",
-          "558029156712612133",
           "538888858292478823",
           "554651456989741746",
-          "554651456989743798",
           "528755124966294428",
           "528755759118712475",
           "545644257733878012",
-          "527629859228422802"
+          "540014758206329024",
+          "527629859228422802",
+          "521999091288453437",
+          "520874459786529017",
+          "556903256798929123",
+          "528755759135158787",
+          "496101493269838391",
+          "532133458848916802",
+          "517496125889892528"
         ],
-        "total_count": 193,
-        "first_ask": 23.02,
-        "last_page0_at_utc": "2026-06-07T13:23:38.750962+00:00",
+        "total_count": 186,
+        "first_ask": 22.82,
+        "last_page0_at_utc": "2026-06-07T20:07:17.682108+00:00",
         "day_key": "2026-06-07",
-        "last_deep_at_utc": "2026-06-07T13:23:38.750962+00:00",
-        "last_deep_reason": "sentinel_changed:page0_ids_changed+total_count_changed",
+        "last_deep_at_utc": "2026-06-07T20:07:17.682108+00:00",
+        "last_deep_reason": "periodic_360m",
         "deep_pending": false
       },
       "StatTrak™ Zeus x27 | Olympus (Field-Tested)": {
@@ -4092,7 +4092,7 @@
         "deep_pending": false
       }
     },
-    "last_batch_started_at_utc": "2026-06-07T18:26:01.970285+00:00",
+    "last_batch_started_at_utc": "2026-06-07T20:05:50.943236+00:00",
     "last_batch_stats": {
       "enabled": true,
       "tier": "B",
@@ -4103,10 +4103,10 @@
       "page0_changed_cooldown": 0,
       "tail_cutoffs": 0,
       "deep_by_reason": {
-        "sentinel_changed:page0_ids_changed+total_count_changed": 5
+        "periodic_360m": 5
       }
     },
-    "last_batch_finished_at_utc": "2026-06-07T18:28:07.700688+00:00"
+    "last_batch_finished_at_utc": "2026-06-07T20:07:36.180309+00:00"
   },
   "last_fetch_strategy_stats": {
     "enabled": true,
@@ -4118,7 +4118,7 @@
     "page0_changed_cooldown": 0,
     "tail_cutoffs": 0,
     "deep_by_reason": {
-      "sentinel_changed:page0_ids_changed+total_count_changed": 5
+      "periodic_360m": 5
     }
   }
 }
