@@ -2,32 +2,32 @@
   "version": 1,
   "items_signature": "2b5b57a02303252d193e464e309ac0b9a078d1aefba9ef913ea78370d7a87a1f",
   "items_count": 131,
-  "batch_pointer": 102,
-  "last_run_at_utc": "2026-06-09T17:50:36.035045+00:00",
+  "batch_pointer": 107,
+  "last_run_at_utc": "2026-06-09T19:27:54.380531+00:00",
   "last_status": "ok",
   "last_batch_items": [
-    "★ Specialist Gloves | Buckshot (Field-Tested)",
-    "StatTrak™ FAMAS | Rapid Eye Movement (Minimal Wear)",
-    "StatTrak™ AK-47 | Ice Coaled (Minimal Wear)",
-    "★ Driver Gloves | Overtake (Field-Tested)",
-    "StatTrak™ P2000 | Wicked Sick (Minimal Wear)"
+    "AWP | Wildfire (Field-Tested)",
+    "Negev | Lionfish (Factory New)",
+    "Tec-9 | Remote Control (Minimal Wear)",
+    "StatTrak™ M4A1-S | Black Lotus (Minimal Wear)",
+    "StatTrak™ XM1014 | Entombed (Field-Tested)"
   ],
   "last_error": null,
-  "last_finished_at_utc": "2026-06-09T17:52:13.936619+00:00",
-  "last_successful_monitoring_at_utc": "2026-06-09T17:52:13.936619+00:00",
+  "last_finished_at_utc": "2026-06-09T19:29:40.695934+00:00",
+  "last_successful_monitoring_at_utc": "2026-06-09T19:29:40.695934+00:00",
   "last_failed_monitoring_at_utc": "2026-06-04T15:15:54.943302+00:00",
   "consecutive_errors": 0,
   "last_listing_errors": [],
   "last_listing_error_count": 0,
-  "last_listing_rows": 343,
-  "last_enriched_rows": 343,
+  "last_listing_rows": 369,
+  "last_enriched_rows": 369,
   "last_opportunities_rows": 0,
   "last_alert_stats": {
     "mode": "background",
     "queued_rows": 0,
-    "sender_pid": 2016125
+    "sender_pid": 2017014
   },
-  "last_batch_start_pointer": 97,
+  "last_batch_start_pointer": 102,
   "listing_fetch_state": {
     "version": 1,
     "items": {
@@ -3191,7 +3191,11 @@
       },
       "AWP | Wildfire (Field-Tested)": {
         "page0_listing_ids": [
-          "533259358774708415",
+          "542266558032102454",
+          "525378059431290509",
+          "552399657193079292",
+          "529881659057443744",
+          "536637058493463087",
           "533259358773485495",
           "534385258666628530",
           "553525557072337665",
@@ -3199,32 +3203,27 @@
           "550147857376852582",
           "520873825619263308",
           "514116777746593686",
+          "520874459799723053",
           "556903256806546759",
           "630081676857230178",
           "510739458490432887",
-          "542266557998152798",
           "492725693734275599",
           "622200377526648150",
-          "527629225062376275",
           "596305411429054069",
-          "492724679412097305",
-          "520873191397487756",
-          "493851593633737886"
+          "492724679412097305"
         ],
         "total_count": 133,
-        "first_ask": 57.92,
-        "last_page0_at_utc": "2026-06-09T08:47:26.878066+00:00",
+        "first_ask": 57.5,
+        "last_page0_at_utc": "2026-06-09T19:27:54.390459+00:00",
         "day_key": "2026-06-09",
-        "last_deep_at_utc": "2026-06-09T08:47:26.878066+00:00",
-        "last_deep_reason": "new_day",
+        "last_deep_at_utc": "2026-06-09T19:27:54.390459+00:00",
+        "last_deep_reason": "periodic_360m",
         "deep_pending": false
       },
       "Negev | Lionfish (Factory New)": {
         "page0_listing_ids": [
-          "532133458869164858",
-          "538888858308031183",
-          "538888858308030751",
           "538888858308033343",
+          "541140658120754687",
           "555777356911729077",
           "555777356911731273",
           "555777356911732425",
@@ -3233,30 +3232,32 @@
           "555777356911735161",
           "555777356911736457",
           "555777356911738725",
-          "541140658120754687",
           "555777356912012397",
           "532133458868179358",
-          "526503959323163283",
-          "526503959323164147",
           "535511158583910278",
           "545644257745819608",
-          "524252159517049657"
+          "526503959323163283",
+          "526503959323164147",
+          "524252159517049657",
+          "524252159517049477",
+          "529881659040777868",
+          "529881659040780388"
         ],
-        "total_count": 165,
-        "first_ask": 2.53,
-        "last_page0_at_utc": "2026-06-09T14:11:19.233383+00:00",
+        "total_count": 162,
+        "first_ask": 2.54,
+        "last_page0_at_utc": "2026-06-09T19:28:20.551474+00:00",
         "day_key": "2026-06-09",
-        "last_deep_at_utc": "2026-06-09T14:11:19.233383+00:00",
+        "last_deep_at_utc": "2026-06-09T19:28:20.551474+00:00",
         "last_deep_reason": "sentinel_changed:page0_ids_changed+total_count_changed",
         "deep_pending": false
       },
       "Tec-9 | Remote Control (Minimal Wear)": {
         "page0_listing_ids": [
+          "538888858309888207",
           "527629859240949830",
           "536637058491104943",
           "526503959335577307",
           "537762958401281384",
-          "538888858305814267",
           "555777356879385021",
           "506235858882259981",
           "528753221921651277",
@@ -3274,19 +3275,19 @@
           "508487023592605658"
         ],
         "total_count": 74,
-        "first_ask": 8.66,
-        "last_page0_at_utc": "2026-06-09T14:11:40.236005+00:00",
+        "first_ask": 8.6,
+        "last_page0_at_utc": "2026-06-09T19:28:41.933013+00:00",
         "day_key": "2026-06-09",
-        "last_deep_at_utc": "2026-06-09T14:11:40.236005+00:00",
-        "last_deep_reason": "sentinel_changed:page0_ids_changed+total_count_changed",
+        "last_deep_at_utc": "2026-06-09T19:28:41.933013+00:00",
+        "last_deep_reason": "sentinel_changed:page0_ids_changed",
         "deep_pending": false
       },
       "StatTrak™ M4A1-S | Black Lotus (Minimal Wear)": {
         "page0_listing_ids": [
-          "544518357845295917",
-          "544518357840557561",
+          "550147857379773586",
+          "555777356913134049",
+          "524252159519338069",
           "543392457920983500",
-          "524252159515418353",
           "529881024847469662",
           "506237126832478961",
           "552399657186384120",
@@ -3305,15 +3306,17 @@
           "544518357840553493"
         ],
         "total_count": 133,
-        "first_ask": 25.76,
-        "last_page0_at_utc": "2026-06-09T14:11:58.154961+00:00",
+        "first_ask": 26.83,
+        "last_page0_at_utc": "2026-06-09T19:29:03.640231+00:00",
         "day_key": "2026-06-09",
-        "last_deep_at_utc": "2026-06-09T14:11:58.154961+00:00",
-        "last_deep_reason": "sentinel_changed:page0_ids_changed+total_count_changed",
+        "last_deep_at_utc": "2026-06-09T19:29:03.640231+00:00",
+        "last_deep_reason": "sentinel_changed:page0_ids_changed",
         "deep_pending": false
       },
       "StatTrak™ XM1014 | Entombed (Field-Tested)": {
         "page0_listing_ids": [
+          "526503959340230595",
+          "558029156727762805",
           "551273757285953151",
           "531007558957868790",
           "537762958399633772",
@@ -3331,15 +3334,13 @@
           "516368958023277544",
           "507361758779119979",
           "540014758203530636",
-          "510740092221241352",
-          "550147857349423354",
-          "498354178741750519"
+          "510740092221241352"
         ],
-        "total_count": 53,
-        "first_ask": 5.75,
-        "last_page0_at_utc": "2026-06-09T14:12:24.010418+00:00",
+        "total_count": 55,
+        "first_ask": 5.59,
+        "last_page0_at_utc": "2026-06-09T19:29:26.649255+00:00",
         "day_key": "2026-06-09",
-        "last_deep_at_utc": "2026-06-09T14:12:24.010418+00:00",
+        "last_deep_at_utc": "2026-06-09T19:29:26.649255+00:00",
         "last_deep_reason": "sentinel_changed:page0_ids_changed+total_count_changed",
         "deep_pending": false
       },
@@ -4088,7 +4089,7 @@
         "deep_pending": false
       }
     },
-    "last_batch_started_at_utc": "2026-06-09T17:50:36.041215+00:00",
+    "last_batch_started_at_utc": "2026-06-09T19:27:54.390261+00:00",
     "last_batch_stats": {
       "enabled": true,
       "tier": "B",
@@ -4099,11 +4100,12 @@
       "page0_changed_cooldown": 0,
       "tail_cutoffs": 0,
       "deep_by_reason": {
+        "periodic_360m": 1,
         "sentinel_changed:page0_ids_changed+total_count_changed": 2,
-        "periodic_360m": 3
+        "sentinel_changed:page0_ids_changed": 2
       }
     },
-    "last_batch_finished_at_utc": "2026-06-09T17:52:12.116461+00:00"
+    "last_batch_finished_at_utc": "2026-06-09T19:29:38.091400+00:00"
   },
   "last_fetch_strategy_stats": {
     "enabled": true,
@@ -4115,8 +4117,9 @@
     "page0_changed_cooldown": 0,
     "tail_cutoffs": 0,
     "deep_by_reason": {
+      "periodic_360m": 1,
       "sentinel_changed:page0_ids_changed+total_count_changed": 2,
-      "periodic_360m": 3
+      "sentinel_changed:page0_ids_changed": 2
     }
   }
 }
