@@ -463,7 +463,7 @@
       "spread_hybrid_disc": 0.0896686054033355
     },
     "listing:531007558949193906": {
-      "sent_at_utc": "2026-06-08T08:08:19.724591+00:00",
+      "sent_at_utc": "2026-06-09T06:10:07.567946+00:00",
       "item": "StatTrak™ AK-47 | Searing Rage (Battle-Scarred)",
       "listing_id": "531007558949193906",
       "spread_hybrid_disc": 0.0957498790273889
@@ -499,10 +499,10 @@
       "spread_hybrid_disc": 0.1077330729702451
     },
     "listing:520874459793776285": {
-      "sent_at_utc": "2026-06-08T08:06:25.562933+00:00",
+      "sent_at_utc": "2026-06-09T06:09:05.606349+00:00",
       "item": "StatTrak™ AK-47 | Searing Rage (Battle-Scarred)",
       "listing_id": "520874459793776285",
-      "spread_hybrid_disc": 0.0726313254213683
+      "spread_hybrid_disc": 0.0813084592185952
     },
     "listing:522000359705082453": {
       "sent_at_utc": "2026-06-08T08:07:47.475442+00:00",
@@ -575,7 +575,79 @@
       "item": "AWP | Asiimov (Battle-Scarred)",
       "listing_id": "551273757282781119",
       "spread_hybrid_disc": 0.0947870930800425
+    },
+    "listing:529881659054513056": {
+      "sent_at_utc": "2026-06-09T06:08:24.681969+00:00",
+      "item": "StatTrak™ AK-47 | Searing Rage (Battle-Scarred)",
+      "listing_id": "529881659054513056",
+      "spread_hybrid_disc": 0.0768570788410419
+    },
+    "listing:542266558027686586": {
+      "sent_at_utc": "2026-06-09T06:09:46.552130+00:00",
+      "item": "StatTrak™ AK-47 | Searing Rage (Battle-Scarred)",
+      "listing_id": "542266558027686586",
+      "spread_hybrid_disc": 0.0945669683863126
+    },
+    "listing:543392457936037980": {
+      "sent_at_utc": "2026-06-09T06:10:28.493161+00:00",
+      "item": "StatTrak™ AK-47 | Searing Rage (Battle-Scarred)",
+      "listing_id": "543392457936037980",
+      "spread_hybrid_disc": 0.1073659434096589
+    },
+    "listing:527629859239586870": {
+      "sent_at_utc": "2026-06-09T06:11:09.456135+00:00",
+      "item": "StatTrak™ AK-47 | Searing Rage (Battle-Scarred)",
+      "listing_id": "527629859239586870",
+      "spread_hybrid_disc": 0.1102183204699467
+    },
+    "listing:554651456999789778": {
+      "sent_at_utc": "2026-06-09T06:11:50.464018+00:00",
+      "item": "Glock-18 | Mirror Mosaic (Battle-Scarred)",
+      "listing_id": "554651456999789778",
+      "spread_hybrid_disc": 0.1163046440859449
+    },
+    "listing:559155056631593920": {
+      "sent_at_utc": "2026-06-09T09:28:15.878947+00:00",
+      "item": "Desert Eagle | Mulberry (Field-Tested)",
+      "listing_id": "559155056631593920",
+      "spread_hybrid_disc": 0.1129384257190867
+    },
+    "listing:550147857377932330": {
+      "sent_at_utc": "2026-06-09T09:47:57.271020+00:00",
+      "item": "StatTrak™ AK-47 | Searing Rage (Battle-Scarred)",
+      "listing_id": "550147857377932330",
+      "spread_hybrid_disc": 0.0309271513598988
+    },
+    "listing:545644257749565660": {
+      "sent_at_utc": "2026-06-09T09:48:38.211148+00:00",
+      "item": "StatTrak™ AK-47 | Searing Rage (Battle-Scarred)",
+      "listing_id": "545644257749565660",
+      "spread_hybrid_disc": 0.0544809761990489
+    },
+    "listing:554651457001234602": {
+      "sent_at_utc": "2026-06-09T09:49:19.160210+00:00",
+      "item": "StatTrak™ AK-47 | Searing Rage (Battle-Scarred)",
+      "listing_id": "554651457001234602",
+      "spread_hybrid_disc": 0.0566763957602799
+    },
+    "listing:546770157659288857": {
+      "sent_at_utc": "2026-06-09T09:50:00.134037+00:00",
+      "item": "StatTrak™ AK-47 | Searing Rage (Battle-Scarred)",
+      "listing_id": "546770157659288857",
+      "spread_hybrid_disc": 0.0567354586226853
+    },
+    "listing:559155056631013060": {
+      "sent_at_utc": "2026-06-09T09:50:22.212970+00:00",
+      "item": "StatTrak™ AK-47 | Searing Rage (Battle-Scarred)",
+      "listing_id": "559155056631013060",
+      "spread_hybrid_disc": 0.0733262193376085
+    },
+    "listing:542266558030287910": {
+      "sent_at_utc": "2026-06-09T10:24:28.760707+00:00",
+      "item": "★ Driver Gloves | Racing Green (Field-Tested)",
+      "listing_id": "542266558030287910",
+      "spread_hybrid_disc": 0.1023438166824839
     }
   },
-  "last_alert_sent_at_utc": "2026-06-08T18:25:45.962639+00:00"
+  "last_alert_sent_at_utc": "2026-06-09T10:24:28.761093+00:00"
 }
