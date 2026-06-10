@@ -13,74 +13,33 @@
     "B",
     "C"
   ],
-  "queue_pointer": 3,
-  "last_tier": "B",
-  "last_tier_queue_index": 2,
-  "last_batch_start_pointer": 13,
+  "queue_pointer": 4,
+  "last_tier": "A",
+  "last_tier_queue_index": 3,
+  "last_batch_start_pointer": 37,
   "last_batch_items": [
-    "UMP-45 | Momentum (Field-Tested)",
-    "AWP | Crakow! (Field-Tested)",
-    "M4A4 | Turbine (Minimal Wear)",
-    "StatTrak™ Desert Eagle | Light Rail (Field-Tested)",
-    "AK-47 | Slate (Factory New)"
+    "Glock-18 | Shinobu (Battle-Scarred)",
+    "USP-S | Royal Guard (Minimal Wear)",
+    "AK-47 | Searing Rage (Minimal Wear)",
+    "MP9 | Starlight Protector (Field-Tested)",
+    "AWP | Duality (Battle-Scarred)"
   ],
   "last_error": null,
-  "last_run_at_utc": "2026-06-10T17:05:28.800103+00:00",
-  "last_finished_at_utc": "2026-06-10T17:06:42.488135+00:00",
-  "last_successful_monitoring_at_utc": "2026-06-10T17:06:42.488135+00:00",
+  "last_run_at_utc": "2026-06-10T18:36:50.576878+00:00",
+  "last_finished_at_utc": "2026-06-10T18:39:09.828610+00:00",
+  "last_successful_monitoring_at_utc": "2026-06-10T18:39:09.828610+00:00",
   "last_failed_monitoring_at_utc": "2026-06-04T15:15:55.174884+00:00",
   "last_status": "ok",
   "consecutive_errors": 0,
-  "last_listing_errors": [
-    {
-      "market_hash_name": "AWP | Crakow! (Field-Tested)",
-      "meta": {
-        "success": false,
-        "note": "exception",
-        "error": "Steam rate limit (429) for \"2/5 AWP | Crakow! (Field-Tested)\": 429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/AWP%20%7C%20Crakow%21%20%28Field-Tested%29",
-        "pages_fetched": 0,
-        "listings_target_cap": 80
-      }
-    },
-    {
-      "market_hash_name": "M4A4 | Turbine (Minimal Wear)",
-      "meta": {
-        "success": false,
-        "note": "exception",
-        "error": "Steam rate limit (429) for \"3/5 M4A4 | Turbine (Minimal Wear)\": 429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/M4A4%20%7C%20Turbine%20%28Minimal%20Wear%29",
-        "pages_fetched": 0,
-        "listings_target_cap": 80
-      }
-    },
-    {
-      "market_hash_name": "StatTrak™ Desert Eagle | Light Rail (Field-Tested)",
-      "meta": {
-        "success": false,
-        "note": "exception",
-        "error": "Steam rate limit (429) for \"4/5 StatTrak™ Desert Eagle | Light Rail (Field-Tested)\": 429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/StatTrak%E2%84%A2%20Desert%20Eagle%20%7C%20Light%20Rail%20%28Field-Tested%29",
-        "pages_fetched": 0,
-        "listings_target_cap": 80
-      }
-    },
-    {
-      "market_hash_name": "AK-47 | Slate (Factory New)",
-      "meta": {
-        "success": false,
-        "note": "exception",
-        "error": "Steam rate limit (429) for \"5/5 AK-47 | Slate (Factory New)\": 429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/AK-47%20%7C%20Slate%20%28Factory%20New%29",
-        "pages_fetched": 0,
-        "listings_target_cap": 80
-      }
-    }
-  ],
-  "last_listing_error_count": 4,
-  "last_listing_rows": 80,
-  "last_enriched_rows": 80,
+  "last_listing_errors": [],
+  "last_listing_error_count": 0,
+  "last_listing_rows": 500,
+  "last_enriched_rows": 500,
   "last_opportunities_rows": 0,
   "last_alert_stats": {
     "mode": "background",
     "queued_rows": 0,
-    "sender_pid": 2040736
+    "sender_pid": 2041685
   },
   "tiers": {
     "A": {
