@@ -13,54 +13,33 @@
     "B",
     "C"
   ],
-  "queue_pointer": 2,
-  "last_tier": "A",
-  "last_tier_queue_index": 1,
-  "last_batch_start_pointer": 4,
+  "queue_pointer": 3,
+  "last_tier": "B",
+  "last_tier_queue_index": 2,
+  "last_batch_start_pointer": 110,
   "last_batch_items": [
-    "AWP | Duality (Field-Tested)",
-    "AK-47 | Midnight Laminate (Field-Tested)",
-    "USP-S | Jawbreaker (Field-Tested)",
-    "Glock-18 | Shinobu (Field-Tested)",
-    "Zeus x27 | Olympus (Field-Tested)"
+    "M4A4 | Full Throttle (Battle-Scarred)",
+    "StatTrak™ AK-47 | Nightwish (Field-Tested)",
+    "AWP | Neo-Noir (Factory New)",
+    "AK-47 | The Empress (Field-Tested)",
+    "Desert Eagle | The Bronze (Factory New)"
   ],
   "last_error": null,
-  "last_run_at_utc": "2026-06-11T17:49:22.504492+00:00",
-  "last_finished_at_utc": "2026-06-11T17:52:15.193872+00:00",
-  "last_successful_monitoring_at_utc": "2026-06-11T17:52:15.193872+00:00",
+  "last_run_at_utc": "2026-06-11T19:22:25.269345+00:00",
+  "last_finished_at_utc": "2026-06-11T19:24:29.888388+00:00",
+  "last_successful_monitoring_at_utc": "2026-06-11T19:24:29.888388+00:00",
   "last_failed_monitoring_at_utc": "2026-06-04T15:15:55.174884+00:00",
   "last_status": "ok",
   "consecutive_errors": 0,
-  "last_listing_errors": [
-    {
-      "market_hash_name": "Glock-18 | Shinobu (Field-Tested)",
-      "meta": {
-        "success": false,
-        "note": "exception",
-        "error": "Steam rate limit (429) for \"4/5 Glock-18 | Shinobu (Field-Tested)\": 429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/Glock-18%20%7C%20Shinobu%20%28Field-Tested%29",
-        "pages_fetched": 0,
-        "listings_target_cap": 100
-      }
-    },
-    {
-      "market_hash_name": "Zeus x27 | Olympus (Field-Tested)",
-      "meta": {
-        "success": false,
-        "note": "exception",
-        "error": "Steam rate limit (429) for \"5/5 Zeus x27 | Olympus (Field-Tested)\": 429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/Zeus%20x27%20%7C%20Olympus%20%28Field-Tested%29",
-        "pages_fetched": 0,
-        "listings_target_cap": 100
-      }
-    }
-  ],
-  "last_listing_error_count": 2,
-  "last_listing_rows": 138,
-  "last_enriched_rows": 138,
+  "last_listing_errors": [],
+  "last_listing_error_count": 0,
+  "last_listing_rows": 395,
+  "last_enriched_rows": 395,
   "last_opportunities_rows": 0,
   "last_alert_stats": {
     "mode": "background",
     "queued_rows": 0,
-    "sender_pid": 2076335
+    "sender_pid": 2077188
   },
   "tiers": {
     "A": {
