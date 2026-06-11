@@ -691,7 +691,7 @@
       "spread_hybrid_disc": 0.0806674480569288
     },
     "listing:544518357846747617": {
-      "sent_at_utc": "2026-06-10T07:14:53.574599+00:00",
+      "sent_at_utc": "2026-06-10T20:03:44.962049+00:00",
       "item": "StatTrak™ AWP | Duality (Minimal Wear)",
       "listing_id": "544518357846747617",
       "spread_hybrid_disc": 0.1145911805071201
@@ -757,5 +757,5 @@
       "spread_hybrid_disc": 0.0922111974779084
     }
   },
-  "last_alert_sent_at_utc": "2026-06-10T16:59:38.801287+00:00"
+  "last_alert_sent_at_utc": "2026-06-10T20:03:44.962157+00:00"
 }
