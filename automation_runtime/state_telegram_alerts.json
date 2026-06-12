@@ -1007,7 +1007,37 @@
       "item": "M4A4 | Desolate Space (Battle-Scarred)",
       "listing_id": "546770791713309069",
       "spread_hybrid_disc": 0.0702828893743678
+    },
+    "listing:546770791715269773": {
+      "sent_at_utc": "2026-06-12T18:02:42.206785+00:00",
+      "item": "AWP | Ice Coaled (Battle-Scarred)",
+      "listing_id": "546770791715269773",
+      "spread_hybrid_disc": 0.0795398789567646
+    },
+    "listing:545644891808258347": {
+      "sent_at_utc": "2026-06-12T18:13:55.771047+00:00",
+      "item": "StatTrak™ AK-47 | Searing Rage (Battle-Scarred)",
+      "listing_id": "545644891808258347",
+      "spread_hybrid_disc": 0.0842373772161737
+    },
+    "listing:520875184139512196": {
+      "sent_at_utc": "2026-06-12T18:48:37.640696+00:00",
+      "item": "AWP | Crakow! (Battle-Scarred)",
+      "listing_id": "520875184139512196",
+      "spread_hybrid_disc": 0.1052241350823588
+    },
+    "listing:543393091995204508": {
+      "sent_at_utc": "2026-06-12T19:53:04.443688+00:00",
+      "item": "StatTrak™ AWP | Duality (Field-Tested)",
+      "listing_id": "543393091995204508",
+      "spread_hybrid_disc": 0.0395541889133598
+    },
+    "listing:551274391344993977": {
+      "sent_at_utc": "2026-06-12T19:58:02.793898+00:00",
+      "item": "StatTrak™ AWP | Duality (Minimal Wear)",
+      "listing_id": "551274391344993977",
+      "spread_hybrid_disc": 0.0798782162599747
     }
   },
-  "last_alert_sent_at_utc": "2026-06-12T13:44:57.793987+00:00"
+  "last_alert_sent_at_utc": "2026-06-12T19:58:02.794047+00:00"
 }
