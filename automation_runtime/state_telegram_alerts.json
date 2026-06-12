@@ -577,13 +577,13 @@
       "spread_hybrid_disc": 0.0947870930800425
     },
     "listing:529881659054513056": {
-      "sent_at_utc": "2026-06-11T07:18:58.795979+00:00",
+      "sent_at_utc": "2026-06-11T20:09:32.173558+00:00",
       "item": "StatTrak™ AK-47 | Searing Rage (Battle-Scarred)",
       "listing_id": "529881659054513056",
       "spread_hybrid_disc": 0.0790215405553653
     },
     "listing:542266558027686586": {
-      "sent_at_utc": "2026-06-11T07:19:19.761941+00:00",
+      "sent_at_utc": "2026-06-11T20:10:54.069333+00:00",
       "item": "StatTrak™ AK-47 | Searing Rage (Battle-Scarred)",
       "listing_id": "542266558027686586",
       "spread_hybrid_disc": 0.0966484236314014
@@ -709,7 +709,7 @@
       "spread_hybrid_disc": 0.0555493586319844
     },
     "listing:555777990955443452": {
-      "sent_at_utc": "2026-06-11T07:20:00.887435+00:00",
+      "sent_at_utc": "2026-06-11T20:11:34.983487+00:00",
       "item": "StatTrak™ AK-47 | Searing Rage (Battle-Scarred)",
       "listing_id": "555777990955443452",
       "spread_hybrid_disc": 0.099760373687484
@@ -769,7 +769,7 @@
       "spread_hybrid_disc": 0.0202660203307326
     },
     "listing:612073076590630643": {
-      "sent_at_utc": "2026-06-11T07:14:50.476324+00:00",
+      "sent_at_utc": "2026-06-11T20:07:39.163833+00:00",
       "item": "StatTrak™ AK-47 | Searing Rage (Battle-Scarred)",
       "listing_id": "612073076590630643",
       "spread_hybrid_disc": 0.0366127265018524
@@ -781,19 +781,19 @@
       "spread_hybrid_disc": 0.0367250115950237
     },
     "listing:537763592452953044": {
-      "sent_at_utc": "2026-06-11T07:16:12.515098+00:00",
+      "sent_at_utc": "2026-06-11T20:08:00.082823+00:00",
       "item": "StatTrak™ AK-47 | Searing Rage (Battle-Scarred)",
       "listing_id": "537763592452953044",
       "spread_hybrid_disc": 0.0372700993730563
     },
     "listing:540015392264808757": {
-      "sent_at_utc": "2026-06-11T07:16:33.478279+00:00",
+      "sent_at_utc": "2026-06-11T20:08:40.983339+00:00",
       "item": "StatTrak™ AK-47 | Searing Rage (Battle-Scarred)",
       "listing_id": "540015392264808757",
       "spread_hybrid_disc": 0.0506269363939042
     },
     "listing:533259992823967847": {
-      "sent_at_utc": "2026-06-11T07:16:54.490268+00:00",
+      "sent_at_utc": "2026-06-11T20:09:01.985266+00:00",
       "item": "StatTrak™ AK-47 | Searing Rage (Battle-Scarred)",
       "listing_id": "533259992823967847",
       "spread_hybrid_disc": 0.0511459495394357
@@ -805,7 +805,7 @@
       "spread_hybrid_disc": 0.0532619896982167
     },
     "listing:547896691612712223": {
-      "sent_at_utc": "2026-06-11T07:18:16.792909+00:00",
+      "sent_at_utc": "2026-06-11T20:09:07.109821+00:00",
       "item": "StatTrak™ AK-47 | Searing Rage (Battle-Scarred)",
       "listing_id": "547896691612712223",
       "spread_hybrid_disc": 0.065846167547602
@@ -905,7 +905,25 @@
       "item": "MP9 | Slide (Factory New)",
       "listing_id": "553526191148328681",
       "spread_hybrid_disc": 0.1068510678965304
+    },
+    "listing:512993885482480865": {
+      "sent_at_utc": "2026-06-11T20:06:58.189389+00:00",
+      "item": "StatTrak™ AK-47 | Searing Rage (Battle-Scarred)",
+      "listing_id": "512993885482480865",
+      "spread_hybrid_disc": 0.015236793697169
+    },
+    "listing:551274391338534281": {
+      "sent_at_utc": "2026-06-11T20:10:13.117336+00:00",
+      "item": "StatTrak™ AK-47 | Searing Rage (Battle-Scarred)",
+      "listing_id": "551274391338534281",
+      "spread_hybrid_disc": 0.0796958460824446
+    },
+    "listing:546770791710423309": {
+      "sent_at_utc": "2026-06-11T20:42:30.083432+00:00",
+      "item": "AWP | Crakow! (Battle-Scarred)",
+      "listing_id": "546770791710423309",
+      "spread_hybrid_disc": 0.1007430437437509
     }
   },
-  "last_alert_sent_at_utc": "2026-06-11T15:41:15.664728+00:00"
+  "last_alert_sent_at_utc": "2026-06-11T20:42:30.083651+00:00"
 }
