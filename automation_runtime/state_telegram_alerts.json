@@ -1115,7 +1115,31 @@
       "item": "M4A4 | Desolate Space (Battle-Scarred)",
       "listing_id": "528756483495652931",
       "spread_hybrid_disc": 0.1102132467235336
+    },
+    "listing:553526191160489157": {
+      "sent_at_utc": "2026-06-13T16:12:58.453713+00:00",
+      "item": "AWP | Ice Coaled (Battle-Scarred)",
+      "listing_id": "553526191160489157",
+      "spread_hybrid_disc": 0.0248323990782483
+    },
+    "listing:535512049208450748": {
+      "sent_at_utc": "2026-06-13T16:13:39.529555+00:00",
+      "item": "AWP | Ice Coaled (Battle-Scarred)",
+      "listing_id": "535512049208450748",
+      "spread_hybrid_disc": 0.0951149347296796
+    },
+    "listing:540015392280759673": {
+      "sent_at_utc": "2026-06-13T16:18:07.364946+00:00",
+      "item": "StatTrak™ AK-47 | Searing Rage (Battle-Scarred)",
+      "listing_id": "540015392280759673",
+      "spread_hybrid_disc": 0.0216186375838768
+    },
+    "listing:545644891812589111": {
+      "sent_at_utc": "2026-06-13T16:18:48.335996+00:00",
+      "item": "StatTrak™ AK-47 | Searing Rage (Battle-Scarred)",
+      "listing_id": "545644891812589111",
+      "spread_hybrid_disc": 0.0270722685723854
     }
   },
-  "last_alert_sent_at_utc": "2026-06-13T12:04:26.578127+00:00"
+  "last_alert_sent_at_utc": "2026-06-13T16:18:48.336155+00:00"
 }

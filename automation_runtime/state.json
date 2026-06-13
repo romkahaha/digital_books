@@ -16,30 +16,51 @@
   "queue_pointer": 3,
   "last_tier": "B",
   "last_tier_queue_index": 2,
-  "last_batch_start_pointer": 54,
+  "last_batch_start_pointer": 33,
   "last_batch_items": [
-    "StatTrak™ AK-47 | Slate (Battle-Scarred)",
-    "Galil AR | Chromatic Aberration (Battle-Scarred)",
-    "P90 | Nostalgia (Field-Tested)",
-    "MP9 | Hydra (Field-Tested)",
-    "StatTrak™ M4A4 | Turbine (Field-Tested)"
+    "AK-47 | Emerald Pinstripe (Minimal Wear)",
+    "AUG | Momentum (Field-Tested)",
+    "StatTrak™ M4A4 | Magnesium (Minimal Wear)",
+    "StatTrak™ AWP | Atheris (Field-Tested)",
+    "Glock-18 | Water Elemental (Minimal Wear)"
   ],
   "last_error": null,
-  "last_run_at_utc": "2026-06-13T13:59:16.150402+00:00",
-  "last_finished_at_utc": "2026-06-13T14:01:10.503003+00:00",
-  "last_successful_monitoring_at_utc": "2026-06-13T14:01:10.503003+00:00",
+  "last_run_at_utc": "2026-06-13T17:09:12.132076+00:00",
+  "last_finished_at_utc": "2026-06-13T17:11:26.925394+00:00",
+  "last_successful_monitoring_at_utc": "2026-06-13T17:11:26.925394+00:00",
   "last_failed_monitoring_at_utc": "2026-06-04T15:15:55.174884+00:00",
   "last_status": "ok",
   "consecutive_errors": 0,
-  "last_listing_errors": [],
-  "last_listing_error_count": 0,
-  "last_listing_rows": 391,
-  "last_enriched_rows": 391,
+  "last_listing_errors": [
+    {
+      "market_hash_name": "StatTrak™ AWP | Atheris (Field-Tested)",
+      "meta": {
+        "success": false,
+        "note": "exception",
+        "error": "Steam rate limit (429) for \"4/5 StatTrak™ AWP | Atheris (Field-Tested)\": Steam /render/ returned non-JSON and Market Search action fallback failed: 429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/StatTrak%E2%84%A2%20AWP%20%7C%20Atheris%20%28Field-Tested%29",
+        "pages_fetched": 0,
+        "listings_target_cap": 80
+      }
+    },
+    {
+      "market_hash_name": "Glock-18 | Water Elemental (Minimal Wear)",
+      "meta": {
+        "success": false,
+        "note": "exception",
+        "error": "Steam rate limit (429) for \"5/5 Glock-18 | Water Elemental (Minimal Wear)\": 429 Client Error: Too Many Requests for url: https://steamcommunity.com/market/listings/730/Glock-18%20%7C%20Water%20Elemental%20%28Minimal%20Wear%29",
+        "pages_fetched": 0,
+        "listings_target_cap": 80
+      }
+    }
+  ],
+  "last_listing_error_count": 2,
+  "last_listing_rows": 179,
+  "last_enriched_rows": 179,
   "last_opportunities_rows": 0,
   "last_alert_stats": {
     "mode": "background",
     "queued_rows": 0,
-    "sender_pid": 2115750
+    "sender_pid": 2119021
   },
   "tiers": {
     "A": {
