@@ -1139,7 +1139,19 @@
       "item": "StatTrak™ AK-47 | Searing Rage (Battle-Scarred)",
       "listing_id": "545644891812589111",
       "spread_hybrid_disc": 0.0270722685723854
+    },
+    "listing:722411267476246522": {
+      "sent_at_utc": "2026-06-13T18:49:21.125389+00:00",
+      "item": "M4A4 | Desolate Space (Battle-Scarred)",
+      "listing_id": "722411267476246522",
+      "spread_hybrid_disc": 0.0415420048577952
+    },
+    "listing:512993885492774777": {
+      "sent_at_utc": "2026-06-13T18:50:02.355690+00:00",
+      "item": "M4A4 | Desolate Space (Battle-Scarred)",
+      "listing_id": "512993885492774777",
+      "spread_hybrid_disc": 0.0669973198530498
     }
   },
-  "last_alert_sent_at_utc": "2026-06-13T16:18:48.336155+00:00"
+  "last_alert_sent_at_utc": "2026-06-13T18:50:02.355881+00:00"
 }
