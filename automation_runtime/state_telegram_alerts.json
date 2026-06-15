@@ -1205,7 +1205,43 @@
       "item": "AWP | Atheris (Battle-Scarred)",
       "listing_id": "594058678094434090",
       "spread_hybrid_disc": 0.1077171213710435
+    },
+    "listing:545644891819231939": {
+      "sent_at_utc": "2026-06-14T15:53:09.032367+00:00",
+      "item": "StatTrak™ AK-47 | Searing Rage (Battle-Scarred)",
+      "listing_id": "545644891819231939",
+      "spread_hybrid_disc": 0.0585452499341949
+    },
+    "listing:540015392286058729": {
+      "sent_at_utc": "2026-06-14T15:53:49.968069+00:00",
+      "item": "StatTrak™ AK-47 | Searing Rage (Battle-Scarred)",
+      "listing_id": "540015392286058729",
+      "spread_hybrid_disc": 0.0746697327314469
+    },
+    "listing:520875184149913892": {
+      "sent_at_utc": "2026-06-14T15:54:10.877121+00:00",
+      "item": "StatTrak™ AK-47 | Searing Rage (Battle-Scarred)",
+      "listing_id": "520875184149913892",
+      "spread_hybrid_disc": 0.0905182026724891
+    },
+    "listing:520875184151745464": {
+      "sent_at_utc": "2026-06-14T20:34:13.764758+00:00",
+      "item": "StatTrak™ AWP | Duality (Field-Tested)",
+      "listing_id": "520875184151745464",
+      "spread_hybrid_disc": 0.0460173828354514
+    },
+    "listing:528756483503230319": {
+      "sent_at_utc": "2026-06-14T20:34:54.039285+00:00",
+      "item": "StatTrak™ AWP | Duality (Field-Tested)",
+      "listing_id": "528756483503230319",
+      "spread_hybrid_disc": 0.0747160514233893
+    },
+    "listing:612073076611734887": {
+      "sent_at_utc": "2026-06-14T20:41:04.116731+00:00",
+      "item": "M4A1-S | Black Lotus (Battle-Scarred)",
+      "listing_id": "612073076611734887",
+      "spread_hybrid_disc": 0.1008335908175839
     }
   },
-  "last_alert_sent_at_utc": "2026-06-14T11:29:55.072210+00:00"
+  "last_alert_sent_at_utc": "2026-06-14T20:41:04.116872+00:00"
 }
