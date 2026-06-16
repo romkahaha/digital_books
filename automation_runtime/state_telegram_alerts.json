@@ -1081,10 +1081,10 @@
       "spread_hybrid_disc": 0.1045875946435737
     },
     "listing:528756483491012855": {
-      "sent_at_utc": "2026-06-15T07:00:28.833206+00:00",
+      "sent_at_utc": "2026-06-16T17:11:35.876186+00:00",
       "item": "StatTrak™ AWP | Queen's Gambit (Battle-Scarred)",
       "listing_id": "528756483491012855",
-      "spread_hybrid_disc": 0.1183462996441775
+      "spread_hybrid_disc": 0.1140563739209696
     },
     "listing:520875184143671744": {
       "sent_at_utc": "2026-06-13T09:53:40.499867+00:00",
@@ -1393,10 +1393,10 @@
       "spread_hybrid_disc": 0.1066408242138144
     },
     "listing:511867984905898641": {
-      "sent_at_utc": "2026-06-15T18:21:56.107184+00:00",
+      "sent_at_utc": "2026-06-16T14:50:15.386286+00:00",
       "item": "AWP | Crakow! (Battle-Scarred)",
       "listing_id": "511867984905898641",
-      "spread_hybrid_disc": 0.0858131780481133
+      "spread_hybrid_disc": 0.0823292343668943
     },
     "listing:560281681590694970": {
       "sent_at_utc": "2026-06-15T18:37:31.207819+00:00",
@@ -1499,7 +1499,37 @@
       "item": "StatTrak™ AWP | Duality (Field-Tested)",
       "listing_id": "550148491458321052",
       "spread_hybrid_disc": 0.108882691837817
+    },
+    "listing:552400291269420547": {
+      "sent_at_utc": "2026-06-16T14:13:35.236054+00:00",
+      "item": "StatTrak™ AK-47 | Searing Rage (Battle-Scarred)",
+      "listing_id": "552400291269420547",
+      "spread_hybrid_disc": 0.0173247037255377
+    },
+    "listing:553526191176585909": {
+      "sent_at_utc": "2026-06-16T14:14:16.196597+00:00",
+      "item": "StatTrak™ AK-47 | Searing Rage (Battle-Scarred)",
+      "listing_id": "553526191176585909",
+      "spread_hybrid_disc": 0.1152873570576294
+    },
+    "listing:492727686494790122": {
+      "sent_at_utc": "2026-06-16T14:39:11.816955+00:00",
+      "item": "StatTrak™ AWP | Duality (Field-Tested)",
+      "listing_id": "492727686494790122",
+      "spread_hybrid_disc": 0.0942338560999296
+    },
+    "listing:511867984910920821": {
+      "sent_at_utc": "2026-06-16T15:52:03.523181+00:00",
+      "item": "StatTrak™ USP-S | Jawbreaker (Battle-Scarred)",
+      "listing_id": "511867984910920821",
+      "spread_hybrid_disc": 0.0766000292386837
+    },
+    "listing:536637692577510672": {
+      "sent_at_utc": "2026-06-16T17:11:34.902433+00:00",
+      "item": "StatTrak™ AWP | Queen's Gambit (Battle-Scarred)",
+      "listing_id": "536637692577510672",
+      "spread_hybrid_disc": 0.0899625297182216
     }
   },
-  "last_alert_sent_at_utc": "2026-06-16T12:07:28.825081+00:00"
+  "last_alert_sent_at_utc": "2026-06-16T17:11:35.876356+00:00"
 }
