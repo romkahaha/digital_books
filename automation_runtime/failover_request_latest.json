@@ -1,11 +1,11 @@
 {
   "version": 1,
-  "mode": "request",
+  "mode": "clear",
   "request_id": "20260616T121434Z-vmi2737474-request",
   "requested_at_utc": "2026-06-16T12:14:34.827948+00:00",
   "requested_by": "vmi2737474",
   "main_repo_root": "/home/roma/cs-arbitrage/cs-skins-monitoring-bot",
-  "trigger_run": true,
+  "trigger_run": false,
   "lease_seconds": 5400,
   "max_runtime_minutes": 90,
   "cooldown_until_utc": "2026-06-16T13:44:34.827405+00:00",
@@ -17,5 +17,8 @@
   "last_status": "ok",
   "last_error": null,
   "last_finished_at_utc": "2026-06-16T12:14:26.713913+00:00",
-  "last_successful_monitoring_at_utc": "2026-06-16T12:14:26.713913+00:00"
+  "last_successful_monitoring_at_utc": "2026-06-16T12:14:26.713913+00:00",
+  "last_failover_status": "success",
+  "last_failover_exit_code": 0,
+  "last_failover_completed_at_utc": "2026-06-16T13:46:10.472282+00:00"
 }
