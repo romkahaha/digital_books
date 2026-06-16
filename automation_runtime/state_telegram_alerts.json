@@ -1529,7 +1529,13 @@
       "item": "StatTrak™ AWP | Queen's Gambit (Battle-Scarred)",
       "listing_id": "536637692577510672",
       "spread_hybrid_disc": 0.0899625297182216
+    },
+    "listing:550148491459880248": {
+      "sent_at_utc": "2026-06-16T19:24:05.636109+00:00",
+      "item": "P90 | Nostalgia (Field-Tested)",
+      "listing_id": "550148491459880248",
+      "spread_hybrid_disc": 0.1046667175221975
     }
   },
-  "last_alert_sent_at_utc": "2026-06-16T17:11:35.876356+00:00"
+  "last_alert_sent_at_utc": "2026-06-16T19:24:05.636324+00:00"
 }
