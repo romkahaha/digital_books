@@ -19,13 +19,13 @@
   "last_alert_stats": {},
   "sent_alerts": {
     "listing:522000993748308846": {
-      "sent_at_utc": "2026-06-17T09:46:53.660436+00:00",
+      "sent_at_utc": "2026-06-18T06:29:59.336895+00:00",
       "item": "Glock-18 | Nuclear Garden (Factory New)",
       "listing_id": "522000993748308846",
       "spread_hybrid_disc": -0.0494016648862454
     },
     "listing:531007558933520298": {
-      "sent_at_utc": "2026-06-17T09:47:34.726779+00:00",
+      "sent_at_utc": "2026-06-18T06:30:40.319792+00:00",
       "item": "Glock-18 | Nuclear Garden (Factory New)",
       "listing_id": "531007558933520298",
       "spread_hybrid_disc": -0.0105223366226085
@@ -37,25 +37,25 @@
       "spread_hybrid_disc": 0.0562687299103419
     },
     "listing:517496125898487312": {
-      "sent_at_utc": "2026-06-17T09:48:56.696025+00:00",
+      "sent_at_utc": "2026-06-18T06:31:42.378489+00:00",
       "item": "Glock-18 | Nuclear Garden (Factory New)",
       "listing_id": "517496125898487312",
       "spread_hybrid_disc": 0.0564800729994807
     },
     "listing:492726327947551215": {
-      "sent_at_utc": "2026-06-17T09:49:37.667333+00:00",
+      "sent_at_utc": "2026-06-18T06:32:23.418496+00:00",
       "item": "Glock-18 | Nuclear Garden (Factory New)",
       "listing_id": "492726327947551215",
       "spread_hybrid_disc": 0.0968594261005953
     },
     "listing:534385258659271642": {
-      "sent_at_utc": "2026-06-17T09:49:58.663061+00:00",
+      "sent_at_utc": "2026-06-18T06:32:51.593482+00:00",
       "item": "Glock-18 | Nuclear Garden (Factory New)",
       "listing_id": "534385258659271642",
       "spread_hybrid_disc": 0.1068199123709124
     },
     "listing:515244326071267624": {
-      "sent_at_utc": "2026-06-17T09:50:20.792956+00:00",
+      "sent_at_utc": "2026-06-18T06:33:12.530824+00:00",
       "item": "Glock-18 | Nuclear Garden (Factory New)",
       "listing_id": "515244326071267624",
       "spread_hybrid_disc": 0.1149059007294767
@@ -67,19 +67,19 @@
       "spread_hybrid_disc": 0.072568812922359
     },
     "listing:520875184158030200": {
-      "sent_at_utc": "2026-06-17T12:37:24.591821+00:00",
+      "sent_at_utc": "2026-06-18T09:28:02.904886+00:00",
       "item": "MP7 | Astrolabe (Factory New)",
       "listing_id": "520875184158030200",
       "spread_hybrid_disc": 0.0501474077211038
     },
     "listing:520875184158030380": {
-      "sent_at_utc": "2026-06-17T12:37:45.558455+00:00",
+      "sent_at_utc": "2026-06-18T09:28:43.891013+00:00",
       "item": "MP7 | Astrolabe (Factory New)",
       "listing_id": "520875184158030380",
       "spread_hybrid_disc": 0.0587615585781613
     },
     "listing:520875184158030452": {
-      "sent_at_utc": "2026-06-17T12:37:51.683884+00:00",
+      "sent_at_utc": "2026-06-18T09:29:24.895563+00:00",
       "item": "MP7 | Astrolabe (Factory New)",
       "listing_id": "520875184158030452",
       "spread_hybrid_disc": 0.0589426170606072
@@ -91,13 +91,13 @@
       "spread_hybrid_disc": 0.0615781421092661
     },
     "listing:520875184158030236": {
-      "sent_at_utc": "2026-06-17T12:38:33.541188+00:00",
+      "sent_at_utc": "2026-06-18T09:30:05.983820+00:00",
       "item": "MP7 | Astrolabe (Factory New)",
       "listing_id": "520875184158030236",
       "spread_hybrid_disc": 0.0680313728575271
     },
     "listing:520875184158030308": {
-      "sent_at_utc": "2026-06-17T12:39:14.481388+00:00",
+      "sent_at_utc": "2026-06-18T09:30:47.002596+00:00",
       "item": "MP7 | Astrolabe (Factory New)",
       "listing_id": "520875184158030308",
       "spread_hybrid_disc": 0.0988578813396456
@@ -125,7 +125,73 @@
       "item": "AK-47 | Midnight Laminate (Minimal Wear)",
       "listing_id": "526505227800112333",
       "spread_hybrid_disc": 0.1036315110658335
+    },
+    "listing:547897326028725168": {
+      "sent_at_utc": "2026-06-18T06:31:21.321952+00:00",
+      "item": "Glock-18 | Nuclear Garden (Factory New)",
+      "listing_id": "547897326028725168",
+      "spread_hybrid_disc": 0.0086762896045617
+    },
+    "listing:534386527147574940": {
+      "sent_at_utc": "2026-06-18T06:43:49.665297+00:00",
+      "item": "M4A4 | Tooth Fairy (Minimal Wear)",
+      "listing_id": "534386527147574940",
+      "spread_hybrid_disc": 0.1155297577517903
+    },
+    "listing:540016026681161171": {
+      "sent_at_utc": "2026-06-18T08:00:11.162457+00:00",
+      "item": "StatTrak™ AK-47 | Slate (Battle-Scarred)",
+      "listing_id": "540016026681161171",
+      "spread_hybrid_disc": 0.1176549172687662
+    },
+    "listing:551275025747562619": {
+      "sent_at_utc": "2026-06-18T08:35:35.272760+00:00",
+      "item": "StatTrak™ AWP | Ice Coaled (Battle-Scarred)",
+      "listing_id": "551275025747562619",
+      "spread_hybrid_disc": 0.1139596953605411
+    },
+    "listing:535512427054961669": {
+      "sent_at_utc": "2026-06-18T08:45:10.279948+00:00",
+      "item": "StatTrak™ USP-S | Blood Tiger (Minimal Wear)",
+      "listing_id": "535512427054961669",
+      "spread_hybrid_disc": 0.1142205697990552
+    },
+    "listing:536638326959457558": {
+      "sent_at_utc": "2026-06-18T09:09:09.081138+00:00",
+      "item": "R8 Revolver | Blaze (Factory New)",
+      "listing_id": "536638326959457558",
+      "spread_hybrid_disc": 0.0871425943453402
+    },
+    "listing:532134727335195970": {
+      "sent_at_utc": "2026-06-18T09:09:29.998958+00:00",
+      "item": "R8 Revolver | Blaze (Factory New)",
+      "listing_id": "532134727335195970",
+      "spread_hybrid_disc": 0.0952070942563231
+    },
+    "listing:550149125841866668": {
+      "sent_at_utc": "2026-06-18T09:27:40.778864+00:00",
+      "item": "MP7 | Astrolabe (Factory New)",
+      "listing_id": "550149125841866668",
+      "spread_hybrid_disc": -0.015149467051901
+    },
+    "listing:559156325100924649": {
+      "sent_at_utc": "2026-06-18T11:18:45.989860+00:00",
+      "item": "R8 Revolver | Blaze (Factory New)",
+      "listing_id": "559156325100924649",
+      "spread_hybrid_disc": 0.0472018551005938
+    },
+    "listing:526505227803789517": {
+      "sent_at_utc": "2026-06-18T13:27:15.084350+00:00",
+      "item": "AWP | Asiimov (Battle-Scarred)",
+      "listing_id": "526505227803789517",
+      "spread_hybrid_disc": 0.1018793291754629
+    },
+    "listing:544519626310977215": {
+      "sent_at_utc": "2026-06-18T18:20:56.262424+00:00",
+      "item": "StatTrak™ AK-47 | Slate (Battle-Scarred)",
+      "listing_id": "544519626310977215",
+      "spread_hybrid_disc": 0.1048357557871948
     }
   },
-  "last_alert_sent_at_utc": "2026-06-17T18:28:51.577081+00:00"
+  "last_alert_sent_at_utc": "2026-06-18T18:20:56.262633+00:00"
 }
