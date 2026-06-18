@@ -13,35 +13,33 @@
     "B",
     "C"
   ],
-  "queue_pointer": 5,
+  "queue_pointer": 4,
   "last_tier": "A",
-  "last_tier_queue_index": 4,
-  "last_batch_start_pointer": 112,
+  "last_tier_queue_index": 3,
+  "last_batch_start_pointer": 7,
   "last_batch_items": [
-    "M4A1-S | Black Lotus (Factory New)",
-    "M4A4 | Choppa (Factory New)",
-    "MAC-10 | Disco Tech (Field-Tested)",
-    "Dual Berettas | Sweet Little Angels (Field-Tested)",
-    "Desert Eagle | Firebreathing (Factory New)"
+    "Zeus x27 | Olympus (Field-Tested)",
+    "M4A1-S | Electrum (Minimal Wear)",
+    "M4A4 | Tooth Fairy (Field-Tested)",
+    "AK-47 | Slate (Well-Worn)",
+    "AK-47 | Wintergreen (Minimal Wear)"
   ],
   "last_error": null,
-  "last_run_at_utc": "2026-06-18T20:33:27.203468+00:00",
-  "last_finished_at_utc": "2026-06-18T20:36:03.595428+00:00",
-  "last_successful_monitoring_at_utc": "2026-06-18T20:36:03.595428+00:00",
+  "last_run_at_utc": "2026-06-18T20:34:59.925789+00:00",
+  "last_finished_at_utc": "2026-06-18T20:37:29.847318+00:00",
+  "last_successful_monitoring_at_utc": "2026-06-18T20:37:29.847318+00:00",
   "last_failed_monitoring_at_utc": "2026-06-17T19:14:49.935171+00:00",
   "last_status": "ok",
   "consecutive_errors": 0,
   "last_listing_errors": [],
   "last_listing_error_count": 0,
-  "last_listing_rows": 419,
-  "last_enriched_rows": 419,
+  "last_listing_rows": 338,
+  "last_enriched_rows": 338,
   "last_opportunities_rows": 0,
   "last_alert_stats": {
-    "loaded": 0,
-    "filtered": 0,
-    "considered": 0,
-    "sent": 0,
-    "skipped": 0
+    "mode": "background",
+    "queued_rows": 0,
+    "sender_pid": 2530598
   },
   "tiers": {
     "A": {
