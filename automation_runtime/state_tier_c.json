@@ -2,34 +2,32 @@
   "version": 1,
   "items_signature": "eb35bb70455fd45bcd2bbf4d0a5844e50972b81d05e97711f70a52c6a9b8473a",
   "items_count": 176,
-  "batch_pointer": 163,
-  "last_run_at_utc": "2026-06-18T20:21:48.040303+00:00",
+  "batch_pointer": 168,
+  "last_run_at_utc": "2026-06-18T20:42:36.074499+00:00",
   "last_status": "ok",
   "last_batch_items": [
-    "M4A4 | Cyber Security (Field-Tested)",
-    "StatTrak™ AK-47 | Redline (Field-Tested)",
-    "SG 553 | Darkwing (Factory New)",
-    "★ Shadow Daggers | Bright Water (Factory New)",
-    "StatTrak™ Desert Eagle | Conspiracy (Minimal Wear)"
+    "★ Paracord Knife | Doppler (Factory New)",
+    "StatTrak™ SSG 08 | Rapid Transit (Minimal Wear)",
+    "M4A4 | Desert-Strike (Field-Tested)",
+    "Nova | Moon in Libra (Factory New)",
+    "StatTrak™ USP-S | Guardian (Factory New)"
   ],
   "last_error": null,
-  "last_finished_at_utc": "2026-06-18T20:23:00.585351+00:00",
-  "last_successful_monitoring_at_utc": "2026-06-18T20:23:00.585351+00:00",
+  "last_finished_at_utc": "2026-06-18T20:43:52.138435+00:00",
+  "last_successful_monitoring_at_utc": "2026-06-18T20:43:52.138435+00:00",
   "last_failed_monitoring_at_utc": null,
   "consecutive_errors": 0,
   "last_listing_errors": [],
   "last_listing_error_count": 0,
-  "last_listing_rows": 279,
-  "last_enriched_rows": 279,
+  "last_listing_rows": 277,
+  "last_enriched_rows": 277,
   "last_opportunities_rows": 0,
   "last_alert_stats": {
-    "loaded": 0,
-    "filtered": 0,
-    "considered": 0,
-    "sent": 0,
-    "skipped": 0
+    "mode": "background",
+    "queued_rows": 0,
+    "sender_pid": 2530830
   },
-  "last_batch_start_pointer": 158,
+  "last_batch_start_pointer": 163,
   "listing_fetch_state": {
     "version": 1,
     "items": {
@@ -5089,11 +5087,11 @@
         "page0_listing_ids": [
           "538890126768801874",
           "528757027614078328",
-          "520875728267033976",
           "523127528075446494",
+          "541141926593041059",
           "549023225930268302",
+          "545645526218199497",
           "528756483512439479",
-          "549023225934840698",
           "511867984899337245",
           "714529968820067879",
           "558029156717758261",
@@ -5102,28 +5100,28 @@
           "510742084987073780",
           "612073076603857439",
           "514117791968838087",
-          "529881659055477820",
           "706648668776372874",
+          "529881659055477820",
           "500606993048874235",
           "598562278408092606",
-          "547896057537041248"
+          "540014758186011236"
         ],
-        "total_count": 176,
+        "total_count": 178,
         "first_ask": 277.26,
-        "last_page0_at_utc": "2026-06-18T10:09:02.129624+00:00",
+        "last_page0_at_utc": "2026-06-18T20:42:36.086845+00:00",
         "day_key": "2026-06-18",
-        "last_deep_at_utc": "2026-06-18T10:09:02.129624+00:00",
-        "last_deep_reason": "new_day",
+        "last_deep_at_utc": "2026-06-18T20:42:36.086845+00:00",
+        "last_deep_reason": "sentinel_changed:page0_ids_changed+total_count_changed",
         "deep_pending": false
       },
       "StatTrak™ SSG 08 | Rapid Transit (Minimal Wear)": {
         "page0_listing_ids": [
-          "559156325100656845",
           "542267826492383618",
           "542267826497323106",
           "540016026675151475",
           "497231286802100809",
           "537764226861567151",
+          "552400925659808073",
           "503985326989986419",
           "502859427106926514",
           "502859427106926910",
@@ -5132,25 +5130,26 @@
           "526502160731033355",
           "643589939517351147",
           "635712445337214571",
+          "541141926593257275",
           "732530428388194284",
           "527631127705374083",
           "628952610184315486",
           "498353924435798383",
-          "507361758784732703",
-          "511865263789087641"
+          "507361758784732703"
         ],
-        "total_count": 33,
-        "first_ask": 11.38,
-        "last_page0_at_utc": "2026-06-18T10:25:52.827006+00:00",
+        "total_count": 37,
+        "first_ask": 11.61,
+        "last_page0_at_utc": "2026-06-18T20:42:51.309896+00:00",
         "day_key": "2026-06-18",
-        "last_deep_at_utc": "2026-06-18T10:25:52.827006+00:00",
-        "last_deep_reason": "new_day",
+        "last_deep_at_utc": "2026-06-18T20:42:51.309896+00:00",
+        "last_deep_reason": "sentinel_changed:page0_ids_changed+total_count_changed",
         "deep_pending": false
       },
       "M4A4 | Desert-Strike (Field-Tested)": {
         "page0_listing_ids": [
-          "524253427984354325",
-          "528757027613816176",
+          "542267826498908474",
+          "559156325101953493",
+          "529882927523266315",
           "547897326027147180",
           "547896057543276592",
           "533260627236672357",
@@ -5163,7 +5162,6 @@
           "497229293360762959",
           "529880390655941255",
           "509613178100658267",
-          "559156325098129249",
           "546770157652012501",
           "510739363845602674",
           "520872660491813637",
@@ -5171,17 +5169,16 @@
           "511865263790317401"
         ],
         "total_count": 68,
-        "first_ask": 37.9,
-        "last_page0_at_utc": "2026-06-18T10:26:03.967391+00:00",
+        "first_ask": 37.52,
+        "last_page0_at_utc": "2026-06-18T20:43:02.201010+00:00",
         "day_key": "2026-06-18",
-        "last_deep_at_utc": "2026-06-18T10:26:03.967391+00:00",
-        "last_deep_reason": "new_day",
+        "last_deep_at_utc": "2026-06-18T20:43:02.201010+00:00",
+        "last_deep_reason": "sentinel_changed:page0_ids_changed",
         "deep_pending": false
       },
       "Nova | Moon in Libra (Factory New)": {
         "page0_listing_ids": [
           "544518357838219217",
-          "553525557073324749",
           "505111226918747311",
           "526505227799835205",
           "506237126807770901",
@@ -5199,14 +5196,15 @@
           "494978127739070010",
           "526502690914581947",
           "523125625408063504",
-          "520873191394248296"
+          "520873191394248296",
+          "489347463814745463"
         ],
-        "total_count": 63,
+        "total_count": 62,
         "first_ask": 8.9,
-        "last_page0_at_utc": "2026-06-18T10:26:21.195564+00:00",
+        "last_page0_at_utc": "2026-06-18T20:43:18.057293+00:00",
         "day_key": "2026-06-18",
-        "last_deep_at_utc": "2026-06-18T10:26:21.195564+00:00",
-        "last_deep_reason": "new_day",
+        "last_deep_at_utc": "2026-06-18T20:43:18.057293+00:00",
+        "last_deep_reason": "sentinel_changed:page0_ids_changed+total_count_changed",
         "deep_pending": false
       },
       "StatTrak™ USP-S | Guardian (Factory New)": {
@@ -5217,7 +5215,6 @@
           "503986685547914020",
           "537763592467266500",
           "522001628168989076",
-          "594058678103377390",
           "560281681583628170",
           "559155056634078208",
           "520874459786705633",
@@ -5230,14 +5227,15 @@
           "541141292203814062",
           "536637692559644340",
           "536637692545461060",
-          "512990877833685251"
+          "512990877833685251",
+          "556903256784097843"
         ],
-        "total_count": 118,
+        "total_count": 117,
         "first_ask": 12.96,
-        "last_page0_at_utc": "2026-06-18T10:26:38.351355+00:00",
+        "last_page0_at_utc": "2026-06-18T20:43:38.506796+00:00",
         "day_key": "2026-06-18",
-        "last_deep_at_utc": "2026-06-18T10:26:38.351355+00:00",
-        "last_deep_reason": "new_day",
+        "last_deep_at_utc": "2026-06-18T20:43:38.506796+00:00",
+        "last_deep_reason": "sentinel_changed:page0_ids_changed+total_count_changed",
         "deep_pending": false
       },
       "★ Moto Gloves | Finish Line (Field-Tested)": {
@@ -5489,7 +5487,7 @@
         "deep_pending": false
       }
     },
-    "last_batch_started_at_utc": "2026-06-18T20:21:48.054198+00:00",
+    "last_batch_started_at_utc": "2026-06-18T20:42:36.086488+00:00",
     "last_batch_stats": {
       "enabled": true,
       "tier": "C",
@@ -5504,7 +5502,7 @@
         "sentinel_changed:page0_ids_changed": 1
       }
     },
-    "last_batch_finished_at_utc": "2026-06-18T20:22:59.454502+00:00"
+    "last_batch_finished_at_utc": "2026-06-18T20:43:50.078620+00:00"
   },
   "last_fetch_strategy_stats": {
     "enabled": true,
