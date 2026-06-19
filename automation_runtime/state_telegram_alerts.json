@@ -19,10 +19,10 @@
   "last_alert_stats": {},
   "sent_alerts": {
     "listing:522000993748308846": {
-      "sent_at_utc": "2026-06-18T06:29:59.336895+00:00",
+      "sent_at_utc": "2026-06-18T21:54:38.567362+00:00",
       "item": "Glock-18 | Nuclear Garden (Factory New)",
       "listing_id": "522000993748308846",
-      "spread_hybrid_disc": -0.0494016648862454
+      "spread_hybrid_disc": 0.0963339913248318
     },
     "listing:531007558933520298": {
       "sent_at_utc": "2026-06-18T06:30:40.319792+00:00",
@@ -191,7 +191,19 @@
       "item": "StatTrak™ AK-47 | Slate (Battle-Scarred)",
       "listing_id": "544519626310977215",
       "spread_hybrid_disc": 0.1048357557871948
+    },
+    "listing:558030425193366928": {
+      "sent_at_utc": "2026-06-18T21:58:39.945418+00:00",
+      "item": "MP7 | Abyssal Apparition (Battle-Scarred)",
+      "listing_id": "558030425193366928",
+      "spread_hybrid_disc": 0.1146868145646473
+    },
+    "listing:550149125848003228": {
+      "sent_at_utc": "2026-06-19T00:42:29.018376+00:00",
+      "item": "MP7 | Astrolabe (Factory New)",
+      "listing_id": "550149125848003228",
+      "spread_hybrid_disc": 0.0822211913018684
     }
   },
-  "last_alert_sent_at_utc": "2026-06-18T18:20:56.262633+00:00"
+  "last_alert_sent_at_utc": "2026-06-19T00:42:29.018448+00:00"
 }
