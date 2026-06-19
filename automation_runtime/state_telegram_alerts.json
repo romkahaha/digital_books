@@ -19,16 +19,16 @@
   "last_alert_stats": {},
   "sent_alerts": {
     "listing:522000993748308846": {
-      "sent_at_utc": "2026-06-18T21:54:38.567362+00:00",
+      "sent_at_utc": "2026-06-19T11:38:24.197722+00:00",
       "item": "Glock-18 | Nuclear Garden (Factory New)",
       "listing_id": "522000993748308846",
-      "spread_hybrid_disc": 0.0963339913248318
+      "spread_hybrid_disc": -0.0356461670942402
     },
     "listing:531007558933520298": {
-      "sent_at_utc": "2026-06-18T06:30:40.319792+00:00",
+      "sent_at_utc": "2026-06-19T06:34:47.828928+00:00",
       "item": "Glock-18 | Nuclear Garden (Factory New)",
       "listing_id": "531007558933520298",
-      "spread_hybrid_disc": -0.0105223366226085
+      "spread_hybrid_disc": -0.0076757948293055
     },
     "listing:552400291244881183": {
       "sent_at_utc": "2026-06-17T09:48:15.712707+00:00",
@@ -37,19 +37,19 @@
       "spread_hybrid_disc": 0.0562687299103419
     },
     "listing:517496125898487312": {
-      "sent_at_utc": "2026-06-18T06:31:42.378489+00:00",
+      "sent_at_utc": "2026-06-19T06:35:28.805401+00:00",
       "item": "Glock-18 | Nuclear Garden (Factory New)",
       "listing_id": "517496125898487312",
-      "spread_hybrid_disc": 0.0564800729994807
+      "spread_hybrid_disc": 0.0716981363381987
     },
     "listing:492726327947551215": {
-      "sent_at_utc": "2026-06-18T06:32:23.418496+00:00",
+      "sent_at_utc": "2026-06-19T06:36:09.743634+00:00",
       "item": "Glock-18 | Nuclear Garden (Factory New)",
       "listing_id": "492726327947551215",
       "spread_hybrid_disc": 0.0968594261005953
     },
     "listing:534385258659271642": {
-      "sent_at_utc": "2026-06-18T06:32:51.593482+00:00",
+      "sent_at_utc": "2026-06-19T06:36:50.686982+00:00",
       "item": "Glock-18 | Nuclear Garden (Factory New)",
       "listing_id": "534385258659271642",
       "spread_hybrid_disc": 0.1068199123709124
@@ -73,16 +73,16 @@
       "spread_hybrid_disc": 0.0501474077211038
     },
     "listing:520875184158030380": {
-      "sent_at_utc": "2026-06-18T09:28:43.891013+00:00",
+      "sent_at_utc": "2026-06-19T09:28:45.916536+00:00",
       "item": "MP7 | Astrolabe (Factory New)",
       "listing_id": "520875184158030380",
-      "spread_hybrid_disc": 0.0587615585781613
+      "spread_hybrid_disc": 0.0711438063624629
     },
     "listing:520875184158030452": {
-      "sent_at_utc": "2026-06-18T09:29:24.895563+00:00",
+      "sent_at_utc": "2026-06-19T09:29:10.085225+00:00",
       "item": "MP7 | Astrolabe (Factory New)",
       "listing_id": "520875184158030452",
-      "spread_hybrid_disc": 0.0589426170606072
+      "spread_hybrid_disc": 0.0713224829713108
     },
     "listing:550148491457093632": {
       "sent_at_utc": "2026-06-17T12:38:12.610176+00:00",
@@ -97,10 +97,10 @@
       "spread_hybrid_disc": 0.0680313728575271
     },
     "listing:520875184158030308": {
-      "sent_at_utc": "2026-06-18T09:30:47.002596+00:00",
+      "sent_at_utc": "2026-06-19T09:29:51.032023+00:00",
       "item": "MP7 | Astrolabe (Factory New)",
       "listing_id": "520875184158030308",
-      "spread_hybrid_disc": 0.0988578813396456
+      "spread_hybrid_disc": 0.1107126510888152
     },
     "listing:529882927516740919": {
       "sent_at_utc": "2026-06-17T14:46:58.754231+00:00",
@@ -181,10 +181,10 @@
       "spread_hybrid_disc": 0.0472018551005938
     },
     "listing:526505227803789517": {
-      "sent_at_utc": "2026-06-18T13:27:15.084350+00:00",
+      "sent_at_utc": "2026-06-19T13:29:08.525809+00:00",
       "item": "AWP | Asiimov (Battle-Scarred)",
       "listing_id": "526505227803789517",
-      "spread_hybrid_disc": 0.1018793291754629
+      "spread_hybrid_disc": 0.1163730440682806
     },
     "listing:544519626310977215": {
       "sent_at_utc": "2026-06-18T18:20:56.262424+00:00",
@@ -199,11 +199,59 @@
       "spread_hybrid_disc": 0.1146868145646473
     },
     "listing:550149125848003228": {
-      "sent_at_utc": "2026-06-19T00:42:29.018376+00:00",
+      "sent_at_utc": "2026-06-19T14:37:11.546298+00:00",
       "item": "MP7 | Astrolabe (Factory New)",
       "listing_id": "550149125848003228",
-      "spread_hybrid_disc": 0.0822211913018684
+      "spread_hybrid_disc": -0.0515694524729273
+    },
+    "listing:535512427060890329": {
+      "sent_at_utc": "2026-06-19T07:38:21.953081+00:00",
+      "item": "AWP | Atheris (Battle-Scarred)",
+      "listing_id": "535512427060890329",
+      "spread_hybrid_disc": 0.1020819698222131
+    },
+    "listing:556904525289905360": {
+      "sent_at_utc": "2026-06-19T09:28:04.973250+00:00",
+      "item": "MP7 | Astrolabe (Factory New)",
+      "listing_id": "556904525289905360",
+      "spread_hybrid_disc": -0.0924731562730778
+    },
+    "listing:534386527155035796": {
+      "sent_at_utc": "2026-06-19T14:37:52.492216+00:00",
+      "item": "MP7 | Astrolabe (Factory New)",
+      "listing_id": "534386527155035796",
+      "spread_hybrid_disc": 0.0456282606431891
+    },
+    "listing:534386527155035976": {
+      "sent_at_utc": "2026-06-19T14:38:15.600933+00:00",
+      "item": "MP7 | Astrolabe (Factory New)",
+      "listing_id": "534386527155035976",
+      "spread_hybrid_disc": 0.053962223196336
+    },
+    "listing:534386527155032700": {
+      "sent_at_utc": "2026-06-19T14:38:36.507872+00:00",
+      "item": "MP7 | Astrolabe (Factory New)",
+      "listing_id": "534386527155032700",
+      "spread_hybrid_disc": 0.0736070465745067
+    },
+    "listing:534386527155032664": {
+      "sent_at_utc": "2026-06-19T14:39:17.458384+00:00",
+      "item": "MP7 | Astrolabe (Factory New)",
+      "listing_id": "534386527155032664",
+      "spread_hybrid_disc": 0.077175862560022
+    },
+    "listing:534386527155032844": {
+      "sent_at_utc": "2026-06-19T14:39:58.405090+00:00",
+      "item": "MP7 | Astrolabe (Factory New)",
+      "listing_id": "534386527155032844",
+      "spread_hybrid_disc": 0.0856156402056157
+    },
+    "listing:523127528086953174": {
+      "sent_at_utc": "2026-06-19T14:39:59.326116+00:00",
+      "item": "MP7 | Astrolabe (Factory New)",
+      "listing_id": "523127528086953174",
+      "spread_hybrid_disc": 0.1100350246736548
     }
   },
-  "last_alert_sent_at_utc": "2026-06-18T18:20:56.262633+00:00"
+  "last_alert_sent_at_utc": "2026-06-19T14:39:59.326264+00:00"
 }
